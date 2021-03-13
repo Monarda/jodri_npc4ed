@@ -304,6 +304,7 @@ def main():
     # npc.add_career("Knight", 2)
 
     # Doktor Helga Langstrasse
+    npc = npc_4e("human")
     npc._add_career_rank("Scholar", 1)
     npc._add_career_rank("Physician", 2)
     npc._add_career_rank("Physician", 3)
