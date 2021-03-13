@@ -1,0 +1,548 @@
+{
+    "Apothecary" : {
+        "earning skill": "Trade (Apothecary)",
+        "rank 1" : {
+            "name": "Apothecary’s Apprentice",
+            "status": "Brass 3",
+            "advances": ["T","Dex","Int"],
+            "skills" : ["Consume Alcohol","Heal","Language (Classical)","Lore (Chemistry)","Lore (Medicine)","Lore (Plants)","Trade (Apothecary)","Trade (Poisoner)"],
+            "talents":  ["Concoct","Craftsman (Apothecary)","Etiquette (Scholar)","Read/Write"],
+            "npc_essential_talents": ["Concoct", "Read/Write"],
+            "trappings": ["Book (Blank)","Healing Draught","Leather Jerkin","Pestle and Mortar"]
+        },
+        "rank 2" : {
+            "name": "Apothecary",
+            "status": "Silver 1",
+            "advances": ["Fel"],
+            "skills" : ["Charm","Haggle","Lore (Science)","Gossip","Language (Guilder)","Perception"],
+            "talents":  ["Criminal","Dealmaker","Etiquette (Guilder)","Pharmacist"],
+            "npc_essential_talents": ["Pharmacist"],
+            "trappings": ["Guild Licence","Trade Tools"]
+        },
+        "rank 3" : {
+            "name": "Master Apothecary",
+            "status": "Silver 3",
+            "advances": ["I"],
+            "skills" : ["Intuition","Leadership","Research","Secret Signs (Guilder)"],
+            "talents":  ["Bookish","Master Tradesman (Apothecary)","Resistance (Poison)","Savvy"],
+            "npc_essential_talents": ["Master Tradesman (Apothecary)"],
+            "trappings": ["Book (Apothecary)","Apprentice","Workshop"]
+        },
+        "rank 4" : {
+            "name": "Apothecary-General",
+            "status": "Gold 1",
+            "advances": ["WP"],
+            "skills" : ["Intimidate","Ride (Horse)"],
+            "talents":  ["Acute Sense (Taste)","Coolheaded","Master Tradesman (Poisoner)","Savant (Apothecary)"],
+            "npc_essential_talents": ["Savant (Apothecary)"],
+            "trappings": ["Commission Papers","Large Workshop"]
+        }
+    },
+    "Engineer" : {
+        "earning skill": "Trade (Engineer)",
+        "rank 1" : {
+            "name": "Student Engineer",
+            "status": "Brass 4",
+            "advances": ["BS","Dex","Int"],
+            "skills" : ["Consume Alcohol","Cool","Endurance","Language (Classical)","Lore (Engineer)","Perception","Ranged (Blackpowder)","Trade (Engineer)"],
+            "talents":  ["Artistic","Gunner","Read/Write","Tinker"],
+            "npc_essential_talents": ["Read/Write","Tinker"],
+            "trappings": ["Book (Engineer)","Hammer and Spikes"]
+        },
+        "rank 2" : {
+            "name": "Engineer",
+            "status": "Silver 2",
+            "advances": ["I"],
+            "skills" : ["Drive","Dodge","Navigation","Ranged (Engineering)","Research","Language (Guilder)"],
+            "talents":  ["Craftsman (Engineer)","Etiquette (Guilder)","Marksman","Orientation"],
+            "npc_essential_talents": ["Craftsman (Engineer)"],
+            "trappings": ["Guild Licence","Trade Tools"]
+        },
+        "rank 3" : {
+            "name": "Master Engineer",
+            "status": "Silver 4",
+            "advances": ["T"],
+            "skills" : ["Language (Khazalid)","Leadership","Ride (Horse)","Secret Signs (Guilder)"],
+            "talents":  ["Etiquette (Scholar)","Master Tradesman (Engineering)","Sniper","Super Numerate"],
+            "npc_essential_talents": ["Master Tradesman (Engineering)"],
+            "trappings": ["Workshop"]
+        },
+        "rank 4" : {
+            "name": "Chartered Engineer",
+            "status": "Gold 2",
+            "advances": ["WP"],
+            "skills" : ["Language (Any)","Lore (Any)"],
+            "talents":  ["Magnum Opus","Rapid Reload","Savant (Engineering)","Unshakeable"],
+            "npc_essential_talents": ["Savant (Engineering)"],
+            "trappings": ["Guild License","Library (Engineer)","Quality Trade Tools (Engineer)","Large Workshop (Engineer)"]
+        }
+    },
+    "Lawyer" : {
+        "earning skill": "Lore (Law)",
+        "rank 1" : {
+            "name": "Student Lawyer",
+            "status": "Brass 4",
+            "advances": ["I","Dex","Int"],
+            "skills" : ["Consume Alcohol","Endurance","Haggle","Language (Classical)","Lore (Law) ","Lore (Theology)","Perception","Research"],
+            "talents":  ["Blather","Etiquette (Scholar)","Read/Write","Speedreader"],
+            "npc_essential_talents": ["Blather","Read/Write"],
+            "trappings": ["Book (Law)","Magnifying Glass"]
+        },
+        "rank 2" : {
+            "name": "Lawyer",
+            "status": "Silver 3",
+            "advances": ["Fel"],
+            "skills" : ["Bribery","Charm","Gossip","Intuition","Language (Guilder)","Secret Signs (Guilder)"],
+            "talents":  ["Argumentative","Criminal","Etiquette (Guilder)","Suave"],
+            "npc_essential_talents": ["Argumentative"],
+            "trappings": ["Court Robes","Guild Licence","Writing Kit"]
+        },
+        "rank 3" : {
+            "name": "Barrister",
+            "status": "Gold 1",
+            "advances": ["WP"],
+            "skills" : ["Art (Writing)","Entertain (Speeches)","Intimidate","Lore (Any)"],
+            "talents":  ["Bookish","Cat-tongued","Impassioned Zeal","Savvy"],
+            "npc_essential_talents": ["Impassioned Zeal"],
+            "trappings": ["Office","Assistant (Student or Servant)"]
+        },
+        "rank 4" : {
+            "name": "Judge",
+            "status": "Gold 2",
+            "advances": ["T"],
+            "skills" : ["Cool","Lore (Any)"],
+            "talents":  ["Commanding Presence","Kingpin","Savant (Law)","Wealthy"],
+            "npc_essential_talents": ["Commanding Presence","Savant (Law)","Wealthy"],
+            "trappings": ["Gavel","Ostentatious Wig"]
+        }
+    },
+    "Nun" : {
+        "earning skill": "Lore (Theology)",
+        "rank 1" : {
+            "name": "Novitiate",
+            "status": "Brass 1",
+            "advances": ["Dex","Int","Fel"],
+            "skills" : ["Art (Calligraphy)","Cool","Endurance","Entertain (Storyteller)","Gossip","Heal","Lore (Theology) ","Pray"],
+            "talents":  ["Bless (Any)","Stone Soup","Panhandle","Read/Write"],
+            "npc_essential_talents": ["Panhandle"],
+            "trappings": ["Religious Symbol","Robes"]
+        },
+        "rank 2" : {
+            "name": "Nun",
+            "status": "Brass 4",
+            "advances": ["WP"],
+            "skills" : ["Charm","Melee (Any)","Research","Trade (Brewer)","Trade (Herbalist)","Trade (Vintner)"],
+            "talents":  ["Etiquette (Cultists)","Field Dressing","Holy Visions","Invoke (Any)"],
+            "npc_essential_talents": [],
+            "trappings": ["Book (Religion)","Religious Relic","Trade Tools (Any)"]
+        },
+        "rank 3" : {
+            "name": "Abbess",
+            "status": "Silver 2",
+            "advances": ["I"],
+            "skills" : ["Leadership","Lore (Local)","Lore (Politics)","Perception"],
+            "talents":  ["Resistance (Any)","Robust","Savant (Theology)","Stouthearted"],
+            "npc_essential_talents": ["Savant (Theology)","Read/Write"],
+            "trappings": ["Abbey","Library (Theology)"]
+        },
+        "rank 4" : {
+            "name": "Prioress General",
+            "status": "Silver 5",
+            "advances": ["T"],
+            "skills" : ["Language (Any)","Lore (Any)"],
+            "talents":  ["Commanding Presence","Iron Will","Pure Soul","Strong-minded"],
+            "npc_essential_talents": ["Commanding Presence"],
+            "trappings": ["Religious Order"]
+        }
+    },
+    "Physician" : {
+        "earning skill": "Heal",
+        "rank 1" : {
+            "name": "Physician’s Apprentice",
+            "status": "Brass 4",
+            "advances": ["Dex", "Int", "WP"],
+            "skills" : ["Bribery","Cool","Drive","Endurance","Gossip","Heal","Perception","Sleight of Hand"],
+            "talents":  ["Bookish","Field Dressing","Read/Write","Strike to Stun"],
+            "npc_essential_talents": ["Field Dressing","Read/Write"],
+            "trappings": ["Bandages","Healing Draught"]
+        },
+        "rank 2" : {
+            "name": "Physician",
+            "status": "Silver 3",
+            "advances": ["Fel"],
+            "skills" : ["Charm","Haggle","Language (Guilder)","Lore (Anatomy)","Lore (Medicine)","Trade (Barber)"],
+            "talents":  ["Coolheaded","Criminal","Etiquette (Guilder)","Surgery"],
+            "npc_essential_talents": ["Surgery"],
+            "trappings": ["Book (Medicine)","Guild Licence","Trade Tools (Medicine)"]
+        },
+        "rank 3" : {
+            "name": "Doktor",
+            "status": "Silver 5",
+            "advances": ["I"],
+            "skills" : ["Consume Alcohol","Intimidate","Leadership","Research"],
+            "talents":  ["Etiquette (Scholars)","Resistance (Disease)","Savvy","Strike to Injure"],
+            "npc_essential_talents": [],
+            "trappings": ["Apprentice","Workshop (Medicine)"]
+        },
+        "rank 4" : {
+            "name": "Court Physician",
+            "status": "Gold 1",
+            "advances": ["Agi"],
+            "skills" : ["Lore (Noble)","Perform (Dancing)"],
+            "talents":  ["Etiquette (Nobles)","Nimble Fingered","Savant (Medicine)","Strong-minded"],
+            "npc_essential_talents": ["Savant (Medicine)"],
+            "trappings": ["Courtly Attire","Letter of Appointment"]
+        }
+    },
+    "Priest" : {
+        "earning skill": "Pray",
+        "rank 1" : {
+            "name": "Initiate",
+            "status": "Brass 2",
+            "advances": ["T","Agi","WP"],
+            "skills" : ["Athletics","Cool","Endurance","Intuition","Lore (Theology)","Perception","Pray ","Research"],
+            "talents":  ["Bless (Any)","Holy Visions","Read/Write","Suave"],
+            "npc_essential_talents": [],
+            "trappings": ["Religious Symbol","Robes"]
+        },
+        "rank 2" : {
+            "name": "Priest",
+            "status": "Silver 1",
+            "advances": ["Fel"],
+            "skills" : ["Charm","Entertain (Storytelling)","Gossip","Heal","Intimidate","Melee (Basic)"],
+            "talents":  ["Blather","Bookish","Etiquette (Cultists)","Invoke (Any)"],
+            "npc_essential_talents": ["Blather"],
+            "trappings": ["Book (Religion)","Ceremonial Robes"]
+        },
+        "rank 3" : {
+            "name": "High Priest",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Art (Writing)","Entertain (Speeches)","Leadership","Lore (Heraldry)"],
+            "talents":  ["Acute Sense (Any)","Hatred (Any)","Impassioned Zeal","Strong-minded"],
+            "npc_essential_talents": ["Impassioned Zeal","Read/Write"],
+            "trappings": ["Quality Robes","Religious Relic","Subordinate Priests","Temple"]
+        },
+        "rank 4" : {
+            "name": "Lector",
+            "status": "Gold 2",
+            "advances": ["I"],
+            "skills" : ["Language (Any)","Lore (Politics)"],
+            "talents":  ["Master Orator","Pure Soul","Resistance (Any)","Savant (Theology)"],
+            "npc_essential_talents": ["Master Orator","Savant (Theology)"],
+            "trappings": ["Library (Theology)","Subordinate High Priests"]
+        }
+    },
+    "Scholar" : {
+        "earning skill": "Lore (Any)",
+        "rank 1" : {
+            "name": "Student",
+            "status": "Brass 3",
+            "advances": ["T", "Int", "WP"],
+            "skills" : ["Consume Alcohol","Entertain (Storytelling)","Gamble","Gossip","Haggle","Language (Classical)","Lore (Any)","Research"],
+            "talents":  ["Carouser","Read/Write","Savvy","Super Numerate"],
+            "npc_essential_talents": ["Read/Write"],
+            "trappings": ["Alcohol","Book","Opinions","Writing Kit"]
+        },
+        "rank 2" : {
+            "name": "Scholar",
+            "status": "Silver 2",
+            "advances": ["I"],
+            "skills" : ["Art (Writing)","Intuition","Language (Any)","Lore (Any)","Perception","Trade (Any)"],
+            "talents":  ["Bookish","Etiquette (Scholars)","Speedreader","Suave"],
+            "npc_essential_talents": ["Bookish"],
+            "trappings": ["Access to a Library","Degree"]
+        },
+        "rank 3" : {
+            "name": "Fellow",
+            "status": "Silver 5",
+            "advances": ["Fel"],
+            "skills" : ["Entertain (Lecture)","Intimidate","Language (Any)","Lore (Any)"],
+            "talents":  ["Linguistics","Public Speaker","Savant (Any)","Tower of Memories"],
+            "npc_essential_talents": ["Savant (Any)"],
+            "trappings": ["Mortarboard","Robes"]
+        },
+        "rank 4" : {
+            "name": "Professor",
+            "status": "Gold 1",
+            "advances": ["Dex"],
+            "skills" : ["Entertain (Rhetoric)","Lore (Any)"],
+            "talents":  ["Magnum Opus","Master Orator","Savant (Any)","Sharp"],
+            "npc_essential_talents": [],
+            "trappings": ["Study"]
+        }
+    },
+    "Wizard" : {
+        "earning skill": "Language (Magick)",
+        "rank 1" : {
+            "name": "Wizard’s Apprentice",
+            "status": "Brass 3",
+            "advances": ["WS","Int","WP"],
+            "skills" : ["Channelling (Any Colour)","Dodge","Intuition","Language (Magick)","Lore (Magic)","Melee (Basic)","Melee (Polearm)","Perception"],
+            "talents":  ["Aethyric Attunement","Petty Magic","Read/Write","Second Sight"],
+            "npc_essential_talents": [],
+            "trappings": ["Grimoire","Quarterstaff"]
+        },
+        "rank 2" : {
+            "name": "Wizard",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Charm","Cool","Gossip","Intimidate","Language (Battle)","Language (Any)"],
+            "talents":  ["Arcane Magic (Any Arcane Lore)","Detect Artefact","Fast Hands","Sixth Sense"],
+            "npc_essential_talents": ["Arcane Magic (Any Arcane Lore)","Sixth Sense"],
+            "trappings": ["Magical License"]
+        },
+        "rank 3" : {
+            "name": "Master Wizard",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Animal Care","Evaluate","Lore (Warfare)","Ride (Horse)"],
+            "talents":  ["Dual Wielder","Instinctive Diction","Magical Sense","Menacing"],
+            "npc_essential_talents": ["Instinctive Diction"],
+            "trappings": ["Apprentice","Light Warhorse","Magical Item"]
+        },
+        "rank 4" : {
+            "name": "Wizard Lord",
+            "status": "Gold 2",
+            "advances": ["Fel"],
+            "skills" : ["Language (Any)","Lore (Any)"],
+            "talents":  ["Combat Aware","Frightening","Iron Will","War Wizard"],
+            "npc_essential_talents": [],
+            "trappings": ["Apprentice","Library (Magic)","Workshop (Magic)"]
+        }
+    },
+    "Riverwarden" : {
+        "earning skill": "Melee (Basic)",
+        "rank 1" : {
+            "name": "River Recruit",
+            "status": "Silver 1",
+            "advances": ["BS", "S", "Fel"],
+            "skills" : ["Athletics","Dodge","Endurance","Melee (Basic)","Perception","Row","Sail (Any)","Swim"],
+            "talents":  ["Strong Swimmer","Strong Back","Very Strong","Waterman"],
+            "npc_essential_talents": ["Strong Swimmer","Waterman"],
+            "trappings": ["Hand Weapon (Sword)","Leather Jack","Uniform"]
+        },
+        "rank 2" : {
+            "name": "Riverwarden",
+            "status": "Silver 2",
+            "advances": ["WS"],
+            "skills" : ["Bribery","Charm","Intimidate","Gossip","Lore (Riverways)","Ranged (Blackpowder)"],
+            "talents":  ["Criminal","Gunner","Fisherman","Seasoned Traveller"],
+            "npc_essential_talents": [],
+            "trappings": ["Lantern and Oil","Pistol with 10 shot","Shield"]
+        },
+        "rank 3" : {
+            "name": "Shipsword",
+            "status": "Silver 4",
+            "advances": ["I"],
+            "skills" : ["Climb","Cool","Intuition","Leadership"],
+            "talents":  ["Fearless (Wreckers)","Hatred (Any)","Pilot","Sea Legs"],
+            "npc_essential_talents": ["Pilot"],
+            "trappings": ["Grappling Hook","Helmet","Mail Shirt"]
+        },
+        "rank 4" : {
+            "name": "Shipsword Master",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Lore (Law)","Navigation"],
+            "talents":  ["Commanding Presence","Kingpin","Menacing","Orientation"],
+            "npc_essential_talents": ["Commanding Presence"],
+            "trappings": ["Patrol Boats and Crew","Symbol of Rank"]
+        }
+    },
+    "Cavalryman": {
+        "earning skill": "Ride (Horse)",
+        "rank 1": {
+            "name": "Horseman",
+            "status": "Silver 2",
+            "advances": ["WS", "S", "Agi"],
+            "skills": ["Animal Care", "Charm Animal", "Endurance", "Language (Battle)", "Melee (Basic)", "Outdoor Survival", "Perception", "Ride (Horse)"],
+            "talents":  ["Combat Aware","Crack The Whip","Lightning Reflexes","Roughrider"],
+            "npc_essential_talents": ["Crack The Whip","Roughrider"],
+            "trappings": ["Leather Jack","Riding Horse with Saddle and Tack"]
+        },
+        "rank 2": {
+            "name": "Cavalryman",
+            "status": "Silver 4",
+            "advances": ["BS"],
+            "skills": ["Charm","Consume Alcohol","Cool","Gossip","Melee (Cavalry)","Ranged (Blackpowder)"],
+            "talents":  ["Etiquette (Soldiers)","Gunner","Seasoned Traveller","Trick Riding"],
+            "npc_essential_talents": ["Trick Riding"],
+            "trappings": ["Breastplate","Helmet","Light Warhorse with Saddle and Tack","Pistol With 10 Shots","Shield"]
+        },
+        "rank 3": {
+            "name": "Cavalry Sergeant",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills": ["Intimidate","Intuition","Leadership","Lore (Warfare)"],
+            "talents":  ["Combat Reflexes","Fast Shot","Hatred (Any)","Warleader"],
+            "npc_essential_talents": ["Warleader"],
+            "trappings": ["Sash"]
+        },
+        "rank 4": {
+            "name": "Cavalry Officer",
+            "status": "Gold 2",
+            "advances": ["Fel"],
+            "skills": ["Gamble", "Lore (Heraldry)"],
+            "talents":  ["Accurate Shot","Inspiring","Reaction Strike","Robust"],
+            "npc_essential_talents": ["Inspiring"],
+            "trappings": ["Deck of Cards", "Quality Clothing"]
+        }
+    },
+    "Guard": {
+        "earning skill": "Perception",
+        "rank 1": {
+            "name": "Sentry",
+            "status": "Silver 1",
+            "advances": ["WS", "T", "Agi"],
+            "skills": ["Consume Alcohol","Endurance","Entertain (Storytelling)","Gamble","Gossip","Intuition","Melee (Basic)","Perception"],
+            "talents":  ["Diceman","Etiquette (Servants)","Strike To Stun","Tenacious"],
+            "npc_essential_talents": ["Strike To Stun"],
+            "trappings": ["Buckler","Leather Jerkin","Storm Lantern with Oil"]
+        },
+        "rank 2": {
+            "name": "Sentry",
+            "status": "Silver 2",
+            "advances": ["I"],
+            "skills": ["Athletics","Cool","Dodge","Intimidate","Melee (Polearm)","Ranged (Bow)"],
+            "talents":  ["Relentless","Reversal","Shieldsman","Strike Mighty Blow"],
+            "npc_essential_talents": [],
+            "trappings": ["Bow With 10 Arrows","Sleeved Mail Shirt","Shield","Spear"]
+        },
+        "rank 3": {
+            "name": "Honour Guard",
+            "status": "Silver 3",
+            "advances": ["S"],
+            "skills": ["Heal","Language (Battle)","Lore (Etiquette)","Melee (Two-Handed)"],
+            "talents":  ["Fearless (Intruders)","Jump Up","Stout-Hearted","Unshakeable"],
+            "npc_essential_talents": [],
+            "trappings": ["Great Weapon ***or*** Halberd","Helmet","Uniform"]
+        },
+        "rank 4": {
+            "name": "Guard Officer",
+            "status": "Silver 5",
+            "advances": ["Int"],
+            "skills": ["Leadership","Lore (Warfare)"],
+            "talents":  ["Combat Master","Furious Assault","Iron Will","Robust"],
+            "npc_essential_talents": [],
+            "trappings": ["Breastplate"]
+        }
+    },
+    "Knight": {
+        "earning skill": "Melee (Cavalry)",
+        "rank 1": {
+            "name": "Squire",
+            "status": "Silver 3",
+            "advances": ["S","I","Agi"],
+            "skills": ["Athletics","Animal Care","Charm Animal","Heal","Lore (Heraldry)","Melee (Cavalry)","Ride (Horse)","Trade (Farrier)"],
+            "talents":  ["Etiquette (Any)", "Roughrider", "Sturdy", "Warrior Born"],
+            "npc_essential_talents": ["Roughrider", "Sturdy"],
+            "trappings": ["Leather Jack", "Mail Shirt", "Riding Horse with Saddle and Tack", "Shield", "Trade Tools (Farrier)"]
+        },
+        "rank 2": {
+            "name": "Knight",
+            "status": "Silver 5",
+            "advances": ["WS"],
+            "skills": ["Cool","Dodge","Endurance","Intimidate","Language (Battle)","Melee (Any)"],
+            "talents":  ["Menacing","Seasoned Traveller","Shieldsman","Strike Mighty Blow"],
+            "npc_essential_talents": [],
+            "trappings": ["Destrier with Saddle and Tack","Melee Weapon (Any)","Lance","Plate Armour and Helm"]
+        },
+        "rank 3": {
+            "name": "First Knight",
+            "status": "Gold 2",
+            "advances": ["WP"],
+            "skills": ["Charm","Consume Alcohol","Leadership","Lore (Warfare)"],
+            "talents":  ["Fearless (Any)","Stout-hearted","Unshakeable","Warleader"],
+            "npc_essential_talents": ["Warleader"],
+            "trappings": ["Barding","Small Unit of Knights"]
+        },
+        "rank 4": {
+            "name": "Knight of the Inner Circle",
+            "status": "Gold 4",
+            "advances": ["Fel"],
+            "skills": ["Lore (Any)","Secret Signs (Knightly Order)"],
+            "talents":  ["Disarm","Inspiring","Iron Will","Strike to Injure"],
+            "npc_essential_talents": ["Inspiring"],
+            "trappings": ["Plumed Great Helm","Squire","Large Unit of Knights or Several Small Units of Knights"]
+        }
+    },
+    "Pit Fighter": {
+        "earning skill": "Melee (Any)",
+        "rank 1": {
+            "name": "Pugilist",
+            "status": "Brass 4",
+            "advances": ["WS","S","T"],
+            "skills": ["Athletics","Cool","Dodge","Endurance","Gamble","Intimidate","Melee (Any)","Melee (Brawling)"],
+            "talents":  ["Dirty Fighting","In-fighter","Iron Jaw","Reversal"],
+            "npc_essential_talents": ["Dirty Fighting","In-fighter","Iron Jaw"],
+            "trappings": ["Bandages","Knuckledusters","Leather Jack"]
+        },
+        "rank 2": {
+            "name": "Pit Fighter",
+            "status": "Silver 2",
+            "advances": ["I"],
+            "skills": ["Haggle","Intuition","Melee (Basic)","Melee (Flail or Two-handed)","Perception","Ranged (Entangling)"],
+            "talents":  ["Ambidextrous","Combat Reflexes","Dual Wielder","Shieldsman"],
+            "npc_essential_talents": [],
+            "trappings": ["Flail ***or*** Great Weapon","Hand Weapon","Net or Whip","Shield ***or*** Buckler"]
+        },
+        "rank 3": {
+            "name": "Pit Champion",
+            "status": "Silver 5",
+            "advances": ["Agi"],
+            "skills": ["Consume Alcohol","Gossip","Lore (Anatomy)","Perform (Fight)"],
+            "talents":  ["Combat Master","Disarm","Menacing","Robust"],
+            "npc_essential_talents": ["Menacing"],
+            "trappings": ["Breast Plate","Helmet"]
+        },
+        "rank 4": {
+            "name": "Pit Legend",
+            "status": "Gold 2",
+            "advances": ["Fel"],
+            "skills": ["Charm","Ranged (Any)"],
+            "talents":  ["Frightening","Furious Assault","Implacable","Reaction Strike"],
+            "npc_essential_talents": ["Frightening"],
+            "trappings": ["Quality Helmet"]
+        }
+    },
+    "Soldier" : {
+        "earning skill": "Melee (Basic)",
+        "rank 1" : {
+            "name": "Recruit",
+            "status": "Silver 1",
+            "advances": ["WS", "T", "WP"],
+            "skills" : ["Athletics","Climb","Cool","Dodge","Endurance","Language (Battle)","Melee (Basic)","Play (Drum or Fife)"],
+            "talents":  ["Diceman","Marksman","Strong Back","Warrior Born"],
+            "npc_essential_talents": [],
+            "trappings": ["Dagger","Leather Breastplate","Uniform"]
+        },
+        "rank 2" : {
+            "name": "Soldier",
+            "status": "Silver 3",
+            "advances": ["BS"],
+            "skills" : ["Consume Alcohol","Gamble","Gossip","Melee (Any)","Ranged (Any)","Outdoor Survival"],
+            "talents":  ["Drilled","Etiquette (Soldiers)","Rapid Reload","Shieldsman"],
+            "npc_essential_talents": ["Drilled"],
+            "trappings": ["Breastplate","Helmet","Weapon (Any)"]
+        },
+        "rank 3" : {
+            "name": "Sergeant",
+            "status": "Silver 5",
+            "advances": ["I"],
+            "skills" : ["Heal","Intuition","Leadership","Perception"],
+            "talents":  ["Combat Aware","Enclosed Fighter","Unshakeable","Warleader"],
+            "npc_essential_talents": ["Warleader"],
+            "trappings": ["Symbol of Rank","Unit of Troops"]
+        },
+        "rank 4" : {
+            "name": "Officer",
+            "status": "Gold 1",
+            "advances": ["Fel"],
+            "skills" : ["Lore (Warfare)","Navigation"],
+            "talents":  ["Inspiring","Public Speaking","Seasoned Traveller","Stout-hearted"],
+            "npc_essential_talents": ["Inspiring","Public Speaking"],
+            "trappings": ["Letter of Commission","Light Warhorse with Saddle and Tack","Map","Orders","Unit of Soldiers","Quality Uniform","Symbol of Rank"]
+        }
+    }
+}
