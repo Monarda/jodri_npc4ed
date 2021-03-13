@@ -1,0 +1,39 @@
+"" : {
+    "earning skill": "",
+    "rank 1" : {
+        "name": "",
+        "status": "",
+        "advances": [""],
+        "skills" : [""],
+        "talents":  [""],
+        "npc_suggested_talents": [],
+        "trappings": [""]
+    },
+    "rank 2" : {
+        "name": "",
+        "status": "",
+        "advances": [""],
+        "skills" : [""],
+        "talents":  [""],
+        "npc_suggested_talents": [],
+        "trappings": [""]
+    },
+    "rank 3" : {
+        "name": "",
+        "status": "",
+        "advances": [""],
+        "skills" : [""],
+        "talents":  [""],
+        "npc_suggested_talents": [],
+        "trappings": [""]
+    },
+    "rank 4" : {
+        "name": "",
+        "status": "",
+        "advances": [""],
+        "skills" : [""],
+        "talents":  [""],
+        "npc_suggested_talents": [],
+        "trappings": [""]
+    }
+}

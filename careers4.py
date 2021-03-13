@@ -95,8 +95,8 @@ class npc_4e:
         # Talents
         if self.starting_talents:
             retstr += "Starting Talents:  " + str(self.starting_talents) + "\n"
-        retstr += "Suggested Talents: " + str(self.suggested_talents) + "\n"
-        retstr += "Additional Talents: " + str(self.additional_talents) + "\n"
+        retstr += "Suggested Talents: " + str(self.suggested_talents.keys()) + "\n"
+        retstr += "Additional Talents: " + str(self.additional_talents.keys()) + "\n"
 
         # Traits
         retstr += 'Traits: ' + self._traits + '\n'
@@ -257,13 +257,13 @@ class npc_4e:
 
     @property
     def suggested_talents_by_career(self):
-        selector = lambda careerrank : careerrank['npc_essential_talents']
+        selector = lambda careerrank : careerrank['npc_suggested_talents']
 
         return self.__template_by_career(selector)
       
     @property
     def alternate_talents_by_career(self):
-        selector = lambda careerrank : set(careerrank['talents']) - set(careerrank['npc_essential_talents'])
+        selector = lambda careerrank : set(careerrank['talents']) - set(careerrank['npc_suggested_talents'])
 
         return self.__template_by_career(selector) 
 
@@ -347,7 +347,7 @@ class npc_4e:
                     self._skills[skill] = 5
 
             # Update the list of suggested talents
-            self._suggested_talents.update(careerrank['npc_essential_talents'])
+            self._suggested_talents.update(careerrank['npc_suggested_talents'])
 
             # And update the list of all available talents
             self._talents.update(careerrank['talents'])
@@ -372,7 +372,7 @@ class npc_4e:
 
 def main():
     # npc = npc_4e("human")
-    # npc.add_career("Engineer", 2)
+    # npc.add_career("Warrior Priest", 3)
 
     ## Hospitaller Cristina González
     # npc = npc_4e("Estalian", 
