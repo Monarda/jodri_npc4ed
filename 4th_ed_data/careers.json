@@ -2,7 +2,7 @@
     "Apothecary" : {
         "earning skill": "Trade (Apothecary)",
         "rank 1" : {
-            "name": "Apothecary’s Apprentice",
+            "name": "Apothecary's Apprentice",
             "status": "Brass 3",
             "advances": ["T","Dex","Int"],
             "skills" : ["Consume Alcohol","Heal","Language (Classical)","Lore (Chemistry)","Lore (Medicine)","Lore (Plants)","Trade (Apothecary)","Trade (Poisoner)"],
@@ -158,7 +158,7 @@
     "Physician" : {
         "earning skill": "Heal",
         "rank 1" : {
-            "name": "Physician’s Apprentice",
+            "name": "Physician's Apprentice",
             "status": "Brass 4",
             "advances": ["Dex", "Int", "WP"],
             "skills" : ["Bribery","Cool","Drive","Endurance","Gossip","Heal","Perception","Sleight of Hand"],
@@ -275,7 +275,7 @@
     "Wizard" : {
         "earning skill": "Language (Magick)",
         "rank 1" : {
-            "name": "Wizard’s Apprentice",
+            "name": "Wizard's Apprentice",
             "status": "Brass 3",
             "advances": ["WS","Int","WP"],
             "skills" : ["Channelling (Any Colour)","Dodge","Intuition","Language (Magick)","Lore (Magic)","Melee (Basic)","Melee (Polearm)","Perception"],
