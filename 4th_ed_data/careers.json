@@ -662,6 +662,84 @@
             "trappings": ["4 sets of Best Quality Courtly Garb","Quality Foil ***or*** Hand Mirror","500 GC","Jewellery worth 500 GC","Province"]
         }
     },
+    "Boatman" : {
+        "earning skill": "Sail",
+        "rank 1" : {
+            "name": "Boat-hand",
+            "status": "Silver 1",
+            "advances": ["S","T","Agi"],
+            "skills" : ["Consume Alcohol","Dodge","Endurance","Gossip","Melee (Brawling)","Row","Sail ","Swim"],
+            "talents":  ["Dirty Fighting","Fisherman","Strong Back","Strong Swimmer"],
+            "npc_suggested_talents": ["Strong Swimmer"],
+            "trappings": ["Hand Weapon (Boat Hook)","Leather Jack","Pole"]
+        },
+        "rank 2" : {
+            "name": "Boatman",
+            "status": "Silver 2",
+            "advances": ["I"],
+            "skills" : ["Athletics","Entertain (Storytelling)","Haggle","Intuition","Lore (Riverways)","Perception"],
+            "talents":  ["Etiquette (Guilder)","Seasoned Traveller","Very Strong","Waterman"],
+            "npc_suggested_talents": ["Waterman"],
+            "trappings": ["Rope","Rowboat"]
+        },
+        "rank 3" : {
+            "name": "Bargeswain",
+            "status": "Silver 3",
+            "advances": ["Dex"],
+            "skills" : ["Climb","Entertain (Singing)","Heal","Trade (Boatbuilding)"],
+            "talents":  ["Dealmaker","Embezzle","Nose for Trouble","Strike Mighty Blow"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","Trade Tools (Carpenter)"]
+        },
+        "rank 4" : {
+            "name": "Barge Master",
+            "status": "Silver 5",
+            "advances": ["Int"],
+            "skills" : ["Leadership","Navigation"],
+            "talents":  ["Menacing","Orientation","Pilot","Public Speaker"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hat","Riverboat and Crew"]
+        }
+    },
+    "Huffer" : {
+        "earning skill": "Lore (Riverways)",
+        "rank 1" : {
+            "name": "Riverguide",
+            "status": "Brass 4",
+            "advances": ["WS","T","I"],
+            "skills" : ["Consume Alcohol","Gossip","Intuition","Lore (Local)","Lore (Riverways)","Perception","Row","Swim"],
+            "talents":  ["Fisherman","Night Vision","Orientation","Waterman"],
+            "npc_suggested_talents": ["Waterman"],
+            "trappings": ["Hand Weapon (Boat Hook)","Storm Lantern and Oil"]
+        },
+        "rank 2" : {
+            "name": "Huffer",
+            "status": "Silver 1",
+            "advances": ["WP"],
+            "skills" : ["Charm","Cool","Entertain (Storytelling)","Language (Any)","Melee (Basic)","Navigation"],
+            "talents":  ["Dealmaker","Etiquette (Guilder)","Nose for Trouble","River Guide"],
+            "npc_suggested_talents": ["River Guide"],
+            "trappings": ["Leather Jerkin","Rope","Row Boat"]
+        },
+        "rank 3" : {
+            "name": "Pilot",
+            "status": "Silver 3",
+            "advances": ["Int"],
+            "skills" : ["Haggle","Intimidate","Lore (Local)","Lore (Wrecks)"],
+            "talents":  ["Acute Sense (Sight)","Pilot","Sea Legs","Very Strong"],
+            "npc_suggested_talents": ["Pilot"],
+            "trappings": ["Pole","Storm Lantern and Oil"]
+        },
+        "rank 4" : {
+            "name": "Master Pilot",
+            "status": "Silver 5",
+            "advances": ["Fel"],
+            "skills" : ["Leadership","Sail"],
+            "talents":  ["Sixth Sense","Sharp","Strong Swimmer","Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Boathand","Small Riverboat"]
+        }
+    },
     "Riverwarden" : {
         "earning skill": "Melee (Basic)",
         "rank 1" : {
@@ -699,6 +777,513 @@
             "talents":  ["Commanding Presence","Kingpin","Menacing","Orientation"],
             "npc_suggested_talents": ["Commanding Presence"],
             "trappings": ["Patrol Boats and Crew","Symbol of Rank"]
+        }
+    },
+    "Riverwoman" : {
+        "earning skill": "",
+        "rank 1" : {
+            "name": "Greenfish",
+            "status": "Brass 2",
+            "advances": ["T","Agi","Dex"],
+            "skills" : ["Athletics","Consume Alcohol","Dodge","Endurance","Gossip","Outdoor Survival","Row","Swim"],
+            "talents":  ["Fisherman","Gregarious","Strider (Marshes)","Strong Swimmer"],
+            "npc_suggested_talents": ["Fisherman","Strong Swimmer"],
+            "trappings": ["Bucket","Fishing Rod and Bait","Leather Leggings"]
+        },
+        "rank 2" : {
+            "name": "Riverwoman",
+            "status": "Brass 3",
+            "advances": ["WS"],
+            "skills" : ["Gamble","Lore (Local)","Lore (Riverways)","Ranged (Entangling)","Ranged (Throwing)","Set Trap"],
+            "talents":  ["Craftsman (Boatbuilder)","Rover","Strong Back","Waterman"],
+            "npc_suggested_talents": ["Waterman"],
+            "trappings": ["Eel Trap","Leather Jerkin","Net","Spear "]
+        },
+        "rank 3" : {
+            "name": "Riverwise",
+            "status": "Brass 5",
+            "advances": ["I"],
+            "skills" : ["Charm","Intuition","Melee (Polearm)","Perception"],
+            "talents":  ["Savant (Riverways)","Stout-hearted","Tenacious","Very Strong"],
+            "npc_suggested_talents": [],
+            "trappings": ["Row Boat","Storm Lantern and Oil"]
+        },
+        "rank 4" : {
+            "name": "River Elder",
+            "status": "Silver 2",
+            "advances": ["Fel"],
+            "skills" : ["Entertain (Storytelling)","Lore (Folklore)"],
+            "talents":  ["Master Craftsman (Boatbuilder)","Public Speaker","Sharp","Strong-minded"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hut or Riverboat"]
+        }
+    },
+    "Seaman" : {
+        "earning skill": "Sail",
+        "rank 1" : {
+            "name": "Landsman",
+            "status": "Silver 1",
+            "advances": ["Agi","Dex","Fel"],
+            "skills" : ["Climb","Consume Alcohol","Gamble","Gossip","Row","Melee (Brawling)","Sail","Swim"],
+            "talents":  ["Fisherman","Strider (Coastal)","Strong Back","Strong Swimmer"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bucket","Brush","Mop"]
+        },
+        "rank 2" : {
+            "name": "Seaman",
+            "status": "Silver 3",
+            "advances": ["WS"],
+            "skills" : ["Athletics","Dodge","Endurance","Entertain (Singing)","Language (any)","Melee (Basic)"],
+            "talents":  ["Catfall","Sea Legs","Seasoned Traveller","Strong Legs"],
+            "npc_suggested_talents": ["Sea Legs"],
+            "trappings": ["Hand Weapon (Boat Hook)","Leather Jerkin"]
+        },
+        "rank 3" : {
+            "name": "Boatswain",
+            "status": "Silver 5",
+            "advances": ["I"],
+            "skills" : ["Cool","Leadership","Perception","Trade (Carpenter)"],
+            "talents":  ["Old Salt","Strike Mighty Blow","Tenacious","Very Strong"],
+            "npc_suggested_talents": ["Old Salt"],
+            "trappings": ["Trade Tools (Carpenter)"]
+        },
+        "rank 4" : {
+            "name": "Ship’s Master",
+            "status": "Gold 2",
+            "advances": ["Int"],
+            "skills" : ["Charm","Navigation"],
+            "talents":  ["Orientation","Pilot","Public Speaking","Savvy"],
+            "npc_suggested_talents": ["Pilot"],
+            "trappings": ["Shipping Charts","Sailing Ship and Crew","Sextant","Spyglass"]
+        }
+    },
+    "Smuggler" : {
+        "earning skill": "Stealth (Rural or Urban)",
+        "rank 1" : {
+            "name": "River Runner",
+            "status": "Brass 2",
+            "advances": ["Agi","Dex","WP"],
+            "skills" : ["Athletics","Bribery","Cool","Consume Alcohol","Row","Sail","Stealth (Rural or Urban)","Swim"],
+            "talents":  ["Criminal","Fisherman","Strider (Marshes)","Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Large Sack","Mask or Scarves","Tinderbox","Storm Lantern and Oil"]
+        },
+        "rank 2" : {
+            "name": "Smuggler",
+            "status": "Brass 3",
+            "advances": ["I"],
+            "skills" : ["Haggle","Gossip","Lore (Local)","Melee (Basic)","Perception","Secret Signs (Smuggler)"],
+            "talents":  ["Dealmaker","Etiquette (Criminals)","Waterman","Very Strong"],
+            "npc_suggested_talents": [],
+            "trappings": ["2 Barrels","Hand Weapon","Leather Jack","Row Boat"]
+        },
+        "rank 3" : {
+            "name": "Master Smuggler",
+            "status": "Brass 5",
+            "advances": ["Int"],
+            "skills" : ["Evaluate","Intimidate","Intuition","Lore (Riverways)"],
+            "talents":  ["Briber","Fearless (Riverwardens)","Pilot","Strong Swimmer"],
+            "npc_suggested_talents": [],
+            "trappings": ["River Runner","Speedy Riverboat"]
+        },
+        "rank 4" : {
+            "name": "Smuggler King",
+            "status": "Silver 2",
+            "advances": ["Fel"],
+            "skills" : ["Language (Any)","Leadership"],
+            "talents":  ["Kingpin","Savvy","Strider (Coastal)","Sea Legs"],
+            "npc_suggested_talents": [],
+            "trappings": ["Disguise Kit","Small Fleet of Riverboats"]
+        }
+    },
+    "Stevedore" : {
+        "earning skill": "Endurance",
+        "rank 1" : {
+            "name": "Dockhand",
+            "status": "Brass 3",
+            "advances": ["WS","T","I"],
+            "skills" : ["Athletics","Climb","Consume Alcohol","Dodge","Endurance ","Gossip","Melee (Basic)","Swim"],
+            "talents":  ["Dirty Fighting","Strong Back","Sturdy","Very Strong"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon (Boat Hook)","Leather Gloves"]
+        },
+        "rank 2" : {
+            "name": "Stevedore",
+            "status": "Silver 1",
+            "advances": ["S"],
+            "skills" : ["Bribery","Entertain (Storytelling)","Gamble","Intimidate","Perception","Stealth (Urban)"],
+            "talents":  ["Criminal","Etiquette (Guilders)","Strong Legs","Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Guild Licence","Leather Jerkin","Pipe and Tobacco","Porter Cap"]
+        },
+        "rank 3" : {
+            "name": "Foreman",
+            "status": "Silver 3",
+            "advances": ["WP"],
+            "skills" : ["Cool","Evaluate","Intuition","Leadership"],
+            "talents":  ["Dealmaker","Embezzle","Etiquette (Criminals)","Public Speaking"],
+            "npc_suggested_talents": [],
+            "trappings": ["Gang of Stevedores","Whistle"]
+        },
+        "rank 4" : {
+            "name": "Dock Master",
+            "status": "Silver 5",
+            "advances": ["Int"],
+            "skills" : ["Charm","Lore (Taxes)"],
+            "talents":  ["Kingpin","Menacing","Numismatics","Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Office and Staff","Writing Kit"]
+        }
+    },
+    "Wrecker" : {
+        "earning skill": "Melee (Basic)",
+        "rank 1" : {
+            "name": "Cargo Scavenger",
+            "status": "Brass 2",
+            "advances": ["WS","S","I"],
+            "skills" : ["Climb","Consume Alcohol","Dodge","Endurance","Row","Melee (Basic) ","Outdoor Survival","Swim"],
+            "talents":  ["Break and Enter","Criminal","Fisherman","Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crowbar","Large Sack","Leather Gloves"]
+        },
+        "rank 2" : {
+            "name": "Wrecker",
+            "status": "Brass 3",
+            "advances": ["WP"],
+            "skills" : ["Bribery","Cool","Intuition","Navigation","Perception","Set Traps"],
+            "talents":  ["Flee!","Rover","Strong Swimmer","Trapper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon (Boat Hook)","Leather Jack","Storm Lantern and Oil"]
+        },
+        "rank 3" : {
+            "name": "River Pirate",
+            "status": "Brass 5",
+            "advances": ["BS"],
+            "skills" : ["Gossip","Intimidate","Ranged (Crossbow)","Stealth (Rural)"],
+            "talents":  ["Dirty Fighting","Etiquette (Criminals)","Menacing","Waterman"],
+            "npc_suggested_talents": ["Menacing"],
+            "trappings": ["Crossbow with 10 Bolts","Grappling Hook and Rope","Riverboat"]
+        },
+        "rank 4" : {
+            "name": "Wrecker Captain",
+            "status": "Silver 2",
+            "advances": ["Fel"],
+            "skills" : ["Leadership","Lore (Riverways)"],
+            "talents":  ["Furious Assault","In-fighter","Pilot","Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Fleet of Riverboats and Wrecker Crew","Keg of Ale","Manacles"]
+        }
+    },
+    "Bawd" : {
+        "earning skill": "Charm,",
+        "rank 1" : {
+            "name": "Hustler",
+            "status": "Brass 1",
+            "advances": ["Agi","Dex","Fel"],
+            "skills" : ["Bribery","Charm","Consume Alcohol","Entertain (Any)","Gamble","Gossip","Haggle","Intimidate"],
+            "talents":  ["Attractive","Alley Cat","Blather","Gregarious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Flask of Spirits"]
+        },
+        "rank 2" : {
+            "name": "Bawd",
+            "status": "Brass 3",
+            "advances": ["I"],
+            "skills" : ["Dodge","Endurance","Intuition","Lore (Local)","Melee (Basic)","Perception"],
+            "talents":  ["Ambidextrous","Carouser","Criminal","Resistant (Disease)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Dose of Weirdroot","Quality Clothing"]
+        },
+        "rank 3" : {
+            "name": "Procurer",
+            "status": "Silver 1",
+            "advances": ["WP"],
+            "skills" : ["Cool","Evaluate","Language (any)","Lore (Law)"],
+            "talents":  ["Dealmaker","Embezzle","Etiquette (Any)","Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["A Ring of Hustlers"]
+        },
+        "rank 4" : {
+            "name": "Ringleader",
+            "status": "Silver 3",
+            "advances": ["Int"],
+            "skills" : ["Leadership","Lore (Heraldry)"],
+            "talents":  ["Briber","Kingpin","Numismatics","Savvy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Townhouse with Discreet Back Entrance","a Ring of Bawds"]
+        }
+    },
+    "Charlatan" : {
+        "earning skill": "Charm,",
+        "rank 1" : {
+            "name": "Swindler",
+            "status": "Brass 3",
+            "advances": ["I","Dex","Fel"],
+            "skills" : ["Bribery","Consume Alcohol","Charm","Entertain (Storytelling)","Gamble","Gossip","Haggle","Sleight of Hand"],
+            "talents":  ["Cardsharp","Diceman","Etiquette (Any)","Luck"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","2 Sets of Clothing","Deck of Cards","Dice"]
+        },
+        "rank 2" : {
+            "name": "Charlatan",
+            "status": "Brass 5",
+            "advances": ["WP"],
+            "skills" : ["Cool","Dodge","Entertain (Acting)","Evaluate","Intuition","Perception"],
+            "talents":  ["Blather","Criminal","Fast Hands","Secret Identity"],
+            "npc_suggested_talents": [],
+            "trappings": ["1 Forged Document","2 Sets of Quality Clothing","Selection of Coloured Powders and Water","Selection of Trinkets and Charms"]
+        },
+        "rank 3" : {
+            "name": "Con Artist",
+            "status": "Silver 2",
+            "advances": ["Agi"],
+            "skills" : ["Language (Thief)","Lore (Heraldry)","Pick Lock","Secret Signs (Thief)"],
+            "talents":  ["Attractive","Cat-tongued","Dealmaker","Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Disguise Kit","Lock Picks","Multiple Forged Documents"]
+        },
+        "rank 4" : {
+            "name": "Scoundrel",
+            "status": "Silver 4",
+            "advances": ["Int"],
+            "skills" : ["Lore (Genealogy)","Research"],
+            "talents":  ["Gregarious","Master of Disguise","Nose for Trouble","Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["Forged Seal","Writing Kit"]
+        }
+    },
+    "Fence" : {
+        "earning skill": "Evaluate",
+        "rank 1" : {
+            "name": "Broker",
+            "status": "Silver 1",
+            "advances": ["I","Agi","Fel"],
+            "skills" : ["Charm","Consume Alcohol","Dodge","Evaluate","Gamble","Gossip","Haggle","Melee (Basic)"],
+            "talents":  ["Alley Cat","Cardsharp","Dealmaker","Gregarious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","Stolen Goods worth 3d10 Shillings"]
+        },
+        "rank 2" : {
+            "name": "Fence",
+            "status": "Silver 2",
+            "advances": ["Dex"],
+            "skills" : ["Cool","Intimidate","Intuition","Perception","Secret Signs (Thief)","Trade (Engraver)"],
+            "talents":  ["Criminal","Etiquette (Criminals)","Numismatics","Savvy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Eye-glass","Trade Tools (Engraver)","Writing Kit"]
+        },
+        "rank 3" : {
+            "name": "Master Fence",
+            "status": "Silver 3",
+            "advances": ["Int"],
+            "skills" : ["Bribery","Entertain (Storytelling)","Lore (Art)","Lore (Local)"],
+            "talents":  ["Kingpin","Strike to Stun","Suave","Super Numerate"],
+            "npc_suggested_talents": [],
+            "trappings": ["Pawnbroker’s Shop"]
+        },
+        "rank 4" : {
+            "name": "Black Marketeer",
+            "status": "Silver 4",
+            "advances": ["WP"],
+            "skills" : ["Lore (Heraldry)","Research"],
+            "talents":  ["Dirty Fighting","Iron Will","Menacing","Briber"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hired Muscle","Network of Informants","Warehouse"]
+        }
+    },
+    "Grave Robber" : {
+        "earning skill": "Stealth (Any)",
+        "rank 1" : {
+            "name": "Body Snatcher",
+            "status": "Brass 2",
+            "advances": ["S","I","WP"],
+            "skills" : ["Climb","Cool","Dodge","Endurance","Gossip","Intuition","Perception","Stealth (Any)"],
+            "talents":  ["Alley Cat","Criminal","Flee!","Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crowbar","Handcart","Hooded Cloak","Tarpaulin"]
+        },
+        "rank 2" : {
+            "name": "Grave Robber",
+            "status": "Brass 2",
+            "advances": ["WS"],
+            "skills" : ["Bribery","Drive","Evaluate","Haggle","Lore (Medicine)","Melee (Basic)"],
+            "talents":  ["Break and Enter","Night Vision","Resistance (Disease)","Very Strong"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","Hand Weapon","Spade","Storm Lantern and Oil"]
+        },
+        "rank 3" : {
+            "name": "Tomb Robber",
+            "status": "Silver 1",
+            "advances": ["Dex"],
+            "skills" : ["Lore (History)","Pick Lock","Research","Set Trap"],
+            "talents":  ["Read/Write","Strike Mighty Blow","Tenacious","Tunnel Rat"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon (Pick)","Horse and Cart","Leather Jack","Rope","Trade Tools (Thief)"]
+        },
+        "rank 4" : {
+            "name": "Treasure Hunter",
+            "status": "Silver 3",
+            "advances": ["Int"],
+            "skills" : ["Navigation","Trade (Engineer)"],
+            "talents":  ["Fearless (Undead)","Sixth Sense","Strongminded","Trapper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bedroll","Maps","Tent","Trade Tools (Engineer)","Writing Kit"]
+        }
+    },
+    "Outlaw" : {
+        "earning skill": "Intimidate",
+        "rank 1" : {
+            "name": "Brigand",
+            "status": "Brass 1",
+            "advances": ["WS","S","T"],
+            "skills" : ["Athletics","Consume Alcohol","Cool","Endurance","Gamble","Intimidate ","Melee (Basic)","Outdoor Survival"],
+            "talents":  ["Combat Aware","Criminal","Rover","Flee!"],
+            "npc_suggested_talents": ["Criminal"],
+            "trappings": ["Bedroll","Hand Weapon","Leather Jerkin","Tinderbox"]
+        },
+        "rank 2" : {
+            "name": "Outlaw",
+            "status": "Brass 2",
+            "advances": ["BS"],
+            "skills" : ["Dodge","Heal","Lore (Local)","Perception","Ranged (Bow)","Stealth (Rural)"],
+            "talents":  ["Dirty Fighting","Marksman","Strike to Stun","Trapper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bow with 10 Arrows","Shield","Tent"]
+        },
+        "rank 3" : {
+            "name": "Outlaw Chief",
+            "status": "Brass 4",
+            "advances": ["I"],
+            "skills" : ["Gossip","Intuition","Leadership","Ride (Horse)"],
+            "talents":  ["Rapid Reload","Roughrider","Menacing","Very Resilient"],
+            "npc_suggested_talents": ["Menacing"],
+            "trappings": ["Helmet","Riding Horse with Saddle and Tack","Sleeved Mail Shirt","Band of Outlaws"]
+        },
+        "rank 4" : {
+            "name": "Bandit King",
+            "status": "Silver 2",
+            "advances": ["Fel"],
+            "skills" : ["Charm","Lore (Empire)"],
+            "talents":  ["Deadeye Shot","Fearless (Road Wardens)","Iron Will","Robust"],
+            "npc_suggested_talents": [],
+            "trappings": ["'Fiefdom' of Outlaw Chiefs","Lair"]
+        }
+    },
+    "Racketeer" : {
+        "earning skill": "Intimidate",
+        "rank 1" : {
+            "name": "Thug",
+            "status": "Brass 3",
+            "advances": ["WS","S","T"],
+            "skills" : ["Consume Alcohol","Cool","Dodge","Endurance","Intimidate ","Lore (Local)","Melee (Brawling)","Stealth (Urban)"],
+            "talents":  ["Criminal","Etiquette (Criminals)","Menacing","Strike Mighty Blow"],
+            "npc_suggested_talents": ["Criminal"],
+            "trappings": ["Knuckledusters","Leather Jack"]
+        },
+        "rank 2" : {
+            "name": "Racketeer",
+            "status": "Brass 5",
+            "advances": ["Fel"],
+            "skills" : ["Bribery","Charm","Evaluate","Gossip","Language (Estalian or Tilean)","Melee (Basic)"],
+            "talents":  ["Dirty Fighting","Embezzle","Strike to Stun","Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","Hat","Mail Shirt"]
+        },
+        "rank 3" : {
+            "name": "Gang Boss",
+            "status": "Silver 3",
+            "advances": ["WP"],
+            "skills" : ["Intuition","Leadership","Perception","Ranged (Crossbow)"],
+            "talents":  ["Fearless (Watchmen)","Iron Will","Resistance (Poison)","Robust"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crossbow Pistol with 10 Bolts","Gang of Thugs and Racketeers","Lair"]
+        },
+        "rank 4" : {
+            "name": "Crime Lord",
+            "status": "Silver 5",
+            "advances": ["Int"],
+            "skills" : ["Lore (Law)","Lore (Politics)"],
+            "talents":  ["Commanding Presence","Kingpin","Frightening","Wealthy"],
+            "npc_suggested_talents": ["Kingpin"],
+            "trappings": ["Network of Informers","Quality Clothing and Hat","Subordinate Gang Bosses"]
+        }
+    },
+    "Thief" : {
+        "earning skill": "Stealth (Urban)",
+        "rank 1" : {
+            "name": "Prowler",
+            "status": "Brass 1",
+            "advances": ["I","Agi","WP"],
+            "skills" : ["Athletics","Climb","Cool","Dodge","Endurance","Intuition","Perception","Stealth (Urban)"],
+            "talents":  ["Alley Cat","Criminal","Flee!","Strike to Stun"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crowbar","Leather Jerkin","Sack"]
+        },
+        "rank 2" : {
+            "name": "Thief",
+            "status": "Brass 3",
+            "advances": ["Dex"],
+            "skills" : ["Evaluate","Gossip","Lore (Local)","Pick Lock","Secret Signs (Thief)","Sleight of Hand"],
+            "talents":  ["Break and Enter","Etiquette (Criminals)","Fast Hands","Shadow"],
+            "npc_suggested_talents": ["Break and Enter"],
+            "trappings": ["Trade Tools (Thief)","Rope"]
+        },
+        "rank 3" : {
+            "name": "Master Thief",
+            "status": "Brass 5",
+            "advances": ["S"],
+            "skills" : ["Bribery","Gamble","Intimidate","Ranged (Crossbow)"],
+            "talents":  ["Night Vision","Nimble Fingered","Step Aside","Trapper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crossbow Pistol with 10 Bolts"]
+        },
+        "rank 4" : {
+            "name": "Cat Burglar",
+            "status": "Silver 3",
+            "advances": ["Fel"],
+            "skills" : ["Charm","Set Trap"],
+            "talents":  ["Catfall","Scale Sheer Surface","Strong Legs","Wealthy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Dark Clothing","Grappling Hook","Mask or Scarves"]
+        }
+    },
+    "Witch" : {
+        "earning skill": "Language (Magick)",
+        "rank 1" : {
+            "name": "Hexer",
+            "status": "Brass 1",
+            "advances": ["WS","T","WP"],
+            "skills" : ["Channelling","Cool","Endurance","Gossip","Intimidate","Language (Magick)","Sleight of Hand","Stealth (Rural)"],
+            "talents":  ["Criminal","Instinctive Diction","Menacing","Petty Magic"],
+            "npc_suggested_talents": ["Petty Magic"],
+            "trappings": ["Candles","Chalk","Doll","Pins"]
+        },
+        "rank 2" : {
+            "name": "Witch",
+            "status": "Brass 2",
+            "advances": ["I"],
+            "skills" : ["Charm Animal","Dodge","Intuition","Melee (Polearm)","Perception","Trade (Herbalist)"],
+            "talents":  ["Arcane Magic (Witchery)","Attractive","Second Sight","Witch!"],
+            "npc_suggested_talents": ["Arcane Magic (Witchery)","Witch!"],
+            "trappings": ["Quarterstaff","Sack","Selection of Herbs","Trade Tools (Herbalist)"]
+        },
+        "rank 3" : {
+            "name": "Wyrd",
+            "status": "Brass 3",
+            "advances": ["Fel"],
+            "skills" : ["Bribery","Charm","Haggle","Lore (Dark Magic)"],
+            "talents":  ["Animal Affinity","Fast Hands","Frightening","Magical Sense"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","Cloak with Several Pockets","Lucky Charm"]
+        },
+        "rank 4" : {
+            "name": "Warlock",
+            "status": "Brass 5",
+            "advances": ["Int"],
+            "skills" : ["Lore (Daemonology)","Lore (Magic)"],
+            "talents":  ["Aethyric Attunement","Luck","Strong-minded","Very Resilient"],
+            "npc_suggested_talents": [],
+            "trappings": ["Robes","Skull"]
         }
     },
     "Cavalryman": {
@@ -914,7 +1499,7 @@
             "skills" : ["Evaluate","Intimidate","Language (Battle)","Lore (Giants)","Melee (Two-handed)","Outdoor Survival"],
             "talents":  ["Hardy","Implacable","Menacing","Reversal"],
             "npc_suggested_talents": ["Hardy","Implacable"],
-            "trappings": ["Great Axe","Jewellery","Troll’s Head"]
+            "trappings": ["Great Axe","Jewellery","Troll's Head"]
         },
         "rank 3" : {
             "name": "Dragon Slayer",
@@ -923,7 +1508,7 @@
             "skills" : ["Entertain (Storytelling)","Lore (Dragons)","Perception","Ranged (Thrown)"],
             "talents":  ["Ambidextrous","Furious Assault","Relentless","Robust"],
             "npc_suggested_talents": [],
-            "trappings": ["Giant’s Head","Throwing Axes"]
+            "trappings": ["Giant's Head","Throwing Axes"]
         },
         "rank 4" : {
             "name": "Daemon Slayer",
@@ -932,7 +1517,7 @@
             "skills" : ["Intuition","Lore (Chaos)"],
             "talents":  ["Combat Master","Frightening","Strike Mighty Blow","Very Strong"],
             "npc_suggested_talents": [],
-            "trappings": ["Dragon’s Head"]
+            "trappings": ["Dragon's Head"]
         }
     },
     "Soldier" : {
