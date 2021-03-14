@@ -83,7 +83,7 @@
             "name": "Student Lawyer",
             "status": "Brass 4",
             "advances": ["I","Dex","Int"],
-            "skills" : ["Consume Alcohol","Endurance","Haggle","Language (Classical)","Lore (Law) ","Lore (Theology)","Perception","Research"],
+            "skills" : ["Consume Alcohol","Endurance","Haggle","Language (Classical)","Lore (Law)","Lore (Theology)","Perception","Research"],
             "talents":  ["Blather","Etiquette (Scholar)","Read/Write","Speedreader"],
             "npc_suggested_talents": ["Blather","Read/Write"],
             "trappings": ["Book (Law)","Magnifying Glass"]
@@ -122,7 +122,7 @@
             "name": "Novitiate",
             "status": "Brass 1",
             "advances": ["Dex","Int","Fel"],
-            "skills" : ["Art (Calligraphy)","Cool","Endurance","Entertain (Storyteller)","Gossip","Heal","Lore (Theology) ","Pray"],
+            "skills" : ["Art (Calligraphy)","Cool","Endurance","Entertain (Storyteller)","Gossip","Heal","Lore (Theology)","Pray"],
             "talents":  ["Bless (Any)","Stone Soup","Panhandle","Read/Write"],
             "npc_suggested_talents": ["Panhandle"],
             "trappings": ["Religious Symbol","Robes"]
@@ -200,7 +200,7 @@
             "name": "Initiate",
             "status": "Brass 2",
             "advances": ["T","Agi","WP"],
-            "skills" : ["Athletics","Cool","Endurance","Intuition","Lore (Theology)","Perception","Pray ","Research"],
+            "skills" : ["Athletics","Cool","Endurance","Intuition","Lore (Theology)","Perception","Pray","Research"],
             "talents":  ["Bless (Any)","Holy Visions","Read/Write","Suave"],
             "npc_suggested_talents": [],
             "trappings": ["Religious Symbol","Robes"]
@@ -309,6 +309,201 @@
             "talents":  ["Combat Aware","Frightening","Iron Will","War Wizard"],
             "npc_suggested_talents": [],
             "trappings": ["Apprentice","Library (Magic)","Workshop (Magic)"]
+        }
+    },
+    "Agitator" : {
+        "earning skill": "Charm",
+        "rank 1" : {
+            "name": "Pamphleteer",
+            "status": "Brass 1",
+            "advances": ["BS","Int","Fel"],
+            "skills" : ["Art (Writing)","Bribery","Charm","Consume Alcohol","Gossip","Haggle","Lore (Politics)","Trade (Printing)"],
+            "talents":  ["Blather","Gregarious","Panhandle","Read/Write"],
+            "npc_suggested_talents": ["Read/Write"],
+            "trappings": ["Writing Kit","Hammer and Nails","Pile of Leaflets"]
+        },
+        "rank 2" : {
+            "name": "Agitator",
+            "status": "Brass 2",
+            "advances": ["Agi"],
+            "skills" : ["Cool","Dodge","Entertain (Storytelling)","Gamble","Intuition","Leadership"],
+            "talents":  ["Alley Cat","Argumentative","Impassioned Zeal","Public Speaker"],
+            "npc_suggested_talents": ["Public Speaker"],
+            "trappings": ["Leather Jack"]
+        },
+        "rank 3" : {
+            "name": "Rabble Rouser",
+            "status": "Brass 3",
+            "advances": ["WS"],
+            "skills" : ["Athletics","Intimidate","Melee (Brawling)","Perception"],
+            "talents":  ["Cat-tongued","Dirty Fighting","Flee!","Step Aside"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","Pamphleteer"]
+        },
+        "rank 4" : {
+            "name": "Demagogue",
+            "status": "Brass 5",
+            "advances": ["I"],
+            "skills" : ["Lore (Heraldry)","Ride (Horse)"],
+            "talents":  ["Etiquette (Any)","Master Orator","Schemer","Suave"],
+            "npc_suggested_talents": ["Master Orator"],
+            "trappings": ["3 Pamphleteers","Patron","Printing Press","Impressive Hat"]
+        }
+    },
+    "Artisan" : {
+        "earning skill": "Trade (Any)",
+        "rank 1" : {
+            "name": "Apprentice Artisan",
+            "status": "Brass 2",
+            "advances": ["S","T","Dex"],
+            "skills" : ["Athletics","Cool","Consume Alcohol","Dodge","Endurance","Evaluate","Stealth (Urban)","Trade (Any)"],
+            "talents":  ["Artistic","Craftsman (Any)","Strong Back","Very Strong"],
+            "npc_suggested_talents": ["Craftsman (Any)"],
+            "trappings": ["Chalk","Leather Jerkin","d10 rags"]
+        },
+        "rank 2" : {
+            "name": "Artisan",
+            "status": "Silver 1",
+            "advances": ["Fel"],
+            "skills" : ["Charm","Haggle","Lore (Local)","Gossip","Language (Guilder)","Perception"],
+            "talents":  ["Dealmaker","Etiquette (Guilder)","Nimble Fingered","Sturdy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Guild Licence","Trade Tools"]
+        },
+        "rank 3" : {
+            "name": "Master Artisan",
+            "status": "Silver 3",
+            "advances": ["WP"],
+            "skills" : ["Intuition","Leadership","Research","Secret Signs (Guilder)"],
+            "talents":  ["Acute Sense (Taste or Touch)","Master Tradesman (Any)","Read/Write","Tinker"],
+            "npc_suggested_talents": ["Master Tradesman (Any)","Read/Write"],
+            "trappings": ["Apprentice","Workshop"]
+        },
+        "rank 4" : {
+            "name": "Guildmaster",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Bribery","Intimidate"],
+            "talents":  ["Briber","Magnum Opus","Public Speaker","Schemer"],
+            "npc_suggested_talents": [],
+            "trappings": ["Guild","Quality Clothing"]
+        }
+    },
+    "Beggar" : {
+        "earning skill": "Charm,",
+        "rank 1" : {
+            "name": "Pauper",
+            "status": "Brass 0",
+            "advances": ["T","Agi","Fel"],
+            "skills" : ["Athletics","Charm","Consume Alcohol","Cool","Dodge","Endurance","Intuition","Stealth (Urban)"],
+            "talents":  ["Panhandle","Resistance (Disease)","Stone Soup","Very Resilient"],
+            "npc_suggested_talents": ["Panhandle","Stone Soup"],
+            "trappings": ["Poor Quality Blanket","Cup"]
+        },
+        "rank 2" : {
+            "name": "Beggar",
+            "status": "Brass 2",
+            "advances": ["WP"],
+            "skills" : ["Entertain (Acting)","Entertain (Any)","Gossip","Haggle","Perception","Sleight of Hand"],
+            "talents":  ["Alley Cat","Beneath Notice","Criminal","Etiquette (Criminals)"],
+            "npc_suggested_talents": ["Beneath Notice"],
+            "trappings": ["Crutch","Bowl"]
+        },
+        "rank 3" : {
+            "name": "Master Beggar",
+            "status": "Brass 4",
+            "advances": ["WS"],
+            "skills" : ["Charm Animal","Leadership","Lore (Local)","Secret Signs (Vagabond)"],
+            "talents":  ["Blather","Dirty Fighting","Hardy","Step Aside"],
+            "npc_suggested_talents": [],
+            "trappings": ["Disguise Kit","Hiding Place","Pauper Follower"]
+        },
+        "rank 4" : {
+            "name": "Beggar King",
+            "status": "Silver 2",
+            "advances": ["I"],
+            "skills" : ["Bribery","Intimidate"],
+            "talents":  ["Cat-tongued","Fearless (Watchmen)","Kingpin","Suave"],
+            "npc_suggested_talents": ["Kingpin"],
+            "trappings": ["Lair","Large Group of Beggar Followers"]
+        }
+    },
+    "Investigator" : {
+        "earning skill": "Perception",
+        "rank 1" : {
+            "name": "Sleuth",
+            "status": "Silver 1",
+            "advances": ["I","Agi","Int"],
+            "skills" : ["Charm","Climb","Cool","Gossip","Intuition","Perception","Stealth (Urban)","Track"],
+            "talents":  ["Alley Cat","Beneath Notice","Read/Write","Sharp"],
+            "npc_suggested_talents": [],
+            "trappings": ["Lantern","Lamp Oil","Journal","Quill and Ink"]
+        },
+        "rank 2" : {
+            "name": "Investigator",
+            "status": "Silver 2",
+            "advances": ["Fel"],
+            "skills" : ["Consume Alcohol","Dodge","Lore (Law)","Melee (Brawling)","Pick Lock","Sleight of Hand"],
+            "talents":  ["Etiquette (Any)","Savvy","Shadow","Tenacious"],
+            "npc_suggested_talents": ["Shadow"],
+            "trappings": ["Leather Jack","Hand Weapon","Magnifying Glass","Lockpick"]
+        },
+        "rank 3" : {
+            "name": "Master Investigator",
+            "status": "Silver 3",
+            "advances": ["Dex"],
+            "skills" : ["Bribery","Evaluate","Leadership","Lore (Any)"],
+            "talents":  ["Bookish","Break and Enter","Sixth Sense","Suave"],
+            "npc_suggested_talents": ["Sixth Sense"],
+            "trappings": ["Assistant","Office"]
+        },
+        "rank 4" : {
+            "name": "Detective",
+            "status": "Silver 5",
+            "advances": ["WP"],
+            "skills" : ["Intimidate","Lore (any)"],
+            "talents":  ["Acute Sense (Any)","Savant (Any)","Speedreader","Tower of Memories"],
+            "npc_suggested_talents": [],
+            "trappings": ["Network of Informants","Spyglass"]
+        }
+    },
+    "Noble" : {
+        "earning skill": "Leadership",
+        "rank 1" : {
+            "name": "Scion",
+            "status": "Gold 1",
+            "advances": ["WS","I","Dex"],
+            "skills" : ["Bribery","Consume Alcohol","Gamble","Intimidate","Leadership","Lore (Heraldry)","Melee (Fencing)","Play (Any)"],
+            "talents":  ["Etiquette (Nobles)","Luck","Noble Blood","Read/Write"],
+            "npc_suggested_talents": ["Etiquette (Nobles)","Noble Blood","Read/Write"],
+            "trappings": ["Courtly Garb","Foil ***or*** Hand Mirror","Jewellery worth 3d10 gc","Personal Servant"]
+        },
+        "rank 2" : {
+            "name": "Noble",
+            "status": "Gold 3",
+            "advances": ["Fel"],
+            "skills" : ["Charm","Gossip","Language (Classical)","Lore (Local)","Ride (Horse)","Melee (Parry)"],
+            "talents":  ["Attractive","Briber","Carouser","Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["4 Household Servants","Quality Courtly Garb","Courtly Garb","Riding Horse with Saddle and Harness ***or*** Coach","Main Gauche or Quality Cloak","Jewellery worth 50 gc"]
+        },
+        "rank 3" : {
+            "name": "Magnate",
+            "status": "Gold 5",
+            "advances": ["Int"],
+            "skills" : ["Language (Any)","Intuition","Lore (Politics)","Perception"],
+            "talents":  ["Coolheaded","Dealmaker","Public Speaker","Schemer"],
+            "npc_suggested_talents": [],
+            "trappings": ["2 sets of Quality Courtly Garb","200 GC","Fiefdom","Jewellery worth 200 GC","Signet Ring"]
+        },
+        "rank 4" : {
+            "name": "Noble Lord",
+            "status": "Gold 7",
+            "advances": ["WP"],
+            "skills" : ["Lore (Any)","Track"],
+            "talents":  ["Commanding Presence","Iron Will","Warleader","Wealthy"],
+            "npc_suggested_talents": ["Wealthy"],
+            "trappings": ["4 sets of Best Quality Courtly Garb","Quality Foil ***or*** Hand Mirror","500 GC","Jewellery worth 500 GC","Province"]
         }
     },
     "Riverwarden" : {
@@ -629,7 +824,7 @@
             "name": "Novitiate",
             "status": "Brass 2",
             "advances": ["WS","T","WP"],
-            "skills" : ["Cool","Dodge","Endurance","Heal","Leadership ","Lore (Theology)","Melee (Any)","Pray"],
+            "skills" : ["Cool","Dodge","Endurance","Heal","Leadership","Lore (Theology)","Melee (Any)","Pray"],
             "talents":  ["Bless (Any)","Etiquette (Cultists)","Read/Write","Strong-minded"],
             "npc_suggested_talents": [],
             "trappings": ["Book (Religion)","Leather Jerkin","Religious Symbol","Robes","Weapon (Any Melee)"]

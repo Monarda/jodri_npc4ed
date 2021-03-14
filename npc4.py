@@ -1,11 +1,15 @@
-import collections, json, math, sys
+import collections, json, random, string
 import bot_char_dat
 from pprint import pprint
 
-class npc_4e:
+class npc4:
+    """Generate and manage a 4th Edition NPC"""
 
-    def __init__(self, species, 
+    def __init__(self, species : str, 
                  characteristics=None, starting_skills=None, starting_talents=None, starting_trappings=None):
+        # initialise random number generator with OS (or time) seed
+        random.seed()
+
         # Load data about careers, talents and skills
         with open('4th_ed_data/careers.json') as f:
             self._careers_data = json.load(f)
@@ -23,10 +27,20 @@ class npc_4e:
         if species.lower() in known_species:
             index_species = species
         else:
-            if 'elf' in species.lower():
-                index_species = 'elf'
-            else:
-                index_species = 'human'
+            # Default to human if we don't otherwise understand the species requested
+            index_species = 'human'
+
+            # Check if the species text contains any of the known types of species
+            # So if 'Dark Elf' is supplied the index_species will be set to 'elf'
+            # This could have strange results if someone decides 'human-slayer' is a 
+            # species, but that doesn't seem like something worth guarding against!
+            for test_species in known_species:
+                if test_species in species.lower():
+                    index_species = test_species
+                    break
+                
+
+        self._index_species = index_species
 
         # Either use characteristics based on species (see 4th Ed Corebook p.311)
         # or use characteristics passed in by caller
@@ -44,18 +58,18 @@ class npc_4e:
 
         # Traits are always set based on species, which poses a problem if species is 'Reiklander'!
         species_npc_traits_4e = {
-            "human": 'Prejudice (choose one), Weapon +7',
-            "dwarf" : 'Animosity (choose one), Hatred (Greenskins), Magic Resistance (2), Night Vision, Prejudice (choose one), Weapon +7',
-            "halfling": 'Night Vision, Size (Small), Weapon +5',
-            "elf": 'Animosity (choose one), Prejudice (choose two), Night Vision, Weapon+7',
-            "gnome": 'Night vision, Size (Small), Weapon +7'
+            "human": {'Prejudice (choose one)', 'Weapon +7'},
+            "dwarf" : {'Animosity (choose one)', 'Hatred (Greenskins)', 'Magic Resistance (2)', 'Night Vision', 'Prejudice (choose one)', 'Weapon +7'},
+            "halfling": {'Night Vision', 'Size (Small)', 'Weapon +5'},
+            "elf": {'Animosity (choose one)', 'Prejudice (choose two)', 'Night Vision', 'Weapon+7'},
+            "gnome": {'Night vision', 'Size (Small)', 'Weapon +7'}
         }
         species_npc_optional_traits_4e = {
-            "human": 'Disease, Ranged +8 (50), Spellcaster',
-            "dwarf" : 'Fury, Ranged +8 (50)',
-            "halfling": 'Ranged +7 (25), Stealthy',
-            "elf": 'Arboreal, Magical, Magical Resistance, Ranged+9 (150), Stealthy, Spellcaster (any one), Tracker' ,
-            "gnome": ''       
+            "human": {'Disease', 'Ranged +8 (50)', 'Spellcaster'},
+            "dwarf" : {'Fury', 'Ranged +8 (50)'},
+            "halfling": {'Ranged +7 (25)', 'Stealthy'},
+            "elf": {'Arboreal', 'Magical', 'Magical Resistance', 'Ranged+9 (150)', 'Stealthy', 'Spellcaster (any one)', 'Tracker'},
+            "gnome": {'Spellcaster (Ulgu)'}       
         }
         self._traits            = species_npc_traits_4e[index_species]
         self._optional_traits   = species_npc_optional_traits_4e[index_species]
@@ -63,6 +77,8 @@ class npc_4e:
         self._starting_skills    = starting_skills if starting_skills is not None else set() # Need to record these to allow XP calculating
         self._starting_talents   = starting_talents if starting_talents is not None else set()
         self._starting_trappings = starting_trappings if starting_trappings is not None else set()
+
+        self._apply_statmod_stating_talents()
 
         self._careers_taken     = {}                    # Careers taken and their max rank
         self._career_history    = collections.deque()   # The order in which careers and ranks were taken
@@ -72,8 +88,7 @@ class npc_4e:
         self._trappings         = set()
 
 
-
-    def __str__(self):
+    def __str__(self) -> str:
         # Species and most recent career level name
         lastcareer, lastrank = next(reversed(self._career_history))
         lastcareername = self._careers_data[lastcareer]['rank {}'.format(lastrank)]['name']
@@ -112,20 +127,68 @@ class npc_4e:
 
         return retstr
 
+    def _apply_statmod_stating_talents(self):
+        for talent in self._starting_talents:
+            try:
+                if self._talents_data[talent]['stat_mod']:
+                    # Parse the stat mod and apply it
+                    tokens = self._talents_data[talent]['stat_mod'].split(' ')
+                    self._characteristics[tokens[1]] += int(tokens[0][1:])
+            except KeyError:
+                # Could mean the talent isn't in our list, or it could mean it doesn't have a stat_mod
+                # Either way we ignore the error
+                pass
+
+    @property
+    def _get_latest_career_info(self):
+        """Get information about the current career rank, i.e. the last one 
+           entered by the user
+        """
+        lastcareer, lastrank = next(reversed(self._career_history))
+        return self._careers_data[lastcareer]['rank {}'.format(lastrank)]
 
     @property 
-    def career_history(self):
+    def species(self) -> str:
+        """User supplied species, e.g. 'Reiklander Human'"""
+        return self._species
+
+    @property
+    def species_used(self) ->str:
+        """Species used when generating character, e.g. 'Estalian' is converted to 'human'"""
+        return self._index_species
+
+    @property
+    def careername(self) -> str:
+        """The current career name, e.g. 'Wizard Lord', 'Physician's Apprentice', etc."""
+        return self._get_latest_career_info['name']
+
+    @property 
+    def career_history(self) -> list:
+        """Career history as a list of career rank name, e.g. {'Novitiate', 'Nun', 'Warrior Priest'}"""
         return [self._careers_data[career]['rank {}'.format(rank)]['name'] for career,rank in self._career_history]
 
     @property
-    def characteristics(self):
+    def traits(self) -> list:
+        """ Racial traits """
+        return self._traits
+
+    @property
+    def optional_traits(self) -> list:
+        """ Optional racial traits """
+        return self._optional_traits
+
+    @property
+    def characteristics(self) -> dict:
+        """Characteristics as a dictionary, e.g. {"WS":45, "BS":30, ..., "Fel":35, "W":13}
+           Note that wounds are calculated when this function is called
+        """
         output_chars = dict(self._characteristics)
         output_chars.update({'W':self._wounds})
 
         return output_chars
 
-
-    def _characteristic_bonus(self, charb):
+    def _characteristic_bonus(self, charb) -> int:
+        """Get the specified characteristic bonus (e.g. 'WSB') of the NPC"""
         def _get_digit(number, n):
             return number // 10**n % 10        
 
@@ -133,9 +196,7 @@ class npc_4e:
 
     @property
     def _wounds(self):
-        def _get_digit(number, n):
-            return number // 10**n % 10
-
+        """Calculate the NPCs wounds based on their race (gnomes use a different formula)"""
         if self._species != 'gnome':
             wounds =    self._characteristic_bonus('SB') \
                     + 2*self._characteristic_bonus('TB') \
@@ -147,19 +208,26 @@ class npc_4e:
         return wounds
 
     @property
-    def _money(self):
-        # Get the most recent career and rank
+    def _money(self) -> str:
+        """Get the money of the trappings from the NPC's most recent career and rank
+           The is fully determined by Status.
+        """
+        # Get the most recent career and rank, and use that to find the NPC's status
         lastcareer, lastrank = next(reversed(self._career_history))
         status = self._careers_data[lastcareer]['rank {}'.format(lastrank)]['status']
 
+        # Use some string manipulation to turn status into money
         tokens = status.split(' ')
-
         money = "{}d10 {}".format(tokens[1],tokens[0])
 
         return money
 
     @property
     def trappings(self):
+        """All trappings appropriate to the current career rank. This includes all 
+           trappings at that rank and lower, but not outside the current career.
+           Currently class trappings are not included.
+        """
         # Most recent career and rank
         lastcareer, lastrank = next(reversed(self._career_history))
         
@@ -201,12 +269,54 @@ class npc_4e:
         return out_talents
 
     @property
-    def talents(self):
+    def talents(self) -> dict:
+        """All talents available to the NPC across all careers and ranks taken, and 
+           including starting talents (if any).
+
+           Returns a dictionary where the key is the talent name, and each value is
+           a sub-dictionary containing information about the associated tests
+           (if any), and the calculated max times the talent may be taken (usually 
+           based on a characterisic bonus).
+        """
         return self.__template_gettalents(set(self._talents) + self._starting_talents)
 
     @property
-    def starting_talents(self):
-        return self.__template_gettalents(self._starting_talents)
+    def starting_talents(self) -> dict:
+        """Starting talents (if any).
+
+           Returns a dictionary where the key is the talent name, and each value is
+           a sub-dictionary containing information about the associated tests
+           (if any), and the calculated max times the talent may be taken (usually 
+           based on a characterisic bonus).
+        """
+        return self.__template_gettalents(self._starting_talents) 
+
+    @property
+    def formatted_starting_talents(self) -> dict:
+        """Starting talents (if any), formatted to indicate if a stat_mod has been 
+           applied to a characteristic. For example, if Marksman has been taken as a
+           as a starting talent the +5 BS will have been factored into the characteristics
+           of the NPC, and the dictionary returned will include a key '*Marksman*'
+           (rather than 'Marksman')
+
+           Returns a dictionary where the key is the talent name, and each value is
+           a sub-dictionary containing information about the associated tests
+           (if any), and the calculated max times the talent may be taken (usually 
+           based on a characterisic bonus).
+        """
+        starting_talents = self.starting_talents
+        formatted_talents = {}
+        for talent in starting_talents:
+            try:
+                if 'stat_mod' in self._talents_data[talent]:
+                    formatted_talents['*{}*'.format(talent)] = starting_talents[talent]
+                else:
+                    formatted_talents[talent] = starting_talents[talent]
+            except KeyError:
+                # Group talents make things go bang. Ignore those errors
+                formatted_talents[talent] = starting_talents[talent]
+    
+        return formatted_talents 
 
     @property 
     def suggested_talents(self):
@@ -273,15 +383,15 @@ class npc_4e:
     # where total is the same as the value in the simple case and add is the amount to be added to the 
     # characteristic 
     @property
-    def skills(self):
-        calced_skills = {}
+    def skills(self, verbose=False):
+        simple_skills = {}
         complex_skills = {}
         for skill, value in sorted(self._skills.items()):
             if skill in self._skills_data:
                 skillchar  = self._skills_data[skill]['characteristic']
                 skilltotal = self._characteristics[skillchar] + value
 
-                calced_skills[skill] = skilltotal
+                simple_skills[skill] = skilltotal
                 complex_skills[skill] = {"total":skilltotal, "characteristic":skillchar, "add":value}
             else:
                 # This is presumably a group skill, so we need to find the longest match instead of the exact match
@@ -291,7 +401,7 @@ class npc_4e:
                         skillchar  = self._skills_data[key]['characteristic']
                         skilltotal = self._characteristics[skillchar] + value
 
-                        calced_skills[skill] = skilltotal
+                        simple_skills[skill] = skilltotal
                         complex_skills[skill] = {"total":skilltotal, "characteristic":skillchar, "add":value}
 
                         skillfound = True
@@ -300,11 +410,15 @@ class npc_4e:
                 if not skillfound:
                     raise KeyError("{} is not a known skill".format(skill))
 
-        return calced_skills, complex_skills
+        if verbose:
+            return complex_skills
+        else:
+            return simple_skills
 
 
-    # Add a single career rank to the NPC, e.g. Soldier 2
-    def _add_career_rank(self, careername, rank):
+    def add_career_rank(self, careername, rank) -> None:
+        """Add a single career rank to the NPC, e.g. 'Soldier 2'"""
+
         # Validate input
         if rank<1 or rank>4:
             raise IndexError('Rank less than 0 or greater than 4')
@@ -346,20 +460,39 @@ class npc_4e:
                 else:
                     self._skills[skill] = 5
 
-            # Update the list of suggested talents
-            self._suggested_talents.update(careerrank['npc_suggested_talents'])
+            # Update the list of suggested talents, but don't add any more that can only be taken once
+            onetakers = set()
+            for talentname in (self._suggested_talents.union(self._starting_talents)):
+                try:
+                    talent_info = self._talents_data[talentname]
+                    if isinstance(talent_info['max'],int) and talent_info['max']==1:
+                        onetakers.update([talentname])
+                except KeyError:
+                    pass    # Ignore key errors, they ought to come from talent group issues
+            modified_suggested_talents = set(careerrank['npc_suggested_talents']) - onetakers
+            modified_available_talents = list(set(careerrank['talents']) - onetakers)
+
+            if modified_suggested_talents:
+                self._suggested_talents.update(modified_suggested_talents)
+            else:
+                # If there are no suggested talents then we're still required to pick one talent per rank
+                # So we pick a random talent from those that are valid, but only if we've not been 
+                # through this exact rank before
+                if i==rank:
+                    self._suggested_talents.update(random.choices(modified_available_talents))
 
             # And update the list of all available talents
-            self._talents.update(careerrank['talents'])
+            self._talents.update(modified_available_talents)
 
         # Update career history
         self._careers_taken[careername] = rank
         self._career_history.append((careername,rank))
 
 
-    # Utility function to apply all career ranks up to the specified one to an NPC
-    # So calling with Soldier 3 will apply Soldier 1, Soldier 2, and Soldier 3
-    def add_career(self, careername, rank):
+    def add_career(self, careername, rank) -> None:
+        """ Utility function to apply all career ranks up to the specified one to an NPC.
+            So calling with Soldier 3 will apply Soldier 1, Soldier 2, and Soldier 3
+        """
         careername = careername.title()
         # Validate input
         career = self._careers_data[careername] # Blow up early if career not in list of careers
@@ -367,29 +500,41 @@ class npc_4e:
             raise IndexError('Rank less than 0 or greater than 4')
 
         for i in range(1, rank+1):
-            self._add_career_rank(careername, i)
+            self.add_career_rank(careername, i)
 
 
 def main():
-    # npc = npc_4e("human")
-    # npc.add_career("Warrior Priest", 3)
+    # npc = npc4("High elf")
+    # npc.add_career("Nun",2)
+    # npc.add_career("Warrior Priest",2)
 
-    ## Hospitaller Cristina González
-    # npc = npc_4e("Estalian", 
-    #              characteristics={"M":4, "WS":31, "BS":37, "S":30, "T":28, "I":36, "Agi":34, "Dex":28, "Int":29, "WP":30, "Fel":32},
-    #              starting_skills={"Consume Alcohol":5, "Haggle":5, "Language (Brettonian)":3, "Lore (Estalia)":3, "Sail (Caravel)": 5, "Swim":3},
-    #              starting_talents={"Linguistics", "Marksman", "Resistance (Mutation)", "Rover", "Very Strong"})
-    # npc.add_career("Soldier", 2)
-    # npc.add_career("Riverwarden", 1)
-    # npc.add_career("Knight", 2)
+    # Hospitaller Cristina González
+    npc = npc4("Estalian", 
+               characteristics={"M":4, "WS":31, "BS":37, "S":30, "T":28, "I":36, "Agi":34, "Dex":28, "Int":29, "WP":30, "Fel":32},
+               starting_skills={"Consume Alcohol":5, "Haggle":5, "Language (Brettonian)":3, "Lore (Estalia)":3, "Sail (Caravel)": 5, "Swim":3},
+               starting_talents={"Linguistics", "Marksman", "Resistance (Mutation)", "Rover", "Very Strong"})
+    npc.add_career("Soldier", 2)
+    npc.add_career("Riverwarden", 1)
+    npc.add_career("Knight", 2)
 
     # Doktor Helga Langstrasse
-    npc = npc_4e("human")
-    npc._add_career_rank("Scholar", 1)
-    npc._add_career_rank("Physician", 2)
-    npc._add_career_rank("Physician", 3)
+    # npc = npc4("human")
+    # npc._add_career_rank("Scholar", 1)
+    # npc._add_career_rank("Physician", 2)
+    # npc._add_career_rank("Physician", 3)
 
-    print(npc)
+    print("{} ({}) {}".format(npc.species, npc.species_used, npc.careername))
+    print("**Career History**: {}".format(' --> '.join(npc.career_history)))
+    print("`| {} |`".format('| '.join(npc.characteristics.keys())))
+    print("`| {} |`".format('| '.join([str(x) for x in npc.characteristics.values()])))
+    print("**Skills**: {}".format(', '.join("{!s}: {!r}".format(key,val) for (key,val) in npc.skills.items())))
+    if npc.starting_talents:
+        print("**Starting Talents**: {}".format(', '.join(npc.formatted_starting_talents.keys())))
+    print("**Suggested Talents**: {}".format(', '.join(npc.suggested_talents.keys())))
+    print("**Additional Talents**: {}".format(', '.join(npc.additional_talents.keys())))
+    print("**Traits**: {}".format(', '.join(npc.traits)))
+    print("**Optional Traits**: {}".format(', '.join(npc.optional_traits)))
+    print("**Trappings**: {}".format(', '.join(npc.trappings)))
 
 if __name__ == "__main__":
     # execute only if run as a script
