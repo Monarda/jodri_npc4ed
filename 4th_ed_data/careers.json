@@ -782,7 +782,7 @@
     "Knight": {
         "earning skill": "Melee (Cavalry)",
         "rank 1": {
-            "name":",",
+            "name":"Squire",
             "status": "Silver 3",
             "advances": ["S","I","Agi"],
             "skills": ["Athletics","Animal Care","Charm Animal","Heal","Lore (Heraldry)","Melee (Cavalry)","Ride (Horse)","Trade (Farrier)"],

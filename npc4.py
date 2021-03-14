@@ -78,13 +78,16 @@ class npc4:
         self._starting_trappings = starting_trappings if starting_trappings is not None else set()
 
         self._apply_statmod_stating_talents()
+        self._starting_characteristics = dict(self._characteristics)
 
         self._careers_taken     = {}                    # Careers taken and their max rank
         self._career_history    = collections.deque()   # The order in which careers and ranks were taken
-        self._skills            = starting_skills if starting_skills is not None else {}
+        self._skills            = dict(starting_skills) if starting_skills is not None else {}
         self._suggested_talents = set()
         self._talents           = set()
         self._trappings         = set()
+
+        self._xp_spend          = 0
 
 
     def __str__(self) -> str:
@@ -414,6 +417,40 @@ class npc4:
         else:
             return simple_skills
 
+    @property
+    def xp_spend(self):
+        # Careers completed
+        xp = 100 * (len(self.career_history)-1)
+
+        # Characteristics
+        characteristic_advance_costs = [25,30,40,50,70,90,120,150,190,230,280,330,390,450,520]
+        for char,value in self._characteristics.items():
+            advance_to_cost = value - self._starting_characteristics[char]
+
+            for i in range(advance_to_cost, 0,-1):
+                sac_idx = int(i / 5)
+
+                xp += characteristic_advance_costs[sac_idx]
+
+        # Skills
+        skill_advance_costs = [10,15,20,30,40,60,80,110,140,180,220,270,320,380,440]
+        for skill,value in self._skills.items():
+            advance_to_cost = value
+
+            if skill in self._starting_skills:
+                advances_no_cost = self._starting_skills[skill]
+            else:
+                advances_no_cost = 0
+        
+            for i in range(advance_to_cost, advances_no_cost,-1):
+                sac_idx = int(i / 5)
+
+                xp += skill_advance_costs[sac_idx]
+
+        # Talents
+        xp += 100 * len(self.suggested_talents)
+
+        return xp
 
     def add_career_rank(self, careername, rank) -> None:
         """Add a single career rank to the NPC, e.g. 'Soldier 2'"""
@@ -459,29 +496,31 @@ class npc4:
                 else:
                     self._skills[skill] = 5
 
-            # Update the list of suggested talents, but don't add any more that can only be taken once
-            onetakers = set()
-            for talentname in (self._suggested_talents.union(self._starting_talents)):
-                try:
-                    talent_info = self._talents_data[talentname]
-                    if isinstance(talent_info['max'],int) and talent_info['max']==1:
-                        onetakers.update([talentname])
-                except KeyError:
-                    pass    # Ignore key errors, they ought to come from talent group issues
-            modified_suggested_talents = set(careerrank['npc_suggested_talents']) - onetakers
-            modified_available_talents = list(set(careerrank['talents']) - onetakers)
+            # We only need to add new talents if we've not been in this rank before
+            # (Remember we visit ranks multiple times to up skills and characteristics)
+            if i==rank:
+                # Update the list of suggested talents, but don't add any more that can only be taken once
+                onetakers = set()
+                for talentname in (self._suggested_talents.union(self._starting_talents)):
+                    try:
+                        talent_info = self._talents_data[talentname]
+                        if isinstance(talent_info['max'],int) and talent_info['max']==1:
+                            onetakers.update([talentname])
+                    except KeyError:
+                        pass    # Ignore key errors, they ought to come from talent group issues
 
-            if modified_suggested_talents:
-                self._suggested_talents.update(modified_suggested_talents)
-            else:
-                # If there are no suggested talents then we're still required to pick one talent per rank
-                # So we pick a random talent from those that are valid, but only if we've not been 
-                # through this exact rank before
-                if i==rank:
+                modified_suggested_talents = set(careerrank['npc_suggested_talents']) - onetakers
+                modified_available_talents = list(set(careerrank['talents']) - onetakers)
+
+                if modified_suggested_talents:
+                    self._suggested_talents.update(modified_suggested_talents)
+                else:
+                    # If there are no suggested talents then we're still required to pick one talent per rank
+                    # So we pick a random talent from those that are valid
                     self._suggested_talents.update(random.choices(modified_available_talents))
 
-            # And update the list of all available talents
-            self._talents.update(modified_available_talents)
+                # And update the list of all available talents
+                self._talents.update(modified_available_talents)
 
         # Update career history
         self._careers_taken[careername] = rank
@@ -511,7 +550,7 @@ class npc4:
 
 def main():
     # npc = npc4("Human")
-    # npc.add_career("Watchman",3)
+    # npc.add_career("Watchman",1)
 
     # Hospitaller Cristina González
     npc = npc4("Estalian", 
@@ -546,6 +585,7 @@ def main():
     print("**Traits**: {}".format(', '.join(npc.traits)))
     print("**Optional Traits**: {}".format(', '.join(npc.optional_traits)))
     print("**Trappings**: {}".format(', '.join(npc.trappings)))
+    print("**XP Spend**: {:,}".format(npc.xp_spend))
 
 if __name__ == "__main__":
     # execute only if run as a script
