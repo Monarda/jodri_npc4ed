@@ -39,6 +39,7 @@
     "Detect Artefact": {"tests": "Intuition", "max": "IB", "group":false, "stat_mod":null},
     "Diceman": {"tests": ["Gamble","Sleight of Hand"], "max": "IntB", "group":false, "stat_mod":null},
     "Etiquette": {"tests":["Charm", "Gossip"], "max":"FelB", "group":true},
+    "Fearless": {"tests": "Cool", "max": "WPB", "group":true, "stat_mod":null},
     "Field Dressing": {"tests": "Heal", "max": "IntB"},
     "Marksman": {"tests": null, "max": 1, "group":false, "stat_mod":"+5 BS"},
     "Read/Write": {"tests": null, "max":1},

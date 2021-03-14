@@ -7,7 +7,7 @@
             "advances": ["T","Dex","Int"],
             "skills" : ["Consume Alcohol","Heal","Language (Classical)","Lore (Chemistry)","Lore (Medicine)","Lore (Plants)","Trade (Apothecary)","Trade (Poisoner)"],
             "talents":  ["Concoct","Craftsman (Apothecary)","Etiquette (Scholar)","Read/Write"],
-            "npc_suggested_talents": ["Concoct", "Read/Write"],
+            "npc_suggested_talents": ["Concoct","Read/Write"],
             "trappings": ["Book (Blank)","Healing Draught","Leather Jerkin","Pestle and Mortar"]
         },
         "rank 2" : {
@@ -160,7 +160,7 @@
         "rank 1" : {
             "name": "Physician's Apprentice",
             "status": "Brass 4",
-            "advances": ["Dex", "Int", "WP"],
+            "advances": ["Dex","Int","WP"],
             "skills" : ["Bribery","Cool","Drive","Endurance","Gossip","Heal","Perception","Sleight of Hand"],
             "talents":  ["Bookish","Field Dressing","Read/Write","Strike to Stun"],
             "npc_suggested_talents": ["Field Dressing","Read/Write"],
@@ -238,7 +238,7 @@
         "rank 1" : {
             "name": "Student",
             "status": "Brass 3",
-            "advances": ["T", "Int", "WP"],
+            "advances": ["T","Int","WP"],
             "skills" : ["Consume Alcohol","Entertain (Storytelling)","Gamble","Gossip","Haggle","Language (Classical)","Lore (Any)","Research"],
             "talents":  ["Carouser","Read/Write","Savvy","Super Numerate"],
             "npc_suggested_talents": ["Read/Write"],
@@ -467,6 +467,162 @@
             "trappings": ["Network of Informants","Spyglass"]
         }
     },
+    "Merchant" : {
+        "earning skill": "Haggle",
+        "rank 1" : {
+            "name": "Trader",
+            "status": "Silver 2",
+            "advances": ["Agi","WP","Fel"],
+            "skills" : ["Animal Care","Bribery","Charm","Consume Alcohol","Drive","Gamble","Gossip","Haggle"],
+            "talents":  ["Blather","Dealmaker","Read/Write","Suave"],
+            "npc_suggested_talents": ["Dealmaker","Read/Write"],
+            "trappings": ["Abacus","Mule and Cart","Canvas Tarpaulin","3d10 Silver Shillings"]
+        },
+        "rank 2" : {
+            "name": "Merchant",
+            "status": "Silver 5",
+            "advances": ["Int"],
+            "skills" : ["Evaluate","Intuition","Language (Any)","Language (Guilder)","Lore (Local)","Perception"],
+            "talents":  ["Briber","Embezzle","Etiquette (Guilder)","Savvy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Riverboat or 2 Wagons","Guild License","20 GC"]
+        },
+        "rank 3" : {
+            "name": "Master Merchant",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Cool","Language (Classical)","Navigation","Secret Signs (Guilder)"],
+            "talents":  ["Cat-tongued","Etiquette (Any)","Numismatics","Sharp"],
+            "npc_suggested_talents": [],
+            "trappings": ["Town House with Servants","Warehouse","100 GC"]
+        },
+        "rank 4" : {
+            "name": "Merchant Prince",
+            "status": "Gold 3",
+            "advances": ["WS"],
+            "skills" : ["Lore (Any)","Intimidate"],
+            "talents":  ["Iron Will","Luck","Schemer","Wealthy"],
+            "npc_suggested_talents": ["Wealthy"],
+            "trappings": ["2 Riverboats or 4 Wagons","Large Town Estate","2 Warehouses","1000 GC","Quality Clothing"]
+        }
+    },
+    "Rat Catcher" : {
+        "earning skill": "Melee (Basic)",
+        "rank 1" : {
+            "name": "Rat Hunter",
+            "status": "Brass 3",
+            "advances": ["WS","BS","WP"],
+            "skills" : ["Athletics","Animal Training (Dog)","Charm Animal","Consume Alcohol","Endurance","Melee (Basic)","Ranged (Sling)","Stealth (Underground or Urban)"],
+            "talents":  ["Night Vision","Resistance (Disease)","Strike Mighty Blow","Strike to Stun"],
+            "npc_suggested_talents": ["Night Vision","Resistance (Disease)"],
+            "trappings": ["Sling with Ammunition","Sack","Small but Vicious Dog"]
+        },
+        "rank 2" : {
+            "name": "Rat Catcher",
+            "status": "Silver 1",
+            "advances": ["T"],
+            "skills" : ["Animal Care","Gossip","Haggle","Lore (Poison)","Perception","Set Trap"],
+            "talents":  ["Enclosed Fighter","Etiquette (Guilder)","Fearless (Rats)","Very Resilient"],
+            "npc_suggested_talents": ["Enclosed Fighter","Fearless (Rats)"],
+            "trappings": ["Animal Traps","Pole for Dead Rats"]
+        },
+        "rank 3" : {
+            "name": "Sewer Jack",
+            "status": "Silver 2",
+            "advances": ["I"],
+            "skills" : ["Climb","Cool","Dodge","Ranged (Crossbow Pistol)"],
+            "talents":  ["Hardy","Stout-hearted","Strong Legs","Tunnel Rat"],
+            "npc_suggested_talents": ["Tunnel Rat"],
+            "trappings": ["Davrich Lantern","Hand Weapon","Leather Jack"]
+        },
+        "rank 4" : {
+            "name": "Exterminator",
+            "status": "Silver 3",
+            "advances": ["S"],
+            "skills" : ["Leadership","Track"],
+            "talents":  ["Fearless (Skaven)","Menacing","Robust","Strong-minded"],
+            "npc_suggested_talents": [],
+            "trappings": ["Assistant","Large and Vicious Dog","Sack of Poisoned Bait (10 doses of Heartkill)"]
+        }
+    },
+    "Townsman" : {
+        "earning skill": "Haggle",
+        "rank 1" : {
+            "name": "Clerk",
+            "status": "Silver 1",
+            "advances": ["Agi","Int","Fel"],
+            "skills" : ["Charm","Climb","Consume Alcohol","Drive","Dodge","Gamble","Gossip","Haggle"],
+            "talents":  ["Alley Cat","Beneath Notice","Etiquette (Servants)","Sturdy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Lodgings","Sturdy Boots"]
+        },
+        "rank 2" : {
+            "name": "Townsman",
+            "status": "Silver 2",
+            "advances": ["I"],
+            "skills" : ["Bribery","Evaluate","Intuition","Lore (Local)","Melee (Brawling)","Play (Any)"],
+            "talents":  ["Dealmaker","Embezzle","Etiquette (Any)","Gregarious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Modest Townhouse","Servant","Quill and Ink"]
+        },
+        "rank 3" : {
+            "name": "Town Councillor",
+            "status": "Silver 5",
+            "advances": ["Dex"],
+            "skills" : ["Cool","Lore (Law)","Perception","Research"],
+            "talents":  ["Briber","Public Speaker","Read/Write","Supportive"],
+            "npc_suggested_talents": [],
+            "trappings": ["Coach and Driver","Townhouse"]
+        },
+        "rank 4" : {
+            "name": "Burgomeister",
+            "status": "Gold 1",
+            "advances": ["WP"],
+            "skills" : ["Lore (Politics)","Intimidate"],
+            "talents":  ["Commanding Presence","Master Orator","Schemer","Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["Chains of Office","Coach and Footman","Quality Clothing","Large Townhouse with Gardens and Servants"]
+        }
+    },
+    "Watchman" : {
+        "earning skill": "",
+        "rank 1" : {
+            "name": "Watch Recruit",
+            "status": "Brass 3",
+            "advances": ["WS","S","Fel"],
+            "skills" : ["Athletics","Climb","Consume Alcohol","Dodge","Endurance","Gamble","Melee (Any)","Perception"],
+            "talents":  ["Drilled","Hardy","Strike to Stun","Tenacious"],
+            "npc_suggested_talents": ["Strike to Stun"],
+            "trappings": ["Hand Weapon","Leather Jack","Uniform"]
+        },
+        "rank 2" : {
+            "name": "Watchman",
+            "status": "Silver 1",
+            "advances": ["WP"],
+            "skills" : ["Charm","Cool","Gossip","Intimidate","Intuition","Lore (Local)"],
+            "talents":  ["Break and Enter","Criminal","Night Vision","Sprinter"],
+            "npc_suggested_talents": [],
+            "trappings": ["Lantern and Pole","Lamp Oil","Copper Badge"]
+        },
+        "rank 3" : {
+            "name": "Watch Sergeant",
+            "status": "Silver 3",
+            "advances": ["I"],
+            "skills" : ["Entertain (Storytelling)","Haggle","Leadership","Lore (Law)"],
+            "talents":  ["Disarm","Etiquette (Soldiers)","Fearless (Criminals)","Nose for Trouble"],
+            "npc_suggested_talents": [],
+            "trappings": ["Breastplate","Helm","Symbol of Rank"]
+        },
+        "rank 4" : {
+            "name": "Watch Captain",
+            "status": "Gold 1",
+            "advances": ["Agi"],
+            "skills" : ["Lore (Politics)","Ride (Horse)"],
+            "talents":  ["Public Speaker","Robust","Kingpin","Schemer"],
+            "npc_suggested_talents": [],
+            "trappings": ["Riding Horse with Saddle and Tack","Quality Hat","Quality Hand weapon","Quality Symbol of Rank"]
+        }
+    },
     "Noble" : {
         "earning skill": "Leadership",
         "rank 1" : {
@@ -511,7 +667,7 @@
         "rank 1" : {
             "name": "River Recruit",
             "status": "Silver 1",
-            "advances": ["BS", "S", "Fel"],
+            "advances": ["BS","S","Fel"],
             "skills" : ["Athletics","Dodge","Endurance","Melee (Basic)","Perception","Row","Sail (Any)","Swim"],
             "talents":  ["Strong Swimmer","Strong Back","Very Strong","Waterman"],
             "npc_suggested_talents": ["Strong Swimmer","Waterman"],
@@ -550,8 +706,8 @@
         "rank 1": {
             "name": "Horseman",
             "status": "Silver 2",
-            "advances": ["WS", "S", "Agi"],
-            "skills": ["Animal Care", "Charm Animal", "Endurance", "Language (Battle)", "Melee (Basic)", "Outdoor Survival", "Perception", "Ride (Horse)"],
+            "advances": ["WS","S","Agi"],
+            "skills": ["Animal Care","Charm Animal","Endurance","Language (Battle)","Melee (Basic)","Outdoor Survival","Perception","Ride (Horse)"],
             "talents":  ["Combat Aware","Crack The Whip","Lightning Reflexes","Roughrider"],
             "npc_suggested_talents": ["Crack The Whip","Roughrider"],
             "trappings": ["Leather Jack","Riding Horse with Saddle and Tack"]
@@ -578,10 +734,10 @@
             "name": "Cavalry Officer",
             "status": "Gold 2",
             "advances": ["Fel"],
-            "skills": ["Gamble", "Lore (Heraldry)"],
+            "skills": ["Gamble","Lore (Heraldry)"],
             "talents":  ["Accurate Shot","Inspiring","Reaction Strike","Robust"],
             "npc_suggested_talents": ["Inspiring"],
-            "trappings": ["Deck of Cards", "Quality Clothing"]
+            "trappings": ["Deck of Cards","Quality Clothing"]
         }
     },
     "Guard": {
@@ -589,7 +745,7 @@
         "rank 1": {
             "name": "Sentry",
             "status": "Silver 1",
-            "advances": ["WS", "T", "Agi"],
+            "advances": ["WS","T","Agi"],
             "skills": ["Consume Alcohol","Endurance","Entertain (Storytelling)","Gamble","Gossip","Intuition","Melee (Basic)","Perception"],
             "talents":  ["Diceman","Etiquette (Servants)","Strike To Stun","Tenacious"],
             "npc_suggested_talents": ["Strike To Stun"],
@@ -626,13 +782,13 @@
     "Knight": {
         "earning skill": "Melee (Cavalry)",
         "rank 1": {
-            "name": "Squire",
+            "name":",",
             "status": "Silver 3",
             "advances": ["S","I","Agi"],
             "skills": ["Athletics","Animal Care","Charm Animal","Heal","Lore (Heraldry)","Melee (Cavalry)","Ride (Horse)","Trade (Farrier)"],
-            "talents":  ["Etiquette (Any)", "Roughrider", "Sturdy", "Warrior Born"],
-            "npc_suggested_talents": ["Roughrider", "Sturdy"],
-            "trappings": ["Leather Jack", "Mail Shirt", "Riding Horse with Saddle and Tack", "Shield", "Trade Tools (Farrier)"]
+            "talents":  ["Etiquette (Any)","Roughrider","Sturdy","Warrior Born"],
+            "npc_suggested_talents": ["Roughrider","Sturdy"],
+            "trappings": ["Leather Jack","Mail Shirt","Riding Horse with Saddle and Tack","Shield","Trade Tools (Farrier)"]
         },
         "rank 2": {
             "name": "Knight",
@@ -659,7 +815,7 @@
             "skills": ["Lore (Any)","Secret Signs (Knightly Order)"],
             "talents":  ["Disarm","Inspiring","Iron Will","Strike to Injure"],
             "npc_suggested_talents": ["Inspiring"],
-            "trappings": ["Plumed Great Helm","Squire","Large Unit of Knights or Several Small Units of Knights"]
+            "trappings": ["Plumed Great Helm",",","Large Unit of Knights or Several Small Units of Knights"]
         }
     },
     "Pit Fighter": {
@@ -784,7 +940,7 @@
         "rank 1" : {
             "name": "Recruit",
             "status": "Silver 1",
-            "advances": ["WS", "T", "WP"],
+            "advances": ["WS","T","WP"],
             "skills" : ["Athletics","Climb","Cool","Dodge","Endurance","Language (Battle)","Melee (Basic)","Play (Drum or Fife)"],
             "talents":  ["Diceman","Marksman","Strong Back","Warrior Born"],
             "npc_suggested_talents": [],

@@ -40,7 +40,7 @@
     "Secret Signs": {"characteristic":  "Int", "advanced": true, "group": true},
     "Set Trap": {"characteristic":  "Dex", "advanced": true, "group": false},
     "Sleight of Hand": {"characteristic":  "Dex", "advanced": true, "group": false},
-    "Stealth": {"characteristic":  "Ag", "advanced": false, "group": false},
+    "Stealth": {"characteristic":  "Agi", "advanced": false, "group": false},
     "Swim": {"characteristic":  "S", "advanced": false, "group": false},
     "Track": {"characteristic":  "I", "advanced": true, "group": false},
     "Trade": {"characteristic":  "Dex", "advanced": true, "group": true}

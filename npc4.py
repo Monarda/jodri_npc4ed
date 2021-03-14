@@ -25,7 +25,7 @@ class npc4:
 
         known_species = {"human", "dwarf", "halfling", "elf", "gnome"}
         if species.lower() in known_species:
-            index_species = species
+            index_species = species.lower()
         else:
             # Default to human if we don't otherwise understand the species requested
             index_species = 'human'
@@ -39,7 +39,6 @@ class npc4:
                     index_species = test_species
                     break
                 
-
         self._index_species = index_species
 
         # Either use characteristics based on species (see 4th Ed Corebook p.311)
@@ -170,12 +169,12 @@ class npc4:
     @property
     def traits(self) -> list:
         """ Racial traits """
-        return self._traits
+        return sorted(self._traits)
 
     @property
     def optional_traits(self) -> list:
         """ Optional racial traits """
-        return self._optional_traits
+        return sorted(self._optional_traits)
 
     @property
     def characteristics(self) -> dict:
@@ -502,11 +501,17 @@ class npc4:
         for i in range(1, rank+1):
             self.add_career_rank(careername, i)
 
+    def advance_skill(self, skill, value):
+        """Allow a skill to be advanced manually. Useful for tweaks or out-of-career advances"""
+        if skill in self._skills:
+            self._skills[skill] += value
+        else:
+            self._skills[skill] = value
+
 
 def main():
-    # npc = npc4("High elf")
-    # npc.add_career("Nun",2)
-    # npc.add_career("Warrior Priest",2)
+    # npc = npc4("Human")
+    # npc.add_career("Watchman",3)
 
     # Hospitaller Cristina González
     npc = npc4("Estalian", 
@@ -516,6 +521,8 @@ def main():
     npc.add_career("Soldier", 2)
     npc.add_career("Riverwarden", 1)
     npc.add_career("Knight", 2)
+    npc.advance_skill("Lore (Reikland)", 5)
+    # npc.advance_talent("Suave")   # Not sure how to implement this yet
 
     # Doktor Helga Langstrasse
     # npc = npc4("human")
@@ -523,6 +530,10 @@ def main():
     # npc._add_career_rank("Physician", 2)
     # npc._add_career_rank("Physician", 3)
 
+    ## __str__ produces more information but less nicely formatted
+    # print(npc)
+
+    # Nicely formatted and also makes it easier to see which properties to use to access the NPC data
     print("{} ({}) {}".format(npc.species, npc.species_used, npc.careername))
     print("**Career History**: {}".format(' --> '.join(npc.career_history)))
     print("`| {} |`".format('| '.join(npc.characteristics.keys())))
