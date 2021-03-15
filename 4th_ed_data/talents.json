@@ -1,7 +1,7 @@
 {
     "Accurate Shot": {"tests": "Bs", "max":"BSB"},
     "Acute Sense": {"tests": "Perception", "max":"IB", "group":true},
-    "Aetheryic Attunement": {"tests": "Channelling (Any)", "max":"IB"},
+    "Aetheryic Attunement": {"tests": "Channelling", "max":"IB"},
     "Alley Cat": {"tests": "Stealth (Urban)", "max":"IB"},
     "Ambidextrous" : {"tests": null, "max":2},
     "Animal Affinity": {"tests": "Charm Animal", "max":"WPB"},

@@ -204,13 +204,13 @@ class npc4:
 
     @property
     def _wounds(self):
-        """Calculate the NPCs wounds based on their race (gnomes use a different formula)"""
-        if self._species != 'gnome':
-            wounds =    self._characteristic_bonus('SB') \
-                    + 2*self._characteristic_bonus('TB') \
+        """Calculate the NPCs wounds based on their race"""
+        if self._index_species=='halfling' or self._index_species == 'gnome':
+            wounds =  2*self._characteristic_bonus('TB') \
                     +   self._characteristic_bonus('WPB')
         else:
-            wounds =  2*self._characteristic_bonus('TB') \
+            wounds =    self._characteristic_bonus('SB') \
+                    + 2*self._characteristic_bonus('TB') \
                     +   self._characteristic_bonus('WPB')
 
         # Only support Hardy once for now
@@ -528,13 +528,15 @@ class npc4:
 
                 modified_suggested_talents = set(careerrank['npc_suggested_talents']) - onetakers
                 modified_available_talents = list(set(careerrank['talents']) - onetakers)
+                
+                # If there are no suggested talents then we're still required to pick one talent per rank
+                # And sometimes the suggested talent is from an earlier career rank
+                # So we pick a random talent from those that are valid
+                if not modified_suggested_talents or not set(modified_available_talents).intersection(modified_suggested_talents):
+                    self._suggested_talents.update(random.choices(modified_available_talents))
 
                 if modified_suggested_talents:
                     self._suggested_talents.update(modified_suggested_talents)
-                else:
-                    # If there are no suggested talents then we're still required to pick one talent per rank
-                    # So we pick a random talent from those that are valid
-                    self._suggested_talents.update(random.choices(modified_available_talents))
 
                 # And update the list of all available talents
                 self._talents.update(modified_available_talents)
@@ -566,8 +568,25 @@ class npc4:
 
 
 def main():
-    # npc = npc4("Human")
-    # npc.add_career("Wrecker",3)
+    # random.seed()
+    # chars = {"M":4,
+    #          "WS": random.randint(1,11)+random.randint(1,11)+20,
+    #          "BS": random.randint(1,11)+random.randint(1,11)+20,
+    #          "S":  random.randint(1,11)+random.randint(1,11)+20,
+    #          "T":  random.randint(1,11)+random.randint(1,11)+20,
+    #          "I":  random.randint(1,11)+random.randint(1,11)+20,
+    #          "Agi":random.randint(1,11)+random.randint(1,11)+20,
+    #          "Dex":random.randint(1,11)+random.randint(1,11)+20,
+    #          "Int":random.randint(1,11)+random.randint(1,11)+20,
+    #          "WP": random.randint(1,11)+random.randint(1,11)+20,
+    #          "Fel":random.randint(1,11)+random.randint(1,11)+20,
+    #          }
+
+    # npc = npc4("Human", 
+    #            characteristics=chars)
+    # npc.add_career("Stevedore",1)
+    # npc.add_career("Boatman",1)
+    # npc.add_career("Pit Fighter",2)
 
     # Hospitaller Cristina González
     npc = npc4("Estalian", 
