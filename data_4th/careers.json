@@ -246,7 +246,7 @@
             "name": "Student",
             "status": "Brass 3",
             "advances": ["T","Int","WP"],
-            "skills" : ["Consume Alcohol","Entertain (Storytelling)","Gamble","Gossip","Haggle","Language (Classical)","Lore (Any)","Research"],
+            "skills" : ["Consume Alcohol","Entertain (Storytelling)","Gamble","Gossip","Haggle","Language (Classical)","Lore (Any 1)","Research"],
             "talents":  ["Carouser","Read/Write","Savvy","Super Numerate"],
             "npc_suggested_talents": ["Read/Write"],
             "trappings": ["Alcohol","Book","Opinions","Writing Kit"]
@@ -255,7 +255,7 @@
             "name": "Scholar",
             "status": "Silver 2",
             "advances": ["I"],
-            "skills" : ["Art (Writing)","Intuition","Language (Any)","Lore (Any)","Perception","Trade (Any)"],
+            "skills" : ["Art (Writing)","Intuition","Language (Any 1)","Lore (Any 2)","Perception","Trade (Any)"],
             "talents":  ["Bookish","Etiquette (Scholars)","Speedreader","Suave"],
             "npc_suggested_talents": [],
             "trappings": ["Access to a Library","Degree"]
@@ -264,8 +264,8 @@
             "name": "Fellow",
             "status": "Silver 5",
             "advances": ["Fel"],
-            "skills" : ["Entertain (Lecture)","Intimidate","Language (Any)","Lore (Any)"],
-            "talents":  ["Linguistics","Public Speaker","Savant (Any)","Tower of Memories"],
+            "skills" : ["Entertain (Lecture)","Intimidate","Language (Any 2)","Lore (Any 3)"],
+            "talents":  ["Linguistics","Public Speaker","Savant (Any 1)","Tower of Memories"],
             "npc_suggested_talents": [],
             "trappings": ["Mortarboard","Robes"]
         },
@@ -273,8 +273,8 @@
             "name": "Professor",
             "status": "Gold 1",
             "advances": ["Dex"],
-            "skills" : ["Entertain (Rhetoric)","Lore (Any)"],
-            "talents":  ["Magnum Opus","Master Orator","Savant (Any)","Sharp"],
+            "skills" : ["Entertain (Rhetoric)","Lore (Any 4)"],
+            "talents":  ["Magnum Opus","Master Orator","Savant (Any 2)","Sharp"],
             "npc_suggested_talents": [],
             "trappings": ["Study"]
         }

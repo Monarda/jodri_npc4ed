@@ -1,24 +1,25 @@
 import collections, json, random, string
 import bot_char_dat
 from pprint import pprint
-
+from data_4th.bestiary import *
 
 # Load data about careers, talents and skills
 # Does this make sense at module scope?
-with open('4th_ed_data/careers.json') as f:
+with open('data_4th/careers.json') as f:
     _careers_data = json.load(f)
 
-with open('4th_ed_data/skills.json') as f:
+with open('data_4th/skills.json') as f:
     _skills_data = json.load(f)
 
-with open('4th_ed_data/talents.json') as f:
+with open('data_4th/talents.json') as f:
     _talents_data = json.load(f)
 
 class npc4:
     """Generate and manage a 4th Edition NPC"""
 
     def __init__(self, species : str, 
-                 characteristics=None, starting_skills=None, starting_talents=None, starting_trappings=None):
+                 characteristics=None, starting_skills=None, starting_talents=None, starting_trappings=None,
+                 randomise=True):
         # initialise random number generator with OS (or time) seed
         random.seed()
 
@@ -26,8 +27,8 @@ class npc4:
         # one of the known species words (i.e. dwarf, halfing, elf or gnome)
         self._species = species
 
-        known_species = {"human", "dwarf", "halfling", "elf", "gnome"}
-        if species.lower() in known_species:
+        self._known_species = species_npc_characteristics_4e.keys()
+        if species.lower() in self._known_species:
             index_species = species.lower()
         else:
             # Default to human if we don't otherwise understand the species requested
@@ -37,7 +38,7 @@ class npc4:
             # So if 'Dark Elf' is supplied the index_species will be set to 'elf'
             # This could have strange results if someone decides 'human-slayer' is a 
             # species, but that doesn't seem like something worth guarding against!
-            for test_species in known_species:
+            for test_species in self._known_species:
                 if test_species in species.lower():
                     index_species = test_species
                     break
@@ -47,34 +48,28 @@ class npc4:
         # Either use characteristics based on species (see 4th Ed Corebook p.311)
         # or use characteristics passed in by caller
         if not characteristics:
-            species_npc_characteristics_4e = {
-                "human":    {"M":4, "WS":30, "BS":30, "S":30, "T":30, "I":30, "Agi":30, "Dex":30, "Int":30, "WP":30, "Fel":30},
-                "dwarf":    {"M":4, "WS":40, "BS":30, "S":30, "T":40, "I":30, "Agi":20, "Dex":40, "Int":30, "WP":50, "Fel":20},
-                "halfling": {"M":4, "WS":20, "BS":40, "S":20, "T":30, "I":30, "Agi":30, "Dex":30, "Int":30, "WP":30, "Fel":30},
-                "elf":      {"M":5, "WS":40, "BS":40, "S":30, "T":30, "I":50, "Agi":40, "Dex":40, "Int":40, "WP":40, "Fel":30},
-                "gnome":    {"M":3, "WS":30, "BS":20, "S":20, "T":25, "I":40, "Agi":40, "Dex":40, "Int":40, "WP":50, "Fel":25}
-            }
-            self._characteristics = species_npc_characteristics_4e[index_species]
+            
+            base_characteristics = species_npc_characteristics_4e[index_species]
+
+            # Apply randomisation to the stats
+            if randomise:
+                for stat,value in base_characteristics.items():
+                    if stat!="M":
+                        if value>10:
+                            base_characteristics[stat] = (value - 10) + random.randint(1,11) + random.randint(1,11)
+                        else:
+                            base_characteristics[stat] = random.randint(1,11)
+
+            self._characteristics = base_characteristics
         else:
             self._characteristics = characteristics
 
         # Traits are always set based on species
-        species_npc_traits_4e = {
-            "human": {'Prejudice (choose one)', 'Weapon +7'},
-            "dwarf" : {'Animosity (choose one)', 'Hatred (Greenskins)', 'Magic Resistance (2)', 'Night Vision', 'Prejudice (choose one)', 'Weapon +7'},
-            "halfling": {'Night Vision', 'Size (Small)', 'Weapon +5'},
-            "elf": {'Animosity (choose one)', 'Prejudice (choose two)', 'Night Vision', 'Weapon+7'},
-            "gnome": {'Night vision', 'Size (Small)', 'Weapon +7'}
-        }
-        species_npc_optional_traits_4e = {
-            "human": {'Disease', 'Ranged +8 (50)', 'Spellcaster'},
-            "dwarf" : {'Fury', 'Ranged +8 (50)'},
-            "halfling": {'Ranged +7 (25)', 'Stealthy'},
-            "elf": {'Arboreal', 'Magical', 'Magical Resistance', 'Ranged+9 (150)', 'Stealthy', 'Spellcaster (any one)', 'Tracker'},
-            "gnome": {'Spellcaster (Ulgu)'}       
-        }
         self._traits            = species_npc_traits_4e[index_species]
         self._optional_traits   = species_npc_optional_traits_4e[index_species]
+
+        if index_species=="mutant" or index_species=="cultist":
+            self._index_species = "human"
 
         # Record starting skills, talents, etc.
         self._starting_skills    = starting_skills if starting_skills is not None else set() # Need to record these to allow XP calculating
@@ -94,13 +89,19 @@ class npc4:
         self._xp_spend          = 0
 
 
-    def __str__(self) -> str:
-        # Species and most recent career level name
-        lastcareer, lastrank = next(reversed(self._career_history))
-        lastcareername = _careers_data[lastcareer]['rank {}'.format(lastrank)]['name']
+    @property
+    def known_species(self):
+        return self._known_species
 
-        retstr  = self._species.title() + " " + lastcareername + '\n'
-        retstr += 'Career history: ' + str(self.career_history) + '\n'
+    def __str__(self) -> str:
+        retstr = ''
+        # Species and most recent career level name
+        if self._career_history:
+            lastcareer, lastrank = next(reversed(self._career_history))
+            lastcareername = _careers_data[lastcareer]['rank {}'.format(lastrank)]['name']
+
+            retstr  = self._species.title() + " " + lastcareername + '\n'
+            retstr += 'Career history: ' + str(self.career_history) + '\n'
 
         # Characteristics
         retstr += str(self.characteristics) + '\n'
@@ -152,8 +153,11 @@ class npc4:
         """Get information about the current career rank, i.e. the last one 
            entered by the user
         """
-        lastcareer, lastrank = next(reversed(self._career_history))
-        return _careers_data[lastcareer]['rank {}'.format(lastrank)]
+        if self._career_history:
+            lastcareer, lastrank = next(reversed(self._career_history))
+            return _careers_data[lastcareer]['rank {}'.format(lastrank)]
+        else:
+            return {}
 
     @property 
     def species(self) -> str:
@@ -168,7 +172,10 @@ class npc4:
     @property
     def careername(self) -> str:
         """The current career name, e.g. 'Wizard Lord', 'Physician's Apprentice', etc."""
-        return self._get_latest_career_info['name']
+        if self._career_history:
+            return self._get_latest_career_info['name']
+        else:
+            return None
 
     @property 
     def career_history(self) -> list:
@@ -205,13 +212,23 @@ class npc4:
     @property
     def _wounds(self):
         """Calculate the NPCs wounds based on their race"""
-        if self._index_species=='halfling' or self._index_species == 'gnome':
+        wounds =    self._characteristic_bonus('SB') \
+                + 2*self._characteristic_bonus('TB') \
+                +   self._characteristic_bonus('WPB')
+
+        if "Size (Tiny)" in self._traits:
+            wounds = 1
+        elif "Size (Little)" in self._traits:
+            wounds = self._characteristic_bonus('TB')
+        elif "Size (Small)" in self._traits:
             wounds =  2*self._characteristic_bonus('TB') \
                     +   self._characteristic_bonus('WPB')
-        else:
-            wounds =    self._characteristic_bonus('SB') \
-                    + 2*self._characteristic_bonus('TB') \
-                    +   self._characteristic_bonus('WPB')
+        elif "Size (Large)" in self._traits:
+            wounds *= 2
+        elif "Size (Enormous)" in self._traits:
+            wounds *= 4
+        elif "Size (Monstrous)" in self._traits:
+            wounds *= 8
 
         # Only support Hardy once for now
         if "Hardy" in self._starting_talents:
@@ -235,21 +252,24 @@ class npc4:
         return money
 
     @property
-    def trappings(self):
+    def trappings(self) -> set:
         """All trappings appropriate to the current career rank. This includes all 
            trappings at that rank and lower, but not outside the current career.
            Currently class trappings are not included.
         """
         # Most recent career and rank
-        lastcareer, lastrank = next(reversed(self._career_history))
-        
-        trappings = set() 
-        for i in range(1,lastrank+1):
-            trappings.update( _careers_data[lastcareer]['rank {}'.format(i)]['trappings'] )
+        if self._career_history:
+            lastcareer, lastrank = next(reversed(self._career_history))
+            
+            trappings = set() 
+            for i in range(1,lastrank+1):
+                trappings.update( _careers_data[lastcareer]['rank {}'.format(i)]['trappings'] )
 
-        trappings.update( [self._money] )
+            trappings.update( [self._money] )
 
-        return sorted(trappings.union(self._starting_trappings))
+            return sorted(trappings.union(self._starting_trappings))
+        else:
+            return set()
 
     def __template_gettalents(self, selector):
         out_talents = {}
@@ -437,7 +457,7 @@ class npc4:
     @property
     def xp_spend(self):
         # Careers completed
-        xp = 100 * (len(self.career_history)-1)
+        xp = max(100 * (len(self.career_history)-1),0)
 
         # Characteristics
         characteristic_advance_costs = [25,30,40,50,70,90,120,150,190,230,280,330,390,450,520]
@@ -601,12 +621,14 @@ def main():
     # npc.advance_talent("Suave")   # Not sure how to implement this yet
 
     # # Doktor Helga Langstrasse
-    # npc = npc4("human")
+    # npc = npc4("human", randomise=False)
     # npc.add_career_rank("Scholar", 1)
     # npc.add_career_rank("Physician", 2)
     # npc.add_career_rank("Physician", 3)
 
     ## __str__ produces more information but less nicely formatted
+    npc = npc4("Skaven")
+    npc.add_career("Engineer",3)
     print(npc)
 
     # Nicely formatted and also makes it easier to see which properties to use to access the NPC data
