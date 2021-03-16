@@ -546,7 +546,7 @@ class Npc4:
         xp = max(100 * (len(self.career_history)-1),0)
 
         # Characteristics
-        characteristic_advance_costs = [25,30,40,50,70,90,120,150,190,230,280,330,390,450,520]
+        characteristic_advance_costs = [25,30,40,50,70,90,120,150,190,230,280,330,390,450,520,590,670,750]
         for char,value in self._characteristics.items():
             advance_to_cost = value - self._starting_characteristics[char]
 
