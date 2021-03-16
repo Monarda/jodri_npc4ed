@@ -473,7 +473,7 @@
             "name": "Detective",
             "status": "Silver 5",
             "advances": ["WP"],
-            "skills" : ["Intimidate","Lore (any)"],
+            "skills" : ["Intimidate","Lore (Any)"],
             "talents":  ["Acute Sense (Any)","Savant (Any)","Speedreader","Tower of Memories"],
             "npc_suggested_talents": [],
             "trappings": ["Network of Informants","Spyglass"]
@@ -705,7 +705,7 @@
             "status": "Silver 5",
             "advances": ["WP"],
             "skills" : ["Charm","Leadership","Lore (Art)","Lore (Heraldry)"],
-            "talents":  ["Acute Sense (Any)","Dealmaker","Etiquette (any)","Nose for Trouble"],
+            "talents":  ["Acute Sense (Any)","Dealmaker","Etiquette (Any)","Nose for Trouble"],
             "npc_suggested_talents": [],
             "trappings": ["Apprentice","Patron","Workshop (Artist)"]
         },
@@ -837,6 +837,526 @@
             "talents":  ["Commanding Presence","Iron Will","Warleader","Wealthy"],
             "npc_suggested_talents": ["Wealthy"],
             "trappings": ["4 sets of Best Quality Courtly Garb","Quality Foil ***or*** Hand Mirror","500 GC","Jewellery worth 500 GC","Province"]
+        }
+    },
+    "Servant" : {
+        "class": "Courtier",
+        "earning skill": "",
+        "rank 1" : {
+            "name": "Menial",
+            "status": "Silver 1",
+            "advances": ["S","T","Agi"],
+            "skills" : ["Athletics","Climb","Drive","Dodge","Endurance ","Intuition","Perception","Stealth (Any)"],
+            "talents":  ["Beneath Notice","Strong Back","Strong-minded","Sturdy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Floor Brush"]
+        },
+        "rank 2" : {
+            "name": "Servant",
+            "status": "Silver 3",
+            "advances": ["I"],
+            "skills" : ["Animal Care","Consume Alcohol","Evaluate","Gamble","Gossip","Haggle"],
+            "talents":  ["Etiquette (Servants)","Shadow","Tenacious","Well-prepared"],
+            "npc_suggested_talents": [],
+            "trappings": ["Livery"]
+        },
+        "rank 3" : {
+            "name": "Attendant",
+            "status": "Silver 5",
+            "advances": ["Int"],
+            "skills" : ["Charm","Cool","Intimidate","Lore (Local)"],
+            "talents":  ["Embezzle","Resistance (Poison)","Suave","Supportive"],
+            "npc_suggested_talents": [],
+            "trappings": ["Quality Livery","Storm Lantern","Tinderbox","Lamp Oil"]
+        },
+        "rank 4" : {
+            "name": "Steward",
+            "status": "Gold 1",
+            "advances": ["Fel"],
+            "skills" : ["Leadership","Melee (Basic)"],
+            "talents":  ["Etiquette (Any)","Numismatics","Read/Write","Savvy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","Fine Clothes","Servant"]
+        }
+    },
+    "Spy" : {
+        "class": "Courtier",
+        "earning skill": "Gossip",
+        "rank 1" : {
+            "name": "Informer",
+            "status": "Brass 3",
+            "advances": ["Agi","WP","Fel"],
+            "skills" : ["Bribery","Charm","Cool","Gamble","Gossip ","Haggle","Perception","Stealth (Any)"],
+            "talents":  ["Blather","Carouser","Gregarious","Shadow"],
+            "npc_suggested_talents": [],
+            "trappings": ["Charcoal stick","Sling Bag containing 2 different sets of clothing and Hooded Cloak"]
+        },
+        "rank 2" : {
+            "name": "Spy",
+            "status": "Silver 3",
+            "advances": ["WS"],
+            "skills" : ["Climb","Entertain (Act)","Intuition","Melee (Basic)","Secret Signs (Any)","Sleight of Hand"],
+            "talents":  ["Etiquette (Any)","Lip Reading","Read/Write","Secret Identity"],
+            "npc_suggested_talents": ["Secret Identity"],
+            "trappings": ["Informer","Hand Weapon","Disguise Kit","Ring of Informers","Telescope"]
+        },
+        "rank 3" : {
+            "name": "Agent",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Animal Care","Animal Training (Pigeon)","Language (Any)","Leadership"],
+            "talents":  ["Attractive","Cat-tongued","Master of Disguise","Mimic"],
+            "npc_suggested_talents": [],
+            "trappings": ["Book (Cryptography)","Ring of Spies and Informers","Loft of Homing Pigeons","Quill and Ink"]
+        },
+        "rank 4" : {
+            "name": "Spymaster",
+            "status": "Gold 4",
+            "advances": ["Int"],
+            "skills" : ["Lore (Any)","Research"],
+            "talents":  ["Briber","Schemer","Suave","Tower of Memories"],
+            "npc_suggested_talents": [],
+            "trappings": ["Office and Staff","Large Spy Ring of Agents, Spies, and Informers"]
+        }
+    },
+    "Warden" : {
+        "class": "Courtier",
+        "earning skill": "Perception",
+        "rank 1" : {
+            "name": "Custodian",
+            "status": "Silver 1",
+            "advances": ["S","T","WP"],
+            "skills" : ["Athletics","Charm Animal","Consume Alcohol","Cool","Endurance","Intuition","Lore (Local)","Perception"],
+            "talents":  ["Menacing","Night Vision","Sharp","Strike to Stun"],
+            "npc_suggested_talents": [],
+            "trappings": ["Keys","Lantern","Lamp Oil","Livery"]
+        },
+        "rank 2" : {
+            "name": "Warden",
+            "status": "Silver 3",
+            "advances": ["WS"],
+            "skills" : ["Animal Care","Melee (Basic)","Outdoor Survival","Ranged (Bow)","Ride (Horse)","Swim"],
+            "talents":  ["Animal Affinity","Etiquette (Servants)","Strider (Any)","Rover"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon or Bow with 10 arrows","Riding Horse with Saddle and Harness","Leather Jack"]
+        },
+        "rank 3" : {
+            "name": "Seneschal",
+            "status": "Gold 1",
+            "advances": ["Fel"],
+            "skills" : ["Bribery","Charm","Gossip","Leadership"],
+            "talents":  ["Embezzle","Numismatics","Read/Write","Supportive"],
+            "npc_suggested_talents": [],
+            "trappings": ["Breastplate","Ceremonial Staff of Office","Staff of Wardens and Custodians"]
+        },
+        "rank 4" : {
+            "name": "Governor",
+            "status": "Gold 3",
+            "advances": ["Int"],
+            "skills" : ["Evaluate","Language (Any)"],
+            "talents":  ["Commanding Presence","Etiquette (Any)","Savant (Local)","Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["Aide","Governor's Residence","Servant"]
+        }
+    },
+    "Bailiff" : {
+        "class": "Peasant",
+        "earning skill": "Intimidate",
+        "rank 1" : {
+            "name": "Tax Collector",
+            "status": "Silver 1",
+            "advances": ["WS","I","WP"],
+            "skills" : ["Cool","Dodge","Endurance","Gossip","Haggle","Intimidate","Melee (Basic)","Perception"],
+            "talents":  ["Embezzle","Numismatics","Strong Back","Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand weapon","Small lock box"]
+        },
+        "rank 2" : {
+            "name": "Bailiff",
+            "status": "Silver 5",
+            "advances": ["Fel"],
+            "skills" : ["Bribery","Charm","Evaluate","Intuition","Leadership","Lore (Local)"],
+            "talents":  ["Break and Enter","Criminal","Public Speaking","Strike to Stun"],
+            "npc_suggested_talents": [],
+            "trappings": ["Leather Jack","3 Tax Collectors"]
+        },
+        "rank 3" : {
+            "name": "Reeve",
+            "status": "Gold 1",
+            "advances": ["Agi"],
+            "skills" : ["Animal Care","Lore (Heraldry)","Navigation","Ride (Horse)"],
+            "talents":  ["Kingpin","Menacing","Nose for Trouble","Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Horse with Saddle and Tack","Breastplate","Bailiff"]
+        },
+        "rank 4" : {
+            "name": "Magistrate",
+            "status": "Gold 3",
+            "advances": ["Int"],
+            "skills" : ["Language (Classical)","Lore (Law)"],
+            "talents":  ["Commanding Presence","Iron Will","Savvy","Schemer"],
+            "npc_suggested_talents": [],
+            "trappings": ["Library (Law)","Quality Robes","Seal of Office"]
+        }
+    },
+    "Hedge Witch" : {
+        "class": "Peasant",
+        "earning skill": "",
+        "rank 1" : {
+            "name": "Hedge Apprentice",
+            "status": "Brass 1",
+            "advances": ["T","I","Dex"],
+            "skills" : ["Channelling","Endurance","Intuition ","Language (Magick)","Lore (Folklore)","Lore (Herbs)","Outdoor Survival","Perception"],
+            "talents":  ["Fast Hands","Petty Magic","Rover","Strider (Woodlands)"],
+            "npc_suggested_talents": ["Petty Magic"],
+            "trappings": ["1d10 Lucky Charms","Quarterstaff","Backpack"]
+        },
+        "rank 2" : {
+            "name": "Hedge Witch",
+            "status": "Brass 2",
+            "advances": ["Int"],
+            "skills" : ["Cool","Gossip","Heal","Lore (Local)","Trade (Charms)","Trade (Herbalist)"],
+            "talents":  ["Aethyric Attunement","Animal Affinity","Arcane Magic (Hedgecraft)","Sixth Sense"],
+            "npc_suggested_talents": ["Arcane Magic (Hedgecraft)"],
+            "trappings": ["Antitoxin Kit","Healing Poultice","Trade Tools (Herbalist)"]
+        },
+        "rank 3" : {
+            "name": "Hedge Master",
+            "status": "Brass 3",
+            "advances": ["Fel"],
+            "skills" : ["Haggle","Lore (Genealogy)","Lore (Magic)","Lore (Spirits)"],
+            "talents":  ["Craftsman (Herbalist)","Magical Sense","Pure Soul","Resistance (Disease)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Isolated Hut","Apprentice"]
+        },
+        "rank 4" : {
+            "name": "Hedgewise",
+            "status": "Brass 5",
+            "advances": ["WP"],
+            "skills" : ["Intimidate","Pray"],
+            "talents":  ["Acute Sense (Any)","Master Craftsman (Herbalist)","Night Vision","Strong-minded"],
+            "npc_suggested_talents": [],
+            "trappings": ["Assortment of Animal Skulls","Ceremonial Cloak and Garland"]
+        }
+    },
+    "Herbalist" : {
+        "class": "Peasant",
+        "earning skill": "",
+        "rank 1" : {
+            "name": "Herb Gatherer",
+            "status": "Brass 2",
+            "advances": ["T","I","Agi"],
+            "skills" : ["Charm Animal","Climb","Endurance","Lore (Herbs)","Outdoor Survival","Perception","Swim","Trade (Herbalist)"],
+            "talents":  ["Acute Sense (Taste)","Orientation","Rover","Strider (Any)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Boots","Cloak","Sling Bag containing Assortment of Herbs"]
+        },
+        "rank 2" : {
+            "name": "Herbalist",
+            "status": "Brass 4",
+            "advances": ["Dex"],
+            "skills" : ["Consume Alcohol","Cool","Gossip","Haggle","Heal","Lore (Local)"],
+            "talents":  ["Dealmaker","Nimble Fingered","Sharp","Sturdy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon (Sickle)","Healing Poultice","Trade Tools (Herbalist)"]
+        },
+        "rank 3" : {
+            "name": "Herb Master",
+            "status": "Silver 1",
+            "advances": ["Fel"],
+            "skills" : ["Intuition","Leadership","Lore (Medicine)","Trade (Poisons)"],
+            "talents":  ["Craftsman (Herbalist)","Field Dressing","Hardy","Savvy"],
+            "npc_suggested_talents": ["Craftsman (Herbalist)"],
+            "trappings": ["Herb Gatherer","3 Healing Poultices","Healing Draught","Workshop (Herbalist)"]
+        },
+        "rank 4" : {
+            "name": "Herbwise",
+            "status": "Silver 3",
+            "advances": ["Int"],
+            "skills" : ["Drive","Navigation"],
+            "talents":  ["Concoct","Master Tradesman (Herbalist)","Resistance (Poison)","Savant (Herbs)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Pony and Cart"]
+        }
+    },
+    "Hunter" : {
+        "class": "Peasant",
+        "earning skill": "",
+        "rank 1" : {
+            "name": "Trapper",
+            "status": "Brass 2",
+            "advances": ["S","T","Dex"],
+            "skills" : ["Charm Animal","Climb","Endurance","Lore (Beasts)","Outdoor Survival","Perception","Ranged (Sling)","Set Trap"],
+            "talents":  ["Hardy","Rover","Strider (Any)","Trapper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Selection of Animal Traps","Hand Weapon","Sling with 10 Stone Bullets","Sturdy Boots and Cloak"]
+        },
+        "rank 2" : {
+            "name": "Hunter",
+            "status": "Brass 4",
+            "advances": ["BS"],
+            "skills" : ["Cool","Intuition","Melee (Basic)","Ranged (Bow)","Secret Signs (Hunter)","Stealth (Rural)"],
+            "talents":  ["Accurate Shot","Fast Shot","Hunter's Eye","Marksman"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bow with 10 arrows"]
+        },
+        "rank 3" : {
+            "name": "Tracker",
+            "status": "Silver 1",
+            "advances": ["I"],
+            "skills" : ["Navigation","Ride (Horse)","Swim","Track"],
+            "talents":  ["Acute Sense (Any)","Deadeye Shot","Fearless (Animals)","Sharpshooter"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","Bedroll","Tent"]
+        },
+        "rank 4" : {
+            "name": "Huntsmaster",
+            "status": "Silver 3",
+            "advances": ["Int"],
+            "skills" : ["Animal Care","Animal Training (Any)"],
+            "talents":  ["Fearless (Monsters)","Robust","Sniper","Sure Shot"],
+            "npc_suggested_talents": [],
+            "trappings": ["Riding Horse with Saddle and Tack","Kennel of Hunting Dogs"]
+        }
+    },
+    "Miner" : {
+        "class": "Peasant",
+        "earning skill": "Melee (Two-handed)",
+        "rank 1" : {
+            "name": "Prospector",
+            "status": "Brass 2",
+            "advances": ["S","T","WP"],
+            "skills" : ["Cool","Endurance","Intuition","Lore (Local)","Melee (Two-handed) ","Outdoor Survival","Perception","Swim"],
+            "talents":  ["Rover","Strider (Rocky)","Sturdy","Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Charcoal Stick","Crude Map","Pan","Spade"]
+        },
+        "rank 2" : {
+            "name": "Miner",
+            "status": "Brass 4",
+            "advances": ["WS"],
+            "skills" : ["Climb","Consume Alcohol","Evaluate","Melee (Basic)","Secret Signs (Miner)","Trade (Explosives)"],
+            "talents":  ["Night Vision","Strike Mighty Blow","Strong Back","Very Strong"],
+            "npc_suggested_talents": [],
+            "trappings": ["Davrich Lamp","Hand Weapon (Pick)","Lamp Oil","Leather Jack"]
+        },
+        "rank 3" : {
+            "name": "Master Miner",
+            "status": "Brass 5",
+            "advances": ["I"],
+            "skills" : ["Gossip","Lore (Geology)","Stealth (Underground)","Trade (Engineer)"],
+            "talents":  ["Careful Strike","Craftsman (Explosives)","Tinker","Tunnel Rat"],
+            "npc_suggested_talents": [],
+            "trappings": ["Great Weapon (Two-handed Pick)","Helmet","Trade Tools (Engineer)"]
+        },
+        "rank 4" : {
+            "name": "Mine Foreman",
+            "status": "Silver 4",
+            "advances": ["Fel"],
+            "skills" : ["Charm","Leadership"],
+            "talents":  ["Argumentative","Strong-minded","Embezzle","Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crew of Miners","Writing Kit"]
+        }
+    },
+    "Mystic" : {
+        "class": "Peasant",
+        "earning skill": "Intuition",
+        "rank 1" : {
+            "name": "Fortune Teller",
+            "status": "Brass 1",
+            "advances": ["I","Dex","Fel"],
+            "skills" : ["Charm","Entertain (Fortune Telling)","Dodge","Gossip","Haggle","Intuition ","Perception","Sleight of Hand"],
+            "talents":  ["Attractive","Luck","Second Sight","Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["Deck of Cards or Dice","Cheap Jewellery"]
+        },
+        "rank 2" : {
+            "name": "Mystic",
+            "status": "Brass 2",
+            "advances": ["WP"],
+            "skills" : ["Bribery","Cool","Entertain (Prophecy)","Evaluate","Intimidate","Lore (Astrology)"],
+            "talents":  ["Detect Artefact","Holy Visions","Sixth Sense","Well-prepared"],
+            "npc_suggested_talents": [],
+            "trappings": ["Selection of Amulets"]
+        },
+        "rank 3" : {
+            "name": "Sage",
+            "status": "Brass 3",
+            "advances": ["Agi"],
+            "skills" : ["Art (Writing)","Charm Animal","Entertain (Storytelling)","Language (Any)"],
+            "talents":  ["Nose for Trouble","Petty Magic","Read/Write","Witch!"],
+            "npc_suggested_talents": [],
+            "trappings": ["Trade Tools (Writing)"]
+        },
+        "rank 4" : {
+            "name": "Seer",
+            "status": "Brass 4",
+            "advances": ["Int"],
+            "skills" : ["Lore (Prophecy)","Channelling (Azyr)"],
+            "talents":  ["Arcane Magic (Celestial)","Magical Sense","Menacing","Strong-minded"],
+            "npc_suggested_talents": [],
+            "trappings": ["Trade Tools (Astrology)"]
+        }
+    },
+    "Scout" : {
+        "class": "Peasant",
+        "earning skill": "Perception",
+        "rank 1" : {
+            "name": "Guide",
+            "status": "Brass 3",
+            "advances": ["T","I","Agi"],
+            "skills" : ["Charm Animal","Climb","Endurance","Gossip","Lore (Local)","Melee (Basic)","Outdoor Survival","Perception"],
+            "talents":  ["Orientation","Rover","Sharp","Strider (Any)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","Leather Jack","Sturdy Boots and Cloak","Rope"]
+        },
+        "rank 2" : {
+            "name": "Scout",
+            "status": "Brass 5",
+            "advances": ["BS"],
+            "skills" : ["Athletics","Navigation","Ranged (Bow)","Ride (Horse)","Stealth (Rural)","Track"],
+            "talents":  ["Combat Aware","Night Vision","Nose for Trouble","Seasoned Traveller"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bow and 10 Arrows","Mail Shirt"]
+        },
+        "rank 3" : {
+            "name": "Pathfinder",
+            "status": "Silver 1",
+            "advances": ["Int"],
+            "skills" : ["Animal Care","Haggle","Secret Signs (Hunter)","Swim"],
+            "talents":  ["Acute Sense (Sight)","Sixth Sense","Strong Legs","Very Resilient"],
+            "npc_suggested_talents": [],
+            "trappings": ["Map","Riding Horse with Saddle and Tack","Saddlebags with 2 weeks' Rations","Tent"]
+        },
+        "rank 4" : {
+            "name": "Explorer",
+            "status": "Silver 5",
+            "advances": ["Dex"],
+            "skills" : ["Language (Any)","Trade (Cartographer)"],
+            "talents":  ["Hardy","Linguistics","Savant (Local)","Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Selection of Maps","Trade Tools (Cartographer)"]
+        }
+    },
+    "Villager" : {
+        "class": "Peasant",
+        "earning skill": "Endurance",
+        "rank 1" : {
+            "name": "Peasant",
+            "status": "Brass 2",
+            "advances": ["S","T","Agi"],
+            "skills" : ["Animal Care","Athletics","Consume Alcohol","Endurance ","Gossip","Melee (Brawling)","Lore (Local)","Outdoor Survival"],
+            "talents":  ["Rover","Strong Back","Strong-minded","Stone Soup"],
+            "npc_suggested_talents": [],
+            "trappings": ["None"]
+        },
+        "rank 2" : {
+            "name": "Villager",
+            "status": "Brass 3",
+            "advances": ["WS"],
+            "skills" : ["Dodge","Drive","Entertain (Storytelling)","Haggle","Melee (Basic)","Trade (Any)"],
+            "talents":  ["Animal Affinity","Hardy","Tenacious","Very Strong"],
+            "npc_suggested_talents": [],
+            "trappings": ["Leather Jerkin","Hand Weapon (Axe)","Trade Tools (as Trade)"]
+        },
+        "rank 3" : {
+            "name": "Councillor",
+            "status": "Brass 4",
+            "advances": ["Fel"],
+            "skills" : ["Bribery","Charm","Intimidate","Leadership"],
+            "talents":  ["Craftsman (Any)","Dealmaker","Stout-hearted","Very Resilient"],
+            "npc_suggested_talents": [],
+            "trappings": ["Mule and Cart","Village Home and Workshop"]
+        },
+        "rank 4" : {
+            "name": "Village Elder",
+            "status": "Silver 2",
+            "advances": ["Int"],
+            "skills" : ["Intuition","Lore (History)"],
+            "talents":  ["Master Tradesman (Any)","Nimble Fingered","Public Speaker","Savant (Local)"],
+            "npc_suggested_talents": [],
+            "trappings": ["The Respect of the Village"]
+        }
+    },
+    "Bounty Hunter" : {
+        "class": "Ranger",
+        "earning skill": "Melee (Basic)",
+        "rank 1" : {
+            "name": "Thief-taker",
+            "status": "Silver 1",
+            "advances": ["WS","T","Agi"],
+            "skills" : ["Bribery","Charm","Gossip","Haggle","Intuition","Melee (Basic)","Outdoor Survival","Perception"],
+            "talents":  ["Break and Enter","Shadow","Strike to Stun","Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","Leather Jerkin","Rope"]
+        },
+        "rank 2" : {
+            "name": "Bounty Hunter",
+            "status": "Silver 3",
+            "advances": ["BS"],
+            "skills" : ["Athletics","Endurance","Intimidate","Ranged (Crossbow)","Ranged (Entangling)","Track"],
+            "talents":  ["Marksman","Relentless","Seasoned Traveller","Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crossbow and 10 bolts","Leather Skullcap","Manacles","Net","Warrant Papers"]
+        },
+        "rank 3" : {
+            "name": "Master Bounty Hunter",
+            "status": "Silver 5",
+            "advances": ["S"],
+            "skills" : ["Animal Care","Climb","Ride (Horse)","Swim"],
+            "talents":  ["Accurate Shot","Careful Strike","Dual Wielder","Sprinter"],
+            "npc_suggested_talents": [],
+            "trappings": ["Mail Shirt","Riding Horse and Saddle"]
+        },
+        "rank 4" : {
+            "name": "Bounty Hunter General",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Drive","Lore (Law)"],
+            "talents":  ["Deadeye Shot","Fearless (Bounties)","Hardy","Sure Shot"],
+            "npc_suggested_talents": [],
+            "trappings": ["Draught Horse and Cart","Mail Shirt","4 Pairs of Manacles"]
+        }
+    },
+    "Coachman" : {
+        "class": "Ranger",
+        "earning skill": "Drive",
+        "rank 1" : {
+            "name": "Postilion",
+            "status": "Silver 1",
+            "advances": ["BS","T","WP"],
+            "skills" : ["Animal Care","Charm Animal","Climb","Drive","Endurance","Perception","Ranged (Entangling)","Ride (Horse)"],
+            "talents":  ["Animal Affinity","Seasoned Traveller","Trick-Riding","Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Warm Coat and Gloves","Whip"]
+        },
+        "rank 2" : {
+            "name": "Coachman",
+            "status": "Silver 2",
+            "advances": ["Agi"],
+            "skills" : ["Consume Alcohol","Gossip","Intuition","Lore (Local)","Navigation","Ranged (Blackpowder)"],
+            "talents":  ["Coolheaded","Crack the Whip","Gunner","Strongminded"],
+            "npc_suggested_talents": [],
+            "trappings": ["Blunderbuss with 10 Shots","Coach Horn","Leather Jack","Hat"]
+        },
+        "rank 3" : {
+            "name": "Coach Master",
+            "status": "Silver 3",
+            "advances": ["WS"],
+            "skills" : ["Animal Training (Horse)","Intimidation","Language (any)","Lore (Routes)"],
+            "talents":  ["Accurate Shot","Dealmaker","Fearless (Outlaws)","Nose for Trouble"],
+            "npc_suggested_talents": [],
+            "trappings": ["Mail Shirt","Pistol","Quality Cloak"]
+        },
+        "rank 4" : {
+            "name": "Route Master",
+            "status": "Silver 5",
+            "advances": ["I"],
+            "skills" : ["Charm","Leadership"],
+            "talents":  ["Fearless (Beastmen)","Marksman","Orientation","Rapid Reload"],
+            "npc_suggested_talents": [],
+            "trappings": ["Fleet of Coaches and Horses","Maps"]
         }
     },
     "Witch Hunter" : {
@@ -1018,7 +1538,7 @@
             "skills" : ["Gamble","Lore (Local)","Lore (Riverways)","Ranged (Entangling)","Ranged (Throwing)","Set Trap"],
             "talents":  ["Craftsman (Boatbuilder)","Rover","Strong Back","Waterman"],
             "npc_suggested_talents": ["Waterman"],
-            "trappings": ["Eel Trap","Leather Jerkin","Net","Spear "]
+            "trappings": ["Eel Trap","Leather Jerkin","Net","Spear"]
         },
         "rank 3" : {
             "name": "Riverwise",
@@ -1055,7 +1575,7 @@
             "name": "Seaman",
             "status": "Silver 3",
             "advances": ["WS"],
-            "skills" : ["Athletics","Dodge","Endurance","Entertain (Singing)","Language (any)","Melee (Basic)"],
+            "skills" : ["Athletics","Dodge","Endurance","Entertain (Singing)","Language (Any)","Melee (Basic)"],
             "talents":  ["Catfall","Sea Legs","Seasoned Traveller","Strong Legs"],
             "npc_suggested_talents": ["Sea Legs"],
             "trappings": ["Hand Weapon (Boat Hook)","Leather Jerkin"]
@@ -1070,7 +1590,7 @@
             "trappings": ["Trade Tools (Carpenter)"]
         },
         "rank 4" : {
-            "name": "Ship’s Master",
+            "name": "Ship's Master",
             "status": "Gold 2",
             "advances": ["Int"],
             "skills" : ["Charm","Navigation"],
@@ -1224,7 +1744,7 @@
             "name": "Procurer",
             "status": "Silver 1",
             "advances": ["WP"],
-            "skills" : ["Cool","Evaluate","Language (any)","Lore (Law)"],
+            "skills" : ["Cool","Evaluate","Language (Any)","Lore (Law)"],
             "talents":  ["Dealmaker","Embezzle","Etiquette (Any)","Suave"],
             "npc_suggested_talents": [],
             "trappings": ["A Ring of Hustlers"]
@@ -1307,7 +1827,7 @@
             "skills" : ["Bribery","Entertain (Storytelling)","Lore (Art)","Lore (Local)"],
             "talents":  ["Kingpin","Strike to Stun","Suave","Super Numerate"],
             "npc_suggested_talents": [],
-            "trappings": ["Pawnbroker’s Shop"]
+            "trappings": ["Pawnbroker's Shop"]
         },
         "rank 4" : {
             "name": "Black Marketeer",
@@ -1519,6 +2039,46 @@
             "trappings": ["Robes","Skull"]
         }
     },
+    "Cult Magus Of Tzeentch" : {
+        "class": "Rogue",
+        "earning skill": "Language (Magick)",
+        "rank 1" : {
+            "name": "Cult Acolyte",
+            "status": "Brass 1",
+            "advances": ["I","Int","WP"],
+            "skills" : ["Channelling (Dhar)","Entertain (Acting)","Intuition","Language (Magick)","Lore (Tzeentch)","Perception","Secret Signs (Cultist)","Stealth (Urban)"],
+            "talents":  ["Beneath Notice","Secret Identity","Tzeentch's Blessing","Magical Sense","Petty Magic"],
+            "npc_suggested_talents": ["Secret Identity","Petty Magic"],
+            "trappings": ["Cult Insignia","Ritual Vestments","Secret Tattoo"]
+        },
+        "rank 2" : {
+            "name": "Cult Magus",
+            "status": "Silver 4",
+            "advances": ["Fel"],
+            "skills" : ["Charm","Cool","Dodge","Endurance","Research","Sleight of Hand"],
+            "talents":  ["Cat-tongued","Chaos Magic (Tzeentch)","Double Life","Public Speaking"],
+            "npc_suggested_talents": ["Chaos Magic (Tzeentch)","Double Life"],
+            "trappings": ["Chaos Grimoire","Good Quality Ritual Vestments","Schemes"]
+        },
+        "rank 3" : {
+            "name": "Chosen of Tzeentch",
+            "status": "Gold 1",
+            "advances": ["Agi"],
+            "skills" : ["Entertain (Storytelling)","Intimidate","Leadership","Melee (Basic)"],
+            "talents":  ["Arcane Lore (Daemonology)","Disciple of Change","Master of Disguise","Master Orator"],
+            "npc_suggested_talents": [],
+            "trappings": ["Cell of Cultists","Magic Item","Sacrificial Dagger"]
+        },
+        "rank 4" : {
+            "name": "Master Magus",
+            "status": "Gold 2",
+            "advances": ["T"],
+            "skills" : ["Language (Dark Tongue)","Lore (Any)"],
+            "talents":  ["Commanding Presence","Frightening","Impassioned Zeal","Savant (Tzeentch)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Chaos Cult","Terrible Destiny"]
+        }
+    },
     "Cavalryman": {
         "class": "Warrior",
         "earning skill": "Ride (Horse)",
@@ -1572,7 +2132,7 @@
             "trappings": ["Buckler","Leather Jerkin","Storm Lantern with Oil"]
         },
         "rank 2": {
-            "name": "Sentry",
+            "name": "Guard",
             "status": "Silver 2",
             "advances": ["I"],
             "skills": ["Athletics","Cool","Dodge","Intimidate","Melee (Polearm)","Ranged (Bow)"],

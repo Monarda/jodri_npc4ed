@@ -83,6 +83,7 @@
     "Sharp": {"tests":null, "max":1, "group":false, "stat_mod":"+5 I", "combat":false,"social":false},
     "Shieldsman": {"tests": null, "max": "SB", "group":false, "stat_mod":null, "combat":true,"social":false},
     "Slayer": {"tests": null, "max": 1, "group":false, "stat_mod":null, "combat":true,"social":true},
+    "Strider": {"tests": "Athletics", "max": "AgiB", "group":true, "stat_mod":null, "combat":false,"social":false},
     "Strike to Injure": {"tests": null, "max":"IB", "combat":true,"social":false},
     "Strike to Stun": {"tests":"Melee", "max":"WSB", "combat":true,"social":false},
     "Sturdy": {"tests": "S", "max": "SB", "group":false, "stat_mod":null, "combat":false,"social":false},
