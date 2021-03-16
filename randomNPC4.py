@@ -15,43 +15,35 @@ bot_char_dat.career_table_4e += ['Karak Ranger', 0, 2, 0, 0, 0, 0, 0, 0, 0]
 bot_char_dat.career_table_4e += ['Badger Rider', 0, 0, 3, 0, 0, 0, 0, 0, 0]
 
 class RandomNPC4(Npc4):
+    """Create a randomly generated NPC"""
+
     def __init__(self, species=None, starting_career=None, young=False, target=None):
+        """Options are to define the species, a starting career, whether the NPC is young
+           and a final career. The last uses a dictionary of the form {'career':'string', rank:n}
+        """
         if not species:
             # Generate random species
-            species_roll = random.randint(1,100)
-            if species_roll<=90:
-                species = 'Human'
-            elif species_roll<=94:
-                species = 'Halfling'
-            elif species_roll<=98:
-                species = 'Dwarf'
-            elif species_roll<=99:
-                species = 'High Elf'
-            elif species_roll<=100:
-                species = 'Wood Elf'
+            species = random.choices(['Human','Dwarf','Halfling','High Elf','Wood Elf'], cum_weights=[90,94,98,99,100])[0]
         
         if species.lower()=='human':
-            human_roll = random.randint(1,10)
-            if human_roll<=5:
-                species = 'Reiklander'
-            elif human_roll<=6:
-                species = 'Middenheimer'
-            elif human_roll<=8:
-                species = 'Middenlander'
-            elif human_roll<=10:
-                species = 'Nordlander'
+            species = random.choices(['Reiklander','Middenheimer','Middenlander','Nordlander'], weights=[5,1,2,2])[0]
 
+        # Initialise base class
         Npc4.__init__(self,species)
 
-        if target:
-            self.reverse_random_careers(target,young)
-        else:
-            self.add_random_careers(young)
+        if starting_career: starting_career = starting_career.title()
 
-    def add_random_careers(self,young=False):
+        if target:
+            self._reverse_random_careers(target,young)
+        else:
+            self._add_random_careers(starting_career,young)
+
+
+    def _add_random_careers(self,starting_career=None, young=False):
         # Young people start at career rank 1, adults at career rank 2
-        career = self._random_career()
+        career = starting_career if starting_career else self._random_career()
         rank = 1 if young else 2
+
         self.add_career(career,rank)
 
         # careers by class
@@ -98,7 +90,7 @@ class RandomNPC4(Npc4):
                 more_careers = False
 
 
-    def reverse_random_careers(self,target,young=False):
+    def _reverse_random_careers(self,target,young=False):
         career = target['career']
         rank   = target['rank']
         careers_list = [(career,rank)]
@@ -165,7 +157,7 @@ class RandomNPC4(Npc4):
 
         # Append Cult Magus of Tzeentch to the probabilities as appropriate
         if not firstcareer:
-            careers += ['Cult Magus Of Tzeentch', 'Warrior of Tzeentch']
+            careers += ['Cult Magus Of Tzeentch', 'Warrior Of Tzeentch']
             if self._index_species not in ['dwarf','halfling','gnome']:
                 probs += [1, 1]
             else:

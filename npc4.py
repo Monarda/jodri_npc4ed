@@ -92,6 +92,7 @@ class Npc4:
 
     @property
     def known_species(self):
+        """List known species. Most useful for listing 'monsters' than can have careers applied."""
         return self._known_species
 
     def __str__(self) -> str:
@@ -125,15 +126,17 @@ class Npc4:
 
         # Trappings
         retstr += "Trappings: " + str(self.trappings) + "\n"
+        retstr += "Additional Trappings: " + str(self.additional_trappings) + "\n"
 
         # Verbose
         retstr += "\n\nTalents by Career: " + str(self.talents_by_career) + "\n"
         retstr += "Suggested Talents by Career: " + str(self.suggested_talents_by_career) + "\n"
-        retstr += "Additional Talents by Career: " + str(self.alternate_talents_by_career) + "\n"
+        retstr += "Additional Talents by Career: " + str(self.additional_talents_by_career) + "\n"
 
         return retstr
 
     def _apply_statmod_stating_talents(self):
+        """Apply Talents which modify Characteristics if they're in the starting talents list"""
         for talent in self._starting_talents:
             try:
                 if _talents_data[talent]['stat_mod']:
@@ -185,7 +188,7 @@ class Npc4:
 
     @property
     def career_history_unambiguous(self) -> list:
-        """Career history as a list of career rank name, but when career changes it is included
+        """Career history as a list of career rank names, but when career changes it is included
            e.g. {'Tax Collector (Bailiff)', 'Bailiff', 'Custodian (Warden)'} """
         career_history_list = list()
         previous_career = ''
@@ -199,7 +202,6 @@ class Npc4:
             previous_career = career
 
         return career_history_list
-
 
     @property
     def traits(self) -> list:
@@ -230,7 +232,7 @@ class Npc4:
 
     @property
     def _wounds(self):
-        """Calculate the NPCs wounds based on their race"""
+        """Calculate the NPCs wounds based on their size"""
         wounds =    self._characteristic_bonus('SB') \
                 + 2*self._characteristic_bonus('TB') \
                 +   self._characteristic_bonus('WPB')
@@ -257,8 +259,8 @@ class Npc4:
 
     @property
     def _money(self) -> str:
-        """Get the money of the trappings from the NPC's most recent career and rank
-           The is fully determined by Status.
+        """Calculate the money for the trappings from the NPC's most recent career and rank
+           This fully determined by Status.
         """
         # Get the most recent career and rank, and use that to find the NPC's status
         lastcareer, lastrank = next(reversed(self._career_history))
@@ -297,10 +299,10 @@ class Npc4:
 
     @property
     def additional_trappings(self) -> list:
-        """Some complex logic to include trappings from previous careers
+        """Some complex logic to include trappings from previous careers.
 
         The idea here is that we include all previous trappings so long as there 
-        wasn't a fall in status. So a Scholar (silver) only gets to keep what they
+        wasn't a fall in status. So a Scholar (Silver) only gets to keep what they
         had as a Student (Brass) if they become a mere Peasant (Brass)
         """
 
@@ -438,6 +440,9 @@ class Npc4:
 
     @property 
     def suggested_talents(self):
+        """A talent from each career level. Generally randomly chosen, but the careers file
+           includes suggested Talents for some career ranks which are then used instead of a 
+           randomly selected one."""
         # We don't remove starting talents from the list, because career talents can potentially 
         # be taken multiple times without needing GM approval. Though since this is an NPC the
         # GM could probably approve!
@@ -445,6 +450,7 @@ class Npc4:
 
     @property
     def additional_talents(self):
+        """All the other talents (not in the suggested list) that the NPC can access."""
         return self.__template_gettalents(self._talents-self._suggested_talents)
 
     def __template_by_career(self, selector):
@@ -479,18 +485,22 @@ class Npc4:
 
     @property 
     def talents_by_career(self):
+        """All talents available to the NPC sorted by career"""
         selector = lambda careerrank : careerrank['talents']
 
         return self.__template_by_career(selector)
 
     @property
     def suggested_talents_by_career(self):
+        """All suggested talents available to the NPC sorted by career"""
         selector = lambda careerrank : careerrank['npc_suggested_talents']
 
         return self.__template_by_career(selector)
       
     @property
-    def alternate_talents_by_career(self):
+    def additional_talents_by_career(self):
+        """All additional talents available to the NPC sorted by career,
+           i.e. all talents - suggested talents"""
         selector = lambda careerrank : set(careerrank['talents']) - set(careerrank['npc_suggested_talents'])
 
         return self.__template_by_career(selector) 
@@ -534,14 +544,20 @@ class Npc4:
 
     @property
     def skills(self):
+        """All the NPC's skills as a dictionary of {"skillname":value}"""
         return self.__template_skills(verbose=False)
 
     @property
     def skills_verbose(self):
+        """All the NPC's skills as a dictionary of the form
+            {"total":skilltotal, "characteristic":skillchar, "add":value},
+            where "characteristic" is the characteristic associated with the skill
+            and "add" is what is added to the characteristic to get the skill total"""
         return self.__template_skills(verbose=True)
 
     @property
     def xp_spend(self):
+        """Estimate of the XP spend that would be required to create this NPC"""
         # Careers completed
         xp = max(100 * (len(self.career_history)-1),0)
 
@@ -672,7 +688,9 @@ class Npc4:
         else:
             self._skills[skill] = value
 
+
 def pretty_print_npc(npc : Npc4):
+    """Pretty print an NPC"""
     print("{} ({}) {}".format(npc.species, npc.species_used, npc.careername))
     print("**Career History**: {}".format(' --> '.join(npc.career_history_unambiguous)))
     print("`| {} |`".format('| '.join(npc.characteristics.keys())))
@@ -690,26 +708,6 @@ def pretty_print_npc(npc : Npc4):
 
 
 def main():
-    # random.seed()
-    # chars = {"M":4,
-    #          "WS": random.randint(1,10)+random.randint(1,10)+20,
-    #          "BS": random.randint(1,10)+random.randint(1,10)+20,
-    #          "S":  random.randint(1,10)+random.randint(1,10)+20,
-    #          "T":  random.randint(1,10)+random.randint(1,10)+20,
-    #          "I":  random.randint(1,10)+random.randint(1,10)+20,
-    #          "Agi":random.randint(1,10)+random.randint(1,10)+20,
-    #          "Dex":random.randint(1,10)+random.randint(1,10)+20,
-    #          "Int":random.randint(1,10)+random.randint(1,10)+20,
-    #          "WP": random.randint(1,10)+random.randint(1,10)+20,
-    #          "Fel":random.randint(1,10)+random.randint(1,10)+20,
-    #          }
-
-    # npc = npc4("Human", 
-    #            characteristics=chars)
-    # npc.add_career("Stevedore",1)
-    # npc.add_career("Boatman",1)
-    # npc.add_career("Pit Fighter",2)
-
     # Hospitaller Cristina González
     npc = Npc4("Estalian", 
                characteristics={"M":4, "WS":31, "BS":37, "S":30, "T":28, "I":36, "Agi":34, "Dex":28, "Int":29, "WP":30, "Fel":32},
@@ -722,16 +720,15 @@ def main():
     npc.advance_skill("Lore (Reikland)", 5)
     # npc.advance_talent("Suave")   # Not sure how to implement this yet
 
-    # # Doktor Helga Langstrasse
+    # # Doktor Helga Langstrasse (the example NPC from Enemy in Shadows, p.144)
     # npc = npc4("human", randomise=False)
     # npc.add_career_rank("Scholar", 1)
     # npc.add_career_rank("Physician", 2)
     # npc.add_career_rank("Physician", 3)
 
-    npc = Npc4("Human")
-    npc.add_career("Nun",3)
-    npc.add_career_rank("Priest",3)
-    npc.add_career_rank("Badger Rider",1)
+    # # General test stuff!
+    # npc = Npc4("Human")
+    # npc.add_career("Warrior of Tzeentch",3)
 
     ## __str__ produces more information but less nicely formatted
     print(npc)
