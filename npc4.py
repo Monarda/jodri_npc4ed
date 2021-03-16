@@ -1,4 +1,5 @@
 import collections, json, random, string
+from typing import Union
 import bot_char_dat
 from pprint import pprint
 from data_4th.bestiary import *
@@ -14,7 +15,7 @@ with open('data_4th/skills.json') as f:
 with open('data_4th/talents.json') as f:
     _talents_data = json.load(f)
 
-class npc4:
+class Npc4:
     """Generate and manage a 4th Edition NPC"""
 
     def __init__(self, species : str, 
@@ -56,9 +57,9 @@ class npc4:
                 for stat,value in base_characteristics.items():
                     if stat!="M":
                         if value>10:
-                            base_characteristics[stat] = (value - 10) + random.randint(1,11) + random.randint(1,11)
+                            base_characteristics[stat] = (value - 10) + random.randint(1,10) + random.randint(1,10)
                         else:
-                            base_characteristics[stat] = random.randint(1,11)
+                            base_characteristics[stat] = random.randint(1,10)
 
             self._characteristics = base_characteristics
         else:
@@ -183,6 +184,24 @@ class npc4:
         return [_careers_data[career]['rank {}'.format(rank)]['name'] for career,rank in self._career_history]
 
     @property
+    def career_history_unambiguous(self) -> list:
+        """Career history as a list of career rank name, but when career changes it is included
+           e.g. {'Tax Collector (Bailiff)', 'Bailiff', 'Custodian (Warden)'} """
+        career_history_list = list()
+        previous_career = ''
+        for career,rank in self._career_history:
+            rankname = _careers_data[career]['rank {}'.format(rank)]['name']
+            if career!=previous_career:
+                career_history_list.append('{} ({} {})'.format(rankname,career,rank))
+            else:
+                career_history_list.append(rankname)
+            
+            previous_career = career
+
+        return career_history_list
+
+
+    @property
     def traits(self) -> list:
         """ Racial traits """
         return sorted(self._traits)
@@ -252,7 +271,7 @@ class npc4:
         return money
 
     @property
-    def trappings(self) -> set:
+    def trappings(self) -> list:
         """All trappings appropriate to the current career rank. This includes all 
            trappings at that rank and lower, but not outside the current career.
            Currently class trappings are not included.
@@ -266,10 +285,77 @@ class npc4:
                 trappings.update( _careers_data[lastcareer]['rank {}'.format(i)]['trappings'] )
 
             trappings.update( [self._money] )
+            trappings = trappings.union(self._starting_trappings)
 
-            return sorted(trappings.union(self._starting_trappings))
+            # Remove 'None' from trappings. Stupid penniless peasants!
+            # Note even peasants always have 2d10 Brass
+            trappings.discard('None')
+
+            return sorted(trappings)
         else:
-            return set()
+            return list()
+
+    @property
+    def additional_trappings(self) -> list:
+        """Some complex logic to include trappings from previous careers
+
+        The idea here is that we include all previous trappings so long as there 
+        wasn't a fall in status. So a Scholar (silver) only gets to keep what they
+        had as a Student (Brass) if they become a mere Peasant (Brass)
+        """
+
+        # Process careers history
+        # Find unique careers and find details about careername, rank, and status for later
+        unique_careers  = set()
+        career_status_history  = []
+        for careername, rank in self._career_history:
+            unique_careers.update([careername])
+
+            status_tokens = _careers_data[careername]['rank {}'.format(rank)]['status'].split(' ')
+            career_status_history.append({"name":careername, "rank":rank, "status":status_tokens[0]})
+
+        # If we've only been in one career then there can't be additional trappings
+        if len(unique_careers)==1:
+            return {}
+
+        # Keep track of any additional trappings by status
+        additional_trappings_by_status = {"Brass":set(), "Silver":set(), "Gold":set()}
+
+        # Run through the career history
+        # If there's a status drop then remove all higher status stuff
+        # In either case add any new trappings
+        last_status = "Brass"
+        for career_status in career_status_history:
+            name   = career_status["name"]
+            rank   = 'rank {}'.format(career_status["rank"])
+            status = career_status["status"]
+
+            # If status has fallen remove all trappings at the higher status
+            status_order = {"Brass":1,"Silver":2,"Gold":3}
+            if status_order[status]<status_order[last_status]:
+                additional_trappings_by_status["Gold"] = set()
+
+                if status == "Brass":
+                    additional_trappings_by_status["Silver"] = set()
+
+            last_status = status
+
+            for i in range(1,career_status['rank']+1):
+                rank   = 'rank {}'.format(i)
+                additional_trappings_by_status[status].update(set(_careers_data[name][rank]['trappings']))
+
+        # Combine all the additional trappings into one list
+        additional_trappings =   additional_trappings_by_status["Brass"] \
+                                .union(additional_trappings_by_status["Silver"]) \
+                                .union(additional_trappings_by_status["Gold"])
+
+        # Remove any trappings already in the definite trappings
+        additional_trappings -= set(self.trappings)
+        additional_trappings.discard("None")
+
+        # Return a sorted list
+        return sorted(additional_trappings)
+
 
     def __template_gettalents(self, selector):
         out_talents = {}
@@ -586,20 +672,36 @@ class npc4:
         else:
             self._skills[skill] = value
 
+def pretty_print_npc(npc : Npc4):
+    print("{} ({}) {}".format(npc.species, npc.species_used, npc.careername))
+    print("**Career History**: {}".format(' --> '.join(npc.career_history_unambiguous)))
+    print("`| {} |`".format('| '.join(npc.characteristics.keys())))
+    print("`| {} |`".format('| '.join([str(x) for x in npc.characteristics.values()])))
+    print("**Skills**: {}".format(', '.join("{!s}: {!r}".format(key,val) for (key,val) in npc.skills.items())))
+    if npc.starting_talents:
+        print("**Starting Talents**: {}".format(', '.join(npc.formatted_starting_talents.keys())))
+    print("**Suggested Talents**: {}".format(', '.join(npc.suggested_talents.keys())))
+    print("**Additional Talents**: {}".format(', '.join(npc.additional_talents.keys())))
+    print("**Traits**: {}".format(', '.join(npc.traits)))
+    print("**Optional Traits**: {}".format(', '.join(npc.optional_traits)))
+    print("**Trappings**: {}".format(', '.join(npc.trappings)))
+    print("**Additional Trappings**: {}".format(', '.join(npc.additional_trappings)))
+    print("**XP Spend**: {:,}".format(npc.xp_spend))
+
 
 def main():
     # random.seed()
     # chars = {"M":4,
-    #          "WS": random.randint(1,11)+random.randint(1,11)+20,
-    #          "BS": random.randint(1,11)+random.randint(1,11)+20,
-    #          "S":  random.randint(1,11)+random.randint(1,11)+20,
-    #          "T":  random.randint(1,11)+random.randint(1,11)+20,
-    #          "I":  random.randint(1,11)+random.randint(1,11)+20,
-    #          "Agi":random.randint(1,11)+random.randint(1,11)+20,
-    #          "Dex":random.randint(1,11)+random.randint(1,11)+20,
-    #          "Int":random.randint(1,11)+random.randint(1,11)+20,
-    #          "WP": random.randint(1,11)+random.randint(1,11)+20,
-    #          "Fel":random.randint(1,11)+random.randint(1,11)+20,
+    #          "WS": random.randint(1,10)+random.randint(1,10)+20,
+    #          "BS": random.randint(1,10)+random.randint(1,10)+20,
+    #          "S":  random.randint(1,10)+random.randint(1,10)+20,
+    #          "T":  random.randint(1,10)+random.randint(1,10)+20,
+    #          "I":  random.randint(1,10)+random.randint(1,10)+20,
+    #          "Agi":random.randint(1,10)+random.randint(1,10)+20,
+    #          "Dex":random.randint(1,10)+random.randint(1,10)+20,
+    #          "Int":random.randint(1,10)+random.randint(1,10)+20,
+    #          "WP": random.randint(1,10)+random.randint(1,10)+20,
+    #          "Fel":random.randint(1,10)+random.randint(1,10)+20,
     #          }
 
     # npc = npc4("Human", 
@@ -609,7 +711,7 @@ def main():
     # npc.add_career("Pit Fighter",2)
 
     # Hospitaller Cristina González
-    npc = npc4("Estalian", 
+    npc = Npc4("Estalian", 
                characteristics={"M":4, "WS":31, "BS":37, "S":30, "T":28, "I":36, "Agi":34, "Dex":28, "Int":29, "WP":30, "Fel":32},
                starting_skills={"Consume Alcohol":5, "Haggle":5, "Language (Brettonian)":3, "Lore (Estalia)":3, "Sail (Caravel)": 5, "Swim":3},
                starting_talents={"Linguistics", "Marksman", "Resistance (Mutation)", "Rover", "Very Strong"},
@@ -626,25 +728,16 @@ def main():
     # npc.add_career_rank("Physician", 2)
     # npc.add_career_rank("Physician", 3)
 
+    npc = Npc4("Human")
+    npc.add_career("Nun",3)
+    npc.add_career_rank("Priest",3)
+    npc.add_career_rank("Badger Rider",1)
+
     ## __str__ produces more information but less nicely formatted
-    npc = npc4("Skaven")
-    npc.add_career("Engineer",3)
     print(npc)
 
     # Nicely formatted and also makes it easier to see which properties to use to access the NPC data
-    print("{} ({}) {}".format(npc.species, npc.species_used, npc.careername))
-    print("**Career History**: {}".format(' --> '.join(npc.career_history)))
-    print("`| {} |`".format('| '.join(npc.characteristics.keys())))
-    print("`| {} |`".format('| '.join([str(x) for x in npc.characteristics.values()])))
-    print("**Skills**: {}".format(', '.join("{!s}: {!r}".format(key,val) for (key,val) in npc.skills.items())))
-    if npc.starting_talents:
-        print("**Starting Talents**: {}".format(', '.join(npc.formatted_starting_talents.keys())))
-    print("**Suggested Talents**: {}".format(', '.join(npc.suggested_talents.keys())))
-    print("**Additional Talents**: {}".format(', '.join(npc.additional_talents.keys())))
-    print("**Traits**: {}".format(', '.join(npc.traits)))
-    print("**Optional Traits**: {}".format(', '.join(npc.optional_traits)))
-    print("**Trappings**: {}".format(', '.join(npc.trappings)))
-    print("**XP Spend**: {:,}".format(npc.xp_spend))
+    pretty_print_npc(npc)
 
 if __name__ == "__main__":
     # execute only if run as a script
