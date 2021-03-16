@@ -1344,7 +1344,7 @@
             "name": "Coach Master",
             "status": "Silver 3",
             "advances": ["WS"],
-            "skills" : ["Animal Training (Horse)","Intimidation","Language (any)","Lore (Routes)"],
+            "skills" : ["Animal Training (Horse)","Intimidate","Language (any)","Lore (Routes)"],
             "talents":  ["Accurate Shot","Dealmaker","Fearless (Outlaws)","Nose for Trouble"],
             "npc_suggested_talents": [],
             "trappings": ["Mail Shirt","Pistol","Quality Cloak"]
@@ -1357,6 +1357,326 @@
             "talents":  ["Fearless (Beastmen)","Marksman","Orientation","Rapid Reload"],
             "npc_suggested_talents": [],
             "trappings": ["Fleet of Coaches and Horses","Maps"]
+        }
+    },
+    "Entertainer" : {
+        "class": "Ranger",
+        "earning skill": "Entertain (Any)",
+        "rank 1" : {
+            "name": "Busker",
+            "status": "Brass 3",
+            "advances": ["Agi","Dex","Fel"],
+            "skills" : ["Athletics","Charm","Entertain (Any) ","Gossip","Haggle","Perform (Any)","Play (any)","Sleight of Hand"],
+            "talents":  ["Attractive","Mimic","Public-Speaking","Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bowl","Instrument"]
+        },
+        "rank 2" : {
+            "name": "Entertainer",
+            "status": "Brass 5",
+            "advances": ["WS"],
+            "skills" : ["Entertain (Any)","Ride (Any)","Melee (Basic)","Perform (Any)","Play (Any) Ranged (Throwing)"],
+            "talents":  ["Contortionist","Jump Up","Sharpshooter","Trick Riding"],
+            "npc_suggested_talents": [],
+            "trappings": ["Costume","Instrument","Selection of Scripts (that you can't yet read)","Throwing Weapons"]
+        },
+        "rank 3" : {
+            "name": "Troubadour",
+            "status": "Silver 3",
+            "advances": ["BS"],
+            "skills" : ["Animal Care","Animal Training (Any)","Art (Writing)","Language (Any)"],
+            "talents":  ["Blather","Master of Disguise","Perfect Pitch","Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Trained Animal","Writing Kit"]
+        },
+        "rank 4" : {
+            "name": "Troupe Leader",
+            "status": "Gold 1",
+            "advances": ["T"],
+            "skills" : ["Drive","Leadership"],
+            "talents":  ["Dealmaker","Etiquette (Any)","Seasoned Traveller","Sharp"],
+            "npc_suggested_talents": [],
+            "trappings": ["Draught Horses and Wagon (Stage)","Wardrobe of Costumes and Props","Troupe of Entertainers"]
+        }
+    },
+    "Field Warden" : {
+        "class": "Ranger",
+        "earning skill": "Ranged (Sling)",
+        "rank 1" : {
+            "name": "Novice Warden",
+            "status": "Brass 4",
+            "advances": ["BS","Agi","WP"],
+            "skills" : ["Gossip","Intuition","Lore (Moot)","Navigation","Perception","Ranged (Sling)","Trade (Any)","Stealth (Rural)"],
+            "talents":  ["Careful Strike","Distract","Fast Shot","Stout-hearted"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","Tent","Map of local area","Sling with 10 stones","Trade Tools (as Trade)"]
+        },
+        "rank 2" : {
+            "name": "Field Warden",
+            "status": "Silver 1",
+            "advances": ["Int"],
+            "skills" : ["Charm","Consume Alcohol","Dodge","Melee (Basic)","Outdoor Survival","Secret Signs (Scout)"],
+            "talents":  ["Accurate Shot","Drilled","Nose for Trouble","Orientation"],
+            "npc_suggested_talents": [],
+            "trappings": ["Leather Jack","Hand Weapon","Lantern with Oil"]
+        },
+        "rank 3" : {
+            "name": "Field Warden Sergeant",
+            "status": "Silver 3",
+            "advances": ["WS"],
+            "skills" : ["Cool","Endurance","Lore (Necromancy)","Set Trap"],
+            "talents":  ["Fleet-footed","Hardy","Night Vision","Rover"],
+            "npc_suggested_talents": [],
+            "trappings": ["Quality Mail Shirt","Squad of Novice Wardens"]
+        },
+        "rank 4" : {
+            "name": "Field Warden Captain",
+            "status": "Silver 5",
+            "advances": ["T"],
+            "skills" : ["Leadership","Lore (Warfare)"],
+            "talents":  ["Fearless","Hatred (Undead)","Inspiring","Robust","Savant (Moot terrain)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Garrison of Experienced Field Wardens","Respect of the Community"]
+        }
+    },
+    "Flagellant" : {
+        "class": "Ranger",
+        "earning skill": "Melee (Flail)",
+        "rank 1" : {
+            "name": "Zealot",
+            "status": "Brass 0",
+            "advances": ["WS","S","T"],
+            "skills" : ["Dodge","Endurance","Heal","Intimidate","Intuition","Lore (Sigmar)","Melee (Flail) ","Outdoor Survival"],
+            "talents":  ["Berserk Charge","Frenzy","Read/Write","Stone Soup"],
+            "npc_suggested_talents": ["Frenzy"],
+            "trappings": ["Flail","Tattered Robes"]
+        },
+        "rank 2" : {
+            "name": "Flagellant",
+            "status": "Brass 0",
+            "advances": ["WP"],
+            "skills" : ["Art (Icons)","Athletics","Cool","Language (Classical)","Lore (The Empire)","Ranged (Sling)"],
+            "talents":  ["Hardy","Hatred (Heretics)","Flagellant","Implacable"],
+            "npc_suggested_talents": ["Flagellant"],
+            "trappings": ["Placard","Religious Symbol","Sling"]
+        },
+        "rank 3" : {
+            "name": "Penitent",
+            "status": "Brass 0",
+            "advances": ["I"],
+            "skills" : ["Charm","Language (any)","Lore (Theology)","Perception"],
+            "talents":  ["Field Dressing","Furious Assault","Menacing","Seasoned Traveller"],
+            "npc_suggested_talents": [],
+            "trappings": ["Religious Relic"]
+        },
+        "rank 4" : {
+            "name": "Prophet of Doom",
+            "status": "Brass 0",
+            "advances": ["Agi"],
+            "skills" : ["Entertain (Speeches)","Leadership"],
+            "talents":  ["Battle Rage","Fearless (Heretics)","Frightening","Impassioned Zeal"],
+            "npc_suggested_talents": [],
+            "trappings": ["Book (Religion)","Followers (including Penitents, Flagellants, and Zealots)"]
+        }
+    },
+    "Ghost Strider" : {
+        "class": "Ranger",
+        "earning skill": "Ranged (Bow)",
+        "rank 1" : {
+            "name": "Forest Ranger",
+            "status": "Brass 3",
+            "advances": ["BS","Agi","Int"],
+            "skills" : ["Climb","Lore (Beasts)","Navigation","Outdoor Survival","Perception","Ranged (Bow)","Stealth (Any)","Trade (Bowyer)"],
+            "talents":  ["Accurate Shot","Fleet Footed","Shadow","Strider (Woodlands)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","Hooded Cloak","Longbow and 10 arrows","Trade tools (Bowyer)"]
+        },
+        "rank 2" : {
+            "name": "Ghost Strider",
+            "status": "Brass 5",
+            "advances": ["Dex"],
+            "skills" : ["Athletics","Charm Animal","Melee (Basic)","Secret Signs (Ranger)","Set Trap","Swim","Track"],
+            "talents":  ["Animal Affinity","Fast Shot","Orientation","Scale Sheer Surface"],
+            "npc_suggested_talents": [],
+            "trappings": ["Personally crafted Elf Bow and 10 arrows","Selection of Traps","Leather Jack"]
+        },
+        "rank 3" : {
+            "name": "Windwraith",
+            "status": "Silver 1",
+            "advances": ["WS"],
+            "skills" : ["Cool","Endurance","Dodge"],
+            "talents":  ["Catfall","Combat Aware","Lip Reading","Strike Mighty Blow","Sharpshooter"],
+            "npc_suggested_talents": [],
+            "trappings": ["Elf Bow and Leather Armour with at least 1 Quality each","10 Elf Arrows"]
+        },
+        "rank 4" : {
+            "name": "Forest's Wrath",
+            "status": "Silver 3",
+            "advances": ["S"],
+            "skills" : ["Intimidate","Language (Any)"],
+            "talents":  ["Deadeye Shot","Hatred (Any)","Sniper","Strike to Injure"],
+            "npc_suggested_talents": [],
+            "trappings": ["Trophy of a Legendary Enemy","Signature Elf Arrows (For Worthy Prey)","Fearsome Reputation"]
+        }
+    },
+    "Karak Ranger" : {
+        "class": "Ranger",
+        "earning skill": "Trade (Cartographer)",
+        "rank 1" : {
+            "name": "Hold Runner",
+            "status": "Brass 3",
+            "advances": ["WS","S","T"],
+            "skills" : ["Climb","Dodge","Endurance","Trade (Cartographer)","Melee (Basic)","Outdoor Survival","Perception","Row"],
+            "talents":  ["Implacable","Orientation","Strider (Any)","Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","Hand Weapon","Leather Jack","Trade tools (Cartographer)"]
+        },
+        "rank 2" : {
+            "name": "Karak Ranger",
+            "status": "Silver 1",
+            "advances": ["BS"],
+            "skills" : ["Charm Animal","Intuition","Ranged (Blackpowder)","Secret Signs (Scout","Ranger)","Track"],
+            "talents":  ["Strike Mighty Blow","Scale Sheer Surface","Nose for Trouble","Rover"],
+            "npc_suggested_talents": [],
+            "trappings": ["Blackpowder Weapon with Ammunition","Grappling Hook & Rope"]
+        },
+        "rank 3" : {
+            "name": "Karak Pathkeeper",
+            "status": "Silver 2",
+            "advances": ["Agi"],
+            "skills" : ["Lore (Engineering)","Stealth (Underground)"],
+            "talents":  ["Accurate Shot","Enclosed Fighter","River Guide","Gunner","Strong Legs"],
+            "npc_suggested_talents": [],
+            "trappings": ["Tools (Masonry)"]
+        },
+        "rank 4" : {
+            "name": "Karak Mountain Strider",
+            "status": "Silver 4",
+            "advances": ["Int"],
+            "skills" : ["Cool","Language (any)"],
+            "talents":  ["Tinker","Savant (Dwarf Holds and Routes)","Robust","Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["4 Apprentice Hold Runners","Maps","Souvenirs from many Travels"]
+        }
+    },
+    "Messenger" : {
+        "class": "Ranger",
+        "earning skill": "Endurance",
+        "rank 1" : {
+            "name": "Runner",
+            "status": "Brass 3",
+            "advances": ["T","I","Agi"],
+            "skills" : ["Athletics","Climb","Dodge","Endurance","Gossip","Navigation","Perception","Melee (Brawling)"],
+            "talents":  ["Flee!","Fleet Footed","Sprinter","Step Aside"],
+            "npc_suggested_talents": [],
+            "trappings": ["Scroll Case"]
+        },
+        "rank 2" : {
+            "name": "Messenger",
+            "status": "Silver 1",
+            "advances": ["WS"],
+            "skills" : ["Animal Care","Charm","Cool","Lore (Local)","Melee (Basic)","Ride (Horse)"],
+            "talents":  ["Crack the Whip","Criminal","Orientation","Seasoned Traveller"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","Leather Jack","Riding Horse with Saddle and Tack"]
+        },
+        "rank 3" : {
+            "name": "Courier",
+            "status": "Silver 3",
+            "advances": ["WP"],
+            "skills" : ["Charm Animal","Bribery","Consume Alcohol","Outdoor Survival"],
+            "talents":  ["Nose for Trouble","Relentless","Tenacious","Trick Rider"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","Saddlebags","Shield"]
+        },
+        "rank 4" : {
+            "name": "Courier-Captain",
+            "status": "Silver 5",
+            "advances": ["Fel"],
+            "skills" : ["Intimidate","Leadership"],
+            "talents":  ["Dealmaker","Hatred (Outlaws)","Kingpin","Very Resilient"],
+            "npc_suggested_talents": [],
+            "trappings": ["Couriers","Mail Shirt","Writing Kit"]
+        }
+    },
+    "Pedlar" : {
+        "class": "Ranger",
+        "earning skill": "Haggle",
+        "rank 1" : {
+            "name": "Vagabond",
+            "status": "Brass 1",
+            "advances": ["T","Agi","WP"],
+            "skills" : ["Charm","Endurance","Entertain (Storytelling)","Gossip","Haggle ","Intuition","Outdoor Survival","Stealth (Rural or Urban)"],
+            "talents":  ["Fisherman","Flee!","Rover","Tinker"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","Bedroll","Goods worth 2d10 Brass","Tent"]
+        },
+        "rank 2" : {
+            "name": "Pedlar",
+            "status": "Brass 4",
+            "advances": ["Fel"],
+            "skills" : ["Animal Care","Charm Animal","Consume Alcohol","Evaluate","Ride (Horse)","Trade (Tinker)"],
+            "talents":  ["Dealmaker","Orientation","Seasoned Traveller","Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": [""]
+        },
+        "rank 3" : {
+            "name": "Master Pedlar",
+            "status": "Silver 1",
+            "advances": ["I"],
+            "skills" : ["Drive","Intimidate","Language (any)","Perception"],
+            "talents":  ["Numismatics","Sturdy","Well-prepared","Very Resilient"],
+            "npc_suggested_talents": [],
+            "trappings": ["Cart","Goods worth at least 2d10 Gold"]
+        },
+        "rank 4" : {
+            "name": "Wandering Trader",
+            "status": "Silver 3",
+            "advances": ["Int"],
+            "skills" : ["Lore (Local)","Lore (Geography)"],
+            "talents":  ["Cat-tongued","Strong-minded","Suave","Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Draught Horse and Wagon","Goods worth at least 5d10 Gold","50 Silver in Coin"]
+        }
+    },
+    "Road Warden" : {
+        "class": "Ranger",
+        "earning skill": "Perception",
+        "rank 1" : {
+            "name": "Toll Keeper",
+            "status": "Brass 5",
+            "advances": ["BS","T","I"],
+            "skills" : ["Bribery","Consume Alcohol","Gamble","Gossip","Haggle","Melee (Basic)","Perception ","Ranged (Crossbow)"],
+            "talents":  ["Coolheaded","Embezzle","Marksman","Numismatics"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crossbow with 10 Bolts","Leather Jack"]
+        },
+        "rank 2" : {
+            "name": "Road Warden",
+            "status": "Silver 2",
+            "advances": ["WS"],
+            "skills" : ["Animal Care","Endurance","Intimidate","Intuition","Outdoor Survival","Ride (Horse)"],
+            "talents":  ["Crack the Whip","Criminal","Roughrider","Seasoned Traveller"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","Mail Shirt","Riding Horse with Saddle and Harness","Rope"]
+        },
+        "rank 3" : {
+            "name": "Road Sergeant",
+            "status": "Silver 4",
+            "advances": ["Fel"],
+            "skills" : ["Athletics","Charm","Leadership","Ranged (Blackpowder)"],
+            "talents":  ["Etiquette (Soldiers)","Fearless (Outlaws)","Hatred (Any)","Nose for Trouble"],
+            "npc_suggested_talents": [],
+            "trappings": ["Squad of Road Wardens","Pistol with 10 Shots","Shield","Symbol of Rank"]
+        },
+        "rank 4" : {
+            "name": "Road Captain",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Lore (Empire)","Navigation"],
+            "talents":  ["Combat Aware","Commanding Presence","Kingpin","Public Speaker"],
+            "npc_suggested_talents": [],
+            "trappings": ["Light Warhorse","Pistol with 10 Shots","Quality Hat and Cloak","Unit of Road Wardens"]
         }
     },
     "Witch Hunter" : {
@@ -1399,14 +1719,54 @@
             "trappings": ["Best Quality Courtly Garb","Subordinate Witch Hunters"]
         }
     },
+    "Wolf Kin" : {
+        "class": "Ranger",
+        "earning skill": "Outdoor Survival",
+        "rank 1" : {
+            "name": "Survivor",
+            "status": "Brass 1",
+            "advances": ["WS","S","T"],
+            "skills" : ["Climb","Cool","Endurance","Heal","Intimidate","Intuition","Lore (Ulric)","Melee (Basic)","Melee (Brawling)","Outdoor Survival"],
+            "talents":  ["Berserk Charge","Frenzy","Rover","Stone Soup"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","the Clothes on your Back"]
+        },
+        "rank 2" : {
+            "name": "Wolf Cub",
+            "status": "Brass 1",
+            "advances": ["WP"],
+            "skills" : ["Athletics","Dodge","Lore (Beasts)","Lore (Herbs)","Stealth (Rural)"],
+            "talents":  ["Acute Sense (Any)","Hardy","Implacable","Strider (Any)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","the Clothes on your Back"]
+        },
+        "rank 3" : {
+            "name": "Wolf Kin",
+            "status": "Brass 1",
+            "advances": ["I"],
+            "skills" : ["Navigation","Perception","Track"],
+            "talents":  ["Field Dressing","Furious Assault","Orientation","Seasoned Traveller"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","the Clothes on your Back"]
+        },
+        "rank 4" : {
+            "name": "Wolf Brother",
+            "status": "Brass 2",
+            "advances": ["Agi"],
+            "skills" : ["Animal Care","Swim"],
+            "talents":  ["Battle Rage","Fearless (Beastmen)","Frightening","Impassioned Zeal"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon","the Clothes on your Back","the Respect of other Wolf Kin"]
+        }
+    },
     "Boatman" : {
         "class": "Riverfolk",
-        "earning skill": "Sail",
+        "earning skill": "Sail (Any)",
         "rank 1" : {
             "name": "Boat-hand",
             "status": "Silver 1",
             "advances": ["S","T","Agi"],
-            "skills" : ["Consume Alcohol","Dodge","Endurance","Gossip","Melee (Brawling)","Row","Sail","Swim"],
+            "skills" : ["Consume Alcohol","Dodge","Endurance","Gossip","Melee (Brawling)","Row","Sail (Any)","Swim"],
             "talents":  ["Dirty Fighting","Fisherman","Strong Back","Strong Swimmer"],
             "npc_suggested_talents": ["Strong Swimmer"],
             "trappings": ["Hand Weapon (Boat Hook)","Leather Jack","Pole"]
@@ -1473,7 +1833,7 @@
             "name": "Master Pilot",
             "status": "Silver 5",
             "advances": ["Fel"],
-            "skills" : ["Leadership","Sail"],
+            "skills" : ["Leadership","Sail (Any)"],
             "talents":  ["Sixth Sense","Sharp","Strong Swimmer","Tenacious"],
             "npc_suggested_talents": [],
             "trappings": ["Boathand","Small Riverboat"]
@@ -1561,12 +1921,12 @@
     },
     "Seaman" : {
         "class": "Riverfolk",
-        "earning skill": "Sail",
+        "earning skill": "Sail (Any)",
         "rank 1" : {
             "name": "Landsman",
             "status": "Silver 1",
             "advances": ["Agi","Dex","Fel"],
-            "skills" : ["Climb","Consume Alcohol","Gamble","Gossip","Row","Melee (Brawling)","Sail","Swim"],
+            "skills" : ["Climb","Consume Alcohol","Gamble","Gossip","Row","Melee (Brawling)","Sail (Any)","Swim"],
             "talents":  ["Fisherman","Strider (Coastal)","Strong Back","Strong Swimmer"],
             "npc_suggested_talents": [],
             "trappings": ["Bucket","Brush","Mop"]
@@ -1606,7 +1966,7 @@
             "name": "River Runner",
             "status": "Brass 2",
             "advances": ["Agi","Dex","WP"],
-            "skills" : ["Athletics","Bribery","Cool","Consume Alcohol","Row","Sail","Stealth (Rural or Urban)","Swim"],
+            "skills" : ["Athletics","Bribery","Cool","Consume Alcohol","Row","Sail (Any)","Stealth (Rural or Urban)","Swim"],
             "talents":  ["Criminal","Fisherman","Strider (Marshes)","Strong Back"],
             "npc_suggested_talents": [],
             "trappings": ["Large Sack","Mask or Scarves","Tinderbox","Storm Lantern and Oil"]
@@ -2077,6 +2437,46 @@
             "talents":  ["Commanding Presence","Frightening","Impassioned Zeal","Savant (Tzeentch)"],
             "npc_suggested_talents": [],
             "trappings": ["Chaos Cult","Terrible Destiny"]
+        }
+    },
+    "Badger Rider" : {
+        "class": "Warrior",
+        "earning skill": "Ride (Badger)",
+        "rank 1" : {
+            "name": "Badger Botherer",
+            "status": "Silver 1",
+            "advances": ["BS","Agi","Int"],
+            "skills" : ["Animal Training (Badgers)","Charm Animal","Dodge","Gossip","Perception","Ranged (Sling)","Ride (Badger)","Trade (Any)"],
+            "talents":  ["Fast Shot","Flee!","Marksman","Roughrider"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack","Leather Jack","Sling","Tamed Badger with Saddle/Tack"]
+        },
+        "rank 2" : {
+            "name": "Badger Rider",
+            "status": "Silver 3",
+            "advances": ["WS"],
+            "skills" : ["Animal Care","Charm","Cool","Endurance","Melee (Basic)","Navigation","Ranged (Entangling)"],
+            "talents":  ["Accurate Shot","Rover","Seasoned Traveller","Stout-hearted"],
+            "npc_suggested_talents": [],
+            "trappings": ["Saddlebags","Boiled Leather Breastplate","Entangling OR Throwing weapon"]
+        },
+        "rank 3" : {
+            "name": "Badger Sergeant",
+            "status": "Silver 5",
+            "advances": ["S"],
+            "skills" : ["Intimidate","Melee (Cavalry)","Outdoor Survival","Track"],
+            "talents":  ["Distract","Resolute","Trick Riding","Tunnel Rat"],
+            "npc_suggested_talents": [],
+            "trappings": ["Badger Barding (2AP on head and torso)","Melee Weapon (Basic OR Cavalry)"]
+        },
+        "rank 4" : {
+            "name": "Badger Master",
+            "status": "Gold 1",
+            "advances": ["Fel"],
+            "skills" : ["Consume Alcohol","Leadership"],
+            "talents":  ["Carouser","Frightening","Inspiring","Strike to Injure"],
+            "npc_suggested_talents": [],
+            "trappings": ["Large Tame Badger (Mootland Spotted Pony-Badger)","A Squire (Badger Botherer)","Plate Armour","Sense of Humour"]
         }
     },
     "Cavalryman": {
