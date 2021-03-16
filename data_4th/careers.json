@@ -889,7 +889,7 @@
             "skills" : ["Bribery","Charm","Cool","Gamble","Gossip ","Haggle","Perception","Stealth (Any)"],
             "talents":  ["Blather","Carouser","Gregarious","Shadow"],
             "npc_suggested_talents": [],
-            "trappings": ["Charcoal stick","Sling Bag containing 2 different sets of clothing and Hooded Cloak"]
+            "trappings": ["Charcoal Stick","Sling Bag containing 2 different sets of clothing and Hooded Cloak"]
         },
         "rank 2" : {
             "name": "Spy",
@@ -1535,7 +1535,7 @@
             "name": "Karak Ranger",
             "status": "Silver 1",
             "advances": ["BS"],
-            "skills" : ["Charm Animal","Intuition","Ranged (Blackpowder)","Secret Signs (Scout","Ranger)","Track"],
+            "skills" : ["Charm Animal","Intuition","Ranged (Blackpowder)","Secret Signs (Scout)","Secret Signs (Ranger)","Track"],
             "talents":  ["Strike Mighty Blow","Scale Sheer Surface","Nose for Trouble","Rover"],
             "npc_suggested_talents": [],
             "trappings": ["Blackpowder Weapon with Ammunition","Grappling Hook & Rope"]
@@ -2757,6 +2757,46 @@
             "talents":  ["Inspiring","Public Speaking","Seasoned Traveller","Stout-hearted"],
             "npc_suggested_talents": [],
             "trappings": ["Letter of Commission","Light Warhorse with Saddle and Tack","Map","Orders","Unit of Soldiers","Quality Uniform","Symbol of Rank"]
+        }
+    },
+    "Warrior of Tzeentch" : {
+        "class": "Warrior",
+        "earning skill": "Melee (Basic)",
+        "rank 1" : {
+            "name": "Initiate of the Mysteries",
+            "status": "Brass 1",
+            "advances": ["WS","T","Int"],
+            "skills" : ["Athletics","Charm","Gossip","Consume Alcohol","Language (Magick)","Melee (Basic)","Perception","Stealth (Rural)"],
+            "talents":  ["Dual Wielder or Shieldsman","Strike Mighty Blow","Etiquette (Beastmen)","Wilful Corruption"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crude Hand Weapon","Leather Jack","Religious Symbol (Talisman of Tzeentch)"]
+        },
+        "rank 2" : {
+            "name": "Favoured of Tzeentch",
+            "status": "Brass 5",
+            "advances": ["WP"],
+            "skills" : ["Bribery","Dodge","Endurance","Intimidate","Intuition","Language (Dark Tounge)"],
+            "talents":  ["Menacing","Petty Magic","Schemer","Reversal"],
+            "npc_suggested_talents": ["Petty Magic"],
+            "trappings": ["Mail Shirt","Tome of Forbidden Knowledge"]
+        },
+        "rank 3" : {
+            "name": "Warrior of Tzeentch",
+            "status": "Silver 4",
+            "advances": ["Agi"],
+            "skills" : ["Channelling","Leadership","Melee (Any)","Lore (Any)"],
+            "talents":  ["Arcane Lore (Tzeentch)","Furious Assault","Strike to Injure","War Wizard"],
+            "npc_suggested_talents": ["Arcane Lore (Tzeentch)"],
+            "trappings": ["Grimoire of Dark Magicks","Plate Armour and Helm","Spell ingredients for 5 spells"]
+        },
+        "rank 4" : {
+            "name": "Chosen of Tzeentch",
+            "status": "Gold 1",
+            "advances": ["S"],
+            "skills" : ["Cool","Lore (Any)"],
+            "talents":  ["Cat-Tongued","Instinctive Diction","Slayer","Warleader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Cohort of Chaos Warriors","Daemon-bound Weapon","Daemonic Familiar","Severed heads of two or more enemy commanders"]
         }
     },
     "Warrior Priest" : {
