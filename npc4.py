@@ -801,7 +801,7 @@ def main():
 
         # If there's a number trigger a new career rank
         if numbers:
-            career = lastarg.strip()
+            career = lastarg.strip().title()
 
             if not firstgood:
                 # First time through we use the specified number as the 1:number
