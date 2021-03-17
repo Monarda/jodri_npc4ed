@@ -386,7 +386,7 @@
             "advances": ["WP"],
             "skills" : ["Intuition","Leadership","Research","Secret Signs (Guilder)"],
             "talents":  ["Acute Sense (Taste or Touch)","Master Tradesman (Any)","Read/Write","Tinker"],
-            "npc_suggested_talents": ["Master Tradesman (Any)","Read/Write"],
+            "npc_suggested_talents": [],
             "trappings": ["Apprentice","Workshop"]
         },
         "rank 4" : {
@@ -435,7 +435,7 @@
             "advances": ["I"],
             "skills" : ["Bribery","Intimidate"],
             "talents":  ["Cat-tongued","Fearless (Watchmen)","Kingpin","Suave"],
-            "npc_suggested_talents": ["Kingpin"],
+            "npc_suggested_talents": [],
             "trappings": ["Lair","Large Group of Beggar Followers"]
         }
     },
@@ -515,7 +515,7 @@
             "advances": ["WS"],
             "skills" : ["Lore (Any)","Intimidate"],
             "talents":  ["Iron Will","Luck","Schemer","Wealthy"],
-            "npc_suggested_talents": ["Wealthy"],
+            "npc_suggested_talents": [],
             "trappings": ["2 Riverboats or 4 Wagons","Large Town Estate","2 Warehouses","1000 GC","Quality Clothing"]
         }
     },
@@ -528,7 +528,7 @@
             "advances": ["WS","BS","WP"],
             "skills" : ["Athletics","Animal Training (Dog)","Charm Animal","Consume Alcohol","Endurance","Melee (Basic)","Ranged (Sling)","Stealth (Underground or Urban)"],
             "talents":  ["Night Vision","Resistance (Disease)","Strike Mighty Blow","Strike to Stun"],
-            "npc_suggested_talents": ["Night Vision","Resistance (Disease)"],
+            "npc_suggested_talents": [],
             "trappings": ["Sling with Ammunition","Sack","Small but Vicious Dog"]
         },
         "rank 2" : {
@@ -537,7 +537,7 @@
             "advances": ["T"],
             "skills" : ["Animal Care","Gossip","Haggle","Lore (Poison)","Perception","Set Trap"],
             "talents":  ["Enclosed Fighter","Etiquette (Guilder)","Fearless (Rats)","Very Resilient"],
-            "npc_suggested_talents": ["Enclosed Fighter","Fearless (Rats)"],
+            "npc_suggested_talents": [],
             "trappings": ["Animal Traps","Pole for Dead Rats"]
         },
         "rank 3" : {
@@ -546,7 +546,7 @@
             "advances": ["I"],
             "skills" : ["Climb","Cool","Dodge","Ranged (Crossbow Pistol)"],
             "talents":  ["Hardy","Stout-hearted","Strong Legs","Tunnel Rat"],
-            "npc_suggested_talents": ["Tunnel Rat"],
+            "npc_suggested_talents": [],
             "trappings": ["Davrich Lantern","Hand Weapon","Leather Jack"]
         },
         "rank 4" : {
@@ -657,7 +657,7 @@
             "advances": ["Fel"],
             "skills" : ["Charm","Cool","Evaluate","Gamble","Intuition","Lore (Local)"],
             "talents":  ["Blather","Criminal","Schemer","Supportive"],
-            "npc_suggested_talents": ["Schemer","Supportive"],
+            "npc_suggested_talents": [],
             "trappings": ["Livery"]
         },
         "rank 3" : {
@@ -688,7 +688,7 @@
             "advances": ["S","I","Dex"],
             "skills" : ["Art (Any)","Cool","Consume Alcohol","Evaluate","Endurance","Gossip","Perception","Stealth (Urban)"],
             "talents":  ["Artistic","Sharp","Strong Back","Tenacious"],
-            "npc_suggested_talents": ["Artistic"],
+            "npc_suggested_talents": [],
             "trappings": ["Brush or Chisel or Quill Pen"]
         },
         "rank 2" : {
@@ -697,7 +697,7 @@
             "advances": ["Fel"],
             "skills" : ["Climb","Gamble","Haggle","Intuition","Language (Classical)","Trade (Art Supplies)"],
             "talents":  ["Carouser","Criminal","Gregarious","Nimble Fingered"],
-            "npc_suggested_talents": [],
+            "npc_suggested_talents": ["Artistic"],
             "trappings": ["Sling Bag containing Trade Tools (Artist)"]
         },
         "rank 3" : {
@@ -808,7 +808,7 @@
             "advances": ["WS","I","Dex"],
             "skills" : ["Bribery","Consume Alcohol","Gamble","Intimidate","Leadership","Lore (Heraldry)","Melee (Fencing)","Play (Any)"],
             "talents":  ["Etiquette (Nobles)","Luck","Noble Blood","Read/Write"],
-            "npc_suggested_talents": ["Etiquette (Nobles)","Noble Blood","Read/Write"],
+            "npc_suggested_talents": ["Noble Blood"],
             "trappings": ["Courtly Garb","Foil ***or*** Hand Mirror","Jewellery worth 3d10 gc","Personal Servant"]
         },
         "rank 2" : {
@@ -1066,7 +1066,7 @@
             "advances": ["Fel"],
             "skills" : ["Intuition","Leadership","Lore (Medicine)","Trade (Poisoner)"],
             "talents":  ["Craftsman (Herbalist)","Field Dressing","Hardy","Savvy"],
-            "npc_suggested_talents": ["Craftsman (Herbalist)"],
+            "npc_suggested_talents": [],
             "trappings": ["Herb Gatherer","3 Healing Poultices","Healing Draught","Workshop (Herbalist)"]
         },
         "rank 4" : {
