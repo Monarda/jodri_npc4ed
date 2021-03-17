@@ -401,7 +401,7 @@
     },
     "Beggar" : {
         "class": "Burgher",
-        "earning skill": "Charm,",
+        "earning skill": "Charm",
         "rank 1" : {
             "name": "Pauper",
             "status": "Brass 0",
@@ -601,7 +601,7 @@
     },
     "Watchman" : {
         "class": "Burgher",
-        "earning skill": "",
+        "earning skill": "Perception",
         "rank 1" : {
             "name": "Watch Recruit",
             "status": "Brass 3",
@@ -761,7 +761,7 @@
     },
     "Envoy" : {
         "class": "Courtier",
-        "earning skill": "",
+        "earning skill": "Charm",
         "rank 1" : {
             "name": "Herald",
             "status": "Silver 2",
@@ -841,7 +841,7 @@
     },
     "Servant" : {
         "class": "Courtier",
-        "earning skill": "",
+        "earning skill": "Endurance",
         "rank 1" : {
             "name": "Menial",
             "status": "Silver 1",
@@ -1001,7 +1001,7 @@
     },
     "Hedge Witch" : {
         "class": "Peasant",
-        "earning skill": "",
+        "earning skill": "Intuition",
         "rank 1" : {
             "name": "Hedge Apprentice",
             "status": "Brass 1",
@@ -1041,7 +1041,7 @@
     },
     "Herbalist" : {
         "class": "Peasant",
-        "earning skill": "",
+        "earning skill": "Trade (Herbalist)",
         "rank 1" : {
             "name": "Herb Gatherer",
             "status": "Brass 2",
@@ -1081,7 +1081,7 @@
     },
     "Hunter" : {
         "class": "Peasant",
-        "earning skill": "",
+        "earning skill": "Outdoor Survival",
         "rank 1" : {
             "name": "Trapper",
             "status": "Brass 2",
@@ -1618,7 +1618,7 @@
             "skills" : ["Animal Care","Charm Animal","Consume Alcohol","Evaluate","Ride (Horse)","Trade (Tinker)"],
             "talents":  ["Dealmaker","Orientation","Seasoned Traveller","Strong Back"],
             "npc_suggested_talents": [],
-            "trappings": [""]
+            "trappings": ["Mule and Saddlebags", "Goods worth 2d10 Silver", "Selection of Pots and Pans", "Trade Tools (Tinker)"]
         },
         "rank 3" : {
             "name": "Master Pedlar",
@@ -1881,7 +1881,7 @@
     },
     "Riverwoman" : {
         "class": "Riverfolk",
-        "earning skill": "",
+        "earning skill": "Endurance",
         "rank 1" : {
             "name": "Greenfish",
             "status": "Brass 2",
@@ -2081,7 +2081,7 @@
     },
     "Bawd" : {
         "class": "Rogue",
-        "earning skill": "Charm,",
+        "earning skill": "Charm",
         "rank 1" : {
             "name": "Hustler",
             "status": "Brass 1",
@@ -2121,7 +2121,7 @@
     },
     "Charlatan" : {
         "class": "Rogue",
-        "earning skill": "Charm,",
+        "earning skill": "Charm",
         "rank 1" : {
             "name": "Swindler",
             "status": "Brass 3",
@@ -2801,7 +2801,7 @@
     },
     "Warrior Priest" : {
         "class": "Warrior",
-        "earning skill": "",
+        "earning skill": "Leadership",
         "rank 1" : {
             "name": "Novitiate",
             "status": "Brass 2",
