@@ -121,18 +121,21 @@ class RandomNPC4(Npc4):
             elif val==4:
                 # Change to a career in another class
                 # Find this class, then find all careers in careers_by_class which are not that class
-                if rank==1:
-                    thisclass = _careers_data[career]['class']
-                    newcareers = itertools.chain.from_iterable([careers for classname,careers in careers_by_class.items() if classname!=thisclass])
+                
+                # Finish this class
+                for i in range(rank-1,0,-1):
+                    careers_list.append((career,i))
 
-                    career = self._random_career(careerslist=newcareers,firstcareer=False)
+                # Now switch to new class
+                thisclass = _careers_data[career]['class']
+                newcareers = itertools.chain.from_iterable([careers for classname,careers in careers_by_class.items() if classname!=thisclass])
 
-                    # If we've been in this career before then perhaps we should rejoin at that rank?
-                    rank = random.choices([1,2,3,4], weights=[2,3,2,1])[0]
-                    careers_list.append((career,rank))
-                else:
-                    rank -= 1
-                    careers_list.append((career,rank))
+                career = self._random_career(careerslist=newcareers,firstcareer=False)
+
+                rank = random.choices([1,2,3,4], weights=[2,3,2,1])[0]
+                
+                careers_list.append((career,rank))
+
             else:
                 # Keep in the career but go down a rank
                 rank -= 1
@@ -179,8 +182,9 @@ class RandomNPC4(Npc4):
 
 
 def main():
+    random.seed()
     # Generate a Wood Elf Ghost Strider
-    npc = RandomNPC4(species="Wood Elf",young=False,target={"career":"Ghost Strider","rank":2})
+    npc = RandomNPC4(species="Human",young=False,target={"career":"Cult Magus Of Tzeentch","rank":2})
     pretty_print_npc(npc)
 
     # Generate a random NPC
