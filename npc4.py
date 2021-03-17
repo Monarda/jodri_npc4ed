@@ -1,4 +1,10 @@
-import collections, json, random, re
+import argparse
+from careers4 import Careers4
+import collections
+import json
+import random
+import re
+import sys
 from math import inf
 
 import bot_char_dat
@@ -389,7 +395,7 @@ class Npc4:
         for talent in sorted(selector):
             # Check if this talent is in the talent list
             talent_index = talent
-            if talent in _talents_data.get_talents():
+            if talent in _talents_data:
                 # It is
                 out_talents[talent] = dict(_talents_data[talent])
             else:
@@ -605,7 +611,7 @@ class Npc4:
                 xp += characteristic_advance_costs[sac_idx]
 
         # Skills
-        skill_advance_costs = [10,15,20,30,40,60,80,110,140,180,220,270,320,380,440]
+        skill_advance_costs = [10,15,20,30,40,60,80,110,140,180,220,270,320,380,440,510,580]
         for skill,value in self._skills.items():
             advance_to_cost = value
 
@@ -629,7 +635,7 @@ class Npc4:
 
         # Validate input
         if rank<1 or rank>4:
-            raise IndexError('Rank less than 0 or greater than 4')
+            raise IndexError('Rank less than 0 or greater than 4. Rank was {}'.format(rank))
 
         try:
             _careers_data[careername]
@@ -754,11 +760,65 @@ def pretty_print_npc(npc : Npc4):
 
 
 def main():
-    npc = Npc4("Ogre")
-    npc.add_career("Soldier",2)
+    ## Scroll down below the return for a better demo of how to programmatically interact with the Npc4 class
 
-    ## __str__ produces more information but less nicely formatted
-    print(npc) 
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--species", help="Species of NPC to create", type=str, nargs='?',default='Human')
+    parser.add_argument("--species-list", action='store_true', help="List known careers")
+    parser.add_argument("--careers-list", action='store_true', help="List known species")
+    parser.add_argument("careerrank", nargs='*')
+    parser.parse_args()
+    args = parser.parse_args()
+
+    # These don't actually work; I can't remember how to enable this with argparse
+    if args.species_list:
+        print("Unknown species will be considered a type of human.")
+        print("Known species: " + ', '.join(species_npc_characteristics_4e.keys()).title())
+        sys.exit()
+
+    if args.careers_list:
+        careers_by_class = Careers4()._careers_by_class
+        print("Known careers: ")
+        for classname, careers in careers_by_class.items():
+            print("\t{:9s} - {}".format(classname, ', '.join(sorted(careers))))
+        sys.exit()
+
+    # Generate the base NPC with the specified species
+    npc = Npc4(args.species)
+
+    # Add careers from the command line
+    lastarg = ''        # Collect words and letters till we reach a number
+    firstgood = False   # The rule for the first career is slightly different to the later ones
+    for item in args.careerrank:
+        # Numbers and letters
+        numbers = [int(s) for s in item.split() if s.isdigit()]
+        letters = re.sub("\d+", "", item)
+
+        # Add letters to any previously collected letters
+        if letters:
+            lastarg += ' {}'.format(letters)
+
+        # If there's a number trigger a new career rank
+        if numbers:
+            career = lastarg.strip()
+
+            if not firstgood:
+                # First time through we use the specified number as the 1:number
+                npc.add_career(career,numbers[0])
+                firstgood = True
+            else:
+                # Otherwise we just use the digits
+                for rank in list(str(numbers[0])):
+                    npc.add_career_rank(career,int(rank))
+            
+            # Reset
+            lastarg = ''
+
+    # Print
+    pretty_print_npc(npc) 
+
+    return
     
     # Hospitaller Cristina González
     npc = Npc4("Estalian", 
@@ -777,7 +837,7 @@ def main():
 
     # # Doktor Helga Langstrasse (the example NPC from Enemy in Shadows, p.144)
     npc = Npc4("human", randomise=False)
-    npc.add_career("Scholar", 3)
+    npc.add_career("Scholar", 1)
     npc.add_career_rank("Physician", 2)
     npc.add_career_rank("Physician", 3)
     pretty_print_npc(npc)

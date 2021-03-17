@@ -1,5 +1,6 @@
-import collections, itertools
+import itertools
 import random
+import sys
 
 from npc4 import Npc4
 from npc4 import _careers_data
@@ -132,7 +133,7 @@ class RandomNPC4(Npc4):
 
                 career = self._random_career(careerslist=newcareers,firstcareer=False)
 
-                rank = random.choices([1,2,3,4], weights=[2,3,2,1])[0]
+                rank = random.choices([1,2,3], weights=[2,3,2])[0]
                 
                 careers_list.append((career,rank))
 
@@ -183,12 +184,45 @@ class RandomNPC4(Npc4):
 
 def main():
     random.seed()
-    # Generate a Wood Elf Ghost Strider
-    npc = RandomNPC4(species="Human",young=False,target={"career":"Cult Magus Of Tzeentch","rank":2})
-    pretty_print_npc(npc)
 
-    # Generate a random NPC
-    npc = RandomNPC4()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--cl", action='store_true', help="List known species and quit.")
+    parser.add_argument("--species", type=str, nargs='?',default='Human', 
+                        help="""Species of NPC to create. Valid species are Human, Reiklander, Dwarf, 
+                                Halfling, High Elf, Wood Elf, Gnome, Nordlander, Middenheimer, and Middenlander.
+                                Default is human. Human will be randomly assigned to Reiklander, Nordlander, 
+                                Middenheimer, or Middenlander.""")
+    parser.add_argument("--young", help="Young NPCs have a lower probability of career ranks and changes", action='store_true')
+    parser.add_argument("career", help="Final career for NPC. Multi-word arguments must be quoted.", type=str,nargs='?', default=None)
+    parser.add_argument("level",help="Final career level for NPC",type=int,nargs='?',default=None)
+    parser.parse_args()
+    args = parser.parse_args()
+
+    # Produce a list of valid careers, sorted by class
+    if args.cl:
+        from careers4 import Careers4
+        careers_by_class = Careers4()._careers_by_class
+        print("Known careers: ")
+        for classname, careers in careers_by_class.items():
+            print("\t{:9s} - {}".format(classname, ', '.join(sorted(careers))))
+        sys.exit()
+
+    # Check if we've been given a target career and level
+    if args.career and args.level:
+        target = {"career":args.career.title(),"rank":args.level}
+    elif (args.career and not args.level) or (not args.career and args.level):
+        print("Career and level must be input as a pair\n")
+        parser.print_help()
+        sys.exit()
+    else:
+        target=None
+
+    # Generate a Wood Elf Ghost Strider
+    #npc = RandomNPC4(species="Wood Elf",young=False,target={"career":"Ghost Strider","rank":2})
+    
+    # Generate NPC
+    npc = RandomNPC4(species=args.species,young=args.young,target=target)
     pretty_print_npc(npc)
 
 
