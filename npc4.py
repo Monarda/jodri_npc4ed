@@ -1,7 +1,7 @@
-import collections, json, random, string
-from typing import Union
+import collections, json, random, re
+from math import inf
+
 import bot_char_dat
-from pprint import pprint
 from data_4th.bestiary import *
 
 # Load data about careers, talents and skills
@@ -61,9 +61,11 @@ class Npc4:
                         else:
                             base_characteristics[stat] = random.randint(1,10)
 
-            self._characteristics = base_characteristics
+            self._base_characteristics  = base_characteristics
+            self._characteristics       = dict(base_characteristics)
         else:
-            self._characteristics = characteristics
+            self._base_characteristics  = characteristics
+            self._characteristics       = dict(characteristics)
 
         # Traits are always set based on species
         self._traits            = species_npc_traits_4e[index_species]
@@ -110,8 +112,9 @@ class Npc4:
 
         # Skills       
         retstr += "Skills: " 
-        for key, value in self.skills_verbose.items():
-            retstr += "{} {} [{}+{}], ".format(key, value['total'], value['characteristic'], value['add'])
+        for key, values in self.skills_verbose.items():
+            for value in values:
+                retstr += "{} {} [{}+{}], ".format(key, value['total'], value['characteristic'], value['add'])
         retstr += '\n'
 
         # Talents
@@ -223,6 +226,17 @@ class Npc4:
 
         return output_chars
 
+    @property
+    def characteristics_base(self) -> dict:
+        """The original rolled or passed in  characteristics as a dictionary, e.g. {"WS":45, 
+           "BS":30, ..., "Fel":35, "W":13}
+           Note that wounds are calculated when this function is called
+        """
+        output_chars = dict(self._base_characteristics)
+        output_chars.update({'W':self._template_wounds(self._base_characteristics)})
+
+        return output_chars
+
     def _characteristic_bonus(self, charb) -> int:
         """Get the specified characteristic bonus (e.g. 'WSB') of the NPC"""
         def _get_digit(number, n):
@@ -230,20 +244,22 @@ class Npc4:
 
         return _get_digit(self._characteristics[charb[:-1]],1)
 
-    @property
-    def _wounds(self):
-        """Calculate the NPCs wounds based on their size"""
-        wounds =    self._characteristic_bonus('SB') \
-                + 2*self._characteristic_bonus('TB') \
-                +   self._characteristic_bonus('WPB')
+    def _template_wounds(self, charactertistics):
+        """Calculate wounds based on passed in characteristics, and size"""
+        def _get_digit(number):
+            return number // 10#10**n % 10
+
+        sb  = _get_digit(charactertistics['S'])
+        tb  = _get_digit(charactertistics['T'])
+        wpb = _get_digit(charactertistics['WP'])
+        wounds = sb + 2*tb + wpb
 
         if "Size (Tiny)" in self._traits:
             wounds = 1
         elif "Size (Little)" in self._traits:
-            wounds = self._characteristic_bonus('TB')
+            wounds = tb
         elif "Size (Small)" in self._traits:
-            wounds =  2*self._characteristic_bonus('TB') \
-                    +   self._characteristic_bonus('WPB')
+            wounds =  2*tb + wpb
         elif "Size (Large)" in self._traits:
             wounds *= 2
         elif "Size (Enormous)" in self._traits:
@@ -253,9 +269,18 @@ class Npc4:
 
         # Only support Hardy once for now
         if "Hardy" in self._starting_talents:
-            wounds += self._characteristic_bonus('TB')
+            wounds += tb
 
         return wounds
+
+    @property
+    def _wounds(self):
+        """Calculate the NPCs wounds based on their size"""
+        wounds =    self._characteristic_bonus('SB') \
+                + 2*self._characteristic_bonus('TB') \
+                +   self._characteristic_bonus('WPB')
+
+        return self._template_wounds(self._characteristics)
 
     @property
     def _money(self) -> str:
@@ -364,9 +389,9 @@ class Npc4:
         for talent in sorted(selector):
             # Check if this talent is in the talent list
             talent_index = talent
-            if talent in _talents_data:
+            if talent in _talents_data.get_talents():
                 # It is
-                out_talents[talent] = _talents_data[talent]
+                out_talents[talent] = dict(_talents_data[talent])
             else:
                 # It isn't... That might mean it's a group talent
                 talentfound = False
@@ -381,9 +406,12 @@ class Npc4:
                     out_talents[talent] = {}
 
             try:
-                if not isinstance(out_talents[talent]['max'],int) and not isinstance(out_talents[talent]['max'],float):
-                    out_talents[talent]['max'] = self._characteristic_bonus(out_talents[talent]['max'])
-            except KeyError:
+                talentmax = _talents_data[talent]['max']
+                if talentmax == None:
+                    out_talents[talent]['max'] = inf
+                elif not isinstance(talentmax,int):
+                    out_talents[talent]['max'] = self._characteristic_bonus(_talents_data[talent]['max'])             
+            except KeyError: # Remove when all telents in data file
                 pass
 
         return out_talents
@@ -511,31 +539,30 @@ class Npc4:
     # where total is the same as the value in the simple case and add is the amount to be added to the 
     # characteristic 
     def __template_skills(self, verbose=False):
-        simple_skills = {}
-        complex_skills = {}
+        simple_skills  = collections.defaultdict(list)
+        complex_skills = collections.defaultdict(list)
         for skill, value in sorted(self._skills.items()):
-            if skill in _skills_data:
-                skillchar  = _skills_data[skill]['characteristic']
-                skilltotal = self._characteristics[skillchar] + value
+            # Drop everything before brackets to make life easier
+            skillbits = re.split('\(|\)',skill)
+            baseskill = skillbits[0].strip()
 
-                simple_skills[skill] = skilltotal
-                complex_skills[skill] = {"total":skilltotal, "characteristic":skillchar, "add":value}
+            # Handle advanced skills, or more specifically those that have an "Any" specialisation
+            source = None
+            if len(skillbits)>1:
+                specialisation = skillbits[1].strip()
+                if specialisation[0] == '[':
+                    source = specialisation[1:-1]
+                    specialisation = "Any"
+
+                fullskill = "{} ({})".format(baseskill, specialisation)
             else:
-                # This is presumably a group skill, so we need to find the longest match instead of the exact match
-                skillfound = False
-                for key in _skills_data:
-                    if skill.startswith(key):
-                        skillchar  = _skills_data[key]['characteristic']
-                        skilltotal = self._characteristics[skillchar] + value
+                fullskill = baseskill
 
-                        simple_skills[skill] = skilltotal
-                        complex_skills[skill] = {"total":skilltotal, "characteristic":skillchar, "add":value}
+            skillchar  = _skills_data[baseskill]['characteristic']
+            skilltotal = self._characteristics[skillchar] + value
 
-                        skillfound = True
-                        break
-
-                if not skillfound:
-                    raise KeyError("{} is not a known skill".format(skill))
+            simple_skills[fullskill].append(skilltotal)
+            complex_skills[fullskill].append({"total":skilltotal, "characteristic":skillchar, "add":value, "source":source})
 
         if verbose:
             return complex_skills
@@ -544,15 +571,21 @@ class Npc4:
 
     @property
     def skills(self):
-        """All the NPC's skills as a dictionary of {"skillname":value}"""
+        """All the NPC's skills as a dictionary of the form {"skillname":[value]}
+           In most case the list of values will have only one item, e.g. {"Charm":[55]}
+           but general skills with an (Any) may need to be recorded seperately
+           in which case the result could be {"Melee (Any)":[55, 44]}
+        """
         return self.__template_skills(verbose=False)
 
     @property
     def skills_verbose(self):
-        """All the NPC's skills as a dictionary of the form
-            {"total":skilltotal, "characteristic":skillchar, "add":value},
-            where "characteristic" is the characteristic associated with the skill
-            and "add" is what is added to the characteristic to get the skill total"""
+        """All the NPC's skills as a dictionary of lists of dictionaries the form
+            {"skillname": [{"total":skilltotal, "characteristic":skillchar, "add":value, "source":career_and_rank}],
+            where "characteristic" : str is the characteristic associated with the skill,
+            "add" : int is what is added to the characteristic to get the skill total,
+            "source" : str is the source career and rank (e.g. 'Scholar 2')
+        """
         return self.__template_skills(verbose=True)
 
     @property
@@ -630,10 +663,12 @@ class Npc4:
             
             # Either start tracking a new skill or add to an existing one
             for skill in careerrank['skills']:
-                if skill in self._skills:
-                    self._skills[skill] += 5
+                modskill = skill.replace("(Any)","([{} {}])".format(careername,i))
+
+                if modskill in self._skills:
+                    self._skills[modskill] += 5
                 else:
-                    self._skills[skill] = 5
+                    self._skills[modskill] = 5
 
             # We only need to add new talents if we've not been in this rank before
             # (Remember we visit ranks multiple times to up skills and characteristics)
@@ -694,8 +729,19 @@ def pretty_print_npc(npc : Npc4):
     print("{} ({}) {}".format(npc.species, npc.species_used, npc.careername))
     print("**Career History**: {}".format(' --> '.join(npc.career_history_unambiguous)))
     print("`| {} |`".format('| '.join(npc.characteristics.keys())))
+    print("`| {} |`".format('| '.join([str(x) for x in npc.characteristics_base.values()])))
     print("`| {} |`".format('| '.join([str(x) for x in npc.characteristics.values()])))
-    print("**Skills**: {}".format(', '.join("{!s}: {!r}".format(key,val) for (key,val) in npc.skills.items())))
+
+    skills_list = list()
+    for skill, values in npc.skills_verbose.items():
+        for value in values:
+            if value['source'] and len(values)>1:
+                skills_list.append("{!s}: {!r} [{}; +{}]".format(skill,value['total'],value['source'],value['add']))
+            else:
+                skills_list.append("{!s}: {!r}".format(skill,value['total']))
+            #print("{}".format(', '.join("{!s}: {!r}".format(key,val) for (key,val) in npc.skills.items())))
+    print("**Skills**: {}".format(', '.join(skills_list)))
+
     if npc.starting_talents:
         print("**Starting Talents**: {}".format(', '.join(npc.formatted_starting_talents.keys())))
     print("**Suggested Talents**: {}".format(', '.join(npc.suggested_talents.keys())))
@@ -708,6 +754,12 @@ def pretty_print_npc(npc : Npc4):
 
 
 def main():
+    npc = Npc4("Ogre")
+    npc.add_career("Soldier",2)
+
+    ## __str__ produces more information but less nicely formatted
+    print(npc) 
+    
     # Hospitaller Cristina González
     npc = Npc4("Estalian", 
                characteristics={"M":4, "WS":31, "BS":37, "S":30, "T":28, "I":36, "Agi":34, "Dex":28, "Int":29, "WP":30, "Fel":32},
@@ -720,21 +772,20 @@ def main():
     npc.advance_skill("Lore (Reikland)", 5)
     # npc.advance_talent("Suave")   # Not sure how to implement this yet
 
+    # Nicely formatted and if you examine the function you see which properties to use to access the NPC data
+    pretty_print_npc(npc)
+
     # # Doktor Helga Langstrasse (the example NPC from Enemy in Shadows, p.144)
-    # npc = npc4("human", randomise=False)
-    # npc.add_career_rank("Scholar", 1)
-    # npc.add_career_rank("Physician", 2)
-    # npc.add_career_rank("Physician", 3)
+    npc = Npc4("human", randomise=False)
+    npc.add_career("Scholar", 3)
+    npc.add_career_rank("Physician", 2)
+    npc.add_career_rank("Physician", 3)
+    pretty_print_npc(npc)
 
     # # General test stuff!
     # npc = Npc4("Human")
     # npc.add_career("Warrior of Tzeentch",3)
-
-    ## __str__ produces more information but less nicely formatted
-    print(npc)
-
-    # Nicely formatted and also makes it easier to see which properties to use to access the NPC data
-    pretty_print_npc(npc)
+    # pretty_print_npc(npc)
 
 if __name__ == "__main__":
     # execute only if run as a script
