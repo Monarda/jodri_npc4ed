@@ -1,5 +1,4 @@
 import argparse
-from careers4 import Careers4
 import collections
 import json
 import random
@@ -8,7 +7,9 @@ import sys
 from math import inf
 
 import bot_char_dat
+from careers4 import Careers4
 from data_4th.bestiary import *
+from find_best_match import find_best_match
 
 # Load data about careers, talents and skills
 # Does this make sense at module scope?
@@ -762,7 +763,6 @@ def pretty_print_npc(npc : Npc4):
 def main():
     ## Scroll down below the return for a better demo of how to programmatically interact with the Npc4 class
 
-    import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--species", help="Species of NPC to create", type=str, nargs='?',default='Human')
     parser.add_argument("--species-list", action='store_true', help="List known careers")
@@ -802,6 +802,7 @@ def main():
         # If there's a number trigger a new career rank
         if numbers:
             career = lastarg.strip().title()
+            career = find_best_match(career,Careers4().list_careers()) # allow misspellings
 
             if not firstgood:
                 # First time through we use the specified number as the 1:number

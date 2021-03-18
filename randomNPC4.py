@@ -5,6 +5,8 @@ import sys
 from npc4 import Npc4
 from npc4 import _careers_data
 from npc4 import pretty_print_npc
+from find_best_match import find_best_match
+from careers4 import Careers4
 
 import bot_char_dat
 
@@ -201,7 +203,6 @@ def main():
 
     # Produce a list of valid careers, sorted by class
     if args.cl:
-        from careers4 import Careers4
         careers_by_class = Careers4()._careers_by_class
         print("Known careers: ")
         for classname, careers in careers_by_class.items():
@@ -210,7 +211,8 @@ def main():
 
     # Check if we've been given a target career and level
     if args.career and args.level:
-        target = {"career":args.career.title(),"rank":args.level}
+        career = find_best_match(args.career.title(),Careers4().list_careers())
+        target = {"career":career,"rank":args.level}
     elif (args.career and not args.level) or (not args.career and args.level):
         print("Career and level must be input as a pair\n")
         parser.print_help()
