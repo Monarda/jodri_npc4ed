@@ -74,7 +74,7 @@
             "status": "Gold 2",
             "advances": ["WP"],
             "skills" : ["Language (Any)","Lore (Any)"],
-            "talents":  ["Magnum Opus","Rapid Reload","Savant (Engineering)","Unshakeable"],
+            "talents":  ["Magnum Opus","Rapid Reload","Savant (Engineering)","Unshakable"],
             "npc_suggested_talents": [],
             "trappings": ["Guild License","Library (Engineer)","Quality Trade Tools (Engineer)","Large Workshop (Engineer)"]
         }
@@ -834,7 +834,7 @@
             "status": "Gold 7",
             "advances": ["WP"],
             "skills" : ["Lore (Any)","Track"],
-            "talents":  ["Commanding Presence","Iron Will","Warleader","Wealthy"],
+            "talents":  ["Commanding Presence","Iron Will","War Leader","Wealthy"],
             "npc_suggested_talents": ["Wealthy"],
             "trappings": ["4 sets of Best Quality Courtly Garb","Quality Foil ***or*** Hand Mirror","500 GC","Jewellery worth 500 GC","Province"]
         }
@@ -1336,7 +1336,7 @@
             "status": "Silver 2",
             "advances": ["Agi"],
             "skills" : ["Consume Alcohol","Gossip","Intuition","Lore (Local)","Navigation","Ranged (Blackpowder)"],
-            "talents":  ["Coolheaded","Crack the Whip","Gunner","Strongminded"],
+            "talents":  ["Coolheaded","Crack the Whip","Gunner","Strong-minded"],
             "npc_suggested_talents": [],
             "trappings": ["Blunderbuss with 10 Shots","Coach Horn","Leather Jack","Hat"]
         },
@@ -2425,7 +2425,7 @@
             "status": "Gold 1",
             "advances": ["Agi"],
             "skills" : ["Entertain (Storytelling)","Intimidate","Leadership","Melee (Basic)"],
-            "talents":  ["Arcane Lore (Daemonology)","Disciple of Change","Master of Disguise","Master Orator"],
+            "talents":  ["Arcane Magic (Daemonology)","Disciple of Change","Master of Disguise","Master Orator"],
             "npc_suggested_talents": [],
             "trappings": ["Cell of Cultists","Magic Item","Sacrificial Dagger"]
         },
@@ -2505,7 +2505,7 @@
             "status": "Gold 1",
             "advances": ["I"],
             "skills": ["Intimidate","Intuition","Leadership","Lore (Warfare)"],
-            "talents":  ["Combat Reflexes","Fast Shot","Hatred (Any)","Warleader"],
+            "talents":  ["Combat Reflexes","Fast Shot","Hatred (Any)","War Leader"],
             "npc_suggested_talents": [],
             "trappings": ["Sash"]
         },
@@ -2527,8 +2527,8 @@
             "status": "Silver 1",
             "advances": ["WS","T","Agi"],
             "skills": ["Consume Alcohol","Endurance","Entertain (Storytelling)","Gamble","Gossip","Intuition","Melee (Basic)","Perception"],
-            "talents":  ["Diceman","Etiquette (Servants)","Strike To Stun","Tenacious"],
-            "npc_suggested_talents": ["Strike To Stun"],
+            "talents":  ["Diceman","Etiquette (Servants)","Strike to Stun","Tenacious"],
+            "npc_suggested_talents": ["Strike to Stun"],
             "trappings": ["Buckler","Leather Jerkin","Storm Lantern with Oil"]
         },
         "rank 2": {
@@ -2545,7 +2545,7 @@
             "status": "Silver 3",
             "advances": ["S"],
             "skills": ["Heal","Language (Battle)","Lore (Etiquette)","Melee (Two-Handed)"],
-            "talents":  ["Fearless (Intruders)","Jump Up","Stout-hearted","Unshakeable"],
+            "talents":  ["Fearless (Intruders)","Jump Up","Stout-hearted","Unshakable"],
             "npc_suggested_talents": [],
             "trappings": ["Great Weapon ***or*** Halberd","Helmet","Uniform"]
         },
@@ -2585,7 +2585,7 @@
             "status": "Gold 2",
             "advances": ["WP"],
             "skills": ["Charm","Consume Alcohol","Leadership","Lore (Warfare)"],
-            "talents":  ["Fearless (Any)","Stout-hearted","Unshakeable","Warleader"],
+            "talents":  ["Fearless (Any)","Stout-hearted","Unshakable","War Leader"],
             "npc_suggested_talents": [],
             "trappings": ["Barding","Small Unit of Knights"]
         },
@@ -2745,7 +2745,7 @@
             "status": "Silver 5",
             "advances": ["I"],
             "skills" : ["Heal","Intuition","Leadership","Perception"],
-            "talents":  ["Combat Aware","Enclosed Fighter","Unshakeable","Warleader"],
+            "talents":  ["Combat Aware","Enclosed Fighter","Unshakable","War Leader"],
             "npc_suggested_talents": [],
             "trappings": ["Symbol of Rank","Unit of Troops"]
         },
@@ -2785,8 +2785,8 @@
             "status": "Silver 4",
             "advances": ["Agi"],
             "skills" : ["Channelling","Leadership","Melee (Any)","Lore (Any)"],
-            "talents":  ["Arcane Lore (Tzeentch)","Furious Assault","Strike to Injure","War Wizard"],
-            "npc_suggested_talents": ["Arcane Lore (Tzeentch)"],
+            "talents":  ["Arcane Magic (Tzeentch)","Furious Assault","Strike to Injure","War Wizard"],
+            "npc_suggested_talents": ["Arcane Magic (Tzeentch)"],
             "trappings": ["Grimoire of Dark Magicks","Plate Armour and Helm","Spell ingredients for 5 spells"]
         },
         "rank 4" : {
@@ -2794,7 +2794,7 @@
             "status": "Gold 1",
             "advances": ["S"],
             "skills" : ["Cool","Lore (Any)"],
-            "talents":  ["Cat-tongued","Instinctive Diction","Slayer","Warleader"],
+            "talents":  ["Cat-tongued","Instinctive Diction","Slayer","War Leader"],
             "npc_suggested_talents": [],
             "trappings": ["Cohort of Chaos Warriors","Daemon-bound Weapon","Daemonic Familiar","Severed heads of two or more enemy commanders"]
         }
@@ -2834,8 +2834,8 @@
             "status": "Silver 4",
             "advances": ["Fel"],
             "skills" : ["Consume Alcohol","Lore (Warfare)"],
-            "talents":  ["Fearless (Any)","Furious Assault","Holy Hatred","Warleader"],
-            "npc_suggested_talents": ["Read/Write","Warleader"],
+            "talents":  ["Fearless (Any)","Furious Assault","Holy Hatred","War Leader"],
+            "npc_suggested_talents": ["Read/Write","War Leader"],
             "trappings": ["Religious Relic"]
         }
     }
