@@ -3,13 +3,16 @@ import collections
 import json
 import random
 import re
+from skills4 import Skills4
 import sys
 from math import inf
 
 import bot_char_dat
 from careers4 import Careers4
+from talents4 import Talents4
 from data_4th.bestiary import *
 from find_best_match import find_best_match
+import skill_talent
 
 # Load data about careers, talents and skills
 # Does this make sense at module scope?
@@ -109,7 +112,7 @@ class Npc4:
         # Species and most recent career level name
         if self._career_history:
             lastcareer, lastrank = next(reversed(self._career_history))
-            lastcareername = _careers_data[lastcareer]['rank {}'.format(lastrank)]['name']
+            lastcareername = _careers_data[lastcareer][f'rank {lastrank}']['name']
 
             retstr  = self._species.title() + " " + lastcareername + '\n'
             retstr += 'Career history: ' + str(self.career_history) + '\n'
@@ -169,7 +172,7 @@ class Npc4:
         """
         if self._career_history:
             lastcareer, lastrank = next(reversed(self._career_history))
-            return _careers_data[lastcareer]['rank {}'.format(lastrank)]
+            return _careers_data[lastcareer][f'rank {lastrank}']
         else:
             return {}
 
@@ -194,7 +197,7 @@ class Npc4:
     @property 
     def career_history(self) -> list:
         """Career history as a list of career rank name, e.g. {'Novitiate', 'Nun', 'Warrior Priest'}"""
-        return [_careers_data[career]['rank {}'.format(rank)]['name'] for career,rank in self._career_history]
+        return [_careers_data[career][f'rank {rank}']['name'] for career,rank in self._career_history]
 
     @property
     def career_history_unambiguous(self) -> list:
@@ -203,9 +206,9 @@ class Npc4:
         career_history_list = list()
         previous_career = ''
         for career,rank in self._career_history:
-            rankname = _careers_data[career]['rank {}'.format(rank)]['name']
+            rankname = _careers_data[career][f'rank {rank}']['name']
             if career!=previous_career:
-                career_history_list.append('{} ({} {})'.format(rankname,career,rank))
+                career_history_list.append(f'{rankname} ({career} {rank})')
             else:
                 career_history_list.append(rankname)
             
@@ -296,11 +299,11 @@ class Npc4:
         """
         # Get the most recent career and rank, and use that to find the NPC's status
         lastcareer, lastrank = next(reversed(self._career_history))
-        status = _careers_data[lastcareer]['rank {}'.format(lastrank)]['status']
+        status = _careers_data[lastcareer][f'rank {lastrank}']['status']
 
         # Use some string manipulation to turn status into money
         tokens = status.split(' ')
-        money = "{}d10 {}".format(tokens[1],tokens[0])
+        money = f"{tokens[1]}d10 {tokens[0]}"
 
         return money
 
@@ -316,7 +319,7 @@ class Npc4:
             
             trappings = set() 
             for i in range(1,lastrank+1):
-                trappings.update( _careers_data[lastcareer]['rank {}'.format(i)]['trappings'] )
+                trappings.update( _careers_data[lastcareer][f'rank {i}']['trappings'] )
 
             trappings.update( [self._money] )
             trappings = trappings.union(self._starting_trappings)
@@ -345,7 +348,7 @@ class Npc4:
         for careername, rank in self._career_history:
             unique_careers.update([careername])
 
-            status_tokens = _careers_data[careername]['rank {}'.format(rank)]['status'].split(' ')
+            status_tokens = _careers_data[careername][f'rank {rank}']['status'].split(' ')
             career_status_history.append({"name":careername, "rank":rank, "status":status_tokens[0]})
 
         # If we've only been in one career then there can't be additional trappings
@@ -361,7 +364,7 @@ class Npc4:
         last_status = "Brass"
         for career_status in career_status_history:
             name   = career_status["name"]
-            rank   = 'rank {}'.format(career_status["rank"])
+            rank   = f'rank {career_status["rank"]}'
             status = career_status["status"]
 
             # If status has fallen remove all trappings at the higher status
@@ -375,8 +378,7 @@ class Npc4:
             last_status = status
 
             for i in range(1,career_status['rank']+1):
-                rank   = 'rank {}'.format(i)
-                additional_trappings_by_status[status].update(set(_careers_data[name][rank]['trappings']))
+                additional_trappings_by_status[status].update(set(_careers_data[name][f'rank {i}']['trappings']))
 
         # Combine all the additional trappings into one list
         additional_trappings =   additional_trappings_by_status["Brass"] \
@@ -464,7 +466,7 @@ class Npc4:
         for talent in starting_talents:
             try:
                 if 'stat_mod' in _talents_data[talent]:
-                    formatted_talents['*{}*'.format(talent)] = starting_talents[talent]
+                    formatted_talents[f'*{talent}*'] = starting_talents[talent]
                 else:
                     formatted_talents[talent] = starting_talents[talent]
             except KeyError:
@@ -498,7 +500,7 @@ class Npc4:
         # not Doctor 1: they still have all talents from Doctor 1 available
         true_history = []
         for career,rank in self._career_history:
-            careerrankname = _careers_data[career]['rank {}'.format(rank)]['name']
+            careerrankname = _careers_data[career][f'rank {rank}']['name']
             true_history.append(careerrankname)
 
         avail_history = set()
@@ -508,7 +510,7 @@ class Npc4:
         # Go through the career ranks for all could contribute talents
         # Add a star to the end of the careername if it was not really taken
         for careername,rank in avail_history:
-            careerrank = _careers_data[careername]['rank {}'.format(rank)]
+            careerrank = _careers_data[careername][f'rank {rank}']
             careerrankname = careerrank['name']
 
             if careerrankname not in true_history:
@@ -561,7 +563,7 @@ class Npc4:
                     source = specialisation[1:-1]
                     specialisation = "Any"
 
-                fullskill = "{} ({})".format(baseskill, specialisation)
+                fullskill = f"{baseskill} ({specialisation})"
             else:
                 fullskill = baseskill
 
@@ -636,12 +638,12 @@ class Npc4:
 
         # Validate input
         if rank<1 or rank>4:
-            raise IndexError('Rank less than 0 or greater than 4. Rank was {}'.format(rank))
+            raise IndexError(f'Rank less than 0 or greater than 4. Rank was {rank}')
 
         try:
             _careers_data[careername]
         except KeyError:
-            raise KeyError("{} is not a valid career name".format(careername))
+            raise KeyError(f"{careername} is not a valid career name")
 
         # Check if we've been in this career before. Only update the NPC if 
         # we haven't been in this career before or only at a lower rank
@@ -662,7 +664,7 @@ class Npc4:
         # available talents. 
         for i in range(1,rank+1):
             # Get the information about this career rank
-            careerrank = _careers_data[careername]['rank {}'.format(i)]
+            careerrank = _careers_data[careername][f'rank {i}']
 
             # Apply all applicable characteristic advances
             for advance in careerrank['advances']:
@@ -670,7 +672,7 @@ class Npc4:
             
             # Either start tracking a new skill or add to an existing one
             for skill in careerrank['skills']:
-                modskill = skill.replace("(Any)","([{} {}])".format(careername,i))
+                modskill = skill.replace("(Any)",f"([{careername} {i}])")
 
                 if modskill in self._skills:
                     self._skills[modskill] += 5
@@ -731,28 +733,62 @@ class Npc4:
             self._skills[skill] = value
 
 
-def pretty_print_npc(npc : Npc4):
+
+def convert_to_superscript(input):
+    string = str(input)
+    sup = string.maketrans("1234567890()", chr(0x00b9) + chr(0x00B2) + chr(
+                    0x00B3) + u"\u2074" + u"\u2075" + u"\u2076" + u"\u2077" + u"\u2078" + u"\u2079" + u"\u2070" +u"\u207D" +u"\u207E")
+    return string.translate(sup)
+
+
+def pretty_print_npc(npc : Npc4, type=None):
     """Pretty print an NPC"""
+
+    # Skills
+    skills_list = list()
+    filtered_skills_dict = Skills4().filter(npc.skills_verbose,type)
+
+    # Talents
+    t4 = Talents4()
+    if npc.starting_talents:
+        starting_talents = t4.filter(npc.formatted_starting_talents.keys(),type)
+    else: starting_talents = {}
+
+    suggested_talents = t4.filter(npc.suggested_talents,type)
+    additional_talents = t4.filter(npc.additional_talents,type)
+
+    # Association between skills and talents
+    filtered_skills_dict, starting_talents, index   = skill_talent.associate(filtered_skills_dict, starting_talents,   starting_index=1)
+    filtered_skills_dict, suggested_talents, index  = skill_talent.associate(filtered_skills_dict, suggested_talents,  starting_index=index)
+    filtered_skills_dict, additional_talents, index = skill_talent.associate(filtered_skills_dict, additional_talents, starting_index=index)
+
+    # Format skills data
+    for skill, values in filtered_skills_dict.items():
+        for value in values:
+            superscripts = sorted(list(value.get('talent_ref',{0})))
+            if not superscripts[0]==0:
+                superscript = ' '.join(map(str, superscripts))
+                superscript = convert_to_superscript(f'({superscript})')
+            else: superscript = ''
+
+            if value['source'] and len(values)>1:
+                skills_list.append("{!s}: {!r}{} [{}; +{}]".format(skill,value['total'],superscript,value['source'],value['add']))
+            else:
+                skills_list.append("{!s}: {!r}{}".format(skill,value['total'],superscript))
+            #print("{}".format(', '.join("{!s}: {!r}".format(key,val) for (key,val) in npc.skills.items())))
+
+    def format_talents(talents):
+        return ', '.join('{}{}'.format(convert_to_superscript(v.get('skill_ref','')),k) for k,v in talents.items())
+
     print("{} ({}) {}".format(npc.species, npc.species_used, npc.careername))
     print("**Career History**: {}".format(' --> '.join(npc.career_history_unambiguous)))
     print("`| {} |`".format('| '.join(npc.characteristics.keys())))
     print("`| {} |`".format('| '.join([str(x) for x in npc.characteristics_base.values()])))
     print("`| {} |`".format('| '.join([str(x) for x in npc.characteristics.values()])))
-
-    skills_list = list()
-    for skill, values in npc.skills_verbose.items():
-        for value in values:
-            if value['source'] and len(values)>1:
-                skills_list.append("{!s}: {!r} [{}; +{}]".format(skill,value['total'],value['source'],value['add']))
-            else:
-                skills_list.append("{!s}: {!r}".format(skill,value['total']))
-            #print("{}".format(', '.join("{!s}: {!r}".format(key,val) for (key,val) in npc.skills.items())))
     print("**Skills**: {}".format(', '.join(skills_list)))
-
-    if npc.starting_talents:
-        print("**Starting Talents**: {}".format(', '.join(npc.formatted_starting_talents.keys())))
-    print("**Suggested Talents**: {}".format(', '.join(npc.suggested_talents.keys())))
-    print("**Additional Talents**: {}".format(', '.join(npc.additional_talents.keys())))
+    if starting_talents: print(f"**Starting Talents**: {format_talents(starting_talents)}")
+    print(f"**Suggested Talents**: {format_talents(suggested_talents)}")
+    print(f"**Additional Talents**: {format_talents(additional_talents)}")
     print("**Traits**: {}".format(', '.join(npc.traits)))
     print("**Optional Traits**: {}".format(', '.join(npc.optional_traits)))
     print("**Trappings**: {}".format(', '.join(npc.trappings)))
@@ -763,10 +799,11 @@ def pretty_print_npc(npc : Npc4):
 def main():
     ## Scroll down below the return for a better demo of how to programmatically interact with the Npc4 class
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="Generate a specified WFRP4 NPC")
     parser.add_argument("--species", help="Species of NPC to create", type=str, nargs='?',default='Human')
     parser.add_argument("--species-list", action='store_true', help="List known careers")
     parser.add_argument("--careers-list", action='store_true', help="List known species")
+    parser.add_argument("--type", choices=['combat','social','utility'], help="Remove information not relevant to this type of NPC")
     parser.add_argument("careerrank", nargs='*')
     parser.parse_args()
     args = parser.parse_args()
@@ -797,7 +834,7 @@ def main():
 
         # Add letters to any previously collected letters
         if letters:
-            lastarg += ' {}'.format(letters)
+            lastarg += f' {letters}'
 
         # If there's a number trigger a new career rank
         if numbers:
@@ -817,7 +854,7 @@ def main():
             lastarg = ''
 
     # Print
-    pretty_print_npc(npc) 
+    pretty_print_npc(npc, args.type) 
 
     return
     
