@@ -188,13 +188,14 @@ def main():
     random.seed()
 
     import argparse
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="Generate a random WFRP4 NPC")
     parser.add_argument("--cl", action='store_true', help="List known species and quit.")
     parser.add_argument("--species", type=str, nargs='?',default='Human', 
                         help="""Species of NPC to create. Valid species are Human, Reiklander, Dwarf, 
                                 Halfling, High Elf, Wood Elf, Gnome, Nordlander, Middenheimer, and Middenlander.
                                 Default is human. Human will be randomly assigned to Reiklander, Nordlander, 
                                 Middenheimer, or Middenlander.""")
+    parser.add_argument("--type", choices=['combat','social','utility'], help="Remove information not relevant to this type of NPC")
     parser.add_argument("--young", help="Young NPCs have a lower probability of career ranks and changes", action='store_true')
     parser.add_argument("career", help="Final career for NPC. Multi-word arguments must be quoted.", type=str,nargs='?', default=None)
     parser.add_argument("level",help="Final career level for NPC",type=int,nargs='?',default=None)
@@ -225,7 +226,7 @@ def main():
     
     # Generate NPC
     npc = RandomNPC4(species=args.species,young=args.young,target=target)
-    pretty_print_npc(npc)
+    pretty_print_npc(npc, args.type)
 
 
 if __name__ == "__main__":
