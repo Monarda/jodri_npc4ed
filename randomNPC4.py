@@ -159,7 +159,7 @@ class RandomNPC4(Npc4):
         # Extract the information we need from the bot_char_dat.career_table_4e array
         species_indexer = ['Reiklander','Dwarf','Halfling','High Elf','Wood Elf','Gnome','Nordlander','Middenheimer','Middenlander']
         careers = bot_char_dat.career_table_4e[0::10]
-        probs = bot_char_dat.career_table_4e[species_indexer.index(self._species)+1::10]
+        probs = bot_char_dat.career_table_4e[species_indexer.index(self._species.title())+1::10]
 
         # Append Cult Magus of Tzeentch to the probabilities as appropriate
         if not firstcareer:

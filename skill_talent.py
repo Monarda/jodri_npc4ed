@@ -17,6 +17,8 @@ def associate(skills : dict, talents : dict, starting_index=1)  -> typing.Tuple[
         def __getitem__(self,key):
             realkey = key.split('(')[0].strip()
 
+            if realkey[0]=='*': realkey = realkey[1:-1]
+
             return self._talents[realkey]       
 
     t4 = talents_data()
@@ -27,7 +29,9 @@ def associate(skills : dict, talents : dict, starting_index=1)  -> typing.Tuple[
     #      {'Ride': 'Ride (Horse)', 'Ride (Horse)':'Ride'}
     skills_short_to_long = {}
     for skill in skills:
-        unspecialised = skill.split('(')[0].strip()
+        unspecialised = skill.split('(')[0].strip()     # Word before '('
+        if unspecialised[0]=='*': unspecialised[1:-1]   # Strip off stars in e.g. *Savvy*, as used by starting talents
+
         if unspecialised in skills_short_to_long:
             skills_short_to_long[unspecialised].update([skill])
         else:

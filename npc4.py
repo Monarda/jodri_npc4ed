@@ -104,7 +104,7 @@ class Npc4:
 
     @property
     def known_species(self):
-        """List known species. Most useful for listing 'monsters' than can have careers applied."""
+        """List known species. Most useful for listing 'monsters' that can have careers applied."""
         return self._known_species
 
     def __str__(self) -> str:
@@ -270,16 +270,17 @@ class Npc4:
             wounds = tb
         elif "Size (Small)" in self._traits:
             wounds =  2*tb + wpb
+        elif "Hardy" in self._starting_talents: 
+            # Use the weirdness of Python's if evaluation to support Hardy
+            # It's simply added in the case of creatures of Size (Average)
+            # or lower but multiplicative at larger sizes
+            wounds += tb
         elif "Size (Large)" in self._traits:
             wounds *= 2
         elif "Size (Enormous)" in self._traits:
             wounds *= 4
         elif "Size (Monstrous)" in self._traits:
             wounds *= 8
-
-        # Only support Hardy once for now
-        if "Hardy" in self._starting_talents:
-            wounds += tb
 
         return wounds
 
@@ -465,7 +466,7 @@ class Npc4:
         formatted_talents = {}
         for talent in starting_talents:
             try:
-                if 'stat_mod' in _talents_data[talent]:
+                if _talents_data[talent]['stat_mod']:
                     formatted_talents[f'*{talent}*'] = starting_talents[talent]
                 else:
                     formatted_talents[talent] = starting_talents[talent]
@@ -751,7 +752,7 @@ def pretty_print_npc(npc : Npc4, type=None):
     # Talents
     t4 = Talents4()
     if npc.starting_talents:
-        starting_talents = t4.filter(npc.formatted_starting_talents.keys(),type)
+        starting_talents = t4.filter(npc.formatted_starting_talents,type)
     else: starting_talents = {}
 
     suggested_talents = t4.filter(npc.suggested_talents,type)
@@ -856,7 +857,7 @@ def main():
     # Print
     pretty_print_npc(npc, args.type) 
 
-    return
+    #return
     
     # Hospitaller Cristina González
     npc = Npc4("Estalian", 
@@ -879,11 +880,6 @@ def main():
     npc.add_career_rank("Physician", 2)
     npc.add_career_rank("Physician", 3)
     pretty_print_npc(npc)
-
-    # # General test stuff!
-    # npc = Npc4("Human")
-    # npc.add_career("Warrior of Tzeentch",3)
-    # pretty_print_npc(npc)
 
 if __name__ == "__main__":
     # execute only if run as a script
