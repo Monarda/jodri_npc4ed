@@ -92,11 +92,14 @@ def find_best_match(target, options):
     prefix_match = find_longest_prefix(target,options)
     if prefix_match: 
         ## Score the prefix - every letter that doesn't match reduces the score
+        count = 0
         for idx, char in enumerate(list(target)):
             if char!=prefix_match[idx]:
-                breakpointhook
-        score = idx - len(prefix_match)
+                break
+            else: count += 1
 
+        #score = count - (len(target) - count)
+        score = 2*count - len(target)
         if score>0: return prefix_match
 
     # Leventshtein distance is good for misspellings but bad for abbreviations
@@ -105,5 +108,7 @@ def find_best_match(target, options):
         scores[option] = 1 - levenshteinDistance(target,option)
 
     import operator
-    return max(scores.items(), key=operator.itemgetter(1))[0]
+    bestcareer = max(scores.items(), key=operator.itemgetter(1))[0]
+    if scores[bestcareer] > -2: return bestcareer
+    else: return target
 

@@ -780,11 +780,11 @@ def pretty_print_npc(npc : Npc4, type=None):
     def format_talents(talents):
         return ', '.join('{}{}'.format(convert_to_superscript(v.get('skill_ref','')),k) for k,v in talents.items())
 
-    print("{} ({}) {}".format(npc.species, npc.species_used, npc.careername))
-    print("**Career History**: {}".format(' --> '.join(npc.career_history_unambiguous)))
-    print("`| {} |`".format('| '.join(npc.characteristics.keys())))
-    print("`| {} |`".format('| '.join([str(x) for x in npc.characteristics_base.values()])))
-    print("`| {} |`".format('| '.join([str(x) for x in npc.characteristics.values()])))
+    print("{} ({}) {}".format(npc.species, npc.species_used.title(), npc.careername))
+    print("**Career History**: {}".format(' \u2192 '.join(npc.career_history_unambiguous)))
+    print("`| {} |`".format('| '.join([f'{x:>3}' for x in npc.characteristics.keys()])))
+    print("`| {} |`".format('| '.join([f'{x:3}' for x in npc.characteristics_base.values()])))
+    print("`| {} |`".format('| '.join([f'{x:3}' for x in npc.characteristics.values()])))
     print("**Skills**: {}".format(', '.join(skills_list)))
     if starting_talents: print(f"**Starting Talents**: {format_talents(starting_talents)}")
     print(f"**Suggested Talents**: {format_talents(suggested_talents)}")
