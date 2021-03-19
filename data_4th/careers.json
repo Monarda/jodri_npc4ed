@@ -18,7 +18,7 @@
             "skills" : ["Charm","Haggle","Lore (Science)","Gossip","Language (Guilder)","Perception"],
             "talents":  ["Criminal","Dealmaker","Etiquette (Guilder)","Pharmacist"],
             "npc_suggested_talents": ["Pharmacist"],
-            "trappings": ["Guild Licence","Trade Tools"]
+            "trappings": ["Guild Licence","Trade Tools (Apothecary)"]
         },
         "rank 3" : {
             "name": "Master Apothecary",
@@ -58,7 +58,7 @@
             "skills" : ["Drive","Dodge","Navigation","Ranged (Engineering)","Research","Language (Guilder)"],
             "talents":  ["Craftsman (Engineer)","Etiquette (Guilder)","Marksman","Orientation"],
             "npc_suggested_talents": ["Craftsman (Engineer)"],
-            "trappings": ["Guild Licence","Trade Tools"]
+            "trappings": ["Guild Licence","Trade Tools (Engineer)"]
         },
         "rank 3" : {
             "name": "Master Engineer",
@@ -378,7 +378,7 @@
             "skills" : ["Charm","Haggle","Lore (Local)","Gossip","Language (Guilder)","Perception"],
             "talents":  ["Dealmaker","Etiquette (Guilder)","Nimble Fingered","Sturdy"],
             "npc_suggested_talents": [],
-            "trappings": ["Guild Licence","Trade Tools"]
+            "trappings": ["Guild Licence","Trade Tools (Artisan)"]
         },
         "rank 3" : {
             "name": "Master Artisan",
@@ -809,7 +809,7 @@
             "skills" : ["Bribery","Consume Alcohol","Gamble","Intimidate","Leadership","Lore (Heraldry)","Melee (Fencing)","Play (Any)"],
             "talents":  ["Etiquette (Nobles)","Luck","Noble Blood","Read/Write"],
             "npc_suggested_talents": ["Noble Blood"],
-            "trappings": ["Courtly Garb","Foil ***or*** Hand Mirror","Jewellery worth 3d10 gc","Personal Servant"]
+            "trappings": ["Courtly Garb","Foil ***or*** Hand Mirror","Jewellery worth 3d10 GC","Personal Servant"]
         },
         "rank 2" : {
             "name": "Noble",
@@ -818,7 +818,7 @@
             "skills" : ["Charm","Gossip","Language (Classical)","Lore (Local)","Ride (Horse)","Melee (Parry)"],
             "talents":  ["Attractive","Briber","Carouser","Suave"],
             "npc_suggested_talents": [],
-            "trappings": ["4 Household Servants","Quality Courtly Garb","Courtly Garb","Riding Horse with Saddle and Harness ***or*** Coach","Main Gauche or Quality Cloak","Jewellery worth 50 gc"]
+            "trappings": ["4 Household Servants","Quality Courtly Garb","Courtly Garb","Riding Horse with Saddle and Harness ***or*** Coach","Main Gauche or Quality Cloak","Jewellery worth 50 GC"]
         },
         "rank 3" : {
             "name": "Magnate",
