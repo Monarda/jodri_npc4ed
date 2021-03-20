@@ -2596,7 +2596,7 @@
             "skills": ["Lore (Any)","Secret Signs (Knightly Order)"],
             "talents":  ["Disarm","Inspiring","Iron Will","Strike to Injure"],
             "npc_suggested_talents": [],
-            "trappings": ["Plumed Great Helm",",","Large Unit of Knights or Several Small Units of Knights"]
+            "trappings": ["Plumed Great Helm","Large Unit of Knights or Several Small Units of Knights"]
         }
     },
     "Pit Fighter": {
