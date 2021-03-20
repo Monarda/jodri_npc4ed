@@ -857,7 +857,7 @@ def main():
     # Print
     pretty_print_npc(npc, args.type) 
 
-    #return
+    return
     
     # Hospitaller Cristina González
     npc = Npc4("Estalian", 
