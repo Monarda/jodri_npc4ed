@@ -2,13 +2,13 @@ import itertools
 import random
 import sys
 
-from npc4 import Npc4
-from npc4 import _careers_data
-from npc4 import pretty_print_npc
-from find_best_match import find_best_match
-from careers4 import Careers4
+from .npc4 import Npc4
+from .npc4 import _careers_data
+from .npc4 import pretty_print_npc
+from .find_best_match import find_best_match
+from .careers4 import Careers4
 
-import bot_char_dat
+from . import bot_char_dat
 
 ## From Archives of the Empire
 # ['Reiklander','Dwarf','Halfling','High Elf','Wood Elf','Gnome','Nordlander','Middenheimer','Middenlander']

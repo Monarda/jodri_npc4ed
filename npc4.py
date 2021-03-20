@@ -3,28 +3,28 @@ import collections
 import json
 import random
 import re
-from skills4 import Skills4
 import sys
 from math import inf
 import importlib.resources
 
-import bot_char_dat
-from careers4 import Careers4
-from talents4 import Talents4
-from data_4th.bestiary import *
-from find_best_match import find_best_match
-import skill_talent
+from .data_4th.bestiary import *
+from . import bot_char_dat
+from .skills4 import Skills4
+from .careers4 import Careers4
+from .talents4 import Talents4
+from .find_best_match import find_best_match
+from  . import skill_talent
 
 # Load data about careers, talents and skills
 # Does this make sense at module scope?
 #with open('data_4th/careers.json') as f:
-with importlib.resources.open_text('data_4th','careers.json') as f:
+with importlib.resources.open_text('jodri_4career.data_4th','careers.json') as f:
     _careers_data = json.load(f)
 
-with importlib.resources.open_text('data_4th','skills.json') as f:
+with importlib.resources.open_text('jodri_4career.data_4th','skills.json') as f:
     _skills_data = json.load(f)
 
-with importlib.resources.open_text('data_4th','talents.json') as f:
+with importlib.resources.open_text('jodri_4career.data_4th','talents.json') as f:
     _talents_data = json.load(f)
 
 class Npc4:
