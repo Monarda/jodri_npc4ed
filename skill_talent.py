@@ -1,10 +1,11 @@
 import json
 import typing
+import importlib.resources
 
-with open('data_4th/skills.json') as f:
+with importlib.resources.open_text('data_4th','skills.json') as f:
     _skills_data = json.load(f)
 
-with open('data_4th/talents.json') as f:
+with importlib.resources.open_text('data_4th','talents.json') as f:
     _talents_data = json.load(f)
 
 def associate(skills : dict, talents : dict, starting_index=1)  -> typing.Tuple[dict, dict, int]:

@@ -6,6 +6,7 @@ import re
 from skills4 import Skills4
 import sys
 from math import inf
+import importlib.resources
 
 import bot_char_dat
 from careers4 import Careers4
@@ -16,13 +17,14 @@ import skill_talent
 
 # Load data about careers, talents and skills
 # Does this make sense at module scope?
-with open('data_4th/careers.json') as f:
+#with open('data_4th/careers.json') as f:
+with importlib.resources.open_text('data_4th','careers.json') as f:
     _careers_data = json.load(f)
 
-with open('data_4th/skills.json') as f:
+with importlib.resources.open_text('data_4th','skills.json') as f:
     _skills_data = json.load(f)
 
-with open('data_4th/talents.json') as f:
+with importlib.resources.open_text('data_4th','talents.json') as f:
     _talents_data = json.load(f)
 
 class Npc4:
