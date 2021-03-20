@@ -1,0 +1,1 @@
+all = ["npc4", "randomNPC4"]
