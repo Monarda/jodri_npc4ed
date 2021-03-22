@@ -1425,7 +1425,7 @@
         "social": false,
         "stat_mod": null,
         "tests": [
-            null
+            "Melee"
         ],
         "utility": false
     },
