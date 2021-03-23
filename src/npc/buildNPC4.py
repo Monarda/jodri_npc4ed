@@ -7,24 +7,26 @@ import sys
 from math import inf
 import importlib.resources
 
-from data.bestiary import *
-from data import bot_char_dat
-from src.npc.skills4 import Skills4
-from src.npc.careers4 import Careers4
-from src.npc.talents4 import Talents4
-from src.utility.find_best_match import find_best_match
-from src.npc import skill_talent
+from ...data.bestiary import *
+from ...data import bot_char_dat
+from .skills4 import Skills4
+from .careers4 import Careers4
+from .talents4 import Talents4
+from ..utility.find_best_match import find_best_match
+from . import skill_talent
+
+from ... import data
 
 # Load data about careers, talents and skills
 # Does this make sense at module scope?
 #with open('data/careers.json') as f:
-with importlib.resources.open_text('data','careers.json') as f:
+with importlib.resources.open_text(data,'careers.json') as f:
     _careers_data = json.load(f)
 
-with importlib.resources.open_text('data','skills.json') as f:
+with importlib.resources.open_text(data,'skills.json') as f:
     _skills_data = json.load(f)
 
-with importlib.resources.open_text('data','talents.json') as f:
+with importlib.resources.open_text(data,'talents.json') as f:
     _talents_data = json.load(f)
 
 class BuildNPC4:

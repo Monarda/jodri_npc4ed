@@ -1,14 +1,13 @@
-import re
-from src.npc.careers4 import Careers4
-import sys
+from .npc.buildNPC4 import BuildNPC4
+from .npc.randomNPC4 import RandomNPC4
 
-from src.npc.buildNPC4 import BuildNPC4
-from src.npc.randomNPC4 import RandomNPC4
-from src.npc.skills4 import Skills4
-from src.npc.talents4 import Talents4
-from src.npc import skill_talent
+from .npc.careers4 import Careers4
+from .npc.skills4 import Skills4
+from .npc.talents4 import Talents4
 
-from src.utility.convert_to_superscript import *
+from .npc import skill_talent
+
+from .utility.convert_to_superscript import *
 
 class NPC4e:
     """ Make either a fully defined NPC, or one randomly generated"""

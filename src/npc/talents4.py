@@ -3,7 +3,9 @@ import json
 import random
 import importlib.resources
 
-with importlib.resources.open_text('data','talents.json') as f:
+from ... import data
+
+with importlib.resources.open_text(data,'talents.json') as f:
     _talents_data = json.load(f)
 
 class Talents4:

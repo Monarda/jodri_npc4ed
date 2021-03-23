@@ -1,7 +1,9 @@
 import json
 import importlib.resources
 
-with importlib.resources.open_text('data','careers.json') as f:
+from ... import data
+
+with importlib.resources.open_text(data,'careers.json') as f:
     _careers_data = json.load(f)
 
 class Careers4:

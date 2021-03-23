@@ -4,8 +4,10 @@ import importlib.resources
 
 from typing import OrderedDict
 
+from ... import data
+
 #with open('data/skills.json') as f:
-with importlib.resources.open_text('data','skills.json') as f:
+with importlib.resources.open_text(data,'skills.json') as f:
     _skills_data = json.load(f)
 
 class Skills4:

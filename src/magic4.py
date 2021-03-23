@@ -3,10 +3,10 @@ import collections
 import json
 import importlib.resources
 import random
-from find_best_match import find_best_match
+from .utility.find_best_match import find_best_match
 
-with open('data/spells.json') as f:
-#with importlib.resources.open_text('data','spells.json') as f:
+from .. import data
+with importlib.resources.open_text(data,'spells.json') as f:
     _magic_data = json.load(f)
 
 class Magic4:
