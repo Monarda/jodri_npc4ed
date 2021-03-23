@@ -1,7 +1,7 @@
 import json
 import importlib.resources
 
-with importlib.resources.open_text('jodri_4career.data_4th','careers.json') as f:
+with importlib.resources.open_text('data','careers.json') as f:
     _careers_data = json.load(f)
 
 class Careers4:
@@ -55,8 +55,18 @@ class Careers4:
                 else:
                     self._careers_by_class[classname] = set([careername])
 
-    def list_careers(self):
+    @property
+    def careers(self):
         return _careers_data.keys()
+
+    @property
+    def career_levels(self):
+        career_levels = []
+        for career in self.careers:
+            for i in range (1,5):
+                career_levels.append(self[career][f'rank {i}']['name'])
+
+        return career_levels
 
     def __getitem__(self, key):
         return _careers_data[key]

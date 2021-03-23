@@ -1,5 +1,4 @@
-__all__ = ["npc4", "randomNPC4", "data_4th"]
+__all__ = ["npc4e", "magic4", "data"]
 
-from .npc4 import Npc4
-from .npc4 import pretty_print_npc
-from .randomNPC4 import RandomNPC4
+from .src.magic4 import Magic4
+from .src.npc4e import NPC4e

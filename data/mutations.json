@@ -1,0 +1,15 @@
+{
+    "physical" : {
+        "Animalistic Legs" : {"Any": 3, "Khorne": 4, "Nurgle": 3, "Slaanesh":5, "Tzeentch":7}
+    },
+    "beast head" : {
+        "Bear" : {"Any": 10, "Khorne": 5, "Nurgle": 5, "Slaanesh":5, "Tzeentch":10}
+    },
+    "fixations" : {
+        "2" : "Inanimate Objects"
+    },
+    "mental" : {
+        "Aethyric Leak" : {"Any": 1, "Khorne": null, "Slaanesh":null, "Tzeentch":null}
+    }
+}
+

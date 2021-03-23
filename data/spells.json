@@ -1,0 +1,1281 @@
+{
+    "petty": {
+        "colour": false,
+        "spells": {
+            "Animal Friend": {
+                "CN": 0,
+                "Range": "1 yard",
+                "Target": 1,
+                "Duration": "1 hour"
+            },
+            "Bearings": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "Instant"
+            },
+            "Dazzle": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Careful Step": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WP Minutes"
+            },
+            "Conserve": {
+                "CN": 0,
+                "Range": "1 yard",
+                "Target": 1,
+                "Duration": "WPB days"
+            },
+            "Dart": {
+                "CN": 0,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Drain": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Eavesdrop": {
+                "CN": 0,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "IB rounds"
+            },
+            "Gust": {
+                "CN": 0,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Light": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WP minutes"
+            },
+            "Magic Flame": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Marsh Lights": {
+                "CN": 0,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "WP minutes"
+            },
+            "Murmured Whisper": {
+                "CN": 0,
+                "Range": "WP yards",
+                "Target": "",
+                "Duration": "WPB rounds"
+            },
+            "Open Lock": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Produce Small Animal": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Protection from Rain": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "TB rounds"
+            },
+            "Purify Water": {
+                "CN": 0,
+                "Range": "1 yard",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Rot": {
+                "CN": 0,
+                "Range": "1 yard",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Sleep": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Spring": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "WPB rounds"
+            },
+            "Shock": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Sly Hands": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Sounds": {
+                "CN": 0,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "WPB rounds"
+            },
+            "Twitch": {
+                "CN": 0,
+                "Range": "WPB yards",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Warning": {
+                "CN": 0,
+                "Range": "1 yard",
+                "Target": "Special",
+                "Duration": "Instant"
+            }
+        }
+    },
+    "petty of Slaanesh": {
+        "colour": "no",
+        "spells" : {
+            "Befuddle": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Blessing of Slaanesh": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Endure Excess": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "Special"
+            },
+            "Leer": {
+                "CN": 0,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "Special"
+            },
+            "Lure": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB minutes"
+            },
+            "Preen": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "Instant"
+            },
+            "Sense Vice": {
+                "CN": 0,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "Instant"
+            }
+        }
+    },
+    "arcane": {
+        "colour": true,
+        "spells": {
+            "Aethyric Armour": {
+                "CN": 2,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds+"
+            },
+            "Aethyric Arms": {
+                "CN": 2,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds+"
+            },
+            "Arrow Shield": {
+                "CN": 3,
+                "Range": "You",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds+"
+            },
+            "Blast": {
+                "CN": 4,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "Instant"
+            },
+            "Bolt": {
+                "CN": 4,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Breath": {
+                "CN": 6,
+                "Range": "1 yard",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Bridge": {
+                "CN": 4,
+                "Range": "WP yards",
+                "Target": "AoE",
+                "Duration": "WPB rounds+"
+            },
+            "Chain Attack": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Corrosive Blood": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Dark Vision": {
+                "CN": 1,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Distracting": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Dome": {
+                "CN": 7,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Drop": {
+                "CN": 1,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Entangle": {
+                "CN": 3,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "Special"
+            },
+            "Fearsome": {
+                "CN": 3,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Flight": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds+"
+            },
+            "Magic Shield": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Move Object": {
+                "CN": 4,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "1 rounds"
+            },
+            "Mundane Aura": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WP minutes"
+            },
+            "Push": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "Instant"
+            },
+            "Teleport": {
+                "CN": 5,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "Instant"
+            },
+            "Terrifying": {
+                "CN": 7,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Ward": {
+                "CN": 5,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "chaos arcane": {
+        "colour": false,
+        "spells": {
+            "Blast of Corruption": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "YAoE WPB yards",
+                "Duration": "Instant"
+            },
+            "Bolt of Corruption": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Daemonic Mien": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "FelB rounds+"
+            },
+            "Foul Messenger": {
+                "CN": 8,
+                "Range": "Fel miles",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Joyous Aspect": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "FelB rounds+"
+            },
+            "Obsession": {
+                "CN": 8,
+                "Range": "IB miles",
+                "Target": "Special",
+                "Duration": "SL days"
+            },
+            "Power of Chaos": {
+                "CN": 4,
+                "Range": "WP yards",
+                "Target": "AoE FelB yards",
+                "Duration": "WPB rounds"
+            },
+            "Rend Aethyr": {
+                "CN": 16,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "WPB rounds+"
+            },
+            "Slave to Darkness": {
+                "CN": 8,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Special"
+            }
+        }
+    },
+    "lore of beasts": {
+        "colour": true,
+        "names" : {
+            "colour" : "amber",
+            "description": "beasts",
+            "wind" : "Ghur",
+            "order" : "Amber",
+            "adept" : "Shaman"
+        },
+        "spells" : {
+            "Amber Talons": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Beast Form": {
+                "CN": 5,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WP minutes"
+            },
+            "Beast Master": {
+                "CN": 10,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "WPB days"
+            },
+            "Beast Tongue": {
+                "CN": 3,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WP minutes"
+            },
+            "Flock of Doom": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Hunter's Hide": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "The Amber Spear": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Wyssan's Wildform": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "lore of death": {
+        "colour": true,
+        "names" : {
+            "colour" : "purple",
+            "description": "death",
+            "wind" : "Shyish",
+            "order" : "Amethyst",
+            "adept" : "Brethren"
+        },
+        "spells": {
+            "Caress of Laniph": {
+                "CN": 7,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Dying Words": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Purple Pall of Shyish": {
+                "CN": 9,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Sanctify": {
+                "CN": 10,
+                "Range": "Touch",
+                "Target": "AoE WPB yards",
+                "Duration": "WP minutes"
+            },
+            "Scythe of Shyish": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Soul Vortex": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "Instant"
+            },
+            "Steal Life": {
+                "CN": 7,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Swift Passing": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "Instant"
+            }
+        }
+    },
+    "lore of fire": {
+        "colour": true,
+        "names" : {
+            "colour" : "red",
+            "description": "fire",
+            "wind" : "Aqshy",
+            "order" : "Bright",
+            "adept" : "Pyromancer"
+        },
+        "spells": {
+            "Aqshy's Aegis": {
+                "CN": 5,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Cauterise": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Crown of Flame": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Flaming Hearts": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Firewall": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "AoE",
+                "Duration": "WPB rounds"
+            },
+            "Great Fires of U'Zhul": {
+                "CN": 10,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Flaming Sword of Rhuin": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Purge": {
+                "CN": 10,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "lore of heavens": {
+        "colour": true,
+        "names" : {
+            "colour" : "blue",
+            "description": "heavens",
+            "wind" : "Azyr",
+            "order" : "Celestial",
+            "adept" : "Astromancer"
+        },        
+        "spells": {
+            "Cerulean Shield": {
+                "CN": 7,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Comet of Casandora": {
+                "CN": 10,
+                "Range": "I yards",
+                "Target": "AoE IB yards",
+                "Duration": "Special"
+            },
+            "Fate's Fickle Fingers": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "AoE IB yards",
+                "Duration": "WPB rounds"
+            },
+            "Starcrossed": {
+                "CN": 7,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "IB rounds"
+            },
+            "T'Essla's Arc": {
+                "CN": 7,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "The First Portent of Amul": {
+                "CN": 3,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "IB rounds"
+            },
+            "The Second Portent of Amul": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "IB rounds"
+            },
+            "The Third Portent of Amul": {
+                "CN": 12,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "IB rounds"
+            }
+        }
+    },
+    "lore of metal": {
+        "colour": true,
+        "names" : {
+            "colour" : "gold",
+            "description": "metal",
+            "wind" : "Chamon",
+            "order" : "Gold",
+            "adept" : "Alchemist"
+        },
+        "spells": {
+            "Crucible of Chamon": {
+                "CN": 7,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Enchant Weapon": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "WPB rounds"
+            },
+            "Feather of Lead": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Fool's Gold": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WP minutes"
+            },
+            "Forge of Chamon": {
+                "CN": 9,
+                "Range": "WPB yards",
+                "Target": "Special",
+                "Duration": "WP minutes"
+            },
+            "Glittering Robe": {
+                "CN": 5,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "TB rounds"
+            },
+            "Mutable Metal": {
+                "CN": 5,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Transmutation of Chamon": {
+                "CN": 12,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "lore of life": {
+        "names" : {
+            "colour" : "jade",
+            "description": "life",
+            "wind" : "Ghyran",
+            "order" : "Jade",
+            "adept" : "Druid"
+        },
+        "colour": true,
+        "spells": {
+            "Barkskin": {
+                "CN": 3,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Earthblood": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Earthpool": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "Instant"
+            },
+            "Fat of the Land": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB days"
+            },
+            "Forest of Thorns": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Lie of the Land": {
+                "CN": 5,
+                "Range": "IB miles",
+                "Target": "You",
+                "Duration": "Special"
+            },
+            "Lifebloom": {
+                "CN": 8,
+                "Range": "WPB yards",
+                "Target": "Special",
+                "Duration": "Special"
+            },
+            "Regenerate": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "lore of light": {
+        "colour": true,
+        "names" : {
+            "colour" : "white",
+            "description": "light",
+            "wind" : "Hysh",
+            "order" : "Light",
+            "adept" : "Hierophant"
+        },
+        "spells": {
+            "Banishement": {
+                "CN": 12,
+                "Range": "You",
+                "Target": "AoE WPB yards",
+                "Duration": "Instant"
+            },
+            "Blinding Light": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "You",
+                "Duration": "Instant"
+            },
+            "Clarity of Thought": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Int minutes"
+            },
+            "Daemonbane": {
+                "CN": 10,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Healing Light": {
+                "CN": 9,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Net of Amyntok": {
+                "CN": 8,
+                "Range": "IntB yards",
+                "Target": 1,
+                "Duration": "Target IntB rounds"
+            },
+            "Phâ's Protection": {
+                "CN": 10,
+                "Range": "You",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Speed of Thought": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "WPB rounds",
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "lore of shadows": {
+        "colour": true,
+        "names" : {
+            "colour" : "grey",
+            "description": "shadows",
+            "wind" : "Ulgu",
+            "order" : "Grey",
+            "adept" : "Grey Guardian"
+        },
+        "spells": {
+            "Choking Shadows": {
+                "CN": 6,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Doppelganger": {
+                "CN": 10,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "IntB minutes"
+            },
+            "Illusion": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "AoE IntB yards",
+                "Duration": "WPB minutes"
+            },
+            "Mindslip": {
+                "CN": 6,
+                "Range": "1 yards",
+                "Target": 1,
+                "Duration": "WP minutes"
+            },
+            "Mystifying Miasma": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Shadowsteed": {
+                "CN": 6,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "Until the next sunrise"
+            },
+            "Shadowstep": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "You",
+                "Duration": "Instant"
+            },
+            "Shroud of Invisibily": {
+                "CN": 8,
+                "RanNge": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "lore of hedgecraft": {
+        "colour": false,
+        "spells": {
+            "Goodwill": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "AoE FelB yards",
+                "Duration": "WPB rounds"
+            },
+            "Mirkride": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes"
+            },
+            "Nepenthe": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "WPB rounds"
+            },
+            "Nostrum": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "WPB rounds"
+            },
+            "Part of the Branches": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WP rounds"
+            },
+            "Protective Charm": {
+                "CN": 0,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "WPB days"
+            }
+        }
+    },
+    "lore of witchcraft": {
+        "colour": false,
+        "spells": {
+            "Blight": {
+                "CN": 14,
+                "Range": "WPB yards",
+                "Target": "Special",
+                "Duration": "Special"
+            },
+            "Creeping Menace": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Curse of Crippling Pain": {
+                "CN": 10,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Curse of Ill-Fortune": {
+                "CN": 8,
+                "Range": "WPB days",
+                "Target": 1,
+                "Duration": "WPB days"
+            },
+            "Haunting Horror": {
+                "CN": 8,
+                "Range": "Touch",
+                "Target": "AoE",
+                "Duration": "WP days"
+            },
+            "The Evil Eye": {
+                "CN": 6,
+                "Range": "Willpower yards",
+                "Target": "Special",
+                "Duration": "Instant"
+            }
+        }
+    },
+    "chaos lore of tzeentch": {
+        "colour": false,
+        "spells": {
+            "Boon of Tzeentch": {
+                "CN": 9,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "IB days"
+            },
+            "The Purple Hand": {
+                "CN": 3,
+                "Range": "Int yards",
+                "Target": 1,
+                "Duration": "Varies"
+            },
+            "Curse of Tzeentch": {
+                "CN": 9,
+                "Range": "Int yards",
+                "Target": 1,
+                "Duration": "Varies"
+            },
+            "Blue Fire of Tzeentch": {
+                "CN": 6,
+                "Range": "Int yards",
+                "Target": "AoE",
+                "Duration": "Instant"
+            },
+            "Bolt of Change": {
+                "CN": 9,
+                "Range": "Int yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "The Flickering Flames of Fickle Fate": {
+                "CN": 4,
+                "Range": "Int yards",
+                "Target": "Special",
+                "Duration": "WPB rounds+"
+            },
+            "Master of Fortune": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB days"
+            },
+            "Mindfire": {
+                "CN": 6,
+                "Range": "Int yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Pink Fire of Tzeentch": {
+                "CN": 6,
+                "Range": "Int yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Sense the Skein": {
+                "CN": 3,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "1 rounds"
+            },
+            "Transformation of Tzeentch": {
+                "CN": 10,
+                "Range": "IB yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Tzeentch's Firestorm": {
+                "CN": 11,
+                "Range": "Int yards",
+                "Target": "AoE",
+                "Duration": "WPB rounds"
+            },
+            "Tzeentch's Golden Aura": {
+                "CN": 7,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Word of Tzeentch": {
+                "CN": 7,
+                "Range": "SB yards",
+                "Target": 1,
+                "Duration": "IntB rounds"
+            }
+        }
+    },
+    "chaos lore of slaanesh": {
+        "colour": false,
+        "spells": {
+            "Acquiescence": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB Rounds"
+            },
+            "Aura of Acquiescence": {
+                "CN": 12,
+                "Range": "You",
+                "Target": "AoE FelB yards",
+                "Duration": "WPB rounds"
+            },
+            "Bonds of Slaanesh": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Breath of Inspiration": {
+                "CN": 8,
+                "Range": "1 yards",
+                "Target": 1,
+                "Duration": "Up to WP days"
+            },
+            "Blissful Throes": {
+                "CN": 6,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "Instant and Special"
+            },
+            "Cacophonic Caress": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "AoE WPB yards",
+                "Duration": "Instant"
+            },
+            "Careless Whispers": {
+                "CN": 8,
+                "Range": "1 mile",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Chaos Spawn": {
+                "CN": 10,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Cursed Caress": {
+                "CN": 8,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Cutting Wit": {
+                "CN": 3,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Delicious Excruciation": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Fleshy Curse": {
+                "CN": 10,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Flesh Puppet": {
+                "CN": 10,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "WP minutes"
+            },
+            "From Pain, Pleasure": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Lash of Slaanesh": {
+                "CN": 6,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Gift of Slaanesh ": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Luxurious Torment": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Mask of Desire": {
+                "CN": 8,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB hours"
+            },
+            "Pavane of Slaanesh": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "AoE FelB yards",
+                "Duration": "WP rounds"
+            },
+            "Phantasmagoria": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Succubus's Caress": {
+                "CN": 8,
+                "Range": "Fel yards",
+                "Target": 1,
+                "Duration": "FelB hours"
+            },
+            "Summon Daemonette": {
+                "CN": 12,
+                "Range": "WPB yards",
+                "Target": "Special",
+                "Duration": "WPB rounds"
+            },
+            "Summon Daemonette Pack": {
+                "CN": 25,
+                "Range": "WPB yards",
+                "Target": "Special",
+                "Duration": "WPB rounds"
+            },
+            "Titillating Delusions": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "See description",
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "lore of daemonology": {
+        "colour": false,
+        "spells": {
+            "Destoy Lesser Daemon": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB Rounds"
+            },
+            "Detect Daemon": {
+                "CN": 4,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Manifest Lesser Daemon": {
+                "CN": 8,
+                "Range": "WPB yards",
+                "Target": "Special",
+                "Duration": "WPB rounds"
+            },
+            "Octagram": {
+                "CN": 10,
+                "Range": "Touch",
+                "Target": "AoE",
+                "Duration": "WP minutes"
+            }
+        }
+    },
+    "lore of necromancy": {
+        "colour": false,
+        "spells": {
+            "Raise Dead": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "Until Sunrise"
+            },
+            "Reanimate": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "Until Sunrise"
+            },
+            "Screaming Skull": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Vanhel's Call": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "Instant"
+            }
+        }
+    },
+    "lore of nurgle": {
+        "colour": false,
+        "spells": {
+            "Stream of Corruption": {
+                "CN": 9,
+                "Range": "Special",
+                "Target": "Special",
+                "Duration": "Instant"
+            },
+            "Reveal the Inner Beauty": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "Instant"
+            }
+        }
+    }
+}

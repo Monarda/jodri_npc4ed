@@ -3,7 +3,7 @@ import json
 import random
 import importlib.resources
 
-with importlib.resources.open_text('jodri_4career.data_4th','talents.json') as f:
+with importlib.resources.open_text('data','talents.json') as f:
     _talents_data = json.load(f)
 
 class Talents4:
@@ -57,7 +57,7 @@ class Talents4:
         return collections.OrderedDict({key: talentlist[key] for key in list(output)})
 
 def main():
-    with open('data_4th/careers.json') as f:
+    with open('data/careers.json') as f:
         _careers_data = json.load(f)
 
     print("Searching for talents in careers but not in talents file:")
