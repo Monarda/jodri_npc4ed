@@ -76,6 +76,6 @@ species_npc_optional_traits_4e = {
 }
 
 # Aliases
-species_npc_characteristics_4e['skaven'] = species_npc_characteristics_4e['clanrat']
-species_npc_traits_4e['skaven']          = species_npc_traits_4e['clanrat']
-species_npc_optional_traits_4e['skaven'] = species_npc_optional_traits_4e['clanrat']
+species_npc_aliases_4e = {
+    'skaven' : 'clanrat'
+}

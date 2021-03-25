@@ -84,7 +84,9 @@ class NPC4e:
     @classmethod
     def known_species(cls):
         """ List known species of all kind, but still excluding types of human """
-        return list(set(cls.known_species_build())+set(cls.known_species_random()))
+        known_species_build  = set([x.lower() for x in cls.known_species_build()])
+        known_species_random = set([x.lower() for x in cls.known_species_random()])
+        return sorted( list(set(known_species_build.union(known_species_random))) )
 
     @classmethod
     def known_species_build(cls):

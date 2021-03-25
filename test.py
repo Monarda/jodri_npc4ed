@@ -29,7 +29,7 @@ def main():
     print(60*'-')
 
     # Generate NPC with defined career path
-    npc = NPC4e(random=False, species='Ogre', careers=[('Guard',1), ('Guard',2), ('Pedlar',2)])
+    npc = NPC4e(random=False, species='Skaven', careers=[('Guard',1), ('Guard',2), ('Pedlar',2)])
     print_npc(npc)
     print(60*'-')
 
@@ -37,6 +37,9 @@ def main():
     npc = NPC4e(random=True, species='Reiklander', careers=[('Guard',1)])
     npc.filter = 'combat'
     print_npc(npc)
+
+    # Print some additional details
+    print(NPC4e.known_species())
 
 if __name__ == "__main__":
     # execute only if run as a script
