@@ -19,42 +19,68 @@ class NPC4e:
                  random  : bool=True,
                  species : str=None,
                  careers : list=None,
+                 type    : str=None,
                  age     : str=None,
-                 filter  : str=None):
+                 filter  : str=None,
+                 characteristics   : dict=None,
+                 initial_skills    : dict=None,
+                 initial_talents   : dict=None,
+                 initial_trappings : dict=None):
         """
         Create a new WFRP 4th edition NPC.
 
         Parameters
         ----------
-        All parameters are optional.
+        All parameters are optional. If none are given a completely random NPC will be generated.
 
-        random:  
+        random:  bool, optional
         whether to build an NPC with user-defined career history (random=False), or one with a randomly 
         generated career history.
         
-        species: 
+        species: str, optional
         the species of the NPC. Note that the defined and random NPCs have different species possible. 
         The class will return an error explanation if the user inputs a species the associated generator 
         can't handle
         
-        careers: 
+        careers: list, optional
         either a list of tuples of (career, level) for the defined NPC builder, **OR** a single tuple 
         of (career, level) for the random NPC builder. In the latter case the behaviour varies depending 
         on the level in the tuple. If the level is 1 then the career is used as a starting career, if 
         the level is >1 then it becomes the final (i.e. target) career of the NPC
         
-        ages:   
+        type: str, optional
+        NOT IMPLEMENTED. As an alternative to careers, set a broad type of NPC such as 'medical', or 'holy'
+
+        ages: str, optional
         a string which applies to randomly generated NPCs and means that the probabilities are adjusted 
         to make shorter or longer career histories more likely
 
-        filter:  
+        filter: str, optional
         apply a filter to *presentation* of the NPC, emphasing a particular aspect currently valid 
         values are 'combat' and 'social'
         NOTE: the filter is the only option that can be changed once an NPC is generated
+
+        characteristics:
+        Override the generation of characteristics and input them directly. Takes a dictionary of the 
+        form {"M":4, "WS":31, "BS":37, "S":30, "T":28, "I":36, "Agi":34, "Dex":28, "Int":29, "WP":30, "Fel":32}
+
+        initial_skills:
+        Directly add skills to the NPC. Takes a dictionary of the form {"Consume Alcohol":5, "Haggle":5}
+
+        initial_talents:
+        Directly add talents to the NPC. Takes a list of the form {"Linguistics", "Marksman"}
+        NOTE: characteristics are modified by talents which do so, e.g. Marksman
+
+        initial_trappings:
+        Directly add talents to the NPC. These are always printed at the end, irrespective of status, etc.
         """
 
         if random == False:
-            self._npc = BuildNPC4(species=species)
+            self._npc = BuildNPC4(species=species, 
+                                  characteristics=characteristics, 
+                                  starting_skills=initial_skills, 
+                                  starting_talents=initial_talents,
+                                  starting_trappings=initial_trappings)
             for career in careers or []:
                 self._npc.add_career_rank(career[0], career[1])
         else:
@@ -71,8 +97,14 @@ class NPC4e:
             if age=='young' in age: young = True 
             else: young = False
 
-            self._npc = RandomNPC4(
-                species=species, starting_career=starting_career, target=target_career, young=young)
+            self._npc = RandomNPC4(species=species, 
+                                   starting_career=starting_career, 
+                                   target=target_career, 
+                                   young=young, 
+                                   characteristics=characteristics, 
+                                   starting_skills=initial_skills, 
+                                   starting_talents=initial_talents,
+                                   starting_trappings=initial_trappings)
 
         self._filter = filter
         self._format()
@@ -134,6 +166,11 @@ class NPC4e:
     def known_species_random(cls) -> List[str]:
         """ Known species which can be used by the random NPC builder """
         return RandomNPC4.known_species()
+
+    @classmethod
+    def known_types(cls) -> List[str]:
+        """ NOT IMPLEMENTED!!! Broad categories of NPC as an alternative to careers, e.g. 'medical', 'religious' """
+        return None
 
     @property
     def filter(self) -> str:

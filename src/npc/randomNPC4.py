@@ -20,7 +20,8 @@ bot_char_dat.career_table_4e += ['Badger Rider',  0, 0, 3, 0, 0, 0, 0, 0, 0]
 class RandomNPC4(BuildNPC4):
     """Create a randomly generated NPC"""
 
-    def __init__(self, species=None, starting_career=None, young=False, target=None):
+    def __init__(self, species=None, starting_career=None, young=False, target=None, 
+                       characteristics=None, starting_skills = None, starting_talents=None, starting_trappings=None):
         """Options are to define the species, a starting career, whether the NPC is young
            and a final career. The last uses a dictionary of the form {'career':'string', rank:n}
         """
@@ -32,7 +33,11 @@ class RandomNPC4(BuildNPC4):
             species = random.choices(['Reiklander','Middenheimer','Middenlander','Nordlander'], weights=[5,1,2,2])[0]
 
         # Initialise base class
-        BuildNPC4.__init__(self,species)
+        BuildNPC4.__init__(self, species, 
+                            characteristics=characteristics,
+                            starting_skills=starting_skills, 
+                            starting_talents=starting_talents,
+                            starting_trappings=starting_trappings)
 
         if starting_career: starting_career = starting_career.title()
 

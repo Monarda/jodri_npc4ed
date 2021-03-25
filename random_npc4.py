@@ -1,10 +1,9 @@
 import random
 
-import data
-
-from src.npc.careers4 import Careers4
-from src.npc.buildNPC4 import *
-from src.npc.randomNPC4 import *
+from .src.npc.careers4 import Careers4
+from .src.npc.buildNPC4 import *
+from .src.npc.randomNPC4 import *
+from .src.utility.find_best_match import find_best_match
 
 def main():
     random.seed()
@@ -34,7 +33,7 @@ def main():
 
     # Check if we've been given a target career and level
     if args.career and args.level:
-        career = find_best_match(args.career.title(),Careers4().list_careers())
+        career = find_best_match(args.career.title(),Careers4().careers)
         target = {"career":career,"rank":args.level}
     elif (args.career and not args.level) or (not args.career and args.level):
         print("Career and level must be input as a pair\n")
