@@ -42,8 +42,7 @@ class BuildNPC4:
         # one of the known species words (i.e. dwarf, halfing, elf or gnome)
         self._species = species
 
-        self._known_species = species_npc_characteristics_4e.keys()
-        if species.lower() in self._known_species:
+        if species.lower() in self.known_species():
             index_species = species.lower()
         else:
             # Default to human if we don't otherwise understand the species requested
@@ -53,7 +52,7 @@ class BuildNPC4:
             # So if 'Dark Elf' is supplied the index_species will be set to 'elf'
             # This could have strange results if someone decides 'human-slayer' is a 
             # species, but that doesn't seem like something worth guarding against!
-            for test_species in self._known_species:
+            for test_species in self.known_species():
                 if test_species in species.lower():
                     index_species = test_species
                     break
@@ -105,11 +104,10 @@ class BuildNPC4:
 
         self._xp_spend          = 0
 
-
-    @property
-    def known_species(self):
+    @classmethod
+    def known_species(cls) -> list:
         """List known species. Most useful for listing 'monsters' that can have careers applied."""
-        return self._known_species
+        return [*species_npc_characteristics_4e.keys()]
 
     def __str__(self) -> str:
         retstr = ''

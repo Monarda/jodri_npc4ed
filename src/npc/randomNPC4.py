@@ -41,6 +41,14 @@ class RandomNPC4(BuildNPC4):
         else:
             self._add_random_careers(starting_career,young)
 
+    @classmethod
+    def known_species(cls):
+        return ['Reiklander','Dwarf','Halfling','High Elf','Wood Elf','Gnome','Nordlander','Middenheimer','Middenlander']
+
+    @classmethod
+    def known_humans(cls):
+        return ['Reiklander','Nordlander','Middenheimer','Middenlander']
+        
 
     def _add_random_careers(self,starting_career=None, young=False):
         # Young people start at career rank 1, adults at career rank 2
@@ -157,7 +165,7 @@ class RandomNPC4(BuildNPC4):
 
     def _random_career(self, firstcareer=True, careerslist=None) -> str:
         # Extract the information we need from the bot_char_dat.career_table_4e array
-        species_indexer = ['Reiklander','Dwarf','Halfling','High Elf','Wood Elf','Gnome','Nordlander','Middenheimer','Middenlander']
+        species_indexer = self.known_species()
         careers = bot_char_dat.career_table_4e[0::10]
         probs = bot_char_dat.career_table_4e[species_indexer.index(self._species.title())+1::10]
 

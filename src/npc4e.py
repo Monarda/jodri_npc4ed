@@ -1,3 +1,5 @@
+from typing import List
+
 from .npc.buildNPC4 import BuildNPC4
 from .npc.randomNPC4 import RandomNPC4
 
@@ -18,13 +20,24 @@ class NPC4e:
                  careers=None,
                  young=False,
                  filter=None):
+        """Create a new WFRP 4th edition NPC"""
 
         if random==False:
             self._npc = BuildNPC4(species=species)
             for career in careers or []:
                 self._npc.add_career_rank(career[0], career[1])
         else:
-            self._npc = RandomNPC4(species=species, starting_career=careers, young=young)
+            starting_career = None
+            target_career = None
+            if careers:
+                careername = careers[0][0]
+                level = careers[0][1]
+                if level==1:
+                    starting_career = careername
+                else:
+                    target_career = {'career': careername, 'rank':level}
+
+            self._npc = RandomNPC4(species=species, starting_career=starting_career, target=target_career, young=young)
 
         self._filter = filter
         self._format()
@@ -32,27 +45,54 @@ class NPC4e:
         self._error = None
 
     @property
-    def error(self):
+    def error_msg(self) -> str:
+        """ Helpful (?!) error messages"""
         return self._error
 
-    @property
-    def known_species(self):
-        self._npc.known_species
+    @classmethod
+    def known_species(cls):
+        return list(set(cls.known_species_build())+set(cls.known_species_random()))
 
-    @property
-    def known_careers(self):
+    @classmethod
+    def known_species_build(cls):
+        """ Known species which can be used by the directed NPC builder """
+        return BuildNPC4.known_species()
+
+    @classmethod
+    def known_species_random(cls) -> List[str]:
+        """ Known species which can be used by the random NPC builder """
+        return RandomNPC4.known_species()
+
+    @classmethod
+    def known_humans(cls) -> List[str]:
+        """ Known types of human which can be used by the random NPC builder """
+        return RandomNPC4.known_humans()
+
+    @classmethod
+    def known_careers(cls) -> List[str]:
+        """ All known careers """
         return Careers4().careers
 
-    @property
-    def known_career_levels(self):
+    @classmethod
+    def known_career_levels(cls) -> List[str]:
+        """ All known career levels. Note that some may be the same, e.g.  Nun and 
+            Warrior Priest both start with Novitiate """
         return Careers4().career_levels
+
+    @classmethod
+    def known_filters(cls):
+        """ Modes that the filters can use when presenting an NPC. Does not affect the 
+            NPC actually built """
+        return ['combat', 'social']
 
     @property
     def filter(self):
+        """ The current presentation filter set on the NPC """
         return self._filter
 
     @filter.setter
     def filter(self, filter : str):
+        """ Change the presentation of the NPC, simplifying it to show social or combat relevant stats """
         self._filter = filter
         self._format()
 
@@ -103,15 +143,18 @@ class NPC4e:
     ##################################################################################################
     # Output properties
     @property
-    def careername(self):
+    def careername(self) -> str:
+        """ The final careername of the NPC """
         return self._npc.careername
 
     @property
-    def career_history_unambgious(self):
+    def career_history_unambgious(self) -> str:
+        """ The career history of the NPC with ambiguities resolved """
         return ' \u2192 '.join(self._npc.career_history_unambiguous)
 
     @property
-    def characteristics(self):
+    def characteristics(self) -> dict:
+        """ The NPC's characteristics """
         return self._npc.characteristics
 
     @property
@@ -149,6 +192,10 @@ class NPC4e:
     @property
     def traits(self):
         return ', '.join(self._npc.traits)
+
+    @property
+    def traits_optional(self):
+        return ', '.join(self._npc.optional_traits)
     
     @property
     def trappings(self):
@@ -159,5 +206,7 @@ class NPC4e:
         return ', '.join(self._npc.additional_trappings)
     
     @property
-    def xp_spend(self):
+    def xp_spend(self) -> int:
+        """XP required to build this NPC. Note that this includes the cost of the suggested
+           talents but does not include XP discounts from talents such as Artistic"""
         return self._npc.xp_spend
