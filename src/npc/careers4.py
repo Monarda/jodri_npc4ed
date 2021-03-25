@@ -63,10 +63,14 @@ class Careers4:
 
     @property
     def career_levels(self):
-        career_levels = []
-        for career in self.careers:
+        career_levels = {}
+        for careername in self.careers:
             for i in range (1,5):
-                career_levels.append(self[career][f'rank {i}']['name'])
+                career_level_name = self[careername][f'rank {i}']['name']
+                if career_level_name in career_levels:
+                    career_levels[career_level_name].append(careername)
+                else:
+                    career_levels[career_level_name] = [careername]
 
         return career_levels
 
