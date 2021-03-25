@@ -141,7 +141,7 @@ class RandomNPC4(BuildNPC4):
                     careers_list.append((career,i))
 
                 # Now switch to new class
-                thisclass = _careers_data[career]['class']
+                thisclass = Careers4()[career]['class']
                 newcareers = itertools.chain.from_iterable([careers for classname,careers in careers_by_class.items() if classname!=thisclass])
 
                 career = self._random_career(careerslist=newcareers,firstcareer=False)
