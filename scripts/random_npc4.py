@@ -1,9 +1,9 @@
 import random
 
-from .src.npc.careers4 import Careers4
-from .src.npc.buildNPC4 import *
-from .src.npc.randomNPC4 import *
-from .src.utility.find_best_match import find_best_match
+from ..src.npc.careers4 import Careers4
+from ..src.npc.randomNPC4 import *
+from ..src.npc.pretty_print_npc import *
+from ..src.utility.find_best_match import find_best_match
 
 def main():
     random.seed()

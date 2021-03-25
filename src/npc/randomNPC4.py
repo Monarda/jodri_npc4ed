@@ -4,7 +4,6 @@ import sys
 
 from .buildNPC4 import BuildNPC4
 from .buildNPC4 import _careers_data
-from .buildNPC4 import pretty_print_npc
 from ..utility.find_best_match import find_best_match
 from .careers4 import Careers4
 

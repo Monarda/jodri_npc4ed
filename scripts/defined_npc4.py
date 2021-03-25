@@ -1,10 +1,9 @@
 import argparse
 
-import random
-
-from .src.npc.careers4 import Careers4
-from .src.npc.buildNPC4 import *
-from .src.utility.find_best_match import find_best_match
+from ..src.npc.careers4 import Careers4
+from ..src.npc.buildNPC4 import *
+from ..src.npc.pretty_print_npc import pretty_print_npc
+from ..src.utility.find_best_match import find_best_match
 
 def main():
     ## Scroll down below the return for a better demo of how to programmatically interact with the Npc4 class
