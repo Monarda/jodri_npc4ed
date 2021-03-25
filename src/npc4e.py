@@ -11,18 +11,49 @@ from .npc import skill_talent
 
 from .utility.convert_to_superscript import *
 
+
 class NPC4e:
-    """ Make either a fully defined NPC, or one randomly generated"""
+    """ Make either a fully defined or randomly generated NPC"""
 
-    def __init__(self, 
-                 random=False,
-                 species=None,
-                 careers=None,
-                 young=False,
-                 filter=None):
-        """Create a new WFRP 4th edition NPC"""
+    def __init__(self,
+                 random  : bool=True,
+                 species : str=None,
+                 careers : list=None,
+                 young   : bool=False,
+                 filter  : str=None):
+        """
+        Create a new WFRP 4th edition NPC.
 
-        if random==False:
+        Parameters
+        ----------
+        All parameters are optional.
+
+        random:  
+        whether to build an NPC with user-defined career history (random=False), or one with a randomly 
+        generated career history.
+        
+        species: 
+        the species of the NPC. Note that the defined and random NPCs have different species possible. 
+        The class will return an error explanation if the user inputs a species the associated generator 
+        can't handle
+        
+        careers: 
+        either a list of tuples of (career, level) for the defined NPC builder, **OR** a single tuple 
+        of (career, level) for the random NPC builder. In the latter case the behaviour varies depending 
+        on the level in the tuple. If the level is 1 then the career is used as a starting career, if 
+        the level is >1 then it becomes the final (i.e. target) career of the NPC
+        
+        young:   
+        the flag only applies to randomly generated NPCs and means that the probabilities are adjusted 
+        to make shorter career histories more likely
+
+        filter:  
+        apply a filter to *presentation* of the NPC, emphasing a particular aspect currently valid 
+        values are 'combat' and 'social'
+        NOTE: the filter is the only option that can be changed once an NPC is generated
+        """
+
+        if random == False:
             self._npc = BuildNPC4(species=species)
             for career in careers or []:
                 self._npc.add_career_rank(career[0], career[1])
@@ -32,12 +63,13 @@ class NPC4e:
             if careers:
                 careername = careers[0][0]
                 level = careers[0][1]
-                if level==1:
+                if level == 1:
                     starting_career = careername
                 else:
-                    target_career = {'career': careername, 'rank':level}
+                    target_career = {'career': careername, 'rank': level}
 
-            self._npc = RandomNPC4(species=species, starting_career=starting_career, target=target_career, young=young)
+            self._npc = RandomNPC4(
+                species=species, starting_career=starting_career, target=target_career, young=young)
 
         self._filter = filter
         self._format()
@@ -51,6 +83,7 @@ class NPC4e:
 
     @classmethod
     def known_species(cls):
+        """ List known species of all kind, but still excluding types of human """
         return list(set(cls.known_species_build())+set(cls.known_species_random()))
 
     @classmethod
@@ -74,65 +107,75 @@ class NPC4e:
         return Careers4().careers
 
     @classmethod
-    def known_career_levels(cls) -> List[str]:
+    def known_career_levels(cls) -> dict:
         """ All known career levels. Note that some may be the same, e.g.  Nun and 
             Warrior Priest both start with Novitiate """
         return Careers4().career_levels
 
     @classmethod
-    def known_filters(cls):
+    def known_filters(cls) -> list:
         """ Modes that the filters can use when presenting an NPC. Does not affect the 
             NPC actually built """
         return ['combat', 'social']
 
     @property
-    def filter(self):
+    def filter(self) -> str:
         """ The current presentation filter set on the NPC """
         return self._filter
 
     @filter.setter
-    def filter(self, filter : str):
+    def filter(self, filter: str):
         """ Change the presentation of the NPC, simplifying it to show social or combat relevant stats """
         self._filter = filter
         self._format()
 
-    def _format_talents(self, talents):
-        return ', '.join('{}{}'.format(convert_to_superscript(v.get('skill_ref','')),k) for k,v in talents.items())
+    def _format_talents(self, talents) -> str:
+        """ Return all talents as a footnoted list joined with commas """
+        return ', '.join('{}{}'.format(convert_to_superscript(v.get('skill_ref', '')), k) for k, v in talents.items())
 
     def _format(self):
+        """ Apply a filter to the NPC, allowing presentation to be simplified """
         type = self._filter
 
         # Skills
         skills_list = list()
-        filtered_skills_dict = Skills4().filter(self._npc.skills_verbose,type)
+        filtered_skills_dict = Skills4().filter(self._npc.skills_verbose, type)
 
         # Talents
         t4 = Talents4()
         if self._npc.starting_talents:
-            starting_talents = t4.filter(self._npc.formatted_starting_talents,type)
-        else: starting_talents = {}
+            starting_talents = t4.filter(
+                self._npc.formatted_starting_talents, type)
+        else:
+            starting_talents = {}
 
-        suggested_talents = t4.filter(self._npc.suggested_talents,type)
-        additional_talents = t4.filter(self._npc.additional_talents,type)
+        suggested_talents = t4.filter(self._npc.suggested_talents, type)
+        additional_talents = t4.filter(self._npc.additional_talents, type)
 
         # Association between skills and talents
-        filtered_skills_dict, starting_talents, index   = skill_talent.associate(filtered_skills_dict, starting_talents,   starting_index=1)
-        filtered_skills_dict, suggested_talents, index  = skill_talent.associate(filtered_skills_dict, suggested_talents,  starting_index=index)
-        filtered_skills_dict, additional_talents, index = skill_talent.associate(filtered_skills_dict, additional_talents, starting_index=index)
+        filtered_skills_dict, starting_talents, index = skill_talent.associate(
+            filtered_skills_dict, starting_talents,   starting_index=1)
+        filtered_skills_dict, suggested_talents, index = skill_talent.associate(
+            filtered_skills_dict, suggested_talents,  starting_index=index)
+        filtered_skills_dict, additional_talents, index = skill_talent.associate(
+            filtered_skills_dict, additional_talents, starting_index=index)
 
         # Format skills data
         for skill, values in filtered_skills_dict.items():
             for value in values:
-                superscripts = sorted(list(value.get('talent_ref',{0})))
-                if not superscripts[0]==0:
+                superscripts = sorted(list(value.get('talent_ref', {0})))
+                if not superscripts[0] == 0:
                     superscript = ' '.join(map(str, superscripts))
                     superscript = convert_to_superscript(f'({superscript})')
-                else: superscript = ''
-
-                if value['source'] and len(values)>1:
-                    skills_list.append("{!s}: {!r}{} [{}; +{}]".format(skill,value['total'],superscript,value['source'],value['add']))
                 else:
-                    skills_list.append("{!s}: {!r}{}".format(skill,value['total'],superscript))
+                    superscript = ''
+
+                if value['source'] and len(values) > 1:
+                    skills_list.append("{!s}: {!r}{} [{}; +{}]".format(
+                        skill, value['total'], superscript, value['source'], value['add']))
+                else:
+                    skills_list.append("{!s}: {!r}{}".format(
+                        skill, value['total'], superscript))
                     #print("{}".format(', '.join("{!s}: {!r}".format(key,val) for (key,val) in npc.skills.items())))
 
         self.__skills_crossedref = skills_list
@@ -158,53 +201,82 @@ class NPC4e:
         return self._npc.characteristics
 
     @property
-    def skills(self):
+    def skills(self) -> str:
+        """ A skills list, formatted with footnotes linking to taletnts, and joined by commas """
         return ', '.join(self.__skills_crossedref)
 
     @property
-    def species(self):
+    def species(self) -> str:
+        """ The notional species of the NPC, e.g.. if Estalian was input the generator may  
+            have used 'human' rules. This function will return 'Estalian' """
         return self._npc.species
 
     @property
-    def species_used(self):
+    def species_used(self) -> str:
+        """ The species actually used by the NPC generator, i.e. if Estalian was input the 
+            generator may have used 'human' rules. This function will return 'human' """
         return self._npc.species_used
 
     @property
-    def statblock(self):
-        outstr  = "`| {} |`\n".format('| '.join([f'{x:>3}' for x in self._npc.characteristics.keys()]))
-        outstr += "`| {} |`\n".format('| '.join([f'{x:3}' for x in self._npc.characteristics_base.values()]))
-        outstr += "`| {} |`".format('| '.join([f'{x:3}' for x in self._npc.characteristics.values()]))
+    def statblock(self) -> str:
+        """ The formatted (as a grid) statblock of the NPC, showing starting characteristics
+            which do include modifications like Savvy, and final characteristics """
+        outstr = "`| {} |`\n".format(
+            '| '.join([f'{x:>3}' for x in self._npc.characteristics.keys()]))
+        outstr += "`| {} |`\n".format(
+            '| '.join([f'{x:3}' for x in self._npc.characteristics_base.values()]))
+        outstr += "`| {} |`".format(
+            '| '.join([f'{x:3}' for x in self._npc.characteristics.values()]))
 
         return outstr
 
     @property
-    def talents_initial(self):
+    def talents_initial(self) -> str:
+        """ Any talents passed into the NPC generator. Where appropriate these will have 
+            been applied, e.g. Suave. The string returned is formatted with italics for
+            stat modifications applied, with footnotes linking to skills, and joined with
+            commas. """
         return self._format_talents(self.__talents_applied_crossedref)
 
     @property
-    def talents_suggested(self):
+    def talents_suggested(self) -> str:
+        """ Talents suggested during the build of the NPC. These are generated randomly
+            one per career level, except where the careers data overrides. The string 
+            returned is formatted with footnotes linking to skills, and joined with
+            commas. """
         return self._format_talents(self.__talents_suggested_crossedref)
 
     @property
-    def talents_additional(self):
+    def talents_additional(self) -> str:
+        """ Talents the NPC could have picked up in its career history, excluding those
+            already mentioned in the initial or suggested talents. The string 
+            returned is formatted with footnotes linking to skills, and joined with
+            commas. """
         return self._format_talents(self.__talents_additional_crossedref)
-    
+
     @property
-    def traits(self):
+    def traits(self) -> str:
+        """ Traits are taken without modification from the bestiary data """
         return ', '.join(self._npc.traits)
 
     @property
-    def traits_optional(self):
+    def traits_optional(self) -> str:
+        """ Optional traits are taken without modification from the bestiary data """
         return ', '.join(self._npc.optional_traits)
-    
+
     @property
-    def trappings(self):
+    def trappings(self) -> str:
+        """ The final trappings of the NPC. This is generated by accumulating all trappings
+            during the NPC's career history, and dropping those no longer appropriate when
+            Status drops. """
         return ', '.join(self._npc.trappings)
 
     @property
-    def trappings_additional(self):
+    def trappings_additional(self) -> str:
+        """ All trappings available through the NPC's career history, excluding those in the
+            final trappings. """
         return ', '.join(self._npc.additional_trappings)
-    
+
     @property
     def xp_spend(self) -> int:
         """XP required to build this NPC. Note that this includes the cost of the suggested
