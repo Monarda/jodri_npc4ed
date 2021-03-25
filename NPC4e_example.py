@@ -10,8 +10,8 @@ def print_npc(npc : NPC4e):
     print(f'**Skills**: {npc.skills}')
 
     if npc.talents_initial: print(f'**Initial Talents**: {npc.talents_initial}')
-    print(f'**Suggested Talents: {npc.talents_suggested}')
-    print(f'**Additional Talents: {npc.talents_additional}')
+    print(f'**Suggested Talents**: {npc.talents_suggested}')
+    print(f'**Additional Talents**: {npc.talents_additional}')
 
     print(f'**Traits**: {npc.traits}')
     if npc.traits_optional: print(f'**Optional Traits**: {npc.traits_optional}')
