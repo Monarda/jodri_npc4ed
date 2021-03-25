@@ -19,7 +19,7 @@ class NPC4e:
                  random  : bool=True,
                  species : str=None,
                  careers : list=None,
-                 young   : bool=False,
+                 age     : str=None,
                  filter  : str=None):
         """
         Create a new WFRP 4th edition NPC.
@@ -43,9 +43,9 @@ class NPC4e:
         on the level in the tuple. If the level is 1 then the career is used as a starting career, if 
         the level is >1 then it becomes the final (i.e. target) career of the NPC
         
-        young:   
-        the flag only applies to randomly generated NPCs and means that the probabilities are adjusted 
-        to make shorter career histories more likely
+        ages:   
+        a string which applies to randomly generated NPCs and means that the probabilities are adjusted 
+        to make shorter or longer career histories more likely
 
         filter:  
         apply a filter to *presentation* of the NPC, emphasing a particular aspect currently valid 
@@ -68,6 +68,9 @@ class NPC4e:
                 else:
                     target_career = {'career': careername, 'rank': level}
 
+            if age=='young' in age: young = True 
+            else: young = False
+
             self._npc = RandomNPC4(
                 species=species, starting_career=starting_career, target=target_career, young=young)
 
@@ -81,27 +84,6 @@ class NPC4e:
         """ Helpful (?!) error messages"""
         return self._error
 
-    @classmethod
-    def known_species(cls):
-        """ List known species of all kind, but still excluding types of human """
-        known_species_build  = set([x.lower() for x in cls.known_species_build()])
-        known_species_random = set([x.lower() for x in cls.known_species_random()])
-        return sorted( list(set(known_species_build.union(known_species_random))) )
-
-    @classmethod
-    def known_species_build(cls):
-        """ Known species which can be used by the directed NPC builder """
-        return BuildNPC4.known_species()
-
-    @classmethod
-    def known_species_random(cls) -> List[str]:
-        """ Known species which can be used by the random NPC builder """
-        return RandomNPC4.known_species()
-
-    @classmethod
-    def known_humans(cls) -> List[str]:
-        """ Known types of human which can be used by the random NPC builder """
-        return RandomNPC4.known_humans()
 
     @classmethod
     def known_careers(cls) -> List[str]:
@@ -119,6 +101,39 @@ class NPC4e:
         """ Modes that the filters can use when presenting an NPC. Does not affect the 
             NPC actually built """
         return ['combat', 'social']
+
+
+    @classmethod
+    def known_humans(cls) -> List[str]:
+        """ Known types of human which can be used by the random NPC builder """
+        return RandomNPC4.known_humans()
+
+    @classmethod
+    def known_ages(cls) -> List[str]:
+        return ['young']
+
+    @classmethod
+    def known_species(cls) -> List[str]:
+        """ List known species of all kind, including the known types of human """
+        known_species_build  = set([x.lower() for x in cls.known_species_build()])
+        known_species_random = set([x.lower() for x in cls.known_species_random()])
+        known_species = set(known_species_build.union(known_species_random))
+
+        # With or without known types of humans? Comment or uncomment these lines
+        known_humans  = set([x.lower() for x in cls.known_humans()])
+        known_species -= known_humans
+
+        return sorted( list(known_species) )
+
+    @classmethod
+    def known_species_build(cls):
+        """ Known species which can be used by the directed NPC builder """
+        return BuildNPC4.known_species()
+
+    @classmethod
+    def known_species_random(cls) -> List[str]:
+        """ Known species which can be used by the random NPC builder """
+        return RandomNPC4.known_species()
 
     @property
     def filter(self) -> str:
