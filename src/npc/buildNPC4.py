@@ -1,11 +1,7 @@
-import argparse
 import collections
-import json
 import random
 import re
-import sys
 from math import inf
-import importlib.resources
 
 from ...data.bestiary import *
 from ...data import bot_char_dat
@@ -13,21 +9,6 @@ from .skills4 import Skills4
 from .careers4 import Careers4
 from .talents4 import Talents4
 from ..utility.find_best_match import find_best_match
-from . import skill_talent
-
-from ... import data
-
-# Load data about careers, talents and skills
-# Does this make sense at module scope?
-#with open('data/careers.json') as f:
-with importlib.resources.open_text(data,'careers.json') as f:
-    _careers_data = json.load(f)
-
-with importlib.resources.open_text(data,'skills.json') as f:
-    _skills_data = json.load(f)
-
-with importlib.resources.open_text(data,'talents.json') as f:
-    _talents_data = json.load(f)
 
 class BuildNPC4:
     """Generate and manage a 4th Edition NPC"""
@@ -118,7 +99,7 @@ class BuildNPC4:
         # Species and most recent career level name
         if self._career_history:
             lastcareer, lastrank = next(reversed(self._career_history))
-            lastcareername = _careers_data[lastcareer][f'rank {lastrank}']['name']
+            lastcareername = Careers4()[lastcareer][f'rank {lastrank}']['name']
 
             retstr  = self._species.title() + " " + lastcareername + '\n'
             retstr += 'Career history: ' + str(self.career_history) + '\n'
@@ -158,9 +139,9 @@ class BuildNPC4:
         """Apply Talents which modify Characteristics if they're in the starting talents list"""
         for talent in self._starting_talents:
             try:
-                if _talents_data[talent]['stat_mod']:
+                if Talents4()[talent]['stat_mod']:
                     # Parse the stat mod and apply it
-                    tokens = _talents_data[talent]['stat_mod'].split(' ')
+                    tokens = Talents4()[talent]['stat_mod'].split(' ')
                     try:
                         self._characteristics[tokens[1]] += int(tokens[0][1:])
                     except ValueError:
@@ -178,7 +159,7 @@ class BuildNPC4:
         """
         if self._career_history:
             lastcareer, lastrank = next(reversed(self._career_history))
-            return _careers_data[lastcareer][f'rank {lastrank}']
+            return Careers4()[lastcareer][f'rank {lastrank}']
         else:
             return {}
 
@@ -203,7 +184,7 @@ class BuildNPC4:
     @property 
     def career_history(self) -> list:
         """Career history as a list of career rank name, e.g. {'Novitiate', 'Nun', 'Warrior Priest'}"""
-        return [_careers_data[career][f'rank {rank}']['name'] for career,rank in self._career_history]
+        return [Careers4()[career][f'rank {rank}']['name'] for career,rank in self._career_history]
 
     @property
     def career_history_unambiguous(self) -> list:
@@ -212,7 +193,7 @@ class BuildNPC4:
         career_history_list = list()
         previous_career = ''
         for career,rank in self._career_history:
-            rankname = _careers_data[career][f'rank {rank}']['name']
+            rankname = Careers4()[career][f'rank {rank}']['name']
             if career!=previous_career:
                 career_history_list.append(f'{rankname} ({career} {rank})')
             else:
@@ -306,7 +287,7 @@ class BuildNPC4:
         """
         # Get the most recent career and rank, and use that to find the NPC's status
         lastcareer, lastrank = next(reversed(self._career_history))
-        status = _careers_data[lastcareer][f'rank {lastrank}']['status']
+        status = Careers4()[lastcareer][f'rank {lastrank}']['status']
 
         # Use some string manipulation to turn status into money
         tokens = status.split(' ')
@@ -326,7 +307,7 @@ class BuildNPC4:
             
             trappings = set() 
             for i in range(1,lastrank+1):
-                trappings.update( _careers_data[lastcareer][f'rank {i}']['trappings'] )
+                trappings.update( Careers4()[lastcareer][f'rank {i}']['trappings'] )
 
             trappings.update( [self._money] )
             trappings = trappings.union(self._starting_trappings)
@@ -355,7 +336,7 @@ class BuildNPC4:
         for careername, rank in self._career_history:
             unique_careers.update([careername])
 
-            status_tokens = _careers_data[careername][f'rank {rank}']['status'].split(' ')
+            status_tokens = Careers4()[careername][f'rank {rank}']['status'].split(' ')
             career_status_history.append({"name":careername, "rank":rank, "status":status_tokens[0]})
 
         # If we've only been in one career then there can't be additional trappings
@@ -385,7 +366,7 @@ class BuildNPC4:
             last_status = status
 
             for i in range(1,career_status['rank']+1):
-                additional_trappings_by_status[status].update(set(_careers_data[name][f'rank {i}']['trappings']))
+                additional_trappings_by_status[status].update(set(Careers4()[name][f'rank {i}']['trappings']))
 
         # Combine all the additional trappings into one list
         additional_trappings =   additional_trappings_by_status["Brass"] \
@@ -405,15 +386,15 @@ class BuildNPC4:
         for talent in sorted(selector):
             # Check if this talent is in the talent list
             talent_index = talent
-            if talent in _talents_data:
+            if talent in Talents4().get_talents():
                 # It is
-                out_talents[talent] = dict(_talents_data[talent])
+                out_talents[talent] = dict(Talents4()[talent])
             else:
                 # It isn't... That might mean it's a group talent
                 talentfound = False
                 for shortform in bot_char_dat.talent_groups_4e:
                     if talent.startswith(shortform):
-                        out_talents[talent] = _talents_data[shortform]
+                        out_talents[talent] = Talents4()[shortform]
                         talent_index = shortform
                         talentfound = True
                         break
@@ -422,11 +403,11 @@ class BuildNPC4:
                     out_talents[talent] = {}
 
             try:
-                talentmax = _talents_data[talent]['max']
+                talentmax = Talents4()[talent]['max']
                 if talentmax == None:
                     out_talents[talent]['max'] = inf
                 elif not isinstance(talentmax,int):
-                    out_talents[talent]['max'] = self._characteristic_bonus(_talents_data[talent]['max'])             
+                    out_talents[talent]['max'] = self._characteristic_bonus(Talents4()[talent]['max'])             
             except KeyError: # Remove when all telents in data file
                 pass
 
@@ -472,7 +453,7 @@ class BuildNPC4:
         formatted_talents = {}
         for talent in starting_talents:
             try:
-                if _talents_data[talent]['stat_mod']:
+                if Talents4()[talent]['stat_mod']:
                     formatted_talents[f'*{talent}*'] = starting_talents[talent]
                 else:
                     formatted_talents[talent] = starting_talents[talent]
@@ -507,7 +488,7 @@ class BuildNPC4:
         # not Doctor 1: they still have all talents from Doctor 1 available
         true_history = []
         for career,rank in self._career_history:
-            careerrankname = _careers_data[career][f'rank {rank}']['name']
+            careerrankname = Careers4()[career][f'rank {rank}']['name']
             true_history.append(careerrankname)
 
         avail_history = set()
@@ -517,7 +498,7 @@ class BuildNPC4:
         # Go through the career ranks for all could contribute talents
         # Add a star to the end of the careername if it was not really taken
         for careername,rank in avail_history:
-            careerrank = _careers_data[careername][f'rank {rank}']
+            careerrank = Careers4()[careername][f'rank {rank}']
             careerrankname = careerrank['name']
 
             if careerrankname not in true_history:
@@ -574,7 +555,7 @@ class BuildNPC4:
             else:
                 fullskill = baseskill
 
-            skillchar  = _skills_data[baseskill]['characteristic']
+            skillchar  = Skills4()[baseskill]['characteristic']
             skilltotal = self._characteristics[skillchar] + value
 
             simple_skills[fullskill].append(skilltotal)
@@ -648,7 +629,7 @@ class BuildNPC4:
             raise IndexError(f'Rank less than 0 or greater than 4. Rank was {rank}')
 
         try:
-            _careers_data[careername]
+            Careers4()[careername]
         except KeyError:
             raise KeyError(f"{careername} is not a valid career name")
 
@@ -671,7 +652,7 @@ class BuildNPC4:
         # available talents. 
         for i in range(1,rank+1):
             # Get the information about this career rank
-            careerrank = _careers_data[careername][f'rank {i}']
+            careerrank = Careers4()[careername][f'rank {i}']
 
             # Apply all applicable characteristic advances
             for advance in careerrank['advances']:
@@ -693,7 +674,7 @@ class BuildNPC4:
                 onetakers = set()
                 for talentname in (self._suggested_talents.union(self._starting_talents)):
                     try:
-                        talent_info = _talents_data[talentname]
+                        talent_info = Talents4()[talentname]
                         if isinstance(talent_info['max'],int) and talent_info['max']==1:
                             onetakers.update([talentname])
                     except KeyError:
@@ -725,7 +706,7 @@ class BuildNPC4:
         """
         careername = careername.title()
         # Validate input
-        career = _careers_data[careername] # Blow up early if career not in list of careers
+        career = Careers4()[careername] # Blow up early if career not in list of careers
         if rank<1 or rank>4:
             raise IndexError('Rank less than 0 or greater than 4')
 

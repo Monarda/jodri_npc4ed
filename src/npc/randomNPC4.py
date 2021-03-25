@@ -3,7 +3,6 @@ import random
 import sys
 
 from .buildNPC4 import BuildNPC4
-from .buildNPC4 import _careers_data
 from ..utility.find_best_match import find_best_match
 from .careers4 import Careers4
 
@@ -63,8 +62,8 @@ class RandomNPC4(BuildNPC4):
 
         # careers by class
         careers_by_class = dict()
-        for careername in _careers_data:
-            classname = _careers_data[careername]['class']
+        for careername in Careers4().careers:
+            classname = Careers4()[careername]['class']
             if classname in careers_by_class:
                 careers_by_class[classname].update([careername])
             else:
@@ -85,14 +84,14 @@ class RandomNPC4(BuildNPC4):
             elif val==3:
                 # Change to a career within the same class
                 # Determine what the other classes are
-                thisclass = _careers_data[career]['class']
+                thisclass = Careers4()[career]['class']
                 newcareers = careers_by_class[thisclass].difference([career])
                 career = self._random_career(careerslist=newcareers,firstcareer=False)
                 self.add_career_rank(career,rank)
             elif val==4:
                 # Change to a career in another class
                 # Find this class, then find all careers in careers_by_class which are not that class
-                thisclass = _careers_data[career]['class']
+                thisclass = Careers4()[career]['class']
                 newcareers = itertools.chain.from_iterable([careers for classname,careers in careers_by_class.items() if classname!=thisclass])
 
                 career = self._random_career(careerslist=newcareers,firstcareer=False)
@@ -112,8 +111,8 @@ class RandomNPC4(BuildNPC4):
 
         # careers by class
         careers_by_class = dict()
-        for careername in _careers_data:
-            classname = _careers_data[careername]['class']
+        for careername in Careers4().careers:
+            classname = Careers4()[careername]['class']
             if classname in careers_by_class:
                 careers_by_class[classname].update([careername])
             else:
@@ -129,7 +128,7 @@ class RandomNPC4(BuildNPC4):
             if val==3:
                 # Change to a career within the same class
                 # Determine what the other classes are
-                thisclass = _careers_data[career]['class']
+                thisclass = Careers4()[career]['class']
                 newcareers = careers_by_class[thisclass].difference([career])
                 career = self._random_career(careerslist=newcareers,firstcareer=False)
                 careers_list.append((career,rank))

@@ -3,6 +3,8 @@ import json
 import random
 import importlib.resources
 
+from typing import List
+
 from ... import data
 
 with importlib.resources.open_text(data,'talents.json') as f:
@@ -19,11 +21,11 @@ class Talents4:
             if _talents_data[talent]['social']: self._social_talents.update([talent])
             if _talents_data[talent]['utility']: self._utility_talents.update([talent])
 
-    def get_talents(self):
+    def get_talents(self) -> List[str]:
         return list(_talents_data.keys())
 
-    def __getitem__(self, key):
-        return _talents_data[key]
+    def __getitem__(self, key) -> dict:
+        return dict(_talents_data[key])
 
     def filter(self, talentlist, type : str, noextra=False):
         if not type: return talentlist

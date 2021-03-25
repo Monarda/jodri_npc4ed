@@ -9,6 +9,9 @@ with importlib.resources.open_text(data,'careers.json') as f:
 class Careers4:
     # Load data about careers, talents and skills
     def __init__(self):
+        pass
+
+    def __complex_stuff(self):
         self._skills_to_careers = {}
         self._talents_to_careers = {}
 
@@ -59,7 +62,7 @@ class Careers4:
 
     @property
     def careers(self):
-        return _careers_data.keys()
+        return list(_careers_data.keys())
 
     @property
     def career_levels(self):
@@ -75,12 +78,14 @@ class Careers4:
         return career_levels
 
     def __getitem__(self, key):
-        return _careers_data[key]
+        return dict(_careers_data[key])
 
     def provides_skills(self):
+        self.__complex_stuff()
         return self._skills_to_careers
 
     def provides_skill(self, skill):
+        self.__complex_stuff()
         return self._skills_to_careers[skill]
 
 

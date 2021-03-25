@@ -21,6 +21,12 @@ class Skills4:
             if _skills_data[skill]['social']: self._social_skills.update([skill])
             if _skills_data[skill]['utility']: self._utility_skills.update([skill])
 
+    def get_skills(self):
+        return list(_skills_data.keys())
+
+    def __getitem__(self, key):
+        return dict(_skills_data[key])
+
     def filter(self, skilldict, type : str, noextra=False) -> set:
         if not type: return skilldict
 
