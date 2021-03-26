@@ -136,7 +136,7 @@ def find_best_match(target, options):
     # Leventshtein distance is good for misspellings but bad for abbreviations
     scores = {}
     for option in options:
-        scores[option] = 1 - levenshteinDistance(target,option)
+        scores[option] = 1 - damerau_levenshtein_distance(target,option)
 
     import operator
     bestcareer = max(scores.items(), key=operator.itemgetter(1))[0]

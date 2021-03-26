@@ -21,7 +21,8 @@ class Skills4:
             if _skills_data[skill]['social']: self._social_skills.update([skill])
             if _skills_data[skill]['utility']: self._utility_skills.update([skill])
 
-    def get_skills(self):
+    @property
+    def skills(self):
         return list(_skills_data.keys())
 
     def __getitem__(self, key):
