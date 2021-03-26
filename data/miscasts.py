@@ -40,7 +40,7 @@ verbally, or make any Casting Tests, although you may otherwise act normally."""
     'Swarmed:', 40, """You are engaged by a swarm of aethyric Rats, Giant Spiders, Snakes, or similar (GM’s choice). Use
 the standard profiles for the relevant creature type, adding the *Swarm* Creature Trait. After 1d10 {rolld10} rounds, if not
 yet destroyed, the swarm retreats.""",
-    'Ragdoll:', 45, """You are flung 1d10 {rolld10} yards through the air in a random direction, taking 1d10 {rolld10} wounds on landing,
+    'Ragdoll:', 45, """You are flung 1d10 {rolld10} yards through the air in a random direction, taking 1d10 {rolld10again} wounds on landing,
 ignoring Armour Points, and receiving the *Prone* Condition.""",
     'Limb frozen', 50, """One limb (randomly determined) is frozen in place for 1d10 {rolld10} hours. The limb is useless, as if it had
 been Amputated (see page 180).""",
@@ -49,7 +49,7 @@ penalty of –20 for the duration.""",
     'Chaotic Foresight', 60, """Gain a bonus pool of 1d10 {rolld10} Fortune points (this may take you beyond your natural limit).
 Every time you spend one of these points, gain 1 Corruption point. Any of these points remaining at the end of
 the session are lost.""",
-    'Levitation:', 65, """You are borne aloft on the Winds of Magic, floating 1d10 {rolld10} yards above the ground for 1d10 {rolld10} minutes.
+    'Levitation:', 65, """You are borne aloft on the Winds of Magic, floating 1d10 {rolld10} yards above the ground for 1d10 {rolld10again} minutes.
 Other characters may forcibly move you, and you may move using spells, wings or similar, but will continually
 return to your levitating position if otherwise left alone. Refer to the Falling rules (see page 166) for what
 happens when Levitation ends.""",

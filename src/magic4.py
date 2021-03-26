@@ -106,12 +106,13 @@ class Magic4:
 
         d10  = random.randint(1,10)
         d100 = random.randint(1,100)
-        rolld10    = f'({d10})'
-        rolld100   = f'({d100})'
-        rolld10by5 = f'({d10}×5= {d10*5})'
+        rolld10      = f'({d10})'
+        rolld10again = f'({random.randint(1,10)})'
+        rolld100     = f'({d100})'
+        rolld10by5   = f'({d10}×5= {d10*5})'
 
         idx = miscast_names.index(miscast_result)
-        miscast_text = f'**{miscast_result}**: {miscast_rules[idx]}'.format(rolld10=rolld10, rolld100=rolld100, rolld10by5=rolld10by5)
+        miscast_text = f'**{miscast_result}**: {miscast_rules[idx]}'.format(rolld10=rolld10, rolld10again=rolld10again, rolld100=rolld100, rolld10by5=rolld10by5)
 
         return miscast_text, miscast_result
 
@@ -121,10 +122,10 @@ class Magic4:
         if miscast_result == 'Multiplying Misfortune':
             miscast_text += '\n\nRolling again twice:\n'
             miscast_text += self._miscast_template(miscasts.magic_miscasts_minor[:-6])[0] + '\n'
-            miscast_text += self._miscast_template(miscasts.magic_miscasts_minor[:-6])[0]
+            miscast_text += self._miscast_template(miscasts.magic_miscasts_minor[:-6])[0] + '\n'
 
         if miscast_result == 'Cascading Chaos':
-            miscast_text += '\n\nResult from Major Miscast Table:\n' + self._miscast_template(miscasts.magic_miscasts_major)[0]
+            miscast_text += '\n\nResult from Major Miscast Table:\n' + self._miscast_template(miscasts.magic_miscasts_major)[0] + '\n'
 
         return miscast_text
 
