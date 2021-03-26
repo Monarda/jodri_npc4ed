@@ -23,8 +23,12 @@ class Magic4:
         self._error = None
 
         self._all_lores = dict()
+        self._all_lores['all'] = 'all'
         for lore in self.lores:
-            lorename = lore.lower().lstrip('lore of ')
+            #lorename = lore.lower().removeprefix('lore of')
+            lorename = lore.lower().strip()
+            if lorename.startswith('lore of'): lorename = lorename[8:].strip()
+            #lorename = lore.lower().removeprefix('lore of')
 
             self._all_lores[lorename] = lore
             self._all_lores[lore]     = lore
@@ -50,12 +54,21 @@ class Magic4:
         
         return lorekey
 
+    def canonise(self, lore):
+        return self._lore_best_match(lore)
+
     def __getitem__(self, lore : str) -> dict:
         lorekey = self._lore_best_match(lore)
-        if not lorekey: return None
+        if not lorekey: raise KeyError(f"'{lore}' is not valid key for spells dictionary")
 
-        return dict(_magic_data[lorekey])
-
+        if lore.lower()!='all':
+            return dict(_magic_data[lorekey])
+        else:
+            lores = {'spells':{}, 'colour':True}
+            for lore in _magic_data:
+                if 'colour' in self[lore] and self[lore]['colour'] == True:
+                    lores['spells'].update(self.spells(lore))
+            return lores
 
     def spells(self, lore : str) -> dict:
         return dict(self[lore]['spells'])
@@ -66,7 +79,7 @@ class Magic4:
 
     @property 
     def lores_all(self) -> List[str]:
-        return list(alllores.keys())
+        return list(self._all_lores.keys())
 
     def iscolour(self, lore : str) -> bool:
         return bool(self[lore]['colour'])
