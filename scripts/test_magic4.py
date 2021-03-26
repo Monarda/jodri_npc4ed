@@ -18,6 +18,11 @@ def main():
     print('; '.join( m4.get_random_spells(selection,args.nospells) ))
     if (m4.error): print(m4.error)
 
+    print(m4.miscast_minor())
+    print()
+    print(m4.miscast_major())
+    print()
+
 if __name__ == "__main__":
     # execute only if run as a script
     main()

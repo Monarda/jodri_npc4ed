@@ -9,6 +9,8 @@ from .. import data
 with importlib.resources.open_text(data,'spells.json') as f:
     _magic_data = json.load(f)
 
+from ..data import miscasts
+
 class Magic4:
     class Lore:
         def __init__(self, lore : str):
@@ -81,3 +83,37 @@ class Magic4:
 
         random_spells = sorted(random.sample(list(spells), k=request_spells))
         return collections.OrderedDict({key: spells[key] for key in random_spells})
+
+    def _miscast_template(self, miscast_table):
+        miscast_names = miscast_table[0::3]
+        miscast_prob  = miscast_table[1::3]
+        miscast_rules = miscast_table[2::3]
+
+        miscast_result = random.choices(miscast_names, cum_weights=miscast_prob,k=1)[0]
+
+        d10  = random.randint(1,10)
+        d100 = random.randint(1,100)
+        rolld10    = f'({d10})'
+        rolld100   = f'({d100})'
+        rolld10by5 = f'({d10}×5= {d10*5})'
+
+        idx = miscast_names.index(miscast_result)
+        miscast_text = f'**{miscast_result}**: {miscast_rules[idx]}'.format(rolld10=rolld10, rolld100=rolld100, rolld10by5=rolld10by5)
+
+        return miscast_text, miscast_result
+
+    def miscast_minor(self) -> str:
+        miscast_text, miscast_result = self._miscast_template(miscasts.magic_miscasts_minor)
+
+        if miscast_result == 'Multiplying Misfortune':
+            miscast_text += '\n\nRolling again twice:\n'
+            miscast_text += self._miscast_template(miscasts.magic_miscasts_minor[:-6])[0] + '\n'
+            miscast_text += self._miscast_template(miscasts.magic_miscasts_minor[:-6])[0]
+
+        if miscast_result == 'Cascading Chaos':
+            miscast_text += '\n\nResult from Major Miscast Table:\n' + self._miscast_template(miscasts.magic_miscasts_major)[0]
+
+        return miscast_text
+
+    def miscast_major(self) -> str:
+        return self._miscast_template(miscasts.magic_miscasts_major)[0]
