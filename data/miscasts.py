@@ -1,7 +1,7 @@
 # Uses cumulative probability so we can keep the order if that's ever needed
 magic_miscasts_minor = [
     'Witchsign', 5, 'the next living creature born within 1 mile is mutated.',
-    'Soured Milk', 10, 'All milk within 1d100 yards {rolld100} goes sour instantly.',
+    'Soured Milk', 10, 'All milk within 1d100 {rolld100} yards goes sour instantly.',
     'Blight', 15, 'Willpower Bonus fields within Willpower Bonus miles suffer a blight, and all crops rot overnight.',
     'Soulwax', 20, 'Your ears clog instantly with a thick wax. Gain 1 *Deafened* Condition, which is not removed until someone cleans them for you (with a successful use of the Heal Skill).',
     'Witchlight', 25, 'You glow with an eerie light related to your Lore, emitting as much light as a large bonfire, which lasts for 1d10 {rolld10} Rounds.',
