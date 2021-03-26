@@ -139,7 +139,7 @@ def find_best_match(target, options):
         scores[option] = 1 - damerau_levenshtein_distance(target,option)
 
     import operator
-    bestcareer = max(scores.items(), key=operator.itemgetter(1))[0]
-    if scores[bestcareer] > -2: return bestcareer
+    bestmatch = max(scores.items(), key=operator.itemgetter(1))[0]
+    if scores[bestmatch] > -4: return bestmatch
     else: return target
 
