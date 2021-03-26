@@ -13,13 +13,14 @@ def main():
     args = parser.parse_args()
  
     m4 = Magic4()
-    selection = find_best_match( ' '.join(args.lore),m4.lores )
-    print('Colour: {}'.format(m4.iscolour(selection)))
+    selection = m4.canonise( ' '.join(args.lore)).title()
+    print(f'{args.nospells} spells selected randomly from {selection}:')
     print('; '.join( m4.get_random_spells(selection,args.nospells) ))
     if (m4.error): print(m4.error)
 
+    print('\nMinor Miscast:')
     print(m4.miscast_minor())
-    print()
+    print('\nMajor Miscast:')
     print(m4.miscast_major())
     print()
 
