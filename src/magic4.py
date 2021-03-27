@@ -12,6 +12,7 @@ with importlib.resources.open_text(data,'spells.json') as f:
 from ..data import miscasts
 
 class Magic4:
+    """ Class to contain all commands and related information for 4th ed lores, spells, and casting """
     class Lore:
         def __init__(self, lore : str):
             self._lore = lore
@@ -42,6 +43,8 @@ class Magic4:
         return self._error
 
     def _lore_best_match(self, lore : str) -> str:
+        """ Find the lore that best matches what was input """
+
         if lore.lower() in self._all_lores:
             lorekey = self._all_lores[lore.lower()]
         else:
@@ -54,7 +57,9 @@ class Magic4:
         
         return lorekey
 
-    def canonise(self, lore):
+    def canonise_lore(self, lore):
+        """ Return the lore that best matches the input text, e.g. 'ulgu becomes "Lore of Shadows" """
+
         return self._lore_best_match(lore)
 
     def __getitem__(self, lore : str) -> dict:
@@ -71,20 +76,25 @@ class Magic4:
             return lores
 
     def spells(self, lore : str) -> dict:
+        """ Get all the spells for the specified lore """
         return dict(self[lore]['spells'])
 
     @property
     def lores(self) -> List[str]:
+        """ Get a list of all the lores as keys used in the data lookup """
         return list(_magic_data.keys())
 
     @property 
     def lores_all(self) -> List[str]:
+        """ Get a list of all the lores, including alternate names"""
         return list(self._all_lores.keys())
 
     def iscolour(self, lore : str) -> bool:
+        """ Is this lore one of the colour magics? """
         return bool(self[lore]['colour'])
 
     def get_random_spells(self, lore : str, request_spells : int) -> dict:
+        """ Get n random spells from a lore """
         spells = self.spells(lore)
 
         actual_spells = len(spells)
@@ -98,6 +108,7 @@ class Magic4:
         return collections.OrderedDict({key: spells[key] for key in random_spells})
 
     def _miscast_template(self, miscast_table):
+        """ Support function for miscasts """
         miscast_names = miscast_table[0::3]
         miscast_prob  = miscast_table[1::3]
         miscast_rules = miscast_table[2::3]
@@ -117,6 +128,9 @@ class Magic4:
         return miscast_text, miscast_result
 
     def miscast_minor(self) -> str:
+        """ Return text describing a randomly rolled minor miscast. 
+        
+            Includes rerolls and escalations to major miscasts """
         miscast_text, miscast_result = self._miscast_template(miscasts.magic_miscasts_minor)
 
         if miscast_result == 'Multiplying Misfortune':
@@ -130,4 +144,5 @@ class Magic4:
         return miscast_text
 
     def miscast_major(self) -> str:
+        """ Return text describing a randomly rolled major miscast."""
         return self._miscast_template(miscasts.magic_miscasts_major)[0]

@@ -13,13 +13,14 @@ def main():
     args = parser.parse_args()
  
     m4 = Magic4()
-    selection = m4.canonise( ' '.join(args.lore)).title()
+    selection = m4.canonise_lore( ' '.join(args.lore)).title()
     print(f'{args.nospells} spells selected randomly from {selection}:')
     print('; '.join( m4.get_random_spells(selection,args.nospells) ))
     if (m4.error): print(m4.error)
 
     print('\nMinor Miscast:')
-    print(m4.miscast_minor())
+    for i in range(20):
+        print(m4.miscast_minor())
     print('\nMajor Miscast:')
     print(m4.miscast_major())
     print()
