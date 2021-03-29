@@ -34,7 +34,7 @@ species_npc_traits_4e = {
     "ogre": {'Armour 1', 'Hungry', 'Prejudice (Thin People)', 'Night Vision', 'Size (Large)', 'Weapon +8'},
     "fimir": {'Armour 2', 'Cold-blooded', 'Night Vision', 'Size (Large)', 'Swamp-strider', 'Weapon +8'},
     "giant": {'Armour 1', 'Night Vision', 'Size (Enormous)', 'Stride', 'Tough', 'Weapon +10'},
-    "troll": {'Armour 2', 'Bite+8', 'Die Hard', 'Infected', 'Regenerate', 'Size (Large)', 'Stupid','Tough', 'Vomit', 'Weapon +9'},
+    "troll": {'Armour 2', 'Bite+8', 'Die Hard', 'Infected', 'Regenerate', 'Size (Large)', 'Stupid', 'Tough', 'Vomit', 'Weapon +9'},
     "orc": {'Animosity (Greenskins)', 'Armour 3', 'Belligerent', 'Die Hard', 'Infected', 'Night Vision', 'Weapon +8'},
     "goblin": {'Animosity (Greenskins)', 'Armour 1', 'Afraid (Elves)', 'Night Vision', 'Infected', 'Weapon +7'},
     "vampire": {'Bite+8', 'Night Vision', 'Undead', 'Vampiric', 'Weapon +9'},
@@ -45,7 +45,7 @@ species_npc_traits_4e = {
     "mutant": {'Corruption (Minor)', 'Mutation', 'Weapon +7'},
     "cultist": {'Weapon +6'},
     "chaos warrior": {'Armoured 5', 'Champion', 'Corruption (Minor)', 'Weapon +8'},
-    "clanrat": {'Armour 2','Infected', 'Night Vision', 'Weapon +7'},
+    "clanrat": {'Armour 2', 'Infected', 'Night Vision', 'Weapon +7'},
     "stormvermin": {'Armour 4', 'Infected', 'Night Vision', 'Weapon +8'},
     "rat-ogre": {'Armour 1', 'Infected', 'Night Vision', 'Size (Large)', 'Stupid', 'Weapon +9'}
 }
@@ -64,7 +64,7 @@ species_npc_optional_traits_4e = {
     "goblin": {'Arboreal', 'Dark Vision', 'Hatred (Dwarfs)', 'Ranged+7 (25)', 'Venom'},
     "vampire": {'Bestial', 'Champion', 'Corruption (Minor)', 'Dark Vision', 'Die Hard', 'Distracting', 'Fear', 'Flight', 'Frenzy', 'Fury', 'Hungry', 'Mental Corruption', 'Painless', 'Petrifying Gaze', 'Regeneration', 'Spellcaster (Death or Necromancy)', 'Tracker', 'Wall Crawler'},
     "gor": {'Armour 2', 'Corruption (Minor)', 'Disease (Packer’s Pox)', 'Infected', 'Infestation', 'Mutation', 'Size (Large)', 'Spellcaster (Beasts)'},
-    "ungor": {'Armour 1', 'Corruption (Minor)', 'Disease (Packer’s Pox)', 'Infected', 'Infestation', 'Mutation,' 'Ranged+7 (25)', 'Size (Small)'},
+    "ungor": {'Armour 1', 'Corruption (Minor)', 'Disease (Packer’s Pox)', 'Infected', 'Infestation', 'Mutation', 'Ranged+7 (25)', 'Size (Small)'},
     "minotaur": {'Arboreal', 'Belligerent', 'Corruption (Minor)', 'Disease (Packer’s Pox)', 'Fury', 'Infected', 'Infestation', 'Mutation'},
     "bray-shaman": {'Disease (Packer’s Pox)', 'Infected', 'Infestation', 'Mutation', 'Size (Large)'},
     "mutant": {'All Creature Traits'},
