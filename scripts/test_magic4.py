@@ -1,7 +1,7 @@
 import argparse
 import random
 
-from ..src.magic4 import *
+from ..src.magic4e import *
 
 def main():
     random.seed()
@@ -12,7 +12,7 @@ def main():
     parser.parse_args()
     args = parser.parse_args()
  
-    m4 = Magic4()
+    m4 = Magic4e()
     selection = m4.canonise_lore( ' '.join(args.lore)).title()
     print(f'{args.nospells} spells selected randomly from {selection}:')
     print('; '.join( m4.get_random_spells(selection,args.nospells) ))
