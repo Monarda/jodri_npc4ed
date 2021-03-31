@@ -19,6 +19,10 @@ class Job4e():
         what = random.choices(_job_data["what"])[0]
         why  = random.choices(_job_data["why"])[0]
 
+        if who.startswith('A spy disguised as'):
+            norerolls_whos = list(set(_job_data["who"]) - set(who))
+            who += ' ' + random.choices(norerolls_whos)[0]
+
         return [who, what, why]
 
 def main():
