@@ -1507,7 +1507,7 @@
             "skills" : ["Cool","Endurance","Dodge"],
             "talents":  ["Catfall","Combat Aware","Lip Reading","Strike Mighty Blow","Sharpshooter"],
             "npc_suggested_talents": [],
-            "trappings": ["Elf Bow and Leather Armour with at least 1 Quality each","10 Elf Arrows"]
+            "trappings": ["Elf Bow with at least 1 Quality","Leather Armour with at least 1 Quality","10 Elf Arrows"]
         },
         "rank 4" : {
             "name": "Forest's Wrath",
