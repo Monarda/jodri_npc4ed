@@ -745,7 +745,9 @@
         "social": false,
         "stat_mod": null,
         "tests": [
-            null
+            "Lore (Riverways)",
+            "Row",
+            "Sail"
         ],
         "utility": true
     },
