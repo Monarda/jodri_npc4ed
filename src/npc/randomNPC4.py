@@ -105,7 +105,7 @@ class RandomNPC4(BuildNPC4):
 
 
     def _reverse_random_careers(self,target,young=False):
-        career = target['career']
+        career = target['career'].title()
         rank   = target['rank']
         careers_list = [(career,rank)]
 
