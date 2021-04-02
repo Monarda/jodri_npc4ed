@@ -78,6 +78,7 @@ class Careers4:
         return career_levels
 
     def __getitem__(self, key):
+        key = key.title()
         return dict(_careers_data[key])
 
     def provides_skills(self):
