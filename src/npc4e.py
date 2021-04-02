@@ -56,7 +56,7 @@ class NPC4e:
         to make shorter or longer career histories more likely
 
         filter: str, optional
-        apply a filter to *presentation* of the NPC, emphasing a particular aspect currently valid 
+        apply a filter to *presentation* of the NPC, emphasing a particular aspect, currently valid 
         values are 'combat' and 'social'
         NOTE: the filter is the only option that can be changed once an NPC is generated
 
@@ -245,7 +245,7 @@ class NPC4e:
         return self._npc.careername
 
     @property
-    def career_history_unambgious(self) -> str:
+    def career_history_unambiguous(self) -> str:
         """ The career history of the NPC with ambiguities resolved """
         return ' \u2192 '.join(self._npc.career_history_unambiguous)
 
