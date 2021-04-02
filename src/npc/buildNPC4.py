@@ -23,8 +23,12 @@ class BuildNPC4:
         # one of the known species words (i.e. dwarf, halfing, elf or gnome)
         self._species = species
 
+        # Can't use self.known_species because RandomNPC4 has a different list of species it knows
+        # but that list doesn't have stats for Reiklanders, etc.
         lookup_species = species.lower()
-        if lookup_species in self.known_species():
+        species_with_stats = [*species_npc_characteristics_4e.keys(), *species_npc_aliases_4e.keys()]
+
+        if lookup_species in species_with_stats:
             if lookup_species in species_npc_aliases_4e:
                 index_species = species_npc_aliases_4e[lookup_species]
             else:
@@ -37,7 +41,7 @@ class BuildNPC4:
             # So if 'Dark Elf' is supplied the index_species will be set to 'elf'
             # This could have strange results if someone decides 'human-slayer' is a 
             # species, but that doesn't seem like something worth guarding against!
-            for test_species in self.known_species():
+            for test_species in species_with_stats:
                 if test_species in lookup_species:
                     index_species = test_species
                     break

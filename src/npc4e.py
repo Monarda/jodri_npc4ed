@@ -269,7 +269,7 @@ class NPC4e:
     def species_used(self) -> str:
         """ The species actually used by the NPC generator, i.e. if Estalian was input the 
             generator may have used 'human' rules. This function will return 'human' """
-        return self._npc.species_used
+        return self._npc.species_used.title()
 
     @property
     def statblock(self) -> str:
