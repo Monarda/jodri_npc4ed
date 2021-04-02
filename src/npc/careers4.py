@@ -71,9 +71,9 @@ class Careers4:
             for i in range (1,5):
                 career_level_name = self[careername][f'rank {i}']['name']
                 if career_level_name in career_levels:
-                    career_levels[career_level_name].append(careername)
+                    career_levels[career_level_name].append(f'{careername} {i}')
                 else:
-                    career_levels[career_level_name] = [careername]
+                    career_levels[career_level_name] = [f'{careername} {i}']
 
         return career_levels
 
