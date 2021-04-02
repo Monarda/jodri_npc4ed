@@ -275,12 +275,12 @@ class NPC4e:
     def statblock(self) -> str:
         """ The formatted (as a grid) statblock of the NPC, showing starting characteristics
             which do include modifications like Savvy, and final characteristics """
-        outstr = "`| {} |`\n".format(
-            '| '.join([f'{x:>3}' for x in self._npc.characteristics.keys()]))
-        outstr += "`| {} |`\n".format(
-            '| '.join([f'{x:3}' for x in self._npc.characteristics_base.values()]))
-        outstr += "`| {} |`".format(
-            '| '.join([f'{x:3}' for x in self._npc.characteristics.values()]))
+        outstr = "`|{}|`\n".format(
+            '|'.join([f'{x:>3}' for x in self._npc.characteristics.keys()]))
+        outstr += "`|{}|`\n".format(
+            '|'.join([f'{x:3}' for x in self._npc.characteristics_base.values()]))
+        outstr += "`|{}|`".format(
+            '|'.join([f'{x:3}' for x in self._npc.characteristics.values()]))
 
         return outstr
 
