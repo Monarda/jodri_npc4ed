@@ -82,7 +82,7 @@ class NPC4e:
                                   starting_talents=initial_talents,
                                   starting_trappings=initial_trappings)
             for career in careers or []:
-                self._npc.add_career_rank(career[0], career[1])
+                self._npc.add_career_rank(career[0].title(), career[1])
         else:
             starting_career = None
             target_career = None
