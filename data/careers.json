@@ -488,7 +488,7 @@
             "advances": ["Agi","WP","Fel"],
             "skills" : ["Animal Care","Bribery","Charm","Consume Alcohol","Drive","Gamble","Gossip","Haggle"],
             "talents":  ["Blather","Dealmaker","Read/Write","Suave"],
-            "npc_suggested_talents": ["Dealmaker","Read/Write"],
+            "npc_suggested_talents": [],
             "trappings": ["Abacus","Mule and Cart","Canvas Tarpaulin","3d10 Silver Shillings"]
         },
         "rank 2" : {
