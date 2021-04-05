@@ -19,7 +19,8 @@ class RandomNPC4(BuildNPC4):
     """Create a randomly generated NPC"""
 
     def __init__(self, species=None, starting_career=None, young=False, target=None, 
-                       characteristics=None, starting_skills = None, starting_talents=None, starting_trappings=None):
+                       characteristics=None, starting_skills = None, starting_talents=None, starting_trappings=None,
+                       init_only=False):
         """Options are to define the species, a starting career, whether the NPC is young
            and a final career. The last uses a dictionary of the form {'career':'string', rank:n}
         """
@@ -36,6 +37,8 @@ class RandomNPC4(BuildNPC4):
                             starting_skills=starting_skills, 
                             starting_talents=starting_talents,
                             starting_trappings=starting_trappings)
+
+        if init_only: return
 
         if starting_career: starting_career = starting_career.title()
 

@@ -1,3 +1,8 @@
+
+import itertools
+
+
+import itertools
 from typing import List
 
 from .npc.buildNPC4 import BuildNPC4
@@ -16,7 +21,6 @@ class NPC4e:
     """ Make either a fully defined or randomly generated NPC"""
 
     def __init__(self,
-                 random  : bool=True,
                  species : str=None,
                  careers : list=None,
                  type    : str=None,
@@ -75,47 +79,100 @@ class NPC4e:
         Directly add talents to the NPC. These are always printed at the end, irrespective of status, etc.
         """
 
-        if random == False:
-            self._npc = BuildNPC4(species=species, 
-                                  characteristics=characteristics, 
-                                  starting_skills=initial_skills, 
-                                  starting_talents=initial_talents,
-                                  starting_trappings=initial_trappings)
-            for career in careers or []:
-                self._npc.add_career_rank(career[0].title(), career[1])
-        else:
-            starting_career = None
-            target_career = None
-            if careers:
-                careername = careers[0][0]
-                level = careers[0][1]
-                if level == 1:
-                    starting_career = careername
+        if age=='young' in age: young = True 
+        else: young = False
+
+
+        self._error            = None
+        self._error_diagnostic = None
+        try:
+            # Deduplicate the input career list since something like ['any','any','any']
+            # will cause problems later. We have to be careful though as ['any', ('Guard',2), 'any']
+            # is valid. We only want to remove duplicates where they're next to each other
+            dedup_careers = [k for k, g in itertools.groupby(careers)]
+            print(dedup_careers)
+
+            # Search the input career list for 'any'
+            # If it's not present then this is trivial and we just pass everything to the defined NPC builder
+            # Then check the species based on this information to see if it's something the available classes
+            # can handle
+            if not 'any' in dedup_careers:
+                # We can immediately build this NPC
+                self._npc = BuildNPC4(species=species, 
+                                    characteristics=characteristics, 
+                                    starting_skills=initial_skills, 
+                                    starting_talents=initial_talents,
+                                    starting_trappings=initial_trappings)
+                for career in dedup_careers or []:
+                    self._npc.add_career_rank(career[0].title(), career[1])
+            else:
+                # There is a random element to this NPC
+                # The easiest case is one where the only input is any
+                # In that case just generate a completely random NPC
+                self._npc = RandomNPC4(species=species, 
+                                    starting_career=None, 
+                                    target=None, 
+                                    young=young, 
+                                    characteristics=characteristics, 
+                                    starting_skills=initial_skills, 
+                                    starting_talents=initial_talents,
+                                    starting_trappings=initial_trappings,
+                                    init_only=True)
+
+                starting_career = None
+                target_career = None
+                
+                # If 'any' is the only input then generate a fully random NPC and return
+                if len(dedup_careers)<2:
+                    self._npc._add_random_careers(starting_career,young)
                 else:
-                    target_career = {'career': careername, 'rank': level}
+                    # Any is not the only input
 
-            if age=='young' in age: young = True 
-            else: young = False
+                    # Any is the _first_ input. That means we want to generate a random career
+                    # path that terminates at the first defined entry, and then uses defined
+                    # careers from there on
+                    if dedup_careers[0] == 'any':
+                        # Create the random part of ther career path
+                        target_career = {'career': dedup_careers[1][0], 'rank': dedup_careers[1][1]}
+                        self._npc._reverse_random_careers(target_career,young)
 
-            self._npc = RandomNPC4(species=species, 
-                                   starting_career=starting_career, 
-                                   target=target_career, 
-                                   young=young, 
-                                   characteristics=characteristics, 
-                                   starting_skills=initial_skills, 
-                                   starting_talents=initial_talents,
-                                   starting_trappings=initial_trappings)
+                        # Add the additional defined careers (if any)
+                        # ['any', ('Guard', 1)] already terminates at Guard 1
+                        # ['any', ('Guard', 1), ('Priest', 2)] needs only Priest 2 added
+                        if len(dedup_careers)>2:
+                            for career in dedup_careers[2:]:
+                                self._npc.add_career_rank(career[0].title(), career[1])
 
-        self._filter = filter
-        self._format()
+                    # Any is the final element in the list. We need to create a random career
+                    # path that starts at this point
+                    if dedup_careers[-1] == 'any':
+                        # If there were career steps before the one that launches the random ones
+                        # then apply them first
+                        if len(dedup_careers)>2:
+                            for career in dedup_careers[:-2]:
+                                self._npc.add_career_rank(career[0].title(), career[1])                    
 
-        self._error = None
+                        # Then add the career path which is random until the end
+                        starting_career = dedup_careers[-2][0]
+                        self._npc._add_random_careers(starting_career,young)
+
+
+            self._filter = filter
+            self._format()
+
+        except Exception as e:
+            print('Exception triggered')
+            self._error_diagnostic = str(e)
 
     @property
     def error_msg(self) -> str:
-        """ Helpful (?!) error messages"""
+        """ Helpful error messages for Jodri users"""
         return self._error
 
+    @property
+    def error_msg_diagnostic(self) -> str:
+        """ Helpful error messages for Jodri developers """
+        return self._error_diagnostic
 
     @classmethod
     def known_careers(cls) -> List[str]:
