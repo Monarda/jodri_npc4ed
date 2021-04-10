@@ -22,7 +22,7 @@ species_npc_characteristics_4e = {
     "chaos warrior": {"M":4, "WS":55, "BS":30, "S":45, "T":45, "I":45, "Agi":55, "Dex":30, "Int":35, "WP":55, "Fel":25},
     "clanrat":       {"M":5, "WS":30, "BS":30, "S":30, "T":30, "I":40, "Agi":35, "Dex":30, "Int":30, "WP":20, "Fel":30},
     "stormvermin":   {"M":5, "WS":45, "BS":35, "S":35, "T":35, "I":55, "Agi":50, "Dex":30, "Int":30, "WP":25, "Fel":20},
-    "rat-ogre":      {"M":5, "WS":30, "BS":30, "S":30, "T":30, "I":30, "Agi":30, "Dex":30, "Int":30, "WP":30, "Fel":30},
+    "rat ogre":      {"M":5, "WS":35, "BS":10, "S":55, "T":45, "I":35, "Agi":45, "Dex":25, "Int":10, "WP":25, "Fel":15},
 }
 
 species_npc_traits_4e = {
