@@ -47,7 +47,7 @@ species_npc_traits_4e = {
     "chaos warrior": {'Armoured 5', 'Champion', 'Corruption (Minor)', 'Weapon +8'},
     "clanrat": {'Armour 2', 'Infected', 'Night Vision', 'Weapon +7'},
     "stormvermin": {'Armour 4', 'Infected', 'Night Vision', 'Weapon +8'},
-    "rat-ogre": {'Armour 1', 'Infected', 'Night Vision', 'Size (Large)', 'Stupid', 'Weapon +9'}
+    "rat ogre": {'Armour 1', 'Infected', 'Night Vision', 'Size (Large)', 'Stupid', 'Weapon +9'}
 }
 
 species_npc_optional_traits_4e = {
@@ -72,7 +72,7 @@ species_npc_optional_traits_4e = {
     "chaos warrior": {'Belligerent', 'Disease', 'Distracting', 'Frenzy', 'Mental Corruption', 'Mutation', 'Spellcaster (Chaos)'},
     "clanrat": {'Disease (Ratte Fever)', 'Mutation', 'Skittish', 'Stealthy', 'Tracker'},
     "stormvermin": {'Disease (Ratte Fever)', 'Mutation', 'Tracker'},
-    "rat-ogre": {'Corruption (Minor)', 'Dark Vision', 'Disease (Ratte Fever)', 'Infestation', 'Mutation', 'Tail+8', 'Tracker', 'Trained (Broken, Guard, Mount, War)'}
+    "rat ogre": {'Corruption (Minor)', 'Dark Vision', 'Disease (Ratte Fever)', 'Infestation', 'Mutation', 'Tail+8', 'Tracker', 'Trained (Broken, Guard, Mount, War)'}
 }
 
 # Aliases
