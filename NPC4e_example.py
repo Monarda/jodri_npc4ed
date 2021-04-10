@@ -34,13 +34,11 @@ def main():
     print_npc(npc)
 
     # Generate random NPC of species Reiklander and a starting career of Guard
-    npc = NPC4e(species='Ogre', careers=[('scholar', 1), ('priest',2), 'any'])
+    npc = NPC4e(species='Dwarf', careers=[('scholar', 1), 'any', ('priest',2), 'any'])
     npc.filter = 'combat'
     print_npc(npc)
     print(f'User error = {npc.error_msg}')
     print(f'Dev  error = {npc.error_msg_diagnostic}')
-
-    return
 
     # Generate NPC with defined career path
     npc = NPC4e(species='Wood Elf', careers=[('scholar',1), ('priest',1)])

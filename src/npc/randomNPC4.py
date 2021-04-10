@@ -38,6 +38,9 @@ class RandomNPC4(BuildNPC4):
                             starting_talents=starting_talents,
                             starting_trappings=starting_trappings)
 
+        # Record anything we might need to use to rebuild the class
+        self._young = young
+
         if init_only: return
 
         if starting_career: starting_career = starting_career.title()
@@ -47,6 +50,7 @@ class RandomNPC4(BuildNPC4):
         else:
             self._add_random_careers(starting_career,young)
 
+
     @classmethod
     def known_species(cls):
         return ['Reiklander','Dwarf','Halfling','High Elf','Wood Elf','Gnome','Nordlander','Middenheimer','Middenlander']
@@ -55,6 +59,16 @@ class RandomNPC4(BuildNPC4):
     def known_humans(cls):
         return ['Reiklander','Nordlander','Middenheimer','Middenlander']
         
+    def _careers_by_class(self):        
+        careers_by_class = dict()
+        for careername in Careers4().careers:
+            classname = Careers4()[careername]['class']
+            if classname in careers_by_class:
+                careers_by_class[classname].update([careername])
+            else:
+                careers_by_class[classname] = set([careername])
+
+        return careers_by_class
 
     def _add_random_careers(self,starting_career=None, young=False):
         # Young people start at career rank 1, adults at career rank 2
@@ -63,14 +77,7 @@ class RandomNPC4(BuildNPC4):
 
         self.add_career(career,rank)
 
-        # careers by class
-        careers_by_class = dict()
-        for careername in Careers4().careers:
-            classname = Careers4()[careername]['class']
-            if classname in careers_by_class:
-                careers_by_class[classname].update([careername])
-            else:
-                careers_by_class[classname] = set([careername])
+        careers_by_class = self._careers_by_class()
 
         more_careers = True
         while (more_careers):
@@ -112,14 +119,7 @@ class RandomNPC4(BuildNPC4):
         rank   = target['rank']
         careers_list = [(career,rank)]
 
-        # careers by class
-        careers_by_class = dict()
-        for careername in Careers4().careers:
-            classname = Careers4()[careername]['class']
-            if classname in careers_by_class:
-                careers_by_class[classname].update([careername])
-            else:
-                careers_by_class[classname] = set([careername])
+        careers_by_class = self._careers_by_class()
 
         more_careers = True
         while (more_careers):
@@ -167,6 +167,95 @@ class RandomNPC4(BuildNPC4):
             career = careerdata[0]
             rank   = careerdata[1]
             self.add_career_rank(career,rank)
+
+
+    def _span_random_careers(self, startcareer, endcareer, young=False):
+        # First construct the direct route between the start and end If the careers are in
+        # the same class then this is simpleWe just need to determine which level to reach
+        # in the first career before we switch and finish leveling up in the end career.
+        #
+        # If the careers are in different classes then it's even easier. We determine which 
+        # level to reach in the first career and then level up from 1 in the end career.
+        #
+        # The true randomization comes in by deciding whether we will take a longer path
+        # than the direct one. The chance we'll switch to an alternate career in one of the
+        # the classes is low. The chance we'll swithc to an alternate career in an entirely
+        # different class is even lower.
+
+
+        # First go, let's not be clever, use the existing random generator and then simply append
+        # the required final career
+        starting_career = startcareer[0].title()
+        self._add_random_careers(starting_career, young)
+
+        # Details about where we are and where we want to be
+        end_career = endcareer[0].title()
+        end_level  = endcareer[1]
+        current_career = self._career_history[-1][0].title()
+        current_level = self._career_history[-1][1]
+
+        # Check whether we're currently in the desired career. If so we just need to adjust levels
+        if end_career == current_career:
+            print(current_career,current_level)
+            print(end_career, end_level)
+            if end_level == current_level:
+                pass
+            elif end_level>current_level:
+                # Add career levels until we're in the right place
+                for level in range(current_level+1,end_level+1):
+                    self.add_career_rank(end_career,level)
+            elif end_level<current_level:
+                # Damn, we have to remove career levels. The simplest way is simply to rebuild
+                # without those career levels. To do that we need to assemble a new revised 
+                # career history to apply
+                # This is trickier than it might seem because there are two ways we could get here
+                # Consider that we want a Priest (priest,2) but have generated a High Priest (priest,3)
+                # The most likely case is that we've simply overshot and the career history looks
+                # something like [... (priest,1), (priest,2), (priest,3)]. In this case we just need to
+                # delete the extar career levels
+                # But we could also have a case like [(wizard,3),(priest,3)] in which case we need to
+                # change the final career level
+                new_career_history = list(self._career_history)
+                print(new_career_history)
+                while new_career_history[-1]!=(end_career,end_level):
+                    if new_career_history[-2][0] != end_career:
+                        new_career_history[-1] = (end_career,end_level)
+                    else:
+                        new_career_history.pop()
+                print(new_career_history)
+
+                newNPC = RandomNPC4(species=self._species, starting_career=None, young=self._young, 
+                                    characteristics=self._starting_characteristics,
+                                    starting_skills=self._starting_skills, starting_talents=self._starting_talents,
+                                    starting_trappings=self._starting_trappings,
+                                    init_only=True)
+
+                for career, level in new_career_history:
+                    newNPC.add_career_rank(career, level)
+                
+                self.__dict__.update(newNPC.__dict__)
+            
+            return
+
+        # We need to move the NPC to the new career and level
+        # Are we in the right class?
+        careers_by_class = self._careers_by_class()
+        class_by_careers = {}
+        for k,value in careers_by_class.items():
+            for v in value:
+                class_by_careers.setdefault(v,[]).append(k)
+
+        current_class = class_by_careers[current_career]
+        end_class     = class_by_careers[end_career]
+        if current_class == end_class:
+            if current_level>=end_level:
+                self.add_career_rank(end_career,end_level)
+            else:
+                for level in range(current_level,end_level+1):
+                    self.add_career_rank(end_career,level)
+        else:
+            for level in range(1,end_level+1):
+                self.add_career_rank(end_career,level)
 
 
     def _random_career(self, firstcareer=True, careerslist=None) -> str:

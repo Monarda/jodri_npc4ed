@@ -90,7 +90,6 @@ class NPC4e:
             # will cause problems later. We have to be careful though as ['any', ('Guard',2), 'any']
             # is valid. We only want to remove duplicates where they're next to each other
             dedup_careers = [k for k, g in itertools.groupby(careers)]
-            print(dedup_careers)
 
             # Search the input career list for 'any'
             # If it's not present then this is trivial and we just pass everything to the defined NPC builder
@@ -99,10 +98,10 @@ class NPC4e:
             if not 'any' in dedup_careers:
                 # We can immediately build this NPC
                 self._npc = BuildNPC4(species=species, 
-                                    characteristics=characteristics, 
-                                    starting_skills=initial_skills, 
-                                    starting_talents=initial_talents,
-                                    starting_trappings=initial_trappings)
+                                        characteristics=characteristics, 
+                                        starting_skills=initial_skills, 
+                                        starting_talents=initial_talents,
+                                        starting_trappings=initial_trappings)
                 for career in dedup_careers or []:
                     self._npc.add_career_rank(career[0].title(), career[1])
             else:
@@ -122,40 +121,39 @@ class NPC4e:
                 starting_career = None
                 target_career = None
                 
-                # If 'any' is the only input then generate a fully random NPC and return
-                if len(dedup_careers)<2:
-                    self._npc._add_random_careers(starting_career,young)
-                else:
-                    # Any is not the only input
+                while dedup_careers:                                             
+                    careers_left = len(dedup_careers)
+                    careers_copy = list(dedup_careers)
 
-                    # Any is the _first_ input. That means we want to generate a random career
-                    # path that terminates at the first defined entry, and then uses defined
-                    # careers from there on
-                    if dedup_careers[0] == 'any':
-                        # Create the random part of ther career path
-                        target_career = {'career': dedup_careers[1][0], 'rank': dedup_careers[1][1]}
-                        self._npc._reverse_random_careers(target_career,young)
+                    if careers_left==1:
+                        if careers_copy[0]=='any':
+                            self._npc._add_random_careers(None,young)
+                        else:
+                            self._npc.add_career_rank(careers_copy[0][0], careers_copy[0][1])
+                        dedup_careers = []
+                    elif careers_left==2:
+                        # This is either [(career,level),(career,level)] or [(career,level),'any']
+                        if careers_copy[0]=='any':
+                            target_career = {'career': careers_copy[1][0], 'rank': careers_copy[1][1]}
+                            self._npc._reverse_random_careers(target_career,young)
 
-                        # Add the additional defined careers (if any)
-                        # ['any', ('Guard', 1)] already terminates at Guard 1
-                        # ['any', ('Guard', 1), ('Priest', 2)] needs only Priest 2 added
-                        if len(dedup_careers)>2:
-                            for career in dedup_careers[2:]:
-                                self._npc.add_career_rank(career[0].title(), career[1])
-
-                    # Any is the final element in the list. We need to create a random career
-                    # path that starts at this point
-                    if dedup_careers[-1] == 'any':
-                        # If there were career steps before the one that launches the random ones
-                        # then apply them first
-                        if len(dedup_careers)>2:
-                            for career in dedup_careers[:-2]:
-                                self._npc.add_career_rank(career[0].title(), career[1])                    
-
-                        # Then add the career path which is random until the end
-                        starting_career = dedup_careers[-2][0]
-                        self._npc._add_random_careers(starting_career,young)
-
+                            dedup_careers = dedup_careers[2:] # Remove 'any' and the subsequent career
+                        elif careers_copy[1]=='any':
+                            # Then add the career path which is random until the end
+                            starting_career = careers_copy[0][0]
+                            self._npc._add_random_careers(starting_career,young)
+                            dedup_careers = []
+                        else:
+                            self._npc.add_career_rank(careers_copy[0][0], careers_copy[0][1])
+                            dedup_careers = dedup_careers[1:]
+                    else:
+                        # Must be 3 or greater
+                        if dedup_careers[1] == 'any':
+                            self._npc._span_random_careers(careers_copy[0], careers_copy[2])
+                            dedup_careers = dedup_careers[3:]
+                        else:
+                            self._npc.add_career_rank(careers_copy[0][0], careers_copy[0][1])
+                            dedup_careers = dedup_careers[1:]
 
             self._filter = filter
             self._format()
