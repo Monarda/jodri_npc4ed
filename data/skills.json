@@ -4,7 +4,7 @@
     "Art": {"hidden": false, "characteristic": "Dex", "advanced": false, "group": true, "combat":false, "social":true, "utility":true},
     "Athletics": {"hidden": false, "characteristic": "Agi", "advanced": false, "group": false, "combat":true, "social":false, "utility":true},
     "Bribery" : {"hidden": false, "characteristic": "Fel", "advanced": false, "group": false, "combat":false, "social":true, "utility":false},
-    "Channelling" : {"hidden": false, "characteristic": "Dex", "advanced": true, "group": true, "combat":true, "social":true, "utility":true},
+    "Channelling" : {"hidden": false, "characteristic": "WP", "advanced": true, "group": true, "combat":true, "social":true, "utility":true},
     "Charm": {"hidden": false, "characteristic": "Fel", "advanced": false, "group": false, "combat":false, "social":true, "utility":false},
     "Charm Animal": {"hidden": false, "characteristic": "WP", "advanced": false, "group": false, "combat":false, "social":false, "utility":true},
     "Climb": {"hidden": false, "characteristic": "S", "advanced": false, "group": false, "combat":false, "social":false, "utility":true},
