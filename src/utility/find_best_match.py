@@ -1,5 +1,4 @@
 import math, re
-from sys import breakpointhook
 
 def find_whole_words(target, options):
     """ Find a whole word in a set of options, and return the option that matches
