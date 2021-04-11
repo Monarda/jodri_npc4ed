@@ -1,7 +1,3 @@
-
-import itertools
-
-
 import itertools
 from typing import List
 
@@ -148,12 +144,15 @@ class NPC4e:
                             dedup_careers = dedup_careers[1:]
                     else:
                         # Must be 3 or greater
-                        if dedup_careers[1] == 'any':
+                        if careers_copy[1] == 'any':
+                            # Must be of form [(career,n), 'any', (career,n)]
                             self._npc._span_random_careers(careers_copy[0], careers_copy[2])
                             dedup_careers = dedup_careers[3:]
                         else:
-                            self._npc.add_career_rank(careers_copy[0][0], careers_copy[0][1])
-                            dedup_careers = dedup_careers[1:]
+                            # Must be of form ['any', (career,n), 'any']
+                            target_career = {'career': careers_copy[1][0], 'rank': careers_copy[1][1]}
+                            self._npc._reverse_random_careers(target_career,young)
+                            dedup_careers = dedup_careers[2:]
 
             self._filter = filter
             self._format()
