@@ -18,7 +18,7 @@ class NPC4e:
 
     def __init__(self,
                  species : str=None,
-                 careers : list=None,
+                 careers : list=['any'],
                  type    : str=None,
                  age     : str=None,
                  filter  : str=None,
@@ -116,7 +116,6 @@ class NPC4e:
                                     starting_trappings=initial_trappings,
                                     init_only=True)
 
-                starting_career = None
                 target_career = None
                 
                 while dedup_careers:                                             
@@ -164,7 +163,7 @@ class NPC4e:
                                 target_career = {'career': career_name, 'rank': career_rank-1}
                             else:
                                 target_career = {'career': career_name, 'rank': career_rank}
-                                
+
                             self._npc._reverse_random_careers(target_career,young)
                             dedup_careers = dedup_careers[1:]
 
