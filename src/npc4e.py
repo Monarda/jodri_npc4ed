@@ -18,7 +18,7 @@ class NPC4e:
 
     def __init__(self,
                  species : str=None,
-                 careers : list=['any'],
+                 careers : list=None,
                  type    : str=None,
                  age     : str=None,
                  filter  : str=None,
@@ -78,6 +78,8 @@ class NPC4e:
         if age=='young' in age: young = True 
         else: young = False
 
+        if not careers:
+            careers = ['any']
 
         self._error            = None
         self._error_diagnostic = None
