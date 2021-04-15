@@ -70,12 +70,23 @@ class RandomNPC4(BuildNPC4):
 
         return careers_by_class
 
-    def _add_random_careers(self,starting_career=None, young=False):
-        # Young people start at career rank 1, adults at career rank 2
-        career = starting_career if starting_career else self._random_career()
-        rank = 1 if young else 2
 
-        self.add_career(career,rank)
+    def _add_random_careers(self, career, young=False):
+        # If no career tuple given create one
+        if career != None:
+            career_name = career[0].title()
+            career_rank = career[1]
+        else:
+            career_name = self._random_career()
+
+            if young:
+                career_rank = 1
+            else:
+                self.add_career_rank(career_name,1)
+                career_rank = 2
+
+        # Add the specified career and carry on from here
+        self.add_career_rank(career_name,career_rank)
 
         careers_by_class = self._careers_by_class()
 
@@ -88,27 +99,27 @@ class RandomNPC4(BuildNPC4):
 
             if val<=2:
                 # Keep in the career but go up a rank
-                rank += 1
-                self.add_career_rank(career,rank)                    
-                if rank == 4: more_careers = False  # Stop if this is max career rank
+                career_rank += 1
+                self.add_career_rank(career_name,career_rank)                    
+                if career_rank == 4: more_careers = False  # Stop if this is max career rank
             elif val==3:
                 # Change to a career within the same class
                 # Determine what the other classes are
-                thisclass = Careers4()[career]['class']
-                newcareers = careers_by_class[thisclass].difference([career])
-                career = self._random_career(careerslist=newcareers,firstcareer=False)
-                self.add_career_rank(career,rank)
+                thisclass = Careers4()[career_name]['class']
+                newcareers = careers_by_class[thisclass].difference([career_name])
+                career_name = self._random_career(careerslist=newcareers,firstcareer=False)
+                self.add_career_rank(career_name,career_rank)
             elif val==4:
                 # Change to a career in another class
                 # Find this class, then find all careers in careers_by_class which are not that class
-                thisclass = Careers4()[career]['class']
+                thisclass = Careers4()[career_name]['class']
                 newcareers = itertools.chain.from_iterable([careers for classname,careers in careers_by_class.items() if classname!=thisclass])
 
-                career = self._random_career(careerslist=newcareers,firstcareer=False)
+                career_name = self._random_career(careerslist=newcareers,firstcareer=False)
 
                 # If we've been in this career before then perhaps we should rejoin at that rank?
-                rank = 1
-                self.add_career_rank(career,rank)
+                career_rank = 1
+                self.add_career_rank(career_name,career_rank)
             else:
                 # Just stop, we're finished
                 more_careers = False
@@ -170,23 +181,9 @@ class RandomNPC4(BuildNPC4):
 
 
     def _span_random_careers(self, startcareer, endcareer, young=False):
-        # First construct the direct route between the start and end If the careers are in
-        # the same class then this is simpleWe just need to determine which level to reach
-        # in the first career before we switch and finish leveling up in the end career.
-        #
-        # If the careers are in different classes then it's even easier. We determine which 
-        # level to reach in the first career and then level up from 1 in the end career.
-        #
-        # The true randomization comes in by deciding whether we will take a longer path
-        # than the direct one. The chance we'll switch to an alternate career in one of the
-        # the classes is low. The chance we'll swithc to an alternate career in an entirely
-        # different class is even lower.
-
-
         # First go, let's not be clever, use the existing random generator and then simply append
         # the required final career
-        starting_career = startcareer[0].title()
-        self._add_random_careers(starting_career, young)
+        self._add_random_careers(startcareer, young)
 
         # Details about where we are and where we want to be
         end_career = endcareer[0].title()
@@ -196,8 +193,6 @@ class RandomNPC4(BuildNPC4):
 
         # Check whether we're currently in the desired career. If so we just need to adjust levels
         if end_career == current_career:
-            print(current_career,current_level)
-            print(end_career, end_level)
             if end_level == current_level:
                 pass
             elif end_level>current_level:

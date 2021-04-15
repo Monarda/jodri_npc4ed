@@ -86,6 +86,7 @@ class NPC4e:
             # will cause problems later. We have to be careful though as ['any', ('Guard',2), 'any']
             # is valid. We only want to remove duplicates where they're next to each other
             dedup_careers = [k for k, g in itertools.groupby(careers)]
+            firstcareer = True
 
             # Search the input career list for 'any'
             # If it's not present then this is trivial and we just pass everything to the defined NPC builder
@@ -99,7 +100,8 @@ class NPC4e:
                                         starting_talents=initial_talents,
                                         starting_trappings=initial_trappings)
                 for career in dedup_careers or []:
-                    self._npc.add_career_rank(career[0].title(), career[1])
+                    self._add_career(firstcareer, career)
+                    firstcareer = False
             else:
                 # There is a random element to this NPC
                 # The easiest case is one where the only input is any
@@ -125,10 +127,10 @@ class NPC4e:
                         if careers_copy[0]=='any':
                             self._npc._add_random_careers(None,young)
                         else:
-                            self._npc.add_career_rank(careers_copy[0][0], careers_copy[0][1])
+                            self._add_career(firstcareer, careers_copy[0])
                         dedup_careers = []
                     elif careers_left==2:
-                        # This is either [(career,level),(career,level)] or [(career,level),'any']
+                        # This is either ['any',(career,level)], [(career,level),(career,level)] or [(career,level),'any']
                         if careers_copy[0]=='any':
                             target_career = {'career': careers_copy[1][0], 'rank': careers_copy[1][1]}
                             self._npc._reverse_random_careers(target_career,young)
@@ -136,11 +138,16 @@ class NPC4e:
                             dedup_careers = dedup_careers[2:] # Remove 'any' and the subsequent career
                         elif careers_copy[1]=='any':
                             # Then add the career path which is random until the end
-                            starting_career = careers_copy[0][0]
-                            self._npc._add_random_careers(starting_career,young)
+                            career_name = careers_copy[0][0]
+                            career_rank = careers_copy[0][1]
+                            if firstcareer and career_rank>1: 
+                                for i in range(1,career_rank):
+                                    self._npc.add_career_rank(career_name, i)
+
+                            self._npc._add_random_careers(careers_copy[0],young)
                             dedup_careers = []
                         else:
-                            self._npc.add_career_rank(careers_copy[0][0], careers_copy[0][1])
+                            self._add_career(firstcareer, careers_copy[0])
                             dedup_careers = dedup_careers[1:]
                     else:
                         # Must be 3 or greater
@@ -150,9 +157,18 @@ class NPC4e:
                             dedup_careers = dedup_careers[3:]
                         else:
                             # Must be of form ['any', (career,n), 'any']
-                            target_career = {'career': careers_copy[1][0], 'rank': careers_copy[1][1]}
+                            career_name = careers_copy[1][0]
+                            career_rank = careers_copy[1][1]
+
+                            if career_rank>1:
+                                target_career = {'career': career_name, 'rank': career_rank-1}
+                            else:
+                                target_career = {'career': career_name, 'rank': career_rank}
+                                
                             self._npc._reverse_random_careers(target_career,young)
-                            dedup_careers = dedup_careers[2:]
+                            dedup_careers = dedup_careers[1:]
+
+                    firstcareer = False
 
             self._filter = filter
             self._format()
@@ -160,6 +176,12 @@ class NPC4e:
         except Exception as e:
             print('Exception triggered')
             self._error_diagnostic = str(e)
+
+    def _add_career(self, firstcareer, career):
+        if firstcareer:
+            self._npc.add_career(career[0].title(), career[1])
+        else:
+            self._npc.add_career_rank(career[0].title(), career[1])
 
     @property
     def error_msg(self) -> str:
