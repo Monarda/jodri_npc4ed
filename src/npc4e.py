@@ -139,11 +139,7 @@ class NPC4e:
                             dedup_careers = dedup_careers[2:] # Remove 'any' and the subsequent career
                         elif careers_copy[1]=='any':
                             # Then add the career path which is random until the end
-                            career_name = careers_copy[0][0]
-                            career_rank = careers_copy[0][1]
-                            if firstcareer and career_rank>1: 
-                                for i in range(1,career_rank):
-                                    self._npc.add_career_rank(career_name, i)
+                            self._prep_career_history(firstcareer, careers_copy)
 
                             self._npc._add_random_careers(careers_copy[0],young)
                             dedup_careers = []
@@ -154,6 +150,7 @@ class NPC4e:
                         # Must be 3 or greater
                         if careers_copy[1] == 'any':
                             # Must be of form [(career,n), 'any', (career,n)]
+                            self._prep_career_history(firstcareer, careers_copy)
                             self._npc._span_random_careers(careers_copy[0], careers_copy[2])
                             dedup_careers = dedup_careers[3:]
                         else:
@@ -177,6 +174,13 @@ class NPC4e:
         except Exception as e:
             print('Exception triggered')
             self._error_diagnostic = str(e)
+
+    def _prep_career_history(self, firstcareer, careers_copy):
+        career_name = careers_copy[0][0]
+        career_rank = careers_copy[0][1]
+        if firstcareer and career_rank>1: 
+            for i in range(1,career_rank):
+                self._npc.add_career_rank(career_name, i)
 
     def _add_career(self, firstcareer, career):
         if firstcareer:
