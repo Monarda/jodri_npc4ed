@@ -58,7 +58,7 @@ class BuildNPC4:
             if randomise:
                 for stat,value in base_characteristics.items():
                     if stat!="M":
-                        if value>10:
+                        if value>=10:
                             base_characteristics[stat] = (value - 10) + random.randint(1,10) + random.randint(1,10)
                         else:
                             base_characteristics[stat] = random.randint(1,10)
