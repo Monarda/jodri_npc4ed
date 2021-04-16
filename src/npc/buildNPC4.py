@@ -601,10 +601,10 @@ class BuildNPC4:
             advance_to_cost = value - self._starting_characteristics[char]
 
             for i in range(advance_to_cost, 0,-1):
-                sac_idx = int(i / 5)
+                sac_idx = int((i-1) / 5)
 
                 xp += characteristic_advance_costs[sac_idx]
-
+        
         # Skills
         skill_advance_costs = [10,15,20,30,40,60,80,110,140,180,220,270,320,380,440,510,580]
         for skill,value in self._skills.items():
@@ -616,7 +616,7 @@ class BuildNPC4:
                 advances_no_cost = 0
         
             for i in range(advance_to_cost, advances_no_cost,-1):
-                sac_idx = int(i / 5)
+                sac_idx = int((i-1) / 5)
 
                 xp += skill_advance_costs[sac_idx]
 
