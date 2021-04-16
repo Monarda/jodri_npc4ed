@@ -52,7 +52,7 @@ class BuildNPC4:
         # or use characteristics passed in by caller
         if not characteristics:
             
-            base_characteristics = species_npc_characteristics_4e[index_species]
+            base_characteristics = dict(species_npc_characteristics_4e[index_species])
 
             # Apply randomisation to the stats
             if randomise:
