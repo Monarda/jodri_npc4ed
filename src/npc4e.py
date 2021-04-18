@@ -274,7 +274,7 @@ class NPC4e:
 
     def _format_talents(self, talents) -> str:
         """ Return all talents as a footnoted list joined with commas """
-        return ', '.join('{}{}'.format(convert_to_superscript(v.get('skill_ref', '')), k) for k, v in talents.items())
+        return ', '.join('{}{}'.format(convert_number_to_footnote(v.get('skill_ref', 0)), k) for k, v in talents.items())
 
     def _format(self):
         """ Apply a filter to the NPC, allowing presentation to be simplified """
@@ -308,7 +308,8 @@ class NPC4e:
             for value in values:
                 superscripts = sorted(list(value.get('talent_ref', {0})))
                 if not superscripts[0] == 0:
-                    superscript = ' '.join(map(str, superscripts))
+                    footnotes = [convert_number_to_footnote(i) for i in superscripts]
+                    superscript = ' '.join(footnotes)
                     superscript = convert_to_superscript(f'({superscript})')
                 else:
                     superscript = ''
