@@ -437,7 +437,7 @@ NPCs may be generated with user-defined species and career path, random species 
 The syntax is:\n\n`jodri:npc4 [species] [<career(s)>]`\n\n... where, optionally, `species` can be any playable species or human variant or any race from the core rulebook's bestiary, and `career<s>` can be a series of career ranks (e.g., `scholar 3`) or career level names (e.g., `professor`) between which Jodri will insert valid career steps if required. Use of the `any` keyword will insert a random career (only valid for playable races)."""
 
     @classmethod
-    def example_message(cls) -> str:
+    def examples_message(cls) -> str:
         return """NPC Examples:
 > `j:npc4` a completely random NPC (equivalent to `j:npc4 any`)
 > `j:npc4 dwarf` a dwarf NPC with a random career path (equivalent to `j:npc4 dwarf any`)
