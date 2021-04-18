@@ -26,10 +26,10 @@ class RandomNPC4(BuildNPC4):
         """
         if not species:
             # Generate random species
-            species = random.choices(['Human','Dwarf','Halfling','High Elf','Wood Elf'], cum_weights=[90,94,98,99,100])[0]
+            species = self.random_species()
         
         if species.lower()=='human':
-            species = random.choices(['Reiklander','Middenheimer','Middenlander','Nordlander'], weights=[5,1,2,2])[0]
+            species = self.random_human()
 
         # Initialise base class
         BuildNPC4.__init__(self, species, 
@@ -58,7 +58,23 @@ class RandomNPC4(BuildNPC4):
     @classmethod
     def known_humans(cls):
         return ['Reiklander','Nordlander','Middenheimer','Middenlander']
+
+    @classmethod
+    def random_species(cls):
+        """ Generate a random valid species, with defined probabilities """
+        species = random.choices(['Human','Dwarf','Halfling','High Elf','Wood Elf'], cum_weights=[90,94,98,99,100])[0]
         
+        if species.lower()=='human':
+           species = cls.random_human()
+
+        return species
+
+    @classmethod
+    def random_human(cls):
+        """ Generate a random valid human type (from the defined types), with defined probabilities """
+        return random.choices(['Reiklander','Middenheimer','Middenlander','Nordlander'], weights=[5,1,2,2])[0]
+
+
     def _careers_by_class(self):        
         careers_by_class = dict()
         for careername in Careers4().careers:

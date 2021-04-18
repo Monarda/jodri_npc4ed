@@ -75,9 +75,17 @@ class NPC4e:
         Directly add talents to the NPC. These are always printed at the end, irrespective of status, etc.
         """
 
+        # Check for ages we understand
         if age=='young' in age: young = True 
         else: young = False
 
+        # If no species is set then we choose a random species from the probabilities defined
+        # in the rulebook for PCs. That means we never generate a random 'monster' if no
+        # species is defined
+        if not species:
+            species = RandomNPC4.random_species()
+
+        # If no career is defined then engage the random generator
         if not careers:
             careers = ['any']
 
