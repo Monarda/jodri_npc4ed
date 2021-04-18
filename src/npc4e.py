@@ -434,25 +434,22 @@ class NPC4e:
 
 NPCs may be generated with user-defined species and career path, random species and career path, or a combination of the two.
 
-The syntax is:
+The syntax is:\n\n`jodri:npc4 [species] [<career(s)>]`\n\n... where, optionally, `species` can be any playable species or human variant or any race from the core rulebook's bestiary, and `career<s>` can be a series of career ranks (e.g., `scholar 3`) or career level names (e.g., `professor`) between which Jodri will insert valid career steps if required. Use of the `any` keyword will insert a random career (only valid for playable races)."""
 
-> jodri:npc4 [species] [<career(s)>]
-
-... where species can be any species available in the corebook or supplements for PCs, and all races in the bestiary of the corebook. 
-... where career path can be chosen from the valid careers either by career level name (e.g. `professor`) or career name and level (e.g. `scholar3`). Use of the keyword `any` will engage the random career path generator, and is **not** valid for bestiary only races. 
-
-NPC Examples:
-> `j:npc4` an NPC of random race and career path (equivalent to `j:npc4 any`)
-> `j:npc4 dwarf` a dwarf NPC with random career path (equivalent to `j:npc4 dwarf any`)
-> 
-> `j:npc4 fellow` an NPC of random race, with the defined career path student -> scholar -> fellow
-> `j:npc4 fimir guard 2` a Fimir NPC with career path sentry -> guard
-> `j:npc4 middenlander merchant witch23` a Middenlander human with career path trader -> merchant -> witch -> wyrd
-> 
-> `j:npc4 reiklander any scholar3` an NPC who is a human Reiklander following a random career path that ends with fellow
-> `j:npc4 wood elf ghost strider any` a Wood Elf NPC who begins the career path with forest ranger -> ghost strider and then continues with a random career path
-> `j:npc4 stormvermin any` not a valid command as bestiary races do not support random career paths
+    @classmethod
+    def example_message(cls) -> str:
+        return """NPC Examples:
+> `j:npc4` a completely random NPC (equivalent to `j:npc4 any`)
+> `j:npc4 dwarf` a dwarf NPC with a random career path (equivalent to `j:npc4 dwarf any`)
+> `j:npc4 fellow` an NPC (of random race) with career path: `student → scholar → fellow`
+> `j:npc4 fimir guard 2` a fimir NPC with career path: `sentry → guard`
+> `j:npc4 middenlander merchant witch23` a human Middenlander with career path: `trader → merchant → witch → wyrd`
+> `j:npc4 reiklander any scholar3` a human Reiklander with a random career path that ends with `Scholar 3` (i.e., `Fellow`)
+> `j:npc4 wood elf ghost strider any` a wood elf NPC with an initial career path of `forest ranger → ghost strider`, followed by a random onward career path
+> `j:npc4 stormvermin any` not a valid command as only playable races may have random career paths
 
 Additional notes:
 - Neither suggeested nor additional talents are applied to the character.
-- The XP spend includes only characteristic and skill advances. Talents are not included."""
+- The XP spend includes only characteristic and skill advances. Talents are not included.
+
+(Many thanks to @Monarda for this command!)"""
