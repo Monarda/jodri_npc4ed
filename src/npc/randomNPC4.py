@@ -94,12 +94,13 @@ class RandomNPC4(BuildNPC4):
             career_rank = career[1]
         else:
             career_name = self._random_career()
+            career_rank = 1
 
-            if young:
-                career_rank = 1
-            else:
-                self.add_career_rank(career_name,1)
-                career_rank = 2
+            # if young:
+            #     career_rank = 1
+            # else:
+            #     self.add_career_rank(career_name,1)
+            #     career_rank = 2
 
         # Add the specified career and carry on from here
         self.add_career_rank(career_name,career_rank)

@@ -1,5 +1,6 @@
 import itertools
-from typing import List
+import random
+from typing import List, Tuple
 
 from .npc.buildNPC4 import BuildNPC4
 from .npc.randomNPC4 import RandomNPC4
@@ -329,6 +330,43 @@ class NPC4e:
 
     ##################################################################################################
     # Output properties
+
+    @property
+    def age(self) -> Tuple[str, int]:
+        age = 12
+        # For each career level add a random number of years to the age based on
+        # the career level
+        for career, level in self._npc._career_history:
+            if level==0:
+                age += random.randint(1,3)
+            elif level==1:
+                age += random.randint(3,5)
+            elif level>1:
+                age += random.randint(5,10)
+        
+        # If the character's final career level is greater than 1 then add
+        # an additional random age factor which could make them any age between
+        # their current unmodified age and 70
+        if level>1:
+            age += random.randint( -2, max(0,70-age) )
+        else:
+            age += random.randint( -1, max(0,20-age) )
+
+        # Turn the age in years into a description, i.e. 'young', 'medium', 'old'
+        age_descrip = 'medium'
+        if age<20: age_descrip = 'young'
+        elif age>=60: age_descrip = 'old'
+
+        # Compensate for species when return an age
+        # The extra randint is so that every member of the species isn't suspiciously a multiple
+        # of some integer in age
+        if 'elf' in self._npc._index_species.lower():
+            age *= 5 + random.randint(0,4)
+        elif self._npc._index_species.lower() in ['dwarf', 'halfling']:
+            age *= 2 + random.randint(0,1)
+
+        return (age_descrip, age)
+
     @property
     def careername(self) -> str:
         """ The final careername of the NPC """
