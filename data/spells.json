@@ -156,7 +156,7 @@
     },
     "petty of Slaanesh": {
         "colour": "no",
-        "spells" : {
+        "spells": {
             "Befuddle": {
                 "CN": 0,
                 "Range": "Touch",
@@ -405,14 +405,14 @@
     },
     "lore of beasts": {
         "colour": true,
-        "names" : {
-            "colour" : "amber",
+        "names": {
+            "colour": "amber",
             "description": "beasts",
-            "wind" : "Ghur",
-            "order" : "Amber",
-            "adept" : "Shaman"
+            "wind": "Ghur",
+            "order": "Amber",
+            "adept": "Shaman"
         },
-        "spells" : {
+        "spells": {
             "Amber Talons": {
                 "CN": 6,
                 "Range": "You",
@@ -425,6 +425,12 @@
                 "Target": "You",
                 "Duration": "WP minutes"
             },
+            "Beast Made Well": {
+                "CN": 3,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
+            },
             "Beast Master": {
                 "CN": 10,
                 "Range": "WPB yards",
@@ -436,6 +442,12 @@
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WP minutes"
+            },
+            "Cruelty's Deserts": {
+                "CN": 2,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB Days"
             },
             "Flock of Doom": {
                 "CN": 8,
@@ -455,6 +467,18 @@
                 "Target": "Special",
                 "Duration": "Instant"
             },
+            "Wildercall": {
+                "CN": 2,
+                "Range": "You",
+                "Target": "AoE WPB miles",
+                "Duration": "Instant"
+            },
+            "Wyssan's Ally": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
             "Wyssan's Wildform": {
                 "CN": 8,
                 "Range": "You",
@@ -465,12 +489,12 @@
     },
     "lore of death": {
         "colour": true,
-        "names" : {
-            "colour" : "purple",
+        "names": {
+            "colour": "purple",
             "description": "death",
-            "wind" : "Shyish",
-            "order" : "Amethyst",
-            "adept" : "Brethren"
+            "wind": "Shyish",
+            "order": "Amethyst",
+            "adept": "Brethren"
         },
         "spells": {
             "Caress of Laniph": {
@@ -479,11 +503,23 @@
                 "Target": "Special",
                 "Duration": "Instant"
             },
+            "Deathsight": {
+                "CN": 2,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
             "Dying Words": {
                 "CN": 6,
                 "Range": "Touch",
                 "Target": 1,
                 "Duration": "WPB rounds"
+            },
+            "Preservation": {
+                "CN": 5,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB Days"
             },
             "Purple Pall of Shyish": {
                 "CN": 9,
@@ -509,6 +545,12 @@
                 "Target": "AoE WPB yards",
                 "Duration": "Instant"
             },
+            "Stay Death's Hand": {
+                "CN": 3,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
             "Steal Life": {
                 "CN": 7,
                 "Range": "WP yards",
@@ -525,12 +567,12 @@
     },
     "lore of fire": {
         "colour": true,
-        "names" : {
-            "colour" : "red",
+        "names": {
+            "colour": "red",
             "description": "fire",
-            "wind" : "Aqshy",
-            "order" : "Bright",
-            "adept" : "Pyromancer"
+            "wind": "Aqshy",
+            "order": "Bright",
+            "adept": "Pyromancer"
         },
         "spells": {
             "Aqshy's Aegis": {
@@ -545,6 +587,18 @@
                 "Target": 1,
                 "Duration": "Instant"
             },
+            "Ceaseless Flame": {
+                "CN": 2,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB hours"
+            },
+            "Comfort": {
+                "CN": 3,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB hours"
+            },
             "Crown of Flame": {
                 "CN": 8,
                 "Range": "You",
@@ -556,6 +610,12 @@
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
                 "Duration": "WPB rounds"
+            },
+            "Flashcook": {
+                "CN": 2,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
             },
             "Firewall": {
                 "CN": 6,
@@ -585,14 +645,20 @@
     },
     "lore of heavens": {
         "colour": true,
-        "names" : {
-            "colour" : "blue",
+        "names": {
+            "colour": "blue",
             "description": "heavens",
-            "wind" : "Azyr",
-            "order" : "Celestial",
-            "adept" : "Astromancer"
-        },        
+            "wind": "Azyr",
+            "order": "Celestial",
+            "adept": "Astromancer"
+        },
         "spells": {
+            "Birdspeech": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes"
+            },
             "Cerulean Shield": {
                 "CN": 7,
                 "Range": "You",
@@ -610,6 +676,12 @@
                 "Range": "You",
                 "Target": "AoE IB yards",
                 "Duration": "WPB rounds"
+            },
+            "Gale": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": " Special WPB rounds/Hours"
             },
             "Starcrossed": {
                 "CN": 7,
@@ -640,17 +712,23 @@
                 "Range": "You",
                 "Target": "You",
                 "Duration": "IB rounds"
+            },
+            "Weathervane": {
+                "CN": 2,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "Instant"
             }
         }
     },
     "lore of metal": {
         "colour": true,
-        "names" : {
-            "colour" : "gold",
+        "names": {
+            "colour": "gold",
             "description": "metal",
-            "wind" : "Chamon",
-            "order" : "Gold",
-            "adept" : "Alchemist"
+            "wind": "Chamon",
+            "order": "Gold",
+            "adept": "Alchemist"
         },
         "spells": {
             "Crucible of Chamon": {
@@ -695,6 +773,24 @@
                 "Target": 1,
                 "Duration": "WPB rounds"
             },
+            "Rigor of Steel": {
+                "CN": 3,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB minutes"
+            },
+            "Sense Metal": {
+                "CN": 1,
+                "Range": "WP yards",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Tale of Metal": {
+                "CN": 3,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
+            },
             "Transmutation of Chamon": {
                 "CN": 12,
                 "Range": "WP yards",
@@ -704,12 +800,12 @@
         }
     },
     "lore of life": {
-        "names" : {
-            "colour" : "jade",
+        "names": {
+            "colour": "jade",
             "description": "life",
-            "wind" : "Ghyran",
-            "order" : "Jade",
-            "adept" : "Druid"
+            "wind": "Ghyran",
+            "order": "Jade",
+            "adept": "Druid"
         },
         "colour": true,
         "spells": {
@@ -737,6 +833,12 @@
                 "Target": 1,
                 "Duration": "WPB days"
             },
+            "Ferment": {
+                "CN": 3,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
+            },
             "Forest of Thorns": {
                 "CN": 6,
                 "Range": "WP yards",
@@ -760,17 +862,29 @@
                 "Range": "Touch",
                 "Target": 1,
                 "Duration": "WPB rounds"
+            },
+            "Timbervault": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Track's Tale Told": {
+                "CN": 3,
+                "Range": "You",
+                "Target": 1,
+                "Duration": "Special"
             }
         }
     },
     "lore of light": {
         "colour": true,
-        "names" : {
-            "colour" : "white",
+        "names": {
+            "colour": "white",
             "description": "light",
-            "wind" : "Hysh",
-            "order" : "Light",
-            "adept" : "Hierophant"
+            "wind": "Hysh",
+            "order": "Light",
+            "adept": "Hierophant"
         },
         "spells": {
             "Banishement": {
@@ -791,6 +905,18 @@
                 "Target": 1,
                 "Duration": "Int minutes"
             },
+            "Cleansing Glow": {
+                "CN": 3,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Disgust": {
+                "CN": 5,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB Hours"
+            },
             "Daemonbane": {
                 "CN": 10,
                 "Range": "WPB yards",
@@ -802,6 +928,12 @@
                 "Range": "WPB yards",
                 "Target": 1,
                 "Duration": "Instant"
+            },
+            "Illuminate": {
+                "CN": 3,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB Rounds"
             },
             "Net of Amyntok": {
                 "CN": 8,
@@ -825,12 +957,12 @@
     },
     "lore of shadows": {
         "colour": true,
-        "names" : {
-            "colour" : "grey",
+        "names": {
+            "colour": "grey",
             "description": "shadows",
-            "wind" : "Ulgu",
-            "order" : "Grey",
-            "adept" : "Grey Guardian"
+            "wind": "Ulgu",
+            "order": "Grey",
+            "adept": "Grey Guardian"
         },
         "spells": {
             "Choking Shadows": {
@@ -838,6 +970,12 @@
                 "Range": "WPB yards",
                 "Target": 1,
                 "Duration": "WPB rounds"
+            },
+            "Cloak Activity": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes"
             },
             "Doppelganger": {
                 "CN": 10,
@@ -862,6 +1000,18 @@
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
                 "Duration": "WPB rounds"
+            },
+            "Pall of Darkness": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            },
+            "Shadows of Splendour": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB minutes"
             },
             "Shadowsteed": {
                 "CN": 6,
