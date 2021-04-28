@@ -352,8 +352,8 @@ class NPC4e:
         else:
             age += random.randint( -1, max(0,20-age) )
 
-        # Turn the age in years into a description, i.e. 'young', 'medium', 'old'
-        age_descrip = 'medium'
+        # Turn the age in years into a description, i.e. 'young', 'mature', 'old'
+        age_descrip = 'mature'
         if age<20: age_descrip = 'young'
         elif age>=60: age_descrip = 'old'
 
