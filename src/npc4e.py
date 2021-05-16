@@ -468,11 +468,15 @@ class NPC4e:
 
     @classmethod
     def help_message(cls) -> str:
-        return """Generates a 4th edition NPC with a career path, according to the rules in the corebook on p.314 ("Random Creatures and Custom PC Species") and Enemy in Shadows p.144 ("NPCs"). Characteristic and skill advances are applied per those rules, and a list of suggested and additional talents valid to the career path are also generated. Traits, optional traits, and suggested trappings are also provided.
+        return """Generates a fully described 4e non-player character with a career path and stats, plus info on appearence, background, family, etc., taking account of any info provided in the command. NPCs may be generated with user-defined species and career path, random species and career path, or a combination of the two.
+The syntax is:
 
-NPCs may be generated with user-defined species and career path, random species and career path, or a combination of the two.
+`jodri:npc4 [species] [<career(s)>] [<place>] [<info>]`
 
-The syntax is:\n\n`jodri:npc4 [species] [<career(s)>]`\n\n... where, optionally, `species` can be any playable species or human variant or any race from the core rulebook's bestiary, and `career<s>` can be a series of career ranks (e.g., `scholar 3`) or career level names (e.g., `professor`) between which Jodri will insert valid career steps if required. Use of the `any` keyword will insert a random career (only valid for playable races)."""
+... where <species> can be any 4e playable species or human variant or any race from the core rulebook's bestiary, 
+....<career(s)> can be a series of career ranks (e.g., `scholar 3`) or career level names (e.g., `professor`) between which Jodri will insert valid career steps if required. Use of the `any` keyword will insert a random career (only valid for playable races).
+... <place> can specify a place, e.g., Nuln (see help places for more info)
+... and <info> can specify further NPC details (see NPC info below for more info)."""
 
     @classmethod
     def examples_message(cls) -> str:
@@ -484,10 +488,22 @@ The syntax is:\n\n`jodri:npc4 [species] [<career(s)>]`\n\n... where, optionally,
 > `j:npc4 middenlander merchant witch23` a human Middenlander with career path: `trader → merchant → witch → wyrd`
 > `j:npc4 reiklander any scholar3` a human Reiklander with a random career path that ends with `Scholar 3` (i.e., `Fellow`)
 > `j:npc4 wood elf ghost strider any` a wood elf NPC with an initial career path of `forest ranger → ghost strider`, followed by a random onward career path
-> `j:npc4 stormvermin any` not a valid command as only playable races may have random career paths
+> `j:npc4 stormvermin any` not a valid command as only playable races may have random career paths"""
+
+    @classmethod
+    def info_message(cls) -> str:
+        return """
+Jodri understands:
+> Nationality: border princes / bretonnian / estalian / imperial / kislevite (ungol / gospodar) / norse / tilean
+> Region: e.g., reikland, skaeling, brionne, magritta, etc.
+> Birthplace: e.g., Nuln, Tobaro, etc. (check if I know about a place using j:lookup <place>)
+> Life Stage: boy / girl, young / mature / old, married / single
+> Build: emaciated / skinny / slight / slim / average / stocky / bulky / fat / huge (and tall / small)
+
+NPCs are generated according to the rules in the corebook p.314 ("Random Creatures and Custom PC Species") and Enemy in Shadows p.144 ("NPCs").
 
 Additional notes:
-- Neither suggeested nor additional talents are applied to the character.
+- Characteristic modifying suggested or additional talents are not applied to the NPC.
 - The XP spend includes only characteristic and skill advances. Talents are not included.
 
 (Many thanks to @Monarda for this command!)"""
