@@ -529,17 +529,19 @@ The syntax is:
 > `j:npc4 reiklander any scholar3` a human Reiklander with a random career path that ends with `Scholar 3` (i.e., `Fellow`)
 > `j:npc4 wood elf ghost strider any` a wood elf NPC with an initial career path of `forest ranger → ghost strider`, followed by a random onward career path
 > `j:npc4 stormvermin any` not a valid command as only playable races may have random career paths
+> `j:npc young emaciated mutated reikland rat catcher`
 
 ~~~NPC4 Info~~~
 Jodri understands:
-> Nationality: border princes / bretonnian / estalian / imperial / kislevite (ungol / gospodar) / norse / tilean
-> Region: e.g., reikland, skaeling, brionne, magritta, etc.
-> Birthplace: e.g., Nuln, Tobaro, etc. (check if I know about a place using j:lookup <place>)
-> Life Stage: boy / girl, young / mature / old, married / single
-> Build: emaciated / skinny / slight / slim / average / stocky / bulky / fat / huge (and tall / small)
-> Imperial Pronunciation: turn it off using nopro
-...and many other aspects of an npc can be specified using =: e.g., eyes=Grey-Green, name=Hans, surname=Schmeckl, god=Sigmar, mutations=4, etc.
+> Nationality: `border princes` / `bretonnian` / `estalian` / `imperial` / `kislevite` (`ungol` / `gospodar`) / `norse` / `tilean`
+> Region: e.g., `reikland`, `skaeling`, `brionne`, `magritta`, etc.
+> Birthplace: e.g., `Nuln`, `Tobaro`, etc. (check if I know about a place using `j:lookup <place>`)
+> Life Stage: `boy` / `girl`, `young` / `mature` / `old`, `married` / `single`
+> Build: `emaciated` / `skinny` / `slight` / `slim` / `average` / `stocky` / `bulky` / `fat` / `huge` (and `tall` / `small`)
+> Imperial Pronunciation: turn it off using `nopro`
+...and many other aspects of an npc can be specified using =: e.g., `eyes=Grey-Green`, `name=Hans`, `surname=Schmeckl`, `god=Sigmar`, `mutations=4`, etc.
 
+~~~NPC4 Explanations~~~
 NPCs are generated according to the rules in the corebook p.314 ("Random Creatures and Custom PC Species") and Enemy in Shadows p.144 ("NPCs").
 
 Additional notes:
