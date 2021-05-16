@@ -538,6 +538,8 @@ Jodri understands:
 > Birthplace: e.g., Nuln, Tobaro, etc. (check if I know about a place using j:lookup <place>)
 > Life Stage: boy / girl, young / mature / old, married / single
 > Build: emaciated / skinny / slight / slim / average / stocky / bulky / fat / huge (and tall / small)
+> Imperial Pronunciation: turn it off using nopro
+...and many other aspects of an npc can be specified using =: e.g., eyes=Grey-Green, name=Hans, surname=Schmeckl, god=Sigmar, mutations=4, etc.
 
 NPCs are generated according to the rules in the corebook p.314 ("Random Creatures and Custom PC Species") and Enemy in Shadows p.144 ("NPCs").
 
