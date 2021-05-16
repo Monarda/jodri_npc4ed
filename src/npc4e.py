@@ -575,7 +575,7 @@ Additional notes:
                 chunk += line
             else:
                 output_strings.append((title, chunk))
-                title = ''
+                title = title + ' [cont...]'
                 chunk = line
 
         if chunk:
