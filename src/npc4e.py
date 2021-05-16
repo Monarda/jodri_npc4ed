@@ -480,8 +480,7 @@ The syntax is:
 
     @classmethod
     def examples_message(cls) -> str:
-        return """NPC Examples:
-> `j:npc4` a completely random NPC (equivalent to `j:npc4 any`)
+        return """> `j:npc4` a completely random NPC (equivalent to `j:npc4 any`)
 > `j:npc4 dwarf` a dwarf NPC with a random career path (equivalent to `j:npc4 dwarf any`)
 > `j:npc4 fellow` an NPC (of random race) with career path: `student → scholar → fellow`
 > `j:npc4 fimir guard 2` a fimir NPC with career path: `sentry → guard`
@@ -510,7 +509,7 @@ Additional notes:
 
     @classmethod
     def help_messages(cls) -> List[tuple]:
-        big_string = """~~~NPC~~~
+        big_string = """~~~NPC4~~~
 Generates a fully described 4e non-player character with a career path and stats, plus info on appearence, background, family, etc., taking account of any info provided in the command. NPCs may be generated with user-defined species and career path, random species and career path, or a combination of the two.
 The syntax is:
 
@@ -521,7 +520,7 @@ The syntax is:
 ... <place> can specify a place, e.g., Nuln (see help places for more info)
 ... and <info> can specify further NPC details (see NPC info below for more info).
 
-~~~NPC Examples~~~
+~~~NPC4 Examples~~~
 > `j:npc4` a completely random NPC (equivalent to `j:npc4 any`)
 > `j:npc4 dwarf` a dwarf NPC with a random career path (equivalent to `j:npc4 dwarf any`)
 > `j:npc4 fellow` an NPC (of random race) with career path: `student → scholar → fellow`
@@ -531,7 +530,7 @@ The syntax is:
 > `j:npc4 wood elf ghost strider any` a wood elf NPC with an initial career path of `forest ranger → ghost strider`, followed by a random onward career path
 > `j:npc4 stormvermin any` not a valid command as only playable races may have random career paths
 
-~~~NPC Info~~~
+~~~NPC4 Info~~~
 Jodri understands:
 > Nationality: border princes / bretonnian / estalian / imperial / kislevite (ungol / gospodar) / norse / tilean
 > Region: e.g., reikland, skaeling, brionne, magritta, etc.
