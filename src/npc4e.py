@@ -1,6 +1,6 @@
 import itertools
 import random
-from typing import List, Tuple
+from typing import List, Mapping, Tuple
 
 from .npc.buildNPC4 import BuildNPC4
 from .npc.randomNPC4 import RandomNPC4
@@ -509,18 +509,19 @@ Additional notes:
 (Many thanks to @Monarda for this command!)"""
 
     @classmethod
-    def help_messages(cls) -> List[str]:
-        big_string = """Generates a 4th edition NPC with a career path, according to the rules in the corebook on p.314 ("Random Creatures and Custom PC Species") and Enemy in Shadows p.144 ("NPCs"). Characteristic and skill advances are applied per those rules, and a list of suggested and additional talents valid to the career path are also generated. Traits, optional traits, and suggested trappings are also provided.
-
-NPCs may be generated with user-defined species and career path, random species and career path, or a combination of the two.
-
+    def help_messages(cls) -> List[tuple]:
+        big_string = """~~~NPC~~~
+Generates a fully described 4e non-player character with a career path and stats, plus info on appearence, background, family, etc., taking account of any info provided in the command. NPCs may be generated with user-defined species and career path, random species and career path, or a combination of the two.
 The syntax is:
 
-> `jodri:npc4 [species] [<career(s)>]`
+`jodri:npc4 [species] [<career(s)>] [<place>] [<info>]`
 
-... where, optionally, `species` can be any playable species or human variant, or any race from the core rulebook's bestiary, and `career<s>` can be a series of career ranks (e.g., `scholar 3`) or career level names (e.g., `professor`) between which Jodri will insert valid career steps if required. Use of the `any` keyword will insert a random career (only valid for playable races).
+... where <species> can be any 4e playable species or human variant or any race from the core rulebook's bestiary, 
+....<career(s)> can be a series of career ranks (e.g., `scholar 3`) or career level names (e.g., `professor`) between which Jodri will insert valid career steps if required. Use of the `any` keyword will insert a random career path (only valid for playable races).
+... <place> can specify a place, e.g., Nuln (see help places for more info)
+... and <info> can specify further NPC details (see NPC info below for more info).
 
-NPC Examples:
+~~~NPC Examples~~~
 > `j:npc4` a completely random NPC (equivalent to `j:npc4 any`)
 > `j:npc4 dwarf` a dwarf NPC with a random career path (equivalent to `j:npc4 dwarf any`)
 > `j:npc4 fellow` an NPC (of random race) with career path: `student → scholar → fellow`
@@ -530,26 +531,56 @@ NPC Examples:
 > `j:npc4 wood elf ghost strider any` a wood elf NPC with an initial career path of `forest ranger → ghost strider`, followed by a random onward career path
 > `j:npc4 stormvermin any` not a valid command as only playable races may have random career paths
 
+~~~NPC Info~~~
+Jodri understands:
+> Nationality: border princes / bretonnian / estalian / imperial / kislevite (ungol / gospodar) / norse / tilean
+> Region: e.g., reikland, skaeling, brionne, magritta, etc.
+> Birthplace: e.g., Nuln, Tobaro, etc. (check if I know about a place using j:lookup <place>)
+> Life Stage: boy / girl, young / mature / old, married / single
+> Build: emaciated / skinny / slight / slim / average / stocky / bulky / fat / huge (and tall / small)
+
+NPCs are generated according to the rules in the corebook p.314 ("Random Creatures and Custom PC Species") and Enemy in Shadows p.144 ("NPCs").
+
 Additional notes:
-- Neither suggeested nor additional talents are applied to the character.
+- Characteristic modifying suggested or additional talents are not applied to the NPC.
 - The XP spend includes only characteristic and skill advances. Talents are not included.
 
 (Many thanks to @Monarda for this command!)"""
 
+
         # Split the big help text message into lines
         little_strings = big_string.splitlines(True)
 
-        # Concatenate the lines into chunks of less than 1024 characters
-        output_strings = ['']
-        i = 0
-        char_count = 0
+        # Divide the lines into a title (may be blank) and chunks of less than 1024 characters
+        output_strings = []
+        title = ''
+        chunk = ''
         for line in little_strings:
-            if char_count + len(line) < 1024:
-                output_strings[i] += line
-                char_count += len(line)
-            else:
-                i += 1
-                output_strings.append(line)
-                char_count = len(line)
+            # See if we've detected a new title
+            if line.strip().startswith('~~~') and line.strip().endswith('~~~'):
+                # We have a new title so we need to start a new tuple
+                # and store the old tuple (if it exists)
+                if chunk:
+                    output_strings.append((title, chunk))
+                    chunk = ''
+                    char_count = 0
 
+                title = line.strip().strip('~')
+                continue
+
+            # Continue building up the chunk
+            if len(chunk) + len(line) < 1024:
+                chunk += line
+            else:
+                output_strings.append((title, chunk))
+                title = ''
+                chunk = line
+
+        if chunk:
+            output_strings.append((title, chunk))
+            
         return output_strings
+
+
+
+        
