@@ -1,5 +1,5 @@
 {
-    "petty": {
+    "petty lore": {
         "colour": false,
         "spells": {
             "Animal Friend": {
@@ -154,7 +154,7 @@
             }
         }
     },
-    "petty of slaanesh": {
+    "petty lore of slaanesh": {
         "colour": false,
         "spells": {
             "Befuddle": {
@@ -201,7 +201,7 @@
             }
         }
     },
-    "petty of tzeentch": {
+    "petty lore of tzeentch": {
         "colour": false,
         "spells": {
             "Beast Tongue": {
@@ -224,7 +224,7 @@
             }
         }
     },
-    "skaven petty": {
+    "skaven petty lore": {
         "colour": false,
         "spells": {
             "Favour of the Horned Rat'": {
@@ -265,7 +265,7 @@
             }
         }
     },
-    "arcane": {
+    "arcane lore": {
         "colour": true,
         "spells": {
             "Aethyric Armour": {
@@ -408,7 +408,7 @@
             }
         }
     },
-    "chaos arcane": {
+    "chaos arcane lore": {
         "colour": false,
         "spells": {
             "Blast of Corruption": {
@@ -467,7 +467,7 @@
             }
         }
     },
-    "skaven arcane": {
+    "skaven arcane lore": {
         "Curse of the Horned Rat": {
             "CN": 19,
             "Range": "WP yards",
@@ -1553,7 +1553,7 @@
             }
         }
     },
-    "lore of ruin": {
+    "skaven lore of ruin": {
         "colour": false,
         "spells": {
             "Crack's Call": {
@@ -1606,7 +1606,7 @@
             }
         }
     },
-    "lore of plague": {
+    "skaven lore of plague": {
         "colour": false,
         "spells": {
             "Pestilent Breath": {
@@ -1671,7 +1671,7 @@
             }
         }
     },
-    "lore of stealth": {
+    "skaven lore of stealth": {
         "colour": false,
         "spells": {
             "Swiftcamper": {
