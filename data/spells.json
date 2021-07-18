@@ -155,7 +155,7 @@
         }
     },
     "petty of Slaanesh": {
-        "colour": "no",
+        "colour": false,
         "spells": {
             "Befuddle": {
                 "CN": 0,
@@ -198,6 +198,70 @@
                 "Range": "WPB yards",
                 "Target": 1,
                 "Duration": "Instant"
+            }
+        }
+    },
+    "petty of Tzeentch": {
+        "colour": false,
+        "spells": {
+            "Beast Tongue": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WP minutes"
+            },
+            "Eyes of the Beast": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            },
+            "Sign of the Beast": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "Skaven petty": {
+        "colour": false,
+        "spells": {
+            "Favour of the Horned Rat'": {
+                "CN": 0,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "13 hours"
+            },
+            "Ghostly Flame": {
+                "CN": 0,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "1 hour or Instant (see below)"
+            },
+            "Mark of the Horned Rat": {
+                "CN": 0,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "1d10 hours"
+            },
+            "Rat Thrall": {
+                "CN": 0,
+                "Range": "WP yards",
+                "Target": "1 (see spell text)",
+                "Duration": "1d10 hours"
+            },
+            "Vector": {
+                "CN": 0,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "24 hours"
+            },
+            "Wrack": {
+                "CN": 0,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "Intant"
             }
         }
     },
@@ -401,6 +465,38 @@
                 "Target": 1,
                 "Duration": "Special"
             }
+        }
+    },
+    "Skaven arcane": {
+        "Curse of the Horned Rat": {
+            "CN": 19,
+            "Range": "WP yards",
+            "Target": "AoE WPB yards",
+            "Duration": "WPB hours"
+        },
+        "Death Frenzy": {
+            "CN": 5,
+            "Range": "Touch",
+            "Target": 1,
+            "Duration": "WPB rounds+"
+        },
+        "Musk of Terror": {
+            "CN": 9,
+            "Range": "WP yards",
+            "Target": "AoE WPB yards",
+            "Duration": "WPB rounds+"
+        },
+        "Skitterleap": {
+            "CN": 6,
+            "Range": "Touch",
+            "Target": 1,
+            "Duration": "Instant"
+        },
+        "Vermintide": {
+            "CN": 8,
+            "Range": "You",
+            "Target": "Special",
+            "Duration": "2x WPB rounds+ "
         }
     },
     "lore of beasts": {
@@ -1327,6 +1423,12 @@
                 "Target": "AoE WPB yards",
                 "Duration": "WPB rounds"
             },
+            "Soporific Lull": {
+                "CN": 6,
+                "Range": "2x WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
             "Succubus's Caress": {
                 "CN": 8,
                 "Range": "Fel yards",
@@ -1349,6 +1451,12 @@
                 "CN": 8,
                 "Range": "WP yards",
                 "Target": "See description",
+                "Duration": "WPB rounds"
+            },
+            "Uncontrollable Corporal Expulsion": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "1",
                 "Duration": "WPB rounds"
             }
         }
@@ -1425,6 +1533,200 @@
                 "Range": "Touch",
                 "Target": "Special",
                 "Duration": "Instant"
+            }
+        }
+    },
+    "lore of the Little Waaagh!": {
+        "colour": false,
+        "spells": {
+            "Sneaky Stabbin'": {
+                "CN": 2,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Itchy Nuisance": {
+                "CN": 4,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "lore of Ruin": {
+        "colour": false,
+        "spells": {
+            "Crack's Call": {
+                "CN": 11,
+                "Range": "You",
+                "Target": "AoE WPB yards",
+                "Duration": "Instant"
+            },
+            "Crackling Doom": {
+                "CN": 5,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Flensing Ruin": {
+                "CN": 6,
+                "Range": "WPB yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Howling Waprgale": {
+                "CN": 7,
+                "Range": "You",
+                "Target": "AoE WP yards",
+                "Duration": "WPB rounds+"
+            },
+            "Scorch": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "Instant"
+            },
+            "Warp Lightning": {
+                "CN": 7,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Warp Shield": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "Instant"
+            },
+            "Warp Storm": {
+                "CN": 12,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds"
+            }
+        }
+    },
+    "lore of Plague": {
+        "colour": false,
+        "spells": {
+            "Pestilent Breath": {
+                "CN": 8,
+                "Range": "WPB yards",
+                "Target": "AoE (2-yard-wide line",
+                "Duration": "Instant"
+            },
+            "Poisonous Pustule": {
+                "CN": 5,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB hours"
+            },
+            "Bless with Filth": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB minutes+"
+            },
+            "Cloud of Corruption": {
+                "CN": 7,
+                "Range": "You",
+                "Target": "AoE (5-yard radius)",
+                "Duration": "Instant"
+            },
+            "Mantle of Contagion": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB days"
+            },
+            "Putrefy": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "Instant"
+            },
+            "Toxic Rain": {
+                "CN": 10,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds+"
+            },
+            "Veil of Flies": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds+"
+            },
+            "Weeping Wound": {
+                "CN": 9,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds"
+            },
+            "Wither": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "Instant"
+            }
+        }
+    },
+    "lore of Stealth": {
+        "colour": false,
+        "spells": {
+            "Swiftcamper": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB + SL rounds"
+            },
+            "Armour of Darkness": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes"
+            },
+            "Black Whirlwind": {
+                "CN": 12,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds+"
+            },
+            "Buoyant Passage": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes"
+            },
+            "Flash-Bang": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "AoE WPB yards",
+                "Duration": "Instant"
+            },
+            "Pelt of the Assassin": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes+"
+            },
+            "Stickypaws": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes"
+            },
+            "Traceless Demise": {
+                "CN": 11,
+                "Range": "WPB yards",
+                "Target": "Up to WPB targets",
+                "Duration": "WPB days"
+            },
+            "Warp Star Infusion": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "Special",
+                "Duration": "WPB rounds+"
             }
         }
     }
