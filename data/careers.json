@@ -2559,6 +2559,46 @@
             "trappings": ["Breastplate"]
         }
     },
+    "Ironbreaker" : {
+        "class": "Warrior",
+        "earning skill": "Melee (Basic)",
+        "rank 1" : {
+            "name": "Tunnel Fighter",
+            "status": "Brass 4",
+            "advances": ["WS","T","WP"],
+            "skills" : ["Athletics", "Climb", "Cool", "Dodge", "Endurance", "Entertain (Singing)", "Intimidate", "Language (Battle)", "Melee (Basic)", "Stealth (Any)"],
+            "talents":  ["Drilled", "Enclosed Fighter", "Strike Mighty Blow", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Breastplate", "Open Helm", "Bracers", "Leggings", "Shield (Large)", "Axe"]
+        },
+        "rank 2" : {
+            "name": "Ironbreaker",
+            "status": "Silver 3",
+            "advances": ["S"],
+            "skills" : ["Consume Alcohol", "Gossip", "Leadership", "Lore (Geology)", "Melee (Parry)", "Ranged (Explosives)"],
+            "talents":  ["Beat Blade", "Combat Aware", "Shieldsman", "Unshakable"],
+            "npc_suggested_talents": [],
+            "trappings": ["3 Cinderblast Bombs", "A Weapon or Armour Peice made of Gromril"]
+        },
+        "rank 3" : {
+            "name": "Ironbeard",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Intuition", "Leadership", "Melee (Two-handed)", "Perception"],
+            "talents":  ["Careful Strike", "Combat Master", "Reaction Strike", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Two-Handed Axe", "Full Suit of Gromril Armour"]
+        },
+        "rank 4" : {
+            "name": "Old Guard",
+            "status": "Gold 3",
+            "advances": ["Fel"],
+            "skills" : ["Lore (Warfare)", "Navigation"],
+            "talents":  ["Commanding Presence", "Implacable", "Inspiring", "Stout-hearted"],
+            "npc_suggested_talents": [],
+            "trappings": ["Unit of Ironbreakers"]
+        }
+    },
     "Knight": {
         "class": "Warrior",
         "earning skill": "Melee (Cavalry)",

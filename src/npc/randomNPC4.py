@@ -15,6 +15,9 @@ bot_char_dat.career_table_4e += ['Field Warden',  0, 0, 2, 0, 0, 0, 0, 0, 0]
 bot_char_dat.career_table_4e += ['Karak Ranger',  0, 2, 0, 0, 0, 0, 0, 0, 0]
 bot_char_dat.career_table_4e += ['Badger Rider',  0, 0, 3, 0, 0, 0, 0, 0, 0]
 
+## From The Horned Rat Companion, p.81
+bot_char_dat.career_table_4e += ['Ironbreaker',  0, 3, 0, 0, 0, 0, 0, 0, 0]
+
 class RandomNPC4(BuildNPC4):
     """Create a randomly generated NPC"""
 
