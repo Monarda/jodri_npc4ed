@@ -388,6 +388,13 @@
                 "Target": "You",
                 "Duration": "Instant"
             },
+            "Snitch": {
+                "CN": 2,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB hours",
+                "Source": "PBtT:C, p.110"
+            },
             "Teleport": {
                 "CN": 5,
                 "Range": "You",
