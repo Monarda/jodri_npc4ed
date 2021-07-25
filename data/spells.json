@@ -1042,7 +1042,7 @@
             "adept": "Hierophant"
         },
         "spells": {
-            "Banishement": {
+            "Banishment": {
                 "CN": 12,
                 "Range": "You",
                 "Target": "AoE WPB yards",
