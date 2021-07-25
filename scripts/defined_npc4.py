@@ -1,4 +1,4 @@
-import argparse
+import argparse, sys
 
 from ..src.npc.careers4 import Careers4
 from ..src.npc.buildNPC4 import *
