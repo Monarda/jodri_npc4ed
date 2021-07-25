@@ -23,6 +23,7 @@ class NPC4e:
                  type    : str=None,
                  age     : str=None,
                  filter  : str=None,
+                 lore    : str=None,
                  characteristics   : dict=None,
                  initial_skills    : dict=None,
                  initial_talents   : dict=None,
@@ -105,7 +106,8 @@ class NPC4e:
             # can handle
             if not 'any' in dedup_careers:
                 # We can immediately build this NPC
-                self._npc = BuildNPC4(species=species, 
+                self._npc = BuildNPC4(species=species,
+                                        lore=lore, 
                                         characteristics=characteristics, 
                                         starting_skills=initial_skills, 
                                         starting_talents=initial_talents,
@@ -121,6 +123,7 @@ class NPC4e:
                                     starting_career=None, 
                                     target=None, 
                                     young=young, 
+                                    lore=lore,
                                     characteristics=characteristics, 
                                     starting_skills=initial_skills, 
                                     starting_talents=initial_talents,

@@ -2,7 +2,9 @@ import collections
 import random
 import re
 from math import inf
+from collections import Counter
 
+from ..magic4e import Magic4e
 from ...data.bestiary import *
 from ...data import bot_char_dat
 from .skills4 import Skills4
@@ -13,9 +15,10 @@ from ..utility.find_best_match import find_best_match
 class BuildNPC4:
     """Generate and manage a 4th Edition NPC"""
 
-    def __init__(self, species : str, 
+    def __init__(self, species : str, lore : str = None,
                  characteristics=None, starting_skills=None, starting_talents=None, starting_trappings=None,
                  randomise=True):
+
         # initialise random number generator with OS (or time) seed
         random.seed()
 
@@ -91,6 +94,9 @@ class BuildNPC4:
         self._talents           = set()
         self._trappings         = set()
 
+        self._lore              = lore
+        self._spells            = {}
+        
         self._xp_spend          = 0
 
     @classmethod
@@ -723,3 +729,63 @@ class BuildNPC4:
             self._skills[skill] += value
         else:
             self._skills[skill] = value
+
+
+    def _check_lore(self):
+        if self._lore == None:# and 'Wizard' in self._careers_taken.keys():
+            self._lore = random.choice(['Lore of Beasts', 'Lore of Death', 'Lore of Fire',
+                                        'Lore of Heavens', 'Lore of Life', 'Lore of Light', 
+                                        'Lore of Metal', 'Lore of Shadows'])
+
+        m4 = Magic4e()
+        wind_name = m4[self._lore]['names']['wind']
+
+        if 'Channelling (Any Colour)' in self._skills:
+            self._skills[f'Channelling ({wind_name})'] = self._skills.pop('Channelling (Any Colour)')
+
+        if 'Arcane Magic (Any Arcane Lore)' in self._suggested_talents:
+            self._suggested_talents.add(f'Arcane Magic ({wind_name})')
+            self._suggested_talents.remove('Arcane Magic (Any Arcane Lore)')
+
+        if 'Arcane Magic (Any Arcane Lore)' in self._talents:
+            self._talents.add(f'Arcane Magic ({wind_name})')
+            self._talents.remove('Arcane Magic (Any Arcane Lore)')
+
+
+    def _choose_spells(self, spell_lists):
+        # Remove any lores which are already at max spells
+        if 'Arcane Lore (Any)' in spell_lists:
+            spell_lists.append(self._lore)
+            spell_lists.remove('Arcane Lore (Any)')
+
+        #choose four spells from the available lists. First thing is to distribute them
+        spells_from = random.choices(spell_lists, k=4)
+
+        for item in spells_from:
+            if item not in self._spells:
+                self._spells[item] = set()
+
+        m4 = Magic4e()
+        for k,v in Counter(spells_from).items():
+            self._spells[k].update( m4.get_random_spells(k.lower(),v).keys() )
+
+
+    def _format_spells(self):
+        formatted_text = ""
+        for spell_list in self._spells:
+            formatted_text += f'__{spell_list}__: {", ".join(self._spells[spell_list])}\n'
+
+        return formatted_text.strip()
+
+
+    @property
+    def spells(self):
+        # Scan through the careers in the history and find each that has a spell-list associated with it
+        spells = []
+        uch = set(self._career_history)
+        for career in uch:
+            careerrank = Careers4()[career[0]][f'rank {career[1]}']
+            if 'spell-lists' in careerrank:
+                self._choose_spells(careerrank['spell-lists'])
+
+        return self._format_spells()

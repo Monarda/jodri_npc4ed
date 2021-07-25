@@ -21,7 +21,7 @@ bot_char_dat.career_table_4e += ['Ironbreaker',  0, 3, 0, 0, 0, 0, 0, 0, 0]
 class RandomNPC4(BuildNPC4):
     """Create a randomly generated NPC"""
 
-    def __init__(self, species=None, starting_career=None, young=False, target=None, 
+    def __init__(self, species=None, starting_career=None, young=False, target=None, lore=None,
                        characteristics=None, starting_skills = None, starting_talents=None, starting_trappings=None,
                        init_only=False):
         """Options are to define the species, a starting career, whether the NPC is young
@@ -35,7 +35,7 @@ class RandomNPC4(BuildNPC4):
             species = self.random_human()
 
         # Initialise base class
-        BuildNPC4.__init__(self, species, 
+        BuildNPC4.__init__(self, species, lore,
                             characteristics=characteristics,
                             starting_skills=starting_skills, 
                             starting_talents=starting_talents,

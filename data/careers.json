@@ -289,7 +289,8 @@
             "skills" : ["Channelling (Any Colour)","Dodge","Intuition","Language (Magick)","Lore (Magic)","Melee (Basic)","Melee (Polearm)","Perception"],
             "talents":  ["Aethyric Attunement","Petty Magic","Read/Write","Second Sight"],
             "npc_suggested_talents": ["Petty Magic","Read/Write"],
-            "trappings": ["Grimoire","Quarterstaff"]
+            "trappings": ["Grimoire","Quarterstaff"],
+            "spell-lists": ["Petty Lore"]
         },
         "rank 2" : {
             "name": "Wizard",
@@ -298,7 +299,8 @@
             "skills" : ["Charm","Cool","Gossip","Intimidate","Language (Battle)","Language (Any)"],
             "talents":  ["Arcane Magic (Any Arcane Lore)","Detect Artefact","Fast Hands","Sixth Sense"],
             "npc_suggested_talents": ["Arcane Magic (Any Arcane Lore)","Sixth Sense"],
-            "trappings": ["Magical License"]
+            "trappings": ["Magical License"],
+            "spell-lists": ["Arcane Lore", "Arcane Lore (Any)"]
         },
         "rank 3" : {
             "name": "Master Wizard",
@@ -307,7 +309,8 @@
             "skills" : ["Animal Care","Evaluate","Lore (Warfare)","Ride (Horse)"],
             "talents":  ["Dual Wielder","Instinctive Diction","Magical Sense","Menacing"],
             "npc_suggested_talents": [],
-            "trappings": ["Apprentice","Light Warhorse","Magical Item"]
+            "trappings": ["Apprentice","Light Warhorse","Magical Item"],
+            "spell-lists": ["Arcane Lore", "Arcane Lore (Any)"]
         },
         "rank 4" : {
             "name": "Wizard Lord",
@@ -316,7 +319,8 @@
             "skills" : ["Language (Any)","Lore (Any)"],
             "talents":  ["Combat Aware","Frightening","Iron Will","War Wizard"],
             "npc_suggested_talents": [],
-            "trappings": ["Apprentice","Library (Magic)","Workshop (Magic)"]
+            "trappings": ["Apprentice","Library (Magic)","Workshop (Magic)"],
+            "spell-lists": ["Arcane Lore", "Arcane Lore (Any)"]
         }
     },
     "Agitator" : {
@@ -2409,7 +2413,8 @@
             "skills" : ["Channelling (Dhar)","Entertain (Acting)","Intuition","Language (Magick)","Lore (Tzeentch)","Perception","Secret Signs (Cultist)","Stealth (Urban)"],
             "talents":  ["Beneath Notice","Secret Identity","Tzeentch's Blessing","Magical Sense","Petty Magic"],
             "npc_suggested_talents": ["Secret Identity","Petty Magic"],
-            "trappings": ["Cult Insignia","Ritual Vestments","Secret Tattoo"]
+            "trappings": ["Cult Insignia","Ritual Vestments","Secret Tattoo"],
+            "spell-lists": ["Petty Lore", "Petty Lore of Tzeentch"]
         },
         "rank 2" : {
             "name": "Cult Magus",
@@ -2418,7 +2423,8 @@
             "skills" : ["Charm","Cool","Dodge","Endurance","Research","Sleight of Hand"],
             "talents":  ["Cat-tongued","Chaos Magic (Tzeentch)","Double Life","Public Speaker"],
             "npc_suggested_talents": ["Chaos Magic (Tzeentch)","Double Life"],
-            "trappings": ["Chaos Grimoire","Good Quality Ritual Vestments","Schemes"]
+            "trappings": ["Chaos Grimoire","Good Quality Ritual Vestments","Schemes"],
+            "spell-lists": ["Arcane Lore", "Chaos Arcane Lore", "Chaos Lore of Tzeentch"]
         },
         "rank 3" : {
             "name": "Chosen of Tzeentch",
@@ -2427,7 +2433,8 @@
             "skills" : ["Entertain (Storytelling)","Intimidate","Leadership","Melee (Basic)"],
             "talents":  ["Arcane Magic (Daemonology)","Disciple of Change","Master of Disguise","Master Orator"],
             "npc_suggested_talents": [],
-            "trappings": ["Cell of Cultists","Magic Item","Sacrificial Dagger"]
+            "trappings": ["Cell of Cultists","Magic Item","Sacrificial Dagger"],
+            "spell-lists": ["Arcane Lore", "Chaos Arcane Lore", "Chaos Lore of Tzeentch", "Lore of Daemonology"]
         },
         "rank 4" : {
             "name": "Master Magus",
@@ -2436,7 +2443,8 @@
             "skills" : ["Language (Dark Tongue)","Lore (Any)"],
             "talents":  ["Commanding Presence","Frightening","Impassioned Zeal","Savant (Tzeentch)"],
             "npc_suggested_talents": [],
-            "trappings": ["Chaos Cult","Terrible Destiny"]
+            "trappings": ["Chaos Cult","Terrible Destiny"],
+            "spell-lists": ["Arcane Lore", "Chaos Arcane Lore", "Chaos Lore of Tzeentch", "Lore of Daemonology"]
         }
     },
     "Badger Rider" : {
