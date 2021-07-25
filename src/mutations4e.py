@@ -2,9 +2,9 @@ import copy, json
 import importlib.resources
 import random
 
-#from .. import data
-#with importlib.resources.open_text('data','mutations.json') as f:
-with open('C:\Development\Python\monarda_bot\data\mutations.json', 'r') as f:
+from .. import data
+with importlib.resources.open_text('data','mutations.json') as f:
+#with open('C:\Development\Python\monarda_bot\data\mutations.json', 'r') as f:
     _mutations_data = json.load(f)
 
 class Mutations4e:
