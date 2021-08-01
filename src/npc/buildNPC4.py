@@ -433,6 +433,7 @@ class BuildNPC4:
            (if any), and the calculated max times the talent may be taken (usually 
            based on a characterisic bonus).
         """
+        self._check_lore()
         return self.__template_gettalents(set(self._talents) + self._starting_talents)
 
     @property
@@ -481,6 +482,7 @@ class BuildNPC4:
         # We don't remove starting talents from the list, because career talents can potentially 
         # be taken multiple times without needing GM approval. Though since this is an NPC the
         # GM could probably approve!
+        self._check_lore()
         return self.__template_gettalents(self._suggested_talents)
 
     @property
@@ -583,6 +585,7 @@ class BuildNPC4:
            but general skills with an (Any) may need to be recorded seperately
            in which case the result could be {"Melee (Any)":[55, 44]}
         """
+        self._check_lore()
         return self.__template_skills(verbose=False)
 
     @property
@@ -593,6 +596,7 @@ class BuildNPC4:
             "add" : int is what is added to the characteristic to get the skill total,
             "source" : str is the source career and rank (e.g. 'Scholar 2')
         """
+        self._check_lore()
         return self.__template_skills(verbose=True)
 
     @property
@@ -767,6 +771,7 @@ class BuildNPC4:
 
         m4 = Magic4e()
         for k,v in Counter(spells_from).items():
+            print(k,v)
             self._spells[k].update( m4.get_random_spells(k.lower(),v).keys() )
 
 
