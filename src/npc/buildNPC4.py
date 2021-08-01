@@ -778,7 +778,7 @@ class BuildNPC4:
     def _format_spells(self):
         formatted_text = ""
         for spell_list in self._spells:
-            formatted_text += f'__{spell_list}__: {", ".join(self._spells[spell_list])}\n'
+            formatted_text += f'__{spell_list.title()}__: {", ".join(self._spells[spell_list])}\n'
 
         return formatted_text.strip()
 
