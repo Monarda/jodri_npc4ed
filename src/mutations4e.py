@@ -79,7 +79,11 @@ class Mutations4e:
         species_prob_chart = {'elf':      [0, 100],
                               'halfling': [10, 90],
                               'human':    [50, 50],
-                              'dwarf':    [ 5, 95]
+                              'dwarf':    [ 5, 95],
+                              'body':     [100, 0],
+                              'mind':     [0, 100],
+                              'physical': [100, 0],
+                              'mental':   [0, 100]
                              } 
         type = random.choices( ['physical', 'mental'], species_prob_chart[species])[0]
         if type=='physical':
