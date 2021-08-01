@@ -469,6 +469,11 @@ class NPC4e:
            talents but does not include XP discounts from talents such as Artistic"""
         return self._npc.xp_spend
 
+    @property
+    def spells(self) -> str:
+        """ The spells known to the NPC (if any) """
+        return self._npc.spells
+
     @classmethod
     def help_message(cls) -> str:
         return """Generates a fully described 4e non-player character with a career path and stats, plus info on appearence, background, family, etc., taking account of any info provided in the command. NPCs may be generated with user-defined species and career path, random species and career path, or a combination of the two.
