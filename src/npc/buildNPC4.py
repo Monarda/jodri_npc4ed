@@ -746,7 +746,10 @@ class BuildNPC4:
                                         'Lore of Metal', 'Lore of Shadows'])
 
         m4 = Magic4e()
-        wind_name = m4[self._lore]['names']['wind']
+        if 'names' in m4[self._lore]:
+            wind_name = m4[self._lore]['names']['wind']
+        else:
+            wind_name = self._lore.title()
 
         if 'Channelling (Any Colour)' in self._skills:
             self._skills[f'Channelling ({wind_name})'] = self._skills.pop('Channelling (Any Colour)')
