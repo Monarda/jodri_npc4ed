@@ -527,35 +527,38 @@
         }
     },
     "skaven arcane lore": {
-        "Curse of the Horned Rat": {
-            "CN": 19,
-            "Range": "WP yards",
-            "Target": "AoE WPB yards",
-            "Duration": "WPB hours"
-        },
-        "Death Frenzy": {
-            "CN": 5,
-            "Range": "Touch",
-            "Target": 1,
-            "Duration": "WPB rounds+"
-        },
-        "Musk of Terror": {
-            "CN": 9,
-            "Range": "WP yards",
-            "Target": "AoE WPB yards",
-            "Duration": "WPB rounds+"
-        },
-        "Skitterleap": {
-            "CN": 6,
-            "Range": "Touch",
-            "Target": 1,
-            "Duration": "Instant"
-        },
-        "Vermintide": {
-            "CN": 8,
-            "Range": "You",
-            "Target": "Special",
-            "Duration": "2x WPB rounds+ "
+        "colour": false, 
+        "spells" : {
+            "Curse of the Horned Rat": {
+                "CN": 19,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB hours"
+            },
+            "Death Frenzy": {
+                "CN": 5,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "WPB rounds+"
+            },
+            "Musk of Terror": {
+                "CN": 9,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds+"
+            },
+            "Skitterleap": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant"
+            },
+            "Vermintide": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "Special",
+                "Duration": "2x WPB rounds+ "
+            }
         }
     },
     "lore of beasts": {
