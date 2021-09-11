@@ -104,6 +104,10 @@ class BuildNPC4:
         """List known species. Most useful for listing 'monsters' that can have careers applied."""
         return [*species_npc_characteristics_4e.keys(), *species_npc_aliases_4e.keys()]
 
+    @classmethod
+    def default_playable_species(cls) -> list:
+        return species_default_playable
+
     def __str__(self) -> str:
         retstr = ''
         # Species and most recent career level name
@@ -771,7 +775,6 @@ class BuildNPC4:
 
         m4 = Magic4e()
         for k,v in Counter(spells_from).items():
-            print(k,v)
             self._spells[k].update( m4.get_random_spells(k.lower(),v).keys() )
 
 

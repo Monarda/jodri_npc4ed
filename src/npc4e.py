@@ -472,6 +472,9 @@ class NPC4e:
     @property
     def spells(self) -> str:
         """ The spells known to the NPC (if any) """
+        if self._npc._index_species not in BuildNPC4.default_playable_species():
+            return None
+
         return self._npc.spells
 
     @classmethod
