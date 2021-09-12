@@ -801,6 +801,7 @@ class BuildNPC4:
         for career in uch:
             careerrank = Careers4()[career[0]][f'rank {career[1]}']
             if 'spell-lists' in careerrank:
-                self._choose_spells(careerrank['spell-lists'])
+                spell_lists = careerrank['spell-lists'].copy()
+                self._choose_spells(spell_lists)
 
         return self._format_spells()
