@@ -1,5 +1,5 @@
 ## Note aliases listed at the bottom
-species_default_playable = {"human", "dwarf", "halfling", "elf"}
+species_default_playable = {"human", "dwarf", "halfling", "elf", "gnome"}
 
 species_npc_characteristics_4e = {
     "human":         {"M":4, "WS":30, "BS":30, "S":30, "T":30, "I":30, "Agi":30, "Dex":30, "Int":30, "WP":30, "Fel":30},
