@@ -1,16 +1,17 @@
 import collections
 import random
 import re
-from math import inf
 from collections import Counter
+from math import inf
 
-from ..magic4e import Magic4e
-from ...data.bestiary import *
 from ...data import bot_char_dat
-from .skills4 import Skills4
-from .careers4 import Careers4
-from .talents4 import Talents4
+from ...data.bestiary import *
+from ..magic4e import Magic4e
 from ..utility.find_best_match import find_best_match
+from .careers4 import Careers4
+from .skills4 import Skills4
+from .talents4 import Talents4
+
 
 class BuildNPC4:
     """Generate and manage a 4th Edition NPC"""
@@ -791,6 +792,9 @@ class BuildNPC4:
 
     @property
     def spells(self):
+        # Reset the spells in case this has been called before
+        self._spells = {}
+
         # Scan through the careers in the history and find each that has a spell-list associated with it
         spells = []
         uch = set(self._career_history)
