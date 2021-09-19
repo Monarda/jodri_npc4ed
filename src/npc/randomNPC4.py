@@ -53,6 +53,10 @@ class RandomNPC4(BuildNPC4):
         else:
             self._add_random_careers(starting_career,young)
 
+    class NoCareersSpecies(Exception):
+        def __init__(self, species):
+            super().__init__(f'Cannot generate random career for {species}. This species does not have a career probability table (e.g. corebook, p.30-31).')
+
 
     @classmethod
     def known_species(cls):
@@ -277,7 +281,12 @@ class RandomNPC4(BuildNPC4):
         # Extract the information we need from the bot_char_dat.career_table_4e array
         species_indexer = self.known_species()
         careers = bot_char_dat.career_table_4e[0::10]
-        probs = bot_char_dat.career_table_4e[species_indexer.index(self._species.title())+1::10]
+        try:
+            probs = bot_char_dat.career_table_4e[species_indexer.index(self._species.title())+1::10]
+        except ValueError:
+            raise self.NoCareersSpecies(self._species.title())
+        except:
+            raise
 
         # Append Cult Magus of Tzeentch to the probabilities as appropriate
         if not firstcareer:
