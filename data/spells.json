@@ -1578,6 +1578,13 @@
                 "Range": "WP yards",
                 "Target": "Special",
                 "Duration": "Instant"
+            },
+            "Vanhel's Invitation to the Dance Macabre": {
+                "CN": 16,
+                "Range": "Self",
+                "Target": "AoE (up to Willpower Bonus x 100 yards)",
+                "Duration": "Until Sunrise",
+                "Source": "Ubersreik Adventures II, p.11 (Deadly Dispatch)"
             }
         }
     },
