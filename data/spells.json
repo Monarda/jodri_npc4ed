@@ -1601,17 +1601,54 @@
     "lore of the little waaagh!": {
         "colour": false,
         "spells": {
-            "Sneaky Stabbin'": {
+            "Sneaky Stabbin' (Starter Set)": {
                 "CN": 2,
                 "Range": "WP yards",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source" : "Starter Set - Adventure Book, p.36"
             },
             "Itchy Nuisance": {
                 "CN": 4,
                 "Range": "WP yards",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source" : "Starter Set - Adventure Book, p.36"
+            },
+            "Cunnin' Words": {
+                "CN": 0,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB minutes",
+                "Source": "Empire in Ruins, p.140"
+            },
+            "Gork’ll Fix It": {
+                "CN": 7,
+                "Range": "WP yards",
+                "Target": 1,
+                "Duration": "WPB rounds",
+                "Source": "Empire in Ruins, p.140"
+            },
+            "Night Shroud": {
+                "CN": 5,
+                "Range": "SB yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "WPB rounds",
+                "Source": "Empire in Ruins, p.140"
+            },
+            "Sneaky Stabbin' (Empire in Ruins)": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "Orc, Goblin, Snotling, and Hobgoblin allies within Range",
+                "Duration": "WPB rounds",
+                "Source": "Empire in Ruins, p.140"
+            },
+            "Vindictive Glare": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "Instant",
+                "Source": "Empire in Ruins, p.140"
             }
         }
     },
