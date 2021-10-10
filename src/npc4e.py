@@ -13,6 +13,7 @@ from .npc import skill_talent
 
 from .utility.convert_to_superscript import *
 
+import sys, traceback
 
 class NPC4e:
     """ Make either a fully defined or randomly generated NPC"""
@@ -182,10 +183,12 @@ class NPC4e:
 
             self._filter = filter
             self._format()
-
+        except RandomNPC4.NoCareersSpecies as e:
+            self._error = str(e)
         except Exception as e:
             print('Exception triggered')
-            self._error_diagnostic = str(e)
+            exc_type, exc_value, exc_traceback = sys.exc_info()
+            self._error_diagnostic = '\n'.join(traceback.format_exception(e, exc_value, exc_traceback))
 
     def _prep_career_history(self, firstcareer, careers_copy):
         career_name = careers_copy[0][0]
