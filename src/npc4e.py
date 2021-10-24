@@ -401,16 +401,6 @@ class NPC4e:
         return ', '.join(self.__skills_crossedref)
 
     @property
-    def skills_verbose(self):
-        """All the NPC's skills as a dictionary of lists of dictionaries the form
-            {"skillname": [{"total":skilltotal, "characteristic":skillchar, "add":value, "source":career_and_rank}],
-            where "characteristic" : str is the characteristic associated with the skill,
-            "add" : int is what is added to the characteristic to get the skill total,
-            "source" : str is the source career and rank (e.g. 'Scholar 2')
-        """
-        return self._npc.skills_verbose
-
-    @property
     def species(self) -> str:
         """ The notional species of the NPC, e.g.. if Estalian was input the generator may  
             have used 'human' rules. This function will return 'Estalian' """
