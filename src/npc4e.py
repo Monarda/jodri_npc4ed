@@ -352,8 +352,9 @@ class NPC4e:
         
         # If the character's final career level is greater than 1 then add
         # an additional random age factor which could make them any age between
-        # their current unmodified age and 70
-        if level>1:
+        # their current unmodified age and 70. But include a random factor that
+        # means some old NPCs can still be inexperienced
+        if level>1 or random.randint(0,100)<10:
             age += random.randint( -2, max(0,70-age) )
         else:
             age += random.randint( -1, max(0,20-age) )
@@ -367,9 +368,9 @@ class NPC4e:
         # The extra randint is so that every member of the species isn't suspiciously a multiple
         # of some integer in age
         if 'elf' in self._npc._index_species.lower():
-            age *= 5 + random.randint(0,4)
+            age = (age*5) + random.randint(0,4)
         elif self._npc._index_species.lower() in ['dwarf', 'halfling']:
-            age *= 2 + random.randint(0,1)
+            age = (age*2) + random.randint(0,1)
 
         return (age_descrip, age)
 
