@@ -81,6 +81,7 @@ class NPC4e:
         # Check for ages we understand
         if age=='young' in age: young = True 
         else: young = False
+        self._age = age
 
         # If no species is set then we choose a random species from the probabilities defined
         # in the rulebook for PCs. That means we never generate a random 'monster' if no
@@ -293,22 +294,22 @@ class NPC4e:
 
         # Talents
         t4 = Talents4()
-        if self._npc.starting_talents:
-            starting_talents = t4.filter(
+        if self._npc.talents_initial:
+            talents_initial = t4.filter(
                 self._npc.formatted_starting_talents, type)
         else:
-            starting_talents = {}
+            talents_initial = {}
 
-        suggested_talents = t4.filter(self._npc.suggested_talents, type)
-        additional_talents = t4.filter(self._npc.additional_talents, type)
+        talents_suggested = t4.filter(self._npc.talents_suggested, type)
+        talents_additional = t4.filter(self._npc.talents_additional, type)
 
         # Association between skills and talents
-        filtered_skills_dict, starting_talents, index = skill_talent.associate(
-            filtered_skills_dict, starting_talents,   starting_index=1)
-        filtered_skills_dict, suggested_talents, index = skill_talent.associate(
-            filtered_skills_dict, suggested_talents,  starting_index=index)
-        filtered_skills_dict, additional_talents, index = skill_talent.associate(
-            filtered_skills_dict, additional_talents, starting_index=index)
+        filtered_skills_dict, talents_initial, index = skill_talent.associate(
+            filtered_skills_dict, talents_initial,   starting_index=1)
+        filtered_skills_dict, talents_suggested, index = skill_talent.associate(
+            filtered_skills_dict, talents_suggested,  starting_index=index)
+        filtered_skills_dict, talents_additional, index = skill_talent.associate(
+            filtered_skills_dict, talents_additional, starting_index=index)
 
         # Format skills data
         for skill, values in filtered_skills_dict.items():
@@ -330,34 +331,39 @@ class NPC4e:
                     #print("{}".format(', '.join("{!s}: {!r}".format(key,val) for (key,val) in npc.skills.items())))
 
         self.__skills_crossedref = skills_list
-        self.__talents_applied_crossedref = starting_talents
-        self.__talents_suggested_crossedref = suggested_talents
-        self.__talents_additional_crossedref = additional_talents
+        self.__talents_applied_crossedref = talents_initial
+        self.__talents_suggested_crossedref = talents_suggested
+        self.__talents_additional_crossedref = talents_additional
 
     ##################################################################################################
     # Output properties
 
     @property
     def age(self) -> Tuple[str, int]:
-        age = 12
-        # For each career level add a random number of years to the age based on
-        # the career level
-        for career, level in self._npc._career_history:
-            if level==0:
-                age += random.randint(1,3)
-            elif level==1:
-                age += random.randint(3,5)
-            elif level>1:
-                age += random.randint(5,10)
-        
-        # If the character's final career level is greater than 1 then add
-        # an additional random age factor which could make them any age between
-        # their current unmodified age and 70. But include a random factor that
-        # means some old NPCs can still be inexperienced
-        if level>1 or random.randint(0,100)<10:
-            age += random.randint( -2, max(0,70-age) )
+        if self._age == 'young':
+            age = random.randint(12,19)
+        elif self._age == 'old':
+            age = random.randint(61,99)
         else:
-            age += random.randint( -1, max(0,20-age) )
+            age = 12
+            # For each career level add a random number of years to the age based on
+            # the career level
+            for career, level in self._npc._career_history:
+                if level==0:
+                    age += random.randint(1,3)
+                elif level==1:
+                    age += random.randint(3,5)
+                elif level>1:
+                    age += random.randint(5,10)
+            
+            # If the character's final career level is greater than 1 then add
+            # an additional random age factor which could make them any age between
+            # their current unmodified age and 70. But include a random factor that
+            # means some old NPCs can still be inexperienced
+            if level>1 or random.randint(0,100)<10:
+                age += random.randint( -2, max(0,70-age) )
+            else:
+                age += random.randint( -1, max(0,20-age) )
 
         # Turn the age in years into a description, i.e. 'young', 'mature', 'old'
         age_descrip = 'mature'
@@ -393,6 +399,16 @@ class NPC4e:
     def skills(self) -> str:
         """ A skills list, formatted with footnotes linking to taletnts, and joined by commas """
         return ', '.join(self.__skills_crossedref)
+
+    @property
+    def skills_verbose(self):
+        """All the NPC's skills as a dictionary of lists of dictionaries the form
+            {"skillname": [{"total":skilltotal, "characteristic":skillchar, "add":value, "source":career_and_rank}],
+            where "characteristic" : str is the characteristic associated with the skill,
+            "add" : int is what is added to the characteristic to get the skill total,
+            "source" : str is the source career and rank (e.g. 'Scholar 2')
+        """
+        return self._npc.skills_verbose
 
     @property
     def species(self) -> str:

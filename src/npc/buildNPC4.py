@@ -130,10 +130,10 @@ class BuildNPC4:
         retstr += '\n'
 
         # Talents
-        if self.starting_talents:
-            retstr += "Starting Talents:  " + str(self.starting_talents) + "\n"
-        retstr += "Suggested Talents: " + str(self.suggested_talents) + "\n"
-        retstr += "Additional Talents: " + str(self.additional_talents) + "\n"
+        if self.talents_initial:
+            retstr += "Starting Talents:  " + str(self.talents_initial) + "\n"
+        retstr += "Suggested Talents: " + str(self.talents_suggested) + "\n"
+        retstr += "Additional Talents: " + str(self.talents_additional) + "\n"
 
         # Traits
         retstr += 'Traits: ' + str(self.traits) + '\n'
@@ -442,7 +442,7 @@ class BuildNPC4:
         return self.__template_gettalents(set(self._talents) + self._starting_talents)
 
     @property
-    def starting_talents(self) -> dict:
+    def talents_initial(self) -> dict:
         """Starting talents (if any).
 
            Returns a dictionary where the key is the talent name, and each value is
@@ -465,7 +465,7 @@ class BuildNPC4:
            (if any), and the calculated max times the talent may be taken (usually 
            based on a characterisic bonus).
         """
-        starting_talents = self.starting_talents
+        starting_talents = self.talents_initial
         formatted_talents = {}
         for talent in starting_talents:
             try:
@@ -480,7 +480,7 @@ class BuildNPC4:
         return formatted_talents 
 
     @property 
-    def suggested_talents(self):
+    def talents_suggested(self):
         """A talent from each career level. Generally randomly chosen, but the careers file
            includes suggested Talents for some career ranks which are then used instead of a 
            randomly selected one."""
@@ -491,7 +491,7 @@ class BuildNPC4:
         return self.__template_gettalents(self._suggested_talents)
 
     @property
-    def additional_talents(self):
+    def talents_additional(self):
         """All the other talents (not in the suggested list) that the NPC can access."""
         return self.__template_gettalents(self._talents-self._suggested_talents)
 
@@ -636,7 +636,7 @@ class BuildNPC4:
                 xp += skill_advance_costs[sac_idx]
 
         # Talents
-        xp += 100 * len(self.suggested_talents)
+        xp += 100 * len(self.talents_suggested)
 
         return xp
 
