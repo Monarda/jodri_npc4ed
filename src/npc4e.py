@@ -140,7 +140,7 @@ class NPC4e:
 
                     if careers_left==1:
                         if careers_copy[0]=='any':
-                            self._npc._add_random_careers(None,young)
+                            self._npc._add_random_careers(None,young, force_first=True)
                         else:
                             self._add_career(firstcareer, careers_copy[0])
                         dedup_careers = []
@@ -155,7 +155,7 @@ class NPC4e:
                             # Then add the career path which is random until the end
                             self._prep_career_history(firstcareer, careers_copy)
 
-                            self._npc._add_random_careers(careers_copy[0],young)
+                            self._npc._add_random_careers(careers_copy[0],young, force_first=True)
                             dedup_careers = []
                         else:
                             self._add_career(firstcareer, careers_copy[0])

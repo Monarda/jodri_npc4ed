@@ -94,7 +94,7 @@ class RandomNPC4(BuildNPC4):
         return careers_by_class
 
 
-    def _add_random_careers(self, career, young=False):
+    def _add_random_careers(self, career, young=False, force_first=False):
         # If no career tuple given create one
         if career != None:
             career_name = career[0].title()
@@ -118,7 +118,11 @@ class RandomNPC4(BuildNPC4):
         while (more_careers):
             # Roll a dice to determine what to do
             # If an adult it's a d6, if young it's a d8 (higher numbers make us stop)
-            dtype = 6 if not young else 8
+            if (force_first):
+                dtype = 4
+                force_first = False
+            else:
+                dtype = 6 if not young else 8
             val = random.randint(1,dtype)
 
             if val<=2:
