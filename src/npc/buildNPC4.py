@@ -611,7 +611,7 @@ class BuildNPC4:
         xp = max(100 * (len(self.career_history)-1),0)
 
         # Characteristics
-        characteristic_advance_costs = [25,30,40,50,70,90,120,150,190,230,280,330,390,450,520,590,670,750]
+        characteristic_advance_costs = [25,30,40,50,70,90,120,150,190,230,280,330,390,450,520,590,670,750,840,930]
         for char,value in self._characteristics.items():
             advance_to_cost = value - self._starting_characteristics[char]
 
@@ -621,7 +621,7 @@ class BuildNPC4:
                 xp += characteristic_advance_costs[sac_idx]
         
         # Skills
-        skill_advance_costs = [10,15,20,30,40,60,80,110,140,180,220,270,320,380,440,510,580]
+        skill_advance_costs = [10,15,20,30,40,60,80,110,140,180,220,270,320,380,440,510,580,660,740]
         for skill,value in self._skills.items():
             advance_to_cost = value
 
