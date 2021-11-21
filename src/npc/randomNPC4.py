@@ -213,6 +213,10 @@ class RandomNPC4(BuildNPC4):
         # the required final career
         self._add_random_careers(startcareer, young)
 
+        # Then handle the special case of the startcareer and endcareer being the same
+        if (startcareer == endcareer):
+            self._reverse_random_careers({'career':endcareer[0], 'rank':endcareer[1]}) 
+
         # Details about where we are and where we want to be
         end_career = endcareer[0].title()
         end_level  = endcareer[1]
@@ -239,7 +243,6 @@ class RandomNPC4(BuildNPC4):
                 # But we could also have a case like [(wizard,3),(priest,3)] in which case we need to
                 # change the final career level
                 new_career_history = list(self._career_history)
-                print(new_career_history)
                 while new_career_history[-1]!=(end_career,end_level):
                     if new_career_history[-2][0] != end_career:
                         new_career_history[-1] = (end_career,end_level)
