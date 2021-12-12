@@ -399,6 +399,11 @@ class NPC4e:
     def skills(self) -> str:
         """ A skills list, formatted with footnotes linking to taletnts, and joined by commas """
         return ', '.join(self.__skills_crossedref)
+    
+    @property
+    def social_standing(self) -> str:
+        """ Build the social standing history from the NPC's career/rank history. """
+        return " → ".join([Careers4()[career][f'rank {rank}']['status'] for career, rank in self._npc._career_history])
 
     @property
     def species(self) -> str:

@@ -8,8 +8,10 @@ from ..utility.convert_to_superscript import convert_to_superscript
 def pretty_print_npc(npc, type=None):
     """Pretty print an NPC"""
     if isinstance(npc, NPC4e):
+        npc.filter = type
         print("{} ({}) {}".format(npc.species.title(), npc.species_used.title(), npc.careername))
         print(f"**Career History**: {npc.career_history_unambiguous}")
+        print(f"**Social Standing**: {npc.social_standing}")
         print(npc.statblock)
         print(f"**Skills**: {npc.skills}")
         if npc.talents_initial: print(f"**Starting Talents**: {npc.talents_initial}")
@@ -18,7 +20,7 @@ def pretty_print_npc(npc, type=None):
         print(f"**Traits**: {npc.traits}")
         print(f"**Optional Traits**: {npc.traits_optional}")
         print(f"**Trappings**: {npc.trappings}")
-        print(f"**Additional Trappings**: {npc.trappings_additional}")
+        if npc.trappings_additional: print(f"**Additional Trappings**: {npc.trappings_additional}")
         if npc.spells: print(f"**Spells**: {npc.spells}")
         print("**XP Spend**: {:,}".format(npc.xp_spend))
     else:
