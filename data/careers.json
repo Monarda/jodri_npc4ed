@@ -39,6 +39,86 @@
             "trappings": ["Commission Papers","Large Workshop"]
         }
     },
+    "Artillerist" : {
+        "class": "Academic",
+        "earning skill": "Ranged (Blackpowder, Catapult, Crossbow or Engineering)",
+        "rank 1" : {
+            "name": "Apprentice Artillerist",
+            "status": "Silver 1",
+            "advances": ["BS", "I", "Int"],
+            "skills" : ["Animal Care", "Cool", "Drive", "Endurance", "Evaluate", "Language (Battle)", "Melee (Basic)", "Navigation", "Perception", "Ranged (Blackpowder, Catapult, Crossbow, or Engineering)"],
+            "talents":  ["Marksman", "Rapid Reload", "Strong Back", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Dagger", "Leather Apron"]
+        },
+        "rank 2" : {
+            "name": "Artillerist",
+            "status": "Silver 3",
+            "advances": ["T"],
+            "skills" : ["Consume Alcohol", "Gamble", "Gossip", "Outdoor Survival", "Ranged (Blackpowder, Catapult, Crossbow, or Engineering)", "Trade (Carpenter or Gunsmith)"],
+            "talents":  ["Crew Commander", "Etiquette (Soldiers)", "Orientation", "Sniper"],
+            "npc_suggested_talents": ["Crew Commander"],
+            "trappings": ["Weapon (Any)", "Telescope", "Tools", "Uniform"]
+        },
+        "rank 3" : {
+            "name": "Artillerist Captain",
+            "status": "Silver 5",
+            "advances": ["WP"],
+            "skills" : ["Intuition", "Leadership", "Lore (Artillery)", "Ride (Horse)"],
+            "talents":  ["Combat Aware", "Read/Write", "Tinker", "Unshakable"],
+            "npc_suggested_talents": [],
+            "trappings": ["Symbol of Rank", "Quality Uniform"]
+        },
+        "rank 4" : {
+            "name": "Master Artillerist",
+            "status": "Gold 1",
+            "advances": ["Agi"],
+            "skills" : ["Charm", "Lore (Warfare)"],
+            "talents":  ["Inspiring", "Public Speaker", "Seasoned Traveller", "Stout-hearted"],
+            "npc_suggested_talents": [],
+            "trappings": ["Artillery piece and Limber", "Letter of Commission", "Light Warhorse with Saddle and Tack", "Map", "Symbol of Rank"]
+        }
+    },
+    "Butcher" : {
+        "class": "Academic",
+        "earning skill": "Trade (Butcher)",
+        "rank 1" : {
+            "name": "Slopscooper",
+            "status": "Brass 3",
+            "advances": ["WS", "T", "WP"],
+            "skills" : ["Climb", "Consume Alcohol", "Endurance", "Gossip", "Intimidate", "Language (Magick)", "Melee (Basic)", "Pray", "Trade (Butcher)", "Outdoor Survival"],
+            "talents":  ["Implacable", "Petty Magic", "Sixth Sense", "Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Butchers Apron", "Hand Weapon (Cleaver or Mallet)"]
+        },
+        "rank 2" : {
+            "name": "Butcher",
+            "status": "Silver 1",
+            "advances": ["S"],
+            "skills" : ["Art (Butchery)", "Channelling (Lore of the Great Maw)", "Intimidate", "Ranged (Throwing), Lore (The Great Maw), Secret Signs (The Great Maw)"],
+            "talents":  ["Acute Sense (Taste)", "Arcane Magic (Lore of the Great Maw)", "Aethyric Attunement", "Holy Visions"],
+            "npc_suggested_talents": [],
+            "trappings": ["Carved Animal Bones (Grimoire)", "Trade Tools (Butcher)"]
+        },
+        "rank 3" : {
+            "name": "Mawsage",
+            "status": "Silver 2",
+            "advances": ["Fel"],
+            "skills" : ["Entertain (Speeches)", "Heal", "Intuition", "Perception"],
+            "talents":  ["Frightening", "Second Sight", "Strike Mighty Blow", "War Wizard"],
+            "npc_suggested_talents": [],
+            "trappings": ["Apprentice Butcher", "Bloody sack of 10 Esoteric Ingredients", "Collection of Skulls"]
+        },
+        "rank 4" : {
+            "name": "Slaughtermaster",
+            "status": "Silver 4",
+            "advances": ["I"],
+            "skills" : ["Lore (Magick), Language (any)"],
+            "talents":  ["Detect Artefact", "Impassioned Zeal"],
+            "npc_suggested_talents": [],
+            "trappings": ["Cave or Other Lair", "Loyal Cultists of the Maw", "Bottomless Hunger"]
+        }
+    },
     "Engineer" : {
         "class": "Academic",
         "earning skill": "Trade (Engineer)",
@@ -1201,6 +1281,46 @@
             "talents":  ["Arcane Magic (Celestial)","Magical Sense","Menacing","Strong-minded"],
             "npc_suggested_talents": [],
             "trappings": ["Trade Tools (Astrology)"]
+        }
+    },
+    "Rhinox Herder" : {
+        "class": "Peasant",
+        "earning skill": "Ranged (Entangling)",
+        "rank 1" : {
+            "name": "Rhinox Rustler",
+            "status": "Silver 1",
+            "advances": ["BS", "S", "T"],
+            "skills" : ["Athletics", "Bribery", "Consume Alcohol", "Dodge", "Endurance", "Melee (Basic)", "Perception", "Ranged (Entangling)", "Set Trap", "Stealth (Rural)"],
+            "talents":  ["Flee!", "Marksman", "Rover", "Strider (Mountains)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack", "Hand Weapon", "Leather Jack", "Lasso"]
+        },
+        "rank 2" : {
+            "name": "Rhinox Herder",
+            "status": "Silver 3",
+            "advances": ["Fel"],
+            "skills" : ["Animal Care", "Animal Training (Rhinox)", "Charm Animal", "Lore (Rhinox)", "Endurance", "Ranged (Throwing)"],
+            "talents":  ["Fearless (Large Beasts)", "Stout-hearted", "Sturdy", "Roughrider"],
+            "npc_suggested_talents": [],
+            "trappings": ["Harpoon or Great Throwing Spear", "Rhinox Furs"]
+        },
+        "rank 3" : {
+            "name": "Rhinox Breaker",
+            "status": "Silver 5",
+            "advances": ["WS"],
+            "skills" : ["Cool", "Intimidate", "Outdoor Survival", "Ride (Rhinox)"],
+            "talents":  ["Resolute", "Seasoned Traveller", "Trick Riding"],
+            "npc_suggested_talents": [],
+            "trappings": ["Rhinox", "Rhinox Skull Gutplate", "Saddlebags"]
+        },
+        "rank 4" : {
+            "name": "Rhinox Master",
+            "status": "Gold 1",
+            "advances": ["Agi"],
+            "skills" : ["Intuition", "Leadership"],
+            "talents":  ["Carouser", "Frightening", "Inspiring", "Strike to Injure"],
+            "npc_suggested_talents": [],
+            "trappings": ["Herd of Rhinox or Other Large Beasts", "Farmstead or Grazing Rights on a Large Estate"]
         }
     },
     "Scout" : {
@@ -2645,6 +2765,46 @@
             "talents":  ["Disarm","Inspiring","Iron Will","Strike to Injure"],
             "npc_suggested_talents": [],
             "trappings": ["Plumed Great Helm","Large Unit of Knights or Several Small Units of Knights"]
+        }
+    },
+    "Maneater" : {
+        "class": "Warrior",
+        "earning skill": "Melee (Basic)",
+        "rank 1" : {
+            "name": "Fresh Meat",
+            "status": "Brass 3",
+            "advances": ["WS", "S", "T"],
+            "skills" : ["Athletics", "Consume Alcohol", "Cool", "Dodge", "Endurance", "Gamble", "Intimidate", "Language (Battle)", "Melee (Basic)", "Outdoor Survival"],
+            "talents":  ["Dirty Fighting", "Menacing", "Sturdy", "Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon", "Hunk of Meat", "Wanderlust"]
+        },
+        "rank 2" : {
+            "name": "Maneater",
+            "status": "Silver 1",
+            "advances": ["BS"],
+            "skills" : ["Entertain (Bellow)", "Gossip", "Lore (Local)", "Melee (Twohanded)", "Ranged (Blackpowder)"],
+            "talents":  ["Strike Mighty Blow", "Etiquette (Slims)", "Seasoned Traveller", "Rapid Reload"],
+            "npc_suggested_talents": [],
+            "trappings": ["Local Clothing", "Gutplate", "Two-handed Weapon or Ogre Pistol"]
+        },
+        "rank 3" : {
+            "name": "Maneater Crusher",
+            "status": "Silver 3",
+            "advances": ["WP"],
+            "skills" : ["Melee (Any)", "Intuition", "Leadership"],
+            "talents":  ["Accurate Shot", "Combat Reflexes", "Hardy", "Frightening"],
+            "npc_suggested_talents": [],
+            "trappings": ["Unit of Mercenaries", "Respect"]
+        },
+        "rank 4" : {
+            "name": "Maneater Captain",
+            "status": "Silver 5",
+            "advances": ["Fel"],
+            "skills" : ["Ranged (Any), Language (Any)"],
+            "talents":  ["Combat Master", "Furious Assault", "Warleader", "Reaction Strike"],
+            "npc_suggested_talents": [],
+            "trappings": ["Mercenary Contract", "Battle-Tested Gutplate"]
         }
     },
     "Pit Fighter": {

@@ -8,16 +8,6 @@ from .careers4 import Careers4
 
 from ...data import bot_char_dat
 
-## From Archives of the Empire
-# ['Reiklander','Dwarf','Halfling','High Elf','Wood Elf','Gnome','Nordlander','Middenheimer','Middenlander']
-bot_char_dat.career_table_4e += ['Ghost Strider', 0, 0, 0, 0, 2, 0, 0, 0, 0]
-bot_char_dat.career_table_4e += ['Field Warden',  0, 0, 2, 0, 0, 0, 0, 0, 0]
-bot_char_dat.career_table_4e += ['Karak Ranger',  0, 2, 0, 0, 0, 0, 0, 0, 0]
-bot_char_dat.career_table_4e += ['Badger Rider',  0, 0, 3, 0, 0, 0, 0, 0, 0]
-
-## From The Horned Rat Companion, p.81
-bot_char_dat.career_table_4e += ['Ironbreaker',  0, 3, 0, 0, 0, 0, 0, 0, 0]
-
 class RandomNPC4(BuildNPC4):
     """Create a randomly generated NPC"""
 
@@ -60,7 +50,7 @@ class RandomNPC4(BuildNPC4):
 
     @classmethod
     def known_species(cls):
-        return ['Reiklander','Dwarf','Halfling','High Elf','Wood Elf','Gnome','Nordlander','Middenheimer','Middenlander']
+        return ['Reiklander','Dwarf','Halfling','High Elf','Wood Elf','Gnome','Nordlander','Middenheimer','Middenlander', 'Ogre']
 
     @classmethod
     def known_humans(cls):
@@ -69,7 +59,7 @@ class RandomNPC4(BuildNPC4):
     @classmethod
     def random_species(cls):
         """ Generate a random valid species, with defined probabilities """
-        species = random.choices(['Human','Dwarf','Halfling','High Elf','Wood Elf'], cum_weights=[90,94,98,99,100])[0]
+        species = random.choices(['Human','Halfling','Dwarf','Ogre','High Elf','Wood Elf'], cum_weights=[89,92,97,98,99,100])[0]
         
         if species.lower()=='human':
            species = cls.random_human()
@@ -287,9 +277,9 @@ class RandomNPC4(BuildNPC4):
     def _random_career(self, firstcareer=True, careerslist=None) -> str:
         # Extract the information we need from the bot_char_dat.career_table_4e array
         species_indexer = self.known_species()
-        careers = bot_char_dat.career_table_4e[0::10]
+        careers = bot_char_dat.career_table_4e[0::11]
         try:
-            probs = bot_char_dat.career_table_4e[species_indexer.index(self._species.title())+1::10]
+            probs = bot_char_dat.career_table_4e[species_indexer.index(self._species.title())+1::11]
         except ValueError:
             raise self.NoCareersSpecies(self._species.title())
         except:
@@ -298,7 +288,7 @@ class RandomNPC4(BuildNPC4):
         # Append Cult Magus of Tzeentch to the probabilities as appropriate
         if not firstcareer:
             careers += ['Cult Magus Of Tzeentch', 'Warrior Of Tzeentch']
-            if self._index_species not in ['dwarf','halfling','gnome']:
+            if self._index_species not in ['dwarf','halfling','gnome','ogre']:
                 probs += [1, 1]
             else:
                 probs += [0, 0]

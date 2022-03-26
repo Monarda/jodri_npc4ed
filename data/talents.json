@@ -459,6 +459,19 @@
         ],
         "utility": true
     },
+    "Crew Commander": {
+        "addskill": null,
+        "addtalent": null,
+        "combat": true,
+        "group": false,
+        "max": "IB",
+        "social": false,
+        "stat_mod": null,
+        "tests": [
+            "Ranged"
+        ],
+        "utility": false
+    },
     "Criminal": {
         "addskill": null,
         "addtalent": null,
