@@ -2802,7 +2802,7 @@
             "status": "Silver 5",
             "advances": ["Fel"],
             "skills" : ["Ranged (Any), Language (Any)"],
-            "talents":  ["Combat Master", "Furious Assault", "Warleader", "Reaction Strike"],
+            "talents":  ["Combat Master", "Furious Assault", "War Leader", "Reaction Strike"],
             "npc_suggested_talents": [],
             "trappings": ["Mercenary Contract", "Battle-Tested Gutplate"]
         }
