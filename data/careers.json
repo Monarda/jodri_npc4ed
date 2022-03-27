@@ -119,6 +119,46 @@
             "trappings": ["Cave or Other Lair", "Loyal Cultists of the Maw", "Bottomless Hunger"]
         }
     },
+    "Cartographer" : {
+        "class": "Academic",
+        "earning skill": "Art (Cartography)",
+        "rank 1" : {
+            "name": "Surveyor",
+            "status": "Silver 1",
+            "advances": ["I", "Dex", "Int"],
+            "skills" : ["Art (Cartography)", "Climb", "Evaluate", "Lore (Geography)", "Melee (Basic)", "Navigation", "Outdoor Survival", "Perception", "Ride (Horse)", "Stealth (Rural)"],
+            "talents":  ["Artistic", "Orientation", "Read/Write", "Rover"],
+            "npc_suggested_talents": [],
+            "trappings": ["Vellum", "Writing Kit"]
+        },
+        "rank 2" : {
+            "name": "Cartographer",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Charm", "Endurance", "Gossip", "Haggle", "Lore (Heraldry)", "Trade (Cartographer)"],
+            "talents":  ["Coolheaded", "Flee!", "Seasoned Traveller", "Strider (Any)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Horse with Saddle and Tack", "Theodolite"]
+        },
+        "rank 3" : {
+            "name": "Chartered Cartographer",
+            "status": "Silver 5",
+            "advances": ["WS"],
+            "skills" : ["Intuition", "Language (Guilder)", "Research", "Secret Signs (Guilder)"],
+            "talents":  ["Bookish", "Etiquette (Guilders)", "Nimble Fingered", "Unshakable"],
+            "npc_suggested_talents": [],
+            "trappings": ["Letter of Charter", "Quality Travel Clothes"]
+        },
+        "rank 4" : {
+            "name": "Master Cartographer",
+            "status": "Gold 1",
+            "advances": ["WP"],
+            "skills" : ["Language (Any)", "Lore (Any)"],
+            "talents":  ["Dealmaker", "Stout-hearted", "Master Tradesman (Cartography)", "Magnum Opus"],
+            "npc_suggested_talents": [],
+            "trappings": ["Study", "Quality Theodolite"]
+        }
+    },
     "Engineer" : {
         "class": "Academic",
         "earning skill": "Trade (Engineer)",
@@ -1443,6 +1483,46 @@
             "trappings": ["Draught Horse and Cart","Mail Shirt","4 Pairs of Manacles"]
         }
     },
+    "Camp Follower" : {
+        "class": "Ranger",
+        "earning skill": "Outdoor Survival",
+        "rank 1" : {
+            "name": "Ribaud",
+            "status": "Brass 1",
+            "advances": ["WS","Agi","Fel"],
+            "skills" : ["Charm", "Consume Alcohol", "Dodge", "Entertain (Any)", "Gossip", "Haggle", "Melee (Any)", "Outdoor Survival", "Perception", "Perform (Dance)"],
+            "talents":  ["Attractive", "Beneath Notice", "Blather", "Dirty Fighting"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bed Roll", "Dagger", "Pack"]
+        },
+        "rank 2" : {
+            "name": "Camp Follower",
+            "status": "Brass 4",
+            "advances": ["Int"],
+            "skills" : ["Athletics", "Bribery", "Endurance", "Gamble", "Ranged (Any)", "Stealth (Rural)"],
+            "talents":  ["Diceman", "Etiquette (Soldiers)", "Rover", "Stone Soup"],
+            "npc_suggested_talents": [],
+            "trappings": ["Tent", "Quality Hat"]
+        },
+        "rank 3" : {
+            "name": "Seasoned Scavenger",
+            "status": "Silver 1",
+            "advances": ["I"],
+            "skills" : ["Cool", "Intimidate", "Intuition", "Language (Any)"],
+            "talents":  ["Seasoned Traveller", "Sturdy", "Unshakable", "Very Resilient"],
+            "npc_suggested_talents": [],
+            "trappings": ["Quality Clothing"]
+        },
+        "rank 4" : {
+            "name": "Camp Chief",
+            "status": "Silver 4",
+            "advances": ["T"],
+            "skills" : ["Evaluate", "Leadership"],
+            "talents":  ["Inspiring", "Public Speaker", "Stout-hearted", "Strong-minded"],
+            "npc_suggested_talents": [],
+            "trappings": ["Riding Horse with Saddle and Tack", "Ring of Camp Followers"]
+        }
+    },
     "Coachman" : {
         "class": "Ranger",
         "earning skill": "Drive",
@@ -2567,6 +2647,46 @@
             "spell-lists": ["Arcane Lore", "Chaos Arcane Lore", "Chaos Lore of Tzeentch", "Lore of Daemonology"]
         }
     },
+    "Archer" : {
+        "class": "Warrior",
+        "earning skill": "Ranged (Bow)",
+        "rank 1" : {
+            "name": "Bowman",
+            "status": "Silver 1",
+            "advances": ["BS", "I", "Agi"],
+            "skills" : ["Athletics", "Climb", "Consume Alcohol", "Dodge", "Endurance", "Language (Battle)", "Perception", "Play (Horn)", "Ranged (Bow)", "Stealth (Rural)"],
+            "talents":  ["Accurate Shot", "Fast Shot", "Strong Back", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Quiver and 10 Arrows", "Bow", "Dagger", "Pack", "Uniform"]
+        },
+        "rank 2" : {
+            "name": "Archer",
+            "status": "Silver 3",
+            "advances": ["S"],
+            "skills" : ["Gamble", "Gossip", "Melee (Basic)", "Outdoor Survival", "Track", "Trade (Fletcher)"],
+            "talents":  ["Drilled", "Etiquette (Soldiers)", "Marksman", "Sure Shot"],
+            "npc_suggested_talents": [],
+            "trappings": ["Headgear", "Sword", "Quality Bow"]
+        },
+        "rank 3" : {
+            "name": "Archer Sergeant",
+            "status": "Silver 5",
+            "advances": ["T"],
+            "skills" : ["Cool", "Leadership", "Navigation", "Ride (Horse)"],
+            "talents":  ["Combat Aware", "Sharpshooter", "Sniper", "Unshakable"],
+            "npc_suggested_talents": [],
+            "trappings": ["Symbol of Rank", "Quality Uniform"]
+        },
+        "rank 4" : {
+            "name": "Archer Captain",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Lore (Warfare)", "Secret Signs (Scout)"],
+            "talents":  ["Inspiring", "Seasoned Traveller", "Stout-hearted", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Letter of Commission", "Light Warhorse with Saddle and Tack", "Symbol of Rank"]
+        }
+    },
     "Badger Rider" : {
         "class": "Warrior",
         "earning skill": "Ride (Badger)",
@@ -2647,6 +2767,86 @@
             "trappings": ["Deck of Cards","Quality Clothing"]
         }
     },
+    "Freelance" : {
+        "class": "Warrior",
+        "earning skill": "Melee (Cavalry)",
+        "rank 1" : {
+            "name": "Squire",
+            "status": "Silver 1",
+            "advances": ["S","T","Agi"],
+            "skills" : ["Athletics", "Animal Care", "Charm Animal", "Consume Alcohol", "Heal", "Gossip", "Melee (Cavalry)", "Outdoor Survival", "Ride (Horse)", "Trade (Farrier)"],
+            "talents":  ["Roughrider", "Sturdy", "Warrior Born", "Combat Aware"],
+            "npc_suggested_talents": [],
+            "trappings": ["Leather Jack", "Mail Shirt", "Riding Horse with Saddle and Tack", "Shield", "Trade Tools (Farrier)"]
+        },
+        "rank 2" : {
+            "name": "Freelance Knight",
+            "status": "Silver 2",
+            "advances": ["WS"],
+            "skills" : ["Charm", "Cool", "Dodge", "Endurance", "Intimidate", "Intuition", "Melee (Any)"],
+            "talents":  ["Etiquette (Any)", "Seasoned Traveller", "Strike Mighty Blow", "Stone Soup"],
+            "npc_suggested_talents": [],
+            "trappings": ["Destrier with Saddle and Tack", "Melee Weapon (Any)", "Plate Armour and Helm", "Personal Heraldry"]
+        },
+        "rank 3" : {
+            "name": "Freelance Captain",
+            "status": "Gold 1",
+            "advances": ["WP"],
+            "skills" : ["Haggle", "Gamble", "Leadership", "Lore (Warfare)"],
+            "talents":  ["Combat Master", "Stout-hearted", "Unshakable", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Barding", "Small Retinue of Followers"]
+        },
+        "rank 4" : {
+            "name": "Knight Commander",
+            "status": "Gold 3",
+            "advances": ["Fel"],
+            "skills" : ["Language (Battle)", "Lore (Any)"],
+            "talents":  ["Luck", "Disarm", "Iron Will", "Inspiring"],
+            "npc_suggested_talents": [],
+            "trappings": ["Company of knights", "Squire"]
+        }
+    },
+    "Greatsword" : {
+        "class": "Warrior",
+        "earning skill": "Melee (Two-handed)",
+        "rank 1" : {
+            "name": "Greatsword Cadet",
+            "status": "Silver 1",
+            "advances": ["WS", "S", "WP"],
+            "skills" : ["Athletics", "Consume Alcohol", "Cool", "Dodge", "Endurance", "Gossip", "Language (Battle)", "Melee (Basic)", "Melee (Two-handed)", "Play (Drum)"],
+            "talents":  ["Coolheaded", "Drilled", "Strong Back", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Dagger", "Metal Breastplate", "Uniform", "Zweihänder"]
+        },
+        "rank 2" : {
+            "name": "Greatsword",
+            "status": "Silver 3",
+            "advances": ["I"],
+            "skills" : ["Gamble", "Intimidate", "Lore (Heraldry)", "Melee (Any)", "Outdoor Survival", "Perception"],
+            "talents":  ["Combat Reflexes", "Etiquette (Soldiers)", "Fearless (Any)", "Strike Mighty Blow"],
+            "npc_suggested_talents": [],
+            "trappings": ["Full Plate Armour", "Large Feathered Hat"]
+        },
+        "rank 3" : {
+            "name": "Greatsword Sergeant",
+            "status": "Silver 5",
+            "advances": ["T"],
+            "skills" : ["Intuition", "Leadership", "Navigation", "Ride (Horse)"],
+            "talents":  ["Combat Aware", "Enclosed Fighter", "Unshakable", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Manual on the art of Zweihänder fighting", "Quality Zweihänder", "Symbol of Rank"]
+        },
+        "rank 4" : {
+            "name": "Greatsword Captain",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Charm", "Lore (Warfare)"],
+            "talents":  ["Commanding Presence", "Inspiring", "Public Speaker", "Stout-hearted"],
+            "npc_suggested_talents": [],
+            "trappings": ["Letter of Commission", "Light Warhorse with Saddle and Tack", "Quality Uniform", "Symbol of Rank"]
+        }
+    },
     "Guard": {
         "class": "Warrior",
         "earning skill": "Perception",
@@ -2685,6 +2885,86 @@
             "talents":  ["Combat Master","Furious Assault","Iron Will","Robust"],
             "npc_suggested_talents": [],
             "trappings": ["Breastplate"]
+        }
+    },
+    "Halberdier" : {
+        "class": "Warrior",
+        "earning skill": "Melee (Polearm)",
+        "rank 1" : {
+            "name": "Halberdier Recruit",
+            "status": "Silver 1",
+            "advances": ["WS", "T", "Agi"],
+            "skills" : ["Athletics", "Consume Alcohol", "Cool", "Dodge", "Endurance", "Language (Battle)", "Melee (Basic)", "Melee (Polearm)", "Perform (Parade)", "Play (Drum)"],
+            "talents":  ["Diceman", "Drilled", "Strong Back", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Dagger", "Halberd", "Leather Breastplate", "Uniform"]
+        },
+        "rank 2" : {
+            "name": "Halberdier",
+            "status": "Silver 3",
+            "advances": ["S"],
+            "skills" : ["Climb", "Gamble", "Gossip", "Intimidate", "Outdoor Survival", "Perception"],
+            "talents":  ["Enclosed Fighter", "Etiquette (Soldiers)", "Fearless (any)", "Strike Mighty Blow"],
+            "npc_suggested_talents": [],
+            "trappings": ["Metal Breastplate", "Helmet", "Quality Halberd"]
+        },
+        "rank 3" : {
+            "name": "Halberdier Sergeant",
+            "status": "Silver 5",
+            "advances": ["I"],
+            "skills" : ["Intuition", "Leadership", "Navigation", "Ride (Horse)"],
+            "talents":  ["Combat Aware", "Unshakable", "Stout-hearted", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Symbol of Rank", "Quality Uniform"]
+        },
+        "rank 4" : {
+            "name": "Halberdier Captain",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Charm", "Lore (Warfare)"],
+            "talents":  ["Inspiring", "Public Speaker", "Seasoned Traveller", "Commanding Presence"],
+            "npc_suggested_talents": [],
+            "trappings": ["Letter of Commission", "Light Warhorse with Saddle and Tack", "Quality Sword", "Symbol of Rank"]
+        }
+    },
+    "Handgunner" : {
+        "class": "Warrior",
+        "earning skill": "Ranged (Blackpowder)",
+        "rank 1" : {
+            "name": "Handgunner Recruit",
+            "status": "Silver 1",
+            "advances": ["BS","Agi","Dex"],
+            "skills" : ["Athletics", "Consume Alcohol", "Cool", "Dodge", "Endurance", "Language (Battle)", "Melee (Basic)", "Perception", "Play (Flute)", "Ranged (Blackpowder)"],
+            "talents":  ["Accurate Shot", "Gunner", "Marksman", "Sniper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Dagger", "Handgun", "Uniform"]
+        },
+        "rank 2" : {
+            "name": "Handgunner",
+            "status": "Silver 3",
+            "advances": ["I"],
+            "skills" : ["Climb", "Gamble", "Gossip", "Intuition", "Outdoor Survival", "Trade (Gunsmith)"],
+            "talents":  ["Drilled", "Etiquette (Soldiers)", "Fast Shot", "Rapid Reload"],
+            "npc_suggested_talents": [],
+            "trappings": ["Large Feathered Hat", "Quality Handgun"]
+        },
+        "rank 3" : {
+            "name": "Handgunner Sergeant",
+            "status": "Silver 5",
+            "advances": ["Int"],
+            "skills" : ["Leadership", "Navigation", "Ranged (Engineer)", "Ride (Horse)"],
+            "talents":  ["Combat Aware", "Sharpshooter", "Sure Shot", "Unshakable"],
+            "npc_suggested_talents": [],
+            "trappings": ["Symbol of Rank", "Quality Uniform"]
+        },
+        "rank 4" : {
+            "name": "Handgunner Captain",
+            "status": "Gold 1",
+            "advances": ["WP"],
+            "skills" : ["Charm", "Lore (Warfare)"],
+            "talents":  ["Inspiring", "Seasoned Traveller", "Stout-hearted", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Letter of Commission", "Light Warhorse with Saddle and Tack", "Symbol of Rank"]
         }
     },
     "Ironbreaker" : {
@@ -2767,6 +3047,86 @@
             "trappings": ["Plumed Great Helm","Large Unit of Knights or Several Small Units of Knights"]
         }
     },
+    "Knight Of The White Wolf" : {
+        "class": "Warrior",
+        "earning skill": "Melee (Cavalry)",
+        "rank 1" : {
+            "name": "Novice",
+            "status": "Silver 3",
+            "advances": ["WS","S","I"],
+            "skills" : ["Athletics", "Animal Care", "Charm Animal", "Heal", "Lore (Heraldry)", "Melee (Basic)", "Melee (Cavalry)", "Outdoor Survival", "Ride (Horse)", "Trade (Farrier)"],
+            "talents":  ["Roughrider", "Sturdy", "Warrior Born", "Hardy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Leather Jack", "Mail Shirt", "Riding Horse with Saddle and Tack", "Cavalry Hammer", "Trade Tools (Farrier)", "Religious Symbol (Ulric)"]
+        },
+        "rank 2" : {
+            "name": "Knight",
+            "status": "Silver 5",
+            "advances": ["Agi"],
+            "skills" : ["Cool", "Dodge", "Endurance", "Intimidate", "Language (Battle)", "Melee (Any)"],
+            "talents":  ["Menacing", "Seasoned Traveller", "Strike Mighty Blow", "Strike to Injure"],
+            "npc_suggested_talents": [],
+            "trappings": ["Destrier with Saddle and Tack", "Plate Armour", "Wolfskin Cloak"]
+        },
+        "rank 3" : {
+            "name": "Templar Sergeant",
+            "status": "Gold 2",
+            "advances": ["WP"],
+            "skills" : ["Consume Alcohol", "Leadership", "Lore (Warfare)", "Perception"],
+            "talents":  ["Furious Assault", "Unshakable", "Fearless (Any)", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Barding", "Small Unit of White Wolf knights"]
+        },
+        "rank 4" : {
+            "name": "Company Commander (Inner Circle)",
+            "status": "Gold 3",
+            "advances": ["T"],
+            "skills" : ["Lore (Any)", "Secret Signs (Ulric)"],
+            "talents":  ["Iron Will", "Inspiring", "Coolheaded", "Implacable"],
+            "npc_suggested_talents": [],
+            "trappings": ["Novice", "Company of White Wolf knights"]
+        }
+    },
+    "Knight Panther" : {
+        "class": "Warrior",
+        "earning skill": "Melee (Cavalry)",
+        "rank 1" : {
+            "name": "Squire",
+            "status": "Silver 3",
+            "advances": ["WS","BS","I"],
+            "skills" : ["Athletics", "Animal Care", "Charm Animal", "Heal", "Lore (Empire)", "Lore (Heraldry)", "Melee (Basic)", "Melee (Cavalry)", "Ride (Horse)", "Trade (Farrier)"],
+            "talents":  ["Etiquette (any)", "Roughrider", "Sturdy", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Leather Jack", "Mail Shirt", "Riding Horse with Saddle and Tack", "Shield", "Trade Tools (Farrier)"]
+        },
+        "rank 2" : {
+            "name": "Knight",
+            "status": "Silver 5",
+            "advances": ["Agi"],
+            "skills" : ["Cool", "Dodge", "Endurance", "Intimidate", "Language (Battle)", "Melee (Any)"],
+            "talents":  ["Menacing", "Shieldsman", "Strike Mighty Blow", "Coolheaded"],
+            "npc_suggested_talents": [],
+            "trappings": ["Great Cat Pelt", "Destrier with Saddle and Tack", "Melee Weapon (Sword)", "Lance", "Plate Armour and Great Helm with Bestial Crest", "Ring or Medallion with Panther emblem"]
+        },
+        "rank 3" : {
+            "name": "First Knight",
+            "status": "Gold 2",
+            "advances": ["WP"],
+            "skills" : ["Charm", "Language (Any)", "Leadership", "Lore (Warfare)"],
+            "talents":  ["Fearless (Chaos)", "Stout-hearted", "Unshakable", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Barding", "Small Unit of Knights Panther"]
+        },
+        "rank 4" : {
+            "name": "Company Commander (Inner Circle)",
+            "status": "Gold 4",
+            "advances": ["Fel"],
+            "skills" : ["Secret Signs (Knights Panther)", "Lore (Any)"],
+            "talents":  ["Disarm", "Inspiring", "Iron Will", "Strike to Injure"],
+            "npc_suggested_talents": [],
+            "trappings": ["Squire", "Large Unit of Knights Panther or Several Small Units of Knights"]
+        }
+    },
     "Maneater" : {
         "class": "Warrior",
         "earning skill": "Melee (Basic)",
@@ -2845,6 +3205,46 @@
             "talents":  ["Frightening","Furious Assault","Implacable","Reaction Strike"],
             "npc_suggested_talents": ["Frightening"],
             "trappings": ["Quality Helmet"]
+        }
+    },
+    "Priest Of Myrmidia" : {
+        "class": "Warrior",
+        "earning skill": "Silver 2",
+        "rank 1" : {
+            "name": "First Eagle",
+            "status": "Silver 1",
+            "advances": ["WS","Int","Fel"],
+            "skills" : ["Cool", "Dodge", "Language (Battle)", "Leadership", "Lore (Warfare)", "Lore (Theology)", "Melee (Basic)", "Melee (Polearm)", "Perception", "Pray"],
+            "talents":  ["Bless (Myrmidia)", "Combat Aware", "Etiquette (Cultists)", "Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Myrmidian Holy Book", "Leather Jerkin", "Myrmidian Icon", "White Robes", "Spear"]
+        },
+        "rank 2" : {
+            "name": "Warrior Priest",
+            "status": "Silver 3",
+            "advances": ["I"],
+            "skills" : ["Charm", "Entertain (Speeches)", "Heal", "Intuition", "Melee (Any)", "Ranged (Any)"],
+            "talents":  ["Drilled", "Inspiring", "Invoke (Myrmidia)", "Shieldsman"],
+            "npc_suggested_talents": [],
+            "trappings": ["Breastplate & Helmet", "Shield"]
+        },
+        "rank 3" : {
+            "name": "Priest Sergeant",
+            "status": "Silver 4",
+            "advances": ["Agi"],
+            "skills" : ["Lore (Any)", "Melee (Any)", "Research", "Trade (Weaponsmith or Armourer)"],
+            "talents":  ["Bookish", "Holy Visions", "Pure Soul", "Stout-hearted"],
+            "npc_suggested_talents": [],
+            "trappings": ["Full Plate Armour"]
+        },
+        "rank 4" : {
+            "name": "Priest Captain",
+            "status": "Silver 5",
+            "advances": ["S"],
+            "skills" : ["Animal Care", "Ride (Horse)"],
+            "talents":  ["Combat Master", "Combat Reflexes", "Fearless (Any)", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Religious Relic (Myrmidian)"]
         }
     },
     "Protagonist" : {
