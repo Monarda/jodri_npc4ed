@@ -1,6 +1,8 @@
 {
     "Apothecary" : {
         "class": "Academic",
+        "source": "Corebook, p.53",
+        "races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Trade (Apothecary)",
         "rank 1" : {
             "name": "Apothecary's Apprentice",
@@ -41,6 +43,8 @@
     },
     "Artillerist" : {
         "class": "Academic",
+		"source": "Up in Arms, p.18-19",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Ranged (Blackpowder, Catapult, Crossbow or Engineering)",
         "rank 1" : {
             "name": "Apprentice Artillerist",
@@ -81,6 +85,8 @@
     },
     "Butcher" : {
         "class": "Academic",
+		"source": "Archives of the Empire Vol 2, p.37",
+		"races": "Ogre",
         "earning skill": "Trade (Butcher)",
         "rank 1" : {
             "name": "Slopscooper",
@@ -121,6 +127,8 @@
     },
     "Cartographer" : {
         "class": "Academic",
+		"source": "Up in Arms, p.22-23",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Art (Cartography)",
         "rank 1" : {
             "name": "Surveyor",
@@ -161,6 +169,8 @@
     },
     "Engineer" : {
         "class": "Academic",
+		"source": "Corebook, p.54",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Trade (Engineer)",
         "rank 1" : {
             "name": "Student Engineer",
@@ -201,6 +211,8 @@
     },
     "Lawyer" : {
         "class": "Academic",
+		"source": "Corebook, p.55",
+		"races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Lore (Law)",
         "rank 1" : {
             "name": "Student Lawyer",
@@ -241,6 +253,8 @@
     },
     "Nun" : {
         "class": "Academic",
+		"source": "Corebook, p.56",
+		"races": "Human",
         "earning skill": "Lore (Theology)",
         "rank 1" : {
             "name": "Novitiate",
@@ -281,6 +295,8 @@
     },
     "Physician" : {
         "class": "Academic",
+		"source": "Corebook, p.57",
+		"races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Heal",
         "rank 1" : {
             "name": "Physician's Apprentice",
@@ -321,6 +337,8 @@
     },
     "Priest" : {
         "class": "Academic",
+		"source": "Corebook, p.58",
+		"races": "Human",
         "earning skill": "Pray",
         "rank 1" : {
             "name": "Initiate",
@@ -361,6 +379,8 @@
     },
     "Scholar" : {
         "class": "Academic",
+		"source": "Corebook, p.59",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Lore (Any)",
         "rank 1" : {
             "name": "Student",
@@ -401,6 +421,8 @@
     },
     "Wizard" : {
         "class": "Academic",
+		"source": "Corebook, p.60",
+		"races": "High Elf, Human, Wood Elf",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Wizard's Apprentice",
@@ -445,6 +467,8 @@
     },
     "Agitator" : {
         "class": "Burgher",
+		"source": "Corebook, p.61",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Charm",
         "rank 1" : {
             "name": "Pamphleteer",
@@ -485,6 +509,8 @@
     },
     "Artisan" : {
         "class": "Burgher",
+		"source": "Corebook, p.62",
+		"races": ["Dwarf", "Halfling", "High Elf", "Human", "Ogre", "Wood Elf"],
         "earning skill": "Trade (Any)",
         "rank 1" : {
             "name": "Apprentice Artisan",
@@ -525,6 +551,8 @@
     },
     "Beggar" : {
         "class": "Burgher",
+		"source": "Corebook, p.63",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Charm",
         "rank 1" : {
             "name": "Pauper",
@@ -565,6 +593,8 @@
     },
     "Investigator" : {
         "class": "Burgher",
+		"source": "Corebook, p.64",
+		"races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Perception",
         "rank 1" : {
             "name": "Sleuth",
@@ -605,6 +635,8 @@
     },
     "Merchant" : {
         "class": "Burgher",
+		"source": "Corebook, p.65",
+		"races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Haggle",
         "rank 1" : {
             "name": "Trader",
@@ -645,6 +677,8 @@
     },
     "Rat Catcher" : {
         "class": "Burgher",
+		"source": "Corebook, p.66",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Melee (Basic)",
         "rank 1" : {
             "name": "Rat Hunter",
@@ -685,6 +719,8 @@
     },
     "Townsman" : {
         "class": "Burgher",
+		"source": "Corebook, p.67",
+		"races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Haggle",
         "rank 1" : {
             "name": "Clerk",
@@ -725,6 +761,8 @@
     },
     "Watchman" : {
         "class": "Burgher",
+		"source": "Corebook, p.68",
+		"races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Perception",
         "rank 1" : {
             "name": "Watch Recruit",
@@ -765,6 +803,8 @@
     },
     "Advisor" : {
         "class": "Courtier",
+		"source": "Corebook, p.69",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Lore (Politics)",
         "rank 1" : {
             "name": "Aide",
@@ -805,6 +845,8 @@
     },
     "Artist" : {
         "class": "Courtier",
+		"source": "Corebook, p.70",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Art (Any)",
         "rank 1" : {
             "name": "Apprentice Artist",
@@ -845,6 +887,8 @@
     },
     "Duellist" : {
         "class": "Courtier",
+		"source": "Corebook, p.71",
+		"races": "Dwarf, High Elf, Human",
         "earning skill": "Melee (Any)",
         "rank 1" : {
             "name": "Fencer",
@@ -885,6 +929,8 @@
     },
     "Envoy" : {
         "class": "Courtier",
+		"source": "Corebook, p.72",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Charm",
         "rank 1" : {
             "name": "Herald",
@@ -925,6 +971,8 @@
     },
     "Noble" : {
         "class": "Courtier",
+		"source": "Corebook, p.73",
+		"races": "Dwarf, High Elf, Human, Wood Elf",
         "earning skill": "Leadership",
         "rank 1" : {
             "name": "Scion",
@@ -965,6 +1013,8 @@
     },
     "Servant" : {
         "class": "Courtier",
+		"source": "Corebook, p.74",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Endurance",
         "rank 1" : {
             "name": "Menial",
@@ -1005,6 +1055,8 @@
     },
     "Spy" : {
         "class": "Courtier",
+		"source": "Corebook, p.75",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Gossip",
         "rank 1" : {
             "name": "Informer",
@@ -1045,6 +1097,8 @@
     },
     "Warden" : {
         "class": "Courtier",
+		"source": "Corebook, p.76",
+		"races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Perception",
         "rank 1" : {
             "name": "Custodian",
@@ -1085,6 +1139,8 @@
     },
     "Bailiff" : {
         "class": "Peasant",
+		"source": "Corebook, p.77",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Intimidate",
         "rank 1" : {
             "name": "Tax Collector",
@@ -1125,6 +1181,8 @@
     },
     "Hedge Witch" : {
         "class": "Peasant",
+		"source": "Corebook, p.78",
+		"races": "Human",
         "earning skill": "Intuition",
         "rank 1" : {
             "name": "Hedge Apprentice",
@@ -1165,6 +1223,8 @@
     },
     "Herbalist" : {
         "class": "Peasant",
+		"source": "Corebook, p.79",
+		"races": "Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Trade (Herbalist)",
         "rank 1" : {
             "name": "Herb Gatherer",
@@ -1205,6 +1265,8 @@
     },
     "Hunter" : {
         "class": "Peasant",
+		"source": "Corebook, p.80",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Outdoor Survival",
         "rank 1" : {
             "name": "Trapper",
@@ -1245,6 +1307,8 @@
     },
     "Miner" : {
         "class": "Peasant",
+		"source": "Corebook, p.81",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Melee (Two-Handed)",
         "rank 1" : {
             "name": "Prospector",
@@ -1285,6 +1349,8 @@
     },
     "Mystic" : {
         "class": "Peasant",
+		"source": "Corebook, p.82",
+		"races": "Human, Wood Elf",
         "earning skill": "Intuition",
         "rank 1" : {
             "name": "Fortune Teller",
@@ -1325,6 +1391,8 @@
     },
     "Rhinox Herder" : {
         "class": "Peasant",
+		"source": "Archives of the Empire Vol 2, p.36",
+		"races": "Ogre",
         "earning skill": "Ranged (Entangling)",
         "rank 1" : {
             "name": "Rhinox Rustler",
@@ -1365,6 +1433,8 @@
     },
     "Scout" : {
         "class": "Peasant",
+		"source": "Corebook, p.83",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Perception",
         "rank 1" : {
             "name": "Guide",
@@ -1405,6 +1475,8 @@
     },
     "Villager" : {
         "class": "Peasant",
+		"source": "Corebook, p.84",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Endurance",
         "rank 1" : {
             "name": "Peasant",
@@ -1445,6 +1517,8 @@
     },
     "Bounty Hunter" : {
         "class": "Ranger",
+		"source": "Corebook, p.85",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Melee (Basic)",
         "rank 1" : {
             "name": "Thief-taker",
@@ -1485,6 +1559,8 @@
     },
     "Camp Follower" : {
         "class": "Ranger",
+		"source": "Up in Arms, p.20-21",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Outdoor Survival",
         "rank 1" : {
             "name": "Ribaud",
@@ -1525,6 +1601,8 @@
     },
     "Coachman" : {
         "class": "Ranger",
+		"source": "Corebook, p.86",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Drive",
         "rank 1" : {
             "name": "Postilion",
@@ -1565,6 +1643,8 @@
     },
     "Entertainer" : {
         "class": "Ranger",
+		"source": "Corebook, p.87",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Entertain (Any)",
         "rank 1" : {
             "name": "Busker",
@@ -1605,6 +1685,8 @@
     },
     "Field Warden" : {
         "class": "Ranger",
+		"source": "Archives of the Empire Vol 1, p.89",
+		"races": "Halfling",
         "earning skill": "Ranged (Sling)",
         "rank 1" : {
             "name": "Novice Warden",
@@ -1645,6 +1727,8 @@
     },
     "Flagellant" : {
         "class": "Ranger",
+		"source": "Corebook, p.88",
+		"races": "Human",
         "earning skill": "Melee (Flail)",
         "rank 1" : {
             "name": "Zealot",
@@ -1685,6 +1769,8 @@
     },
     "Ghost Strider" : {
         "class": "Ranger",
+		"source": "Archives of the Empire Vol 1, p.88",
+		"races": "Wood Elf",
         "earning skill": "Ranged (Bow)",
         "rank 1" : {
             "name": "Forest Ranger",
@@ -1725,6 +1811,8 @@
     },
     "Karak Ranger" : {
         "class": "Ranger",
+		"source": "Archives of the Empire Vol 1, p.90",
+		"races": "Dwarf",
         "earning skill": "Trade (Cartographer)",
         "rank 1" : {
             "name": "Hold Runner",
@@ -1765,6 +1853,8 @@
     },
     "Messenger" : {
         "class": "Ranger",
+		"source": "Corebook, p.89",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Endurance",
         "rank 1" : {
             "name": "Runner",
@@ -1805,6 +1895,8 @@
     },
     "Pedlar" : {
         "class": "Ranger",
+		"source": "Corebook, p.90",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Haggle",
         "rank 1" : {
             "name": "Vagabond",
@@ -1845,6 +1937,8 @@
     },
     "Road Warden" : {
         "class": "Ranger",
+		"source": "Corebook, p.91",
+		"races": "Halfling, Human",
         "earning skill": "Perception",
         "rank 1" : {
             "name": "Toll Keeper",
@@ -1885,6 +1979,8 @@
     },
     "Witch Hunter" : {
         "class": "Ranger",
+		"source": "Corebook, p.92",
+		"races": "Human",
         "earning skill": "Intimidate",
         "rank 1" : {
             "name": "Interrogator",
@@ -1925,6 +2021,8 @@
     },
     "Wolf Kin" : {
         "class": "Ranger",
+		"source": "Middenheim: City of the White Wolf, p.154",
+		"races": "Human",
         "earning skill": "Outdoor Survival",
         "rank 1" : {
             "name": "Survivor",
@@ -1965,6 +2063,8 @@
     },
     "Boatman" : {
         "class": "Riverfolk",
+		"source": "Corebook, p.93",
+		"races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Sail (Any)",
         "rank 1" : {
             "name": "Boat-hand",
@@ -2005,6 +2105,8 @@
     },
     "Huffer" : {
         "class": "Riverfolk",
+		"source": "Corebook, p.94",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Lore (Riverways)",
         "rank 1" : {
             "name": "Riverguide",
@@ -2045,6 +2147,8 @@
     },
     "Riverwarden" : {
         "class": "Riverfolk",
+		"source": "Corebook, p.95",
+		"races": "Halfling, Human",
         "earning skill": "Melee (Basic)",
         "rank 1" : {
             "name": "River Recruit",
@@ -2085,6 +2189,8 @@
     },
     "Riverwoman" : {
         "class": "Riverfolk",
+		"source": "Corebook, p.96",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Endurance",
         "rank 1" : {
             "name": "Greenfish",
@@ -2125,6 +2231,8 @@
     },
     "Seaman" : {
         "class": "Riverfolk",
+		"source": "Corebook, p.97",
+		"races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Sail (Any)",
         "rank 1" : {
             "name": "Landsman",
@@ -2165,6 +2273,8 @@
     },
     "Smuggler" : {
         "class": "Riverfolk",
+		"source": "Corebook, p.98",
+		"races": "Dwarf, Halfling, High Elf, Human",
         "earning skill": "Stealth (Rural or Urban)",
         "rank 1" : {
             "name": "River Runner",
@@ -2205,6 +2315,8 @@
     },
     "Stevedore" : {
         "class": "Riverfolk",
+		"source": "Corebook, p.99",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Endurance",
         "rank 1" : {
             "name": "Dockhand",
@@ -2245,6 +2357,8 @@
     },
     "Wrecker" : {
         "class": "Riverfolk",
+		"source": "Corebook, p.100",
+		"races": "Dwarf, Human, Wood Elf",
         "earning skill": "Melee (Basic)",
         "rank 1" : {
             "name": "Cargo Scavenger",
@@ -2285,6 +2399,8 @@
     },
     "Bawd" : {
         "class": "Rogue",
+		"source": "Corebook, p.101",
+		"races": "Halfling, High Elf, Human",
         "earning skill": "Charm",
         "rank 1" : {
             "name": "Hustler",
@@ -2325,6 +2441,8 @@
     },
     "Charlatan" : {
         "class": "Rogue",
+		"source": "Corebook, p.102",
+		"races": "Halfling, High Elf, Human",
         "earning skill": "Charm",
         "rank 1" : {
             "name": "Swindler",
@@ -2365,6 +2483,8 @@
     },
     "Fence" : {
         "class": "Rogue",
+		"source": "Corebook, p.103",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Evaluate",
         "rank 1" : {
             "name": "Broker",
@@ -2405,6 +2525,8 @@
     },
     "Grave Robber" : {
         "class": "Rogue",
+		"source": "Corebook, p.104",
+		"races": "Halfling, Human",
         "earning skill": "Stealth (Any)",
         "rank 1" : {
             "name": "Body Snatcher",
@@ -2445,6 +2567,8 @@
     },
     "Outlaw" : {
         "class": "Rogue",
+		"source": "Corebook, p.105",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Intimidate",
         "rank 1" : {
             "name": "Brigand",
@@ -2485,6 +2609,8 @@
     },
     "Racketeer" : {
         "class": "Rogue",
+		"source": "Corebook, p.106",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Intimidate",
         "rank 1" : {
             "name": "Thug",
@@ -2525,6 +2651,8 @@
     },
     "Thief" : {
         "class": "Rogue",
+		"source": "Corebook, p.107",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Stealth (Urban)",
         "rank 1" : {
             "name": "Prowler",
@@ -2565,6 +2693,8 @@
     },
     "Witch" : {
         "class": "Rogue",
+		"source": "Corebook, p.108",
+		"races": "Human",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Hexer",
@@ -2605,6 +2735,8 @@
     },
     "Cult Magus Of Tzeentch" : {
         "class": "Rogue",
+		"source": "",
+		"races": "",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Cult Acolyte",
@@ -2649,6 +2781,8 @@
     },
     "Archer" : {
         "class": "Warrior",
+		"source": "Up in Arms, p.10-11",
+		"races": "Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Ranged (Bow)",
         "rank 1" : {
             "name": "Bowman",
@@ -2689,6 +2823,8 @@
     },
     "Badger Rider" : {
         "class": "Warrior",
+		"source": "Archives of the Empire Vol 1, p.91",
+		"races": "Halfling",
         "earning skill": "Ride (Badger)",
         "rank 1" : {
             "name": "Badger Botherer",
@@ -2729,6 +2865,8 @@
     },
     "Cavalryman": {
         "class": "Warrior",
+		"source": "Corebook, p.109",
+		"races": "High Elf, Human, Wood Elf",
         "earning skill": "Ride (Horse)",
         "rank 1": {
             "name": "Horseman",
@@ -2769,6 +2907,8 @@
     },
     "Freelance" : {
         "class": "Warrior",
+		"source": "Up in Arms, p.31",
+		"races": "Human",
         "earning skill": "Melee (Cavalry)",
         "rank 1" : {
             "name": "Squire",
@@ -2809,6 +2949,8 @@
     },
     "Greatsword" : {
         "class": "Warrior",
+		"source": "Up in Arms, p.12-13",
+		"races": "Human",
         "earning skill": "Melee (Two-handed)",
         "rank 1" : {
             "name": "Greatsword Cadet",
@@ -2849,6 +2991,8 @@
     },
     "Guard": {
         "class": "Warrior",
+		"source": "Corebook, p.110",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Perception",
         "rank 1": {
             "name": "Sentry",
@@ -2889,6 +3033,8 @@
     },
     "Halberdier" : {
         "class": "Warrior",
+		"source": "Up in Arms, p.14-15",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Melee (Polearm)",
         "rank 1" : {
             "name": "Halberdier Recruit",
@@ -2929,6 +3075,8 @@
     },
     "Handgunner" : {
         "class": "Warrior",
+		"source": "Up in Arms, p.16-17",
+		"races": "Dwarf, Halfling, Human",
         "earning skill": "Ranged (Blackpowder)",
         "rank 1" : {
             "name": "Handgunner Recruit",
@@ -2969,6 +3117,8 @@
     },
     "Ironbreaker" : {
         "class": "Warrior",
+		"source": "The Horned Rat Companion, p.81",
+		"races": "Dwarf",
         "earning skill": "Melee (Basic)",
         "rank 1" : {
             "name": "Tunnel Fighter",
@@ -3009,6 +3159,8 @@
     },
     "Knight": {
         "class": "Warrior",
+		"source": "Corebook, p.111",
+		"races": "High Elf, Human, Wood Elf",
         "earning skill": "Melee (Cavalry)",
         "rank 1": {
             "name":"Squire",
@@ -3047,8 +3199,52 @@
             "trappings": ["Plumed Great Helm","Large Unit of Knights or Several Small Units of Knights"]
         }
     },
+    "Knight of the Blazing Son" : {
+        "class": "Warrior",
+        "source": "Up in Arms, p.32-33",
+        "races": "Human",
+        "earning skill": "Melee (Cavalry)",
+        "rank 1" : {
+            "name": "Novice",
+            "status": "Silver 3",
+            "advances": ["WS", "BS", "I"],
+            "skills" : ["Athletics", "Animal Care", "Charm Animal", "Heal", "Language (Classical)", "Lore (Heraldry)", "Lore (Any)", "Melee (Basic)", "Melee (Cavalry)", "Ride (Horse)"],
+            "talents":  ["Etiquette (any)", "Read/Write", "Roughrider", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Leather Jack", "Mail Shirt", "Riding Horse with Saddle and Tack, Shield", "Trade Tools (Farrier)", "Religious Symbol (Myrmidia)"]
+        },
+        "rank 2" : {
+            "name": "Knight",
+            "status": "Silver 5",
+            "advances": ["Int"],
+            "skills" : ["Cool", "Dodge", "Endurance", "Intimidate", "Language (Battle)", "Melee (Any)", "Lore (Warfare)"],
+            "talents":  ["Seasoned Traveller", "Savvy", "Shieldsman", "Strike To Injure"],
+            "npc_suggested_talents": [],
+            "trappings": ["Destrier with Saddle and Tack", "Melee Weapon (Any)", "Lance", "Plate Armour and Helm"]
+        },
+        "rank 3" : {
+            "name": "Hochmeister",
+            "status": "Gold 2",
+            "advances": ["Agi"],
+            "skills" : ["Charm", "Ranged (Any)", "Leadership", "Research"],
+            "talents":  ["Fearless (Any)", "War Leader", "Disarm", "Unshakable"],
+            "npc_suggested_talents": [],
+            "trappings": ["Barding", "Small Unit of Blazing Sun knights"]
+        },
+        "rank 4" : {
+            "name": "Knight of the Inner Circle",
+            "status": "Gold 4",
+            "advances": ["Fel"],
+            "skills" : ["Secret Signs (Blazing Sun)", "Lore (Any)"],
+            "talents":  ["Inspiring", "Stout-hearted", "Wealthy", "Strike Mighty Blow"],
+            "npc_suggested_talents": [],
+            "trappings": ["Great Helm with Sun emblem", "Squire", "Large Unit of Knights or Several Small Units of Knights"]
+        }
+    },
     "Knight Of The White Wolf" : {
         "class": "Warrior",
+		"source": "Up in Arms, p.35-36",
+		"races": "Human",
         "earning skill": "Melee (Cavalry)",
         "rank 1" : {
             "name": "Novice",
@@ -3089,6 +3285,8 @@
     },
     "Knight Panther" : {
         "class": "Warrior",
+		"source": "Up in Arms, p.36-37",
+		"races": "",
         "earning skill": "Melee (Cavalry)",
         "rank 1" : {
             "name": "Squire",
@@ -3129,6 +3327,8 @@
     },
     "Light Cavalry" : {
         "class": "Warrior",
+		"source": "Up in Arms, p.44-45",
+		"races": "Human, High Elf",
         "earning skill": "Ride (Horse)",
         "rank 1" : {
             "name": "Reiver",
@@ -3169,6 +3369,8 @@
     },
     "Maneater" : {
         "class": "Warrior",
+		"source": "Archives of the Empire Vol 2, p.35",
+		"races": "Ogre",
         "earning skill": "Melee (Basic)",
         "rank 1" : {
             "name": "Fresh Meat",
@@ -3209,6 +3411,8 @@
     },
     "Pikeman" : {
         "class": "Warrior",
+		"source": "Up in Arms, p.48-49",
+		"races": "Human",
         "earning skill": "Melee (Polearm)",
         "rank 1" : {
             "name": "Recruit",
@@ -3249,6 +3453,8 @@
     },
     "Pit Fighter": {
         "class": "Warrior",
+		"source": "Corebook, p.112",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Melee (Any)",
         "rank 1": {
             "name": "Pugilist",
@@ -3289,6 +3495,8 @@
     },
     "Priest Of Myrmidia" : {
         "class": "Warrior",
+		"source": "Up in Arms, p.78",
+		"races": "Human",
         "earning skill": "Silver 2",
         "rank 1" : {
             "name": "First Eagle",
@@ -3329,6 +3537,8 @@
     },
     "Protagonist" : {
         "class": "Warrior",
+		"source": "Corebook, p.113",
+		"races": "Dwarf, High Elf, Human",
         "earning skill": "Melee (Any)",
         "rank 1" : {
             "name": "Braggart",
@@ -3369,7 +3579,9 @@
     },
     "Siege Specialist" : {
         "class": "Warrior",
-        "earning skill": "",
+		"source": "Up in Arms, p.46-47",
+		"races": "Dwarf, Human, High Elf",
+        "earning skill": "Ranged (Crossbow)",
         "rank 1" : {
             "name": "Crossbowman",
             "status": "Silver 1",
@@ -3409,6 +3621,8 @@
     },
     "Slayer" : {
         "class": "Warrior",
+		"source": "Corebook, p.114",
+		"races": "Dwarf",
         "earning skill": "Melee (Basic)",
         "rank 1" : {
             "name": "Troll Slayer",
@@ -3449,6 +3663,8 @@
     },
     "Soldier" : {
         "class": "Warrior",
+		"source": "Corebook, p.115",
+		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Melee (Basic)",
         "rank 1" : {
             "name": "Recruit",
@@ -3489,6 +3705,8 @@
     },
     "Warrior Of Tzeentch" : {
         "class": "Warrior",
+		"source": "",
+		"races": "",
         "earning skill": "Melee (Basic)",
         "rank 1" : {
             "name": "Initiate of the Mysteries",
@@ -3529,6 +3747,8 @@
     },
     "Warrior Priest" : {
         "class": "Warrior",
+		"source": "Corebook, p.116",
+		"races": "Human",
         "earning skill": "Leadership",
         "rank 1" : {
             "name": "Novitiate",

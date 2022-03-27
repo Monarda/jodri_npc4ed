@@ -1,5 +1,7 @@
 "" : {
     "class": "",
+    "source": "",
+    "races": "",
     "earning skill": "",
     "rank 1" : {
         "name": "",
@@ -37,4 +39,4 @@
         "npc_suggested_talents": [],
         "trappings": [""]
     }
-}
+},
