@@ -3127,6 +3127,46 @@
             "trappings": ["Squire", "Large Unit of Knights Panther or Several Small Units of Knights"]
         }
     },
+    "Light Cavalry" : {
+        "class": "Warrior",
+        "earning skill": "Ride (Horse)",
+        "rank 1" : {
+            "name": "Reiver",
+            "status": "Brass 3",
+            "advances": ["WS","T","Agi"],
+            "skills" : ["Animal Care", "Dodge", "Endurance", "Haggle", "Heal", "Language (Battle)", "Melee (Basic)", "Outdoor Survival", "Ranged (Throwing)", "Ride (Horse)"],
+            "talents":  ["Etiquette (Mercenaries)", "Field Dressing", "Flee!", "Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Shield or Buckler", "Leather Jack", "Riding Horse with Saddle and Tack", "Javelin"]
+        },
+        "rank 2" : {
+            "name": "Light Cavalry",
+            "status": "Silver 2",
+            "advances": ["BS"],
+            "skills" : ["Charm", "Consume Alcohol", "Gamble", "Gossip", "Melee (Cavalry)", "Ranged (Bow)"],
+            "talents":  ["Combat Aware", "Orientation", "Rover", "Roughrider"],
+            "npc_suggested_talents": [],
+            "trappings": ["Light Warhorse", "Mail Coat", "Open Helm"]
+        },
+        "rank 3" : {
+            "name": "Lance",
+            "status": "Silver 5",
+            "advances": ["Fel"],
+            "skills" : ["Drive", "Intuition", "Leadership", "Lore (Warfare)"],
+            "talents":  ["Combat Reflexes", "Rapid Reload", "Seasoned Traveller", "Trick Riding"],
+            "npc_suggested_talents": [],
+            "trappings": ["Lance", "Mail Chausses", "Squire", "Page"]
+        },
+        "rank 4" : {
+            "name": "Captain",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Lore (Law or Heraldry)", "Ranged (Blackpowder)"],
+            "talents":  ["Commanding Presence", "Dealmaker", "Inspiring", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Brace of Pistols with Gunpowder and Ammunition", "Warhorse", "Flamboyant Clothing", "Breastplate"]
+        }
+    },
     "Maneater" : {
         "class": "Warrior",
         "earning skill": "Melee (Basic)",
@@ -3165,6 +3205,46 @@
             "talents":  ["Combat Master", "Furious Assault", "War Leader", "Reaction Strike"],
             "npc_suggested_talents": [],
             "trappings": ["Mercenary Contract", "Battle-Tested Gutplate"]
+        }
+    },
+    "Pikeman" : {
+        "class": "Warrior",
+        "earning skill": "Melee (Polearm)",
+        "rank 1" : {
+            "name": "Recruit",
+            "status": "Brass 5",
+            "advances": ["WS","S","T"],
+            "skills" : ["Athletics", "Climb", "Consume Alcohol", "Dodge", "Endurance", "Gamble", "Language (Battle)", "Language (Tilean)", "Melee (Basic)", "Melee (Polearm)"],
+            "talents":  ["Drilled", "Reaction Strike", "Very Strong", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon", "Leather Breastplate", "Leather Skullcap", "Pike", "Uniform in Unit Colours"]
+        },
+        "rank 2" : {
+            "name": "Pikeman",
+            "status": "Silver 1",
+            "advances": ["I"],
+            "skills" : ["Cool", "Gossip", "Heal", "Intimidate", "Lore (Warfare)", "Outdoor Survival"],
+            "talents":  ["Diceman", "Enclosed Fighter", "Etiquette (Mercenaries)", "Fearless (Cavalry)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Dice", "Mail Coat", "Open Helm"]
+        },
+        "rank 3" : {
+            "name": "File Leader",
+            "status": "Silver 4",
+            "advances": ["WP"],
+            "skills" : ["Haggle", "Intuition", "Leadership", "Perception"],
+            "talents":  ["Combat Aware", "Combat Reflexes", "Field Dressing", "Robust"],
+            "npc_suggested_talents": [],
+            "trappings": ["Plate Breastplate", "Sash of Rank"]
+        },
+        "rank 4" : {
+            "name": "Banner Captain",
+            "status": "Gold 1",
+            "advances": ["Fel"],
+            "skills" : ["Lore (Law)", "Ride (Horse)"],
+            "talents":  ["Unshakable", "Very Resilient", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Baton of Rank", "Banner-Bearer", "Light Warhorse", "Quality Uniform", "Plate Bracers and Leggings", "Phalanx of Pikemen", "Unit Banner"]
         }
     },
     "Pit Fighter": {
@@ -3285,6 +3365,46 @@
             "talents":  ["Accurate Shot","Ambidextrous","Furious Assault","Strike to Injure"],
             "npc_suggested_talents": ["Strike to Injure"],
             "trappings": ["Crossbow with 10 shots","Disguise Kit"]
+        }
+    },
+    "Siege Specialist" : {
+        "class": "Warrior",
+        "earning skill": "",
+        "rank 1" : {
+            "name": "Crossbowman",
+            "status": "Silver 1",
+            "advances": ["WS","BS","S"],
+            "skills" : ["Athletics", "Climb", "Consume Alcohol", "Endurance", "Gamble", "Gossip", "Language (Battle)", "Melee (Basic)", "Outdoor Survival", "Ranged (Crossbow)"],
+            "talents":  ["Etiquette (Mercenaries)", "Marksman", "Rapid Reload", "Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crossbow and Ammunition", "Hand Weapon", "Pavise", "Leather Jack and Skullcap", "Feathered Hat"]
+        },
+        "rank 2" : {
+            "name": "Siege Specialist",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Intuition", "Lore (Engineering)", "Melee (Two-handed)", "Perception", "Set Trap", "Trade (Miner)"],
+            "talents":  ["Enclosed Fighter", "Hardy", "Orientation", "Tunnel Rat"],
+            "npc_suggested_talents": [],
+            "trappings": ["Two-handed Pick, Shovel"]
+        },
+        "rank 3" : {
+            "name": "Sapper",
+            "status": "Silver 5",
+            "advances": ["Int"],
+            "skills" : ["Leadership", "Ranged (Blackpowder)", "Ranged (Engineering)", "Trade (Explosives)"],
+            "talents":  ["Accurate Shot", "Craftsman (Explosives)", "Gunner", "Unshakable"],
+            "npc_suggested_talents": [],
+            "trappings": ["Book of Ballistics Tables", "Set of Six 60-second Fuses", "Plate Breastplate", "Pistol with Bullets and Ammunition", "Trade Tools (Engineer)"]
+        },
+        "rank 4" : {
+            "name": "Siege Master",
+            "status": "Gold 1",
+            "advances": ["Fel"],
+            "skills" : ["Haggle", "Lore (Law)", "Ride (Horse)"],
+            "talents":  ["Combat Aware", "Master Tradesman (Engineering)", "Savvy", "War Leader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Quality Clothes", "Light Warhorse", "Pavilion Tent with Body Servant"]
         }
     },
     "Slayer" : {
