@@ -1,4 +1,46 @@
 {
+    "Alchemist" : {
+        "class": "Academic",
+        "source": "Winds of Magic, p.68",
+        "races": "Human",
+        "earning skill": "LLanguage (Magick)",
+        "rank 1" : {
+            "name": "Alchemist Apprentice",
+            "status": "Brass 4",
+            "advances": ["T", "Int", "WP"],
+            "skills" : ["Channelling (Chamon)", "Evaluate", "Haggle", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception", "Trade (Alchemist)"],
+            "talents":  ["Aethyric Attunement", "Petty Magic", "Read/Write", "Second Sight"],
+            "npc_suggested_talents": ["Petty Magic", "Read/Write", "Second Sight"],
+            "trappings": ["Grimoire", "Staff"]
+        },
+        "rank 2" : {
+            "name": "Alchemist",
+            "status": "Silver 4",
+            "advances": ["Dex"],
+            "skills" : ["Charm", "Cool", "Intimidate", "Lore (Metallurgy)", "Research", "Trade (Blacksmith or Goldsmith)"],
+            "talents":  ["Arcane Magic (Metal)", "Argumentative", "Detect Artefact", "Sixth Sense"],
+            "npc_suggested_talents": ["Arcane Magic (Metal)"],
+            "trappings": ["Magical License", "Portable Alchemical Laboratory"]
+        },
+        "rank 3" : {
+            "name": "Master Alchemist",
+            "status": "Gold 3",
+            "advances": ["I"],
+            "skills" : ["Lore (Engineering)", "Lore (Science)", "Ride (Horse)", "Trade (Engineer)"],
+            "talents":  ["Bookish", "Craftsman (Goldsmith)", "Instinctive Diction", "Magical Sense"],
+            "npc_suggested_talents": [],
+            "trappings": ["Alchemist Apprentice", "Light Warhorse", "Magical Item"]
+        },
+        "rank 4" : {
+            "name": "Alchemist Lord",
+            "status": "Gold 4",
+            "advances": ["Fel"],
+            "skills" : ["Language (Khazalid)", "Lore (Any)"],
+            "talents":  ["Frightening", "Iron Will", "War Wizard", "Wealthy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Library (Magic, Science, or Engineering)", "Workshop (Magic or Engineering)"]
+        }
+    },    
     "Apothecary" : {
         "class": "Academic",
         "source": "Corebook, p.53",
@@ -81,6 +123,48 @@
             "talents":  ["Inspiring", "Public Speaker", "Seasoned Traveller", "Stout-hearted"],
             "npc_suggested_talents": [],
             "trappings": ["Artillery piece and Limber", "Letter of Commission", "Light Warhorse with Saddle and Tack", "Map", "Symbol of Rank"]
+        }
+    },
+    "Astromancer" : {
+        "class": "Academic",
+        "source": "Winds of Magic, p.92",
+        "races": "Human",
+        "earning skill": "Language (Magick)",
+        "rank 1" : {
+            "name": "Celestial Acolyte",
+            "status": "Brass 4",
+            "advances": ["WS", "Int", "WP"],
+            "skills" : ["Augury", "Channelling (Azyr)", "Dodge", "Entertain (Fortune Telling)", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception"],
+            "talents":  ["Aethyric Attunement", "Petty Magic", "Read/Write", "Second Sight"],
+            "npc_suggested_talents": ["Petty Magic", "Read/Write", "Second Sight"],
+            "trappings": [""]
+        },
+        "rank 2" : {
+            "name": "Astromancer",
+            "status": "Silver 4",
+            "advances": ["Agi"],
+            "skills" : ["Cool", "Gossip", "Intimidate", "Language (Battle)", "Lore (Astronomy)", "Research"],
+            "talents":  ["Arcane Magic (Heavens)", "Detect Artefact", "Orientation", "Sixth Sense"],
+            "npc_suggested_talents": ["Arcane Magic (Heavens)"],
+            "trappings": ["Ceremonial Telescope", "Magical License", "Practical Robes", "Sextant"]
+        },
+        "rank 3" : {
+            "name": "Grand Astromancer",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Evaluate", "Navigation", "Lore (Prophecy)", "Ride (Horse)"],
+            "talents":  ["Instinctive Diction", "Magical Sense", "Seasoned Traveller", "Well-prepared"],
+            "npc_suggested_talents": [],
+            "trappings": ["Apprentice", "Expensive Orrery or Armillary Sphere", "Light Warhorse", "Magical Item", "Standard Robes"]
+        },
+        "rank 4" : {
+            "name": "Lord Celestial",
+            "status": "Gold 2",
+            "advances": ["Fel"],
+            "skills" : ["Language (Any)", "Lore (Any)"],
+            "talents":  ["Frightening", "Iron Will", "Night Vision", "War Wizard"],
+            "npc_suggested_talents": [],
+            "trappings": ["Elaborate Robes", "Library (Magic)", "Tower or Mountaintop Observatory"]
         }
     },
     "Butcher" : {
@@ -167,6 +251,48 @@
             "trappings": ["Study", "Quality Theodolite"]
         }
     },
+    "Druid" : {
+        "class": "Academic",
+        "source": "Winds of Magic, p.80",
+        "races": "Human",
+        "earning skill": "Language (Magick)",
+        "rank 1" : {
+            "name": "Druid’s Apprentice",
+            "status": "Brass 3",
+            "advances": ["Agi", "Int", "WP"],
+            "skills" : ["Channelling (Ghyran)", "Charm Animal", "Dodge", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Outdoor Survival", "Perception"],
+            "talents":  ["Aethyric Attunement", "Petty Magic", "Read/Write", "Second Sight"],
+            "npc_suggested_talents": ["Petty Magic", "Read/Write", "Second Sight"],
+            "trappings": ["Bronze Sickle", "Grimoire", "Staff"]
+        },
+        "rank 2" : {
+            "name": "Druid",
+            "status": "Silver 3",
+            "advances": ["I"],
+            "skills" : ["Charm", "Gossip", "Intimidate", "Language (Battle)", "Language (Any)", "Navigation"],
+            "talents":  ["Arcane Magic (Life)", "Detect Artefact", "Fast Hands", "Sixth Sense"],
+            "npc_suggested_talents": ["Arcane Magic (Life)", "Sixth Sense"],
+            "trappings": ["License", "Practical Robes", "Silver Sickle"]
+        },
+        "rank 3" : {
+            "name": "Master Druid",
+            "status": "Gold 1",
+            "advances": ["Fel"],
+            "skills" : ["Animal Care", "Evaluate", "Lore (Plants)", "Ride (Horse)"],
+            "talents":  ["Instinctive Diction", "Magical Sense", "Menacing", "Rover"],
+            "npc_suggested_talents": [],
+            "trappings": ["Apprentice", "Gold Sickle", "Magical Item", "Standard Robes"]
+        },
+        "rank 4" : {
+            "name": "Druid Lord",
+            "status": "Gold 2",
+            "advances": ["WS"],
+            "skills" : ["Language (Any)", "Lore (Any)"],
+            "talents":  ["Combat Aware", "Frightening", "Iron Will", "War Wizard"],
+            "npc_suggested_talents": [],
+            "trappings": ["Robes", "Garden Retreat", "Library (Magic)"]
+        }
+    },
     "Engineer" : {
         "class": "Academic",
 		"source": "Corebook, p.54",
@@ -209,6 +335,48 @@
             "trappings": ["Guild License","Library (Engineer)","Quality Trade Tools (Engineer)","Large Workshop (Engineer)"]
         }
     },
+    "Hierophant" : {
+        "class": "Academic",
+        "source": "Winds of Magic, p.56",
+        "races": "Human",
+        "earning skill": "Language (Magick)",
+        "rank 1" : {
+            "name": "Acolyte of the Light Order",
+            "status": "Brass 3",
+            "advances": ["I", "Int", "WP"],
+            "skills" : ["Channelling (Hysh)", "Dodge", "Entertain (Singing)", "Intuition", "Language (Magick)", "Lore (Magic)", "Lore (Nehekhara)", "Melee (Basic)", "Melee (Polearm)", "Perception"],
+            "talents":  ["Aethyric Attunement", "Petty Magic", "Read/Write", "Second Sight"],
+            "npc_suggested_talents": ["Petty Magic", "Read/Write", "Second Sight"],
+            "trappings": ["Grimoire", "Staff", "Candle with Holder"]
+        },
+        "rank 2" : {
+            "name": "Hierophant",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Charm", "Cool", "Gossip", "Language (Any)", "Leadership", "Lore (Warfare)"],
+            "talents":  ["Arcane Magic (Light)", "Detect Artefact", "Savvy", "Sixth Sense"],
+            "npc_suggested_talents": ["Arcane Magic (Light)"],
+            "trappings": ["Magical License", "Practical Robes"]
+        },
+        "rank 3" : {
+            "name": "Master Hierophant",
+            "status": "Gold 1",
+            "advances": ["WS"],
+            "skills" : ["Evaluate", "Lore (Daemonology)", "Research", "Ride (Horse)"],
+            "talents":  ["Dual Wielder", "Instinctive Diction", "Magical Sense", "Tower of Memories"],
+            "npc_suggested_talents": [],
+            "trappings": ["Acolyte Apprentice", "Light Warhorse", "Magical Item", "Standard Robes"]
+        },
+        "rank 4" : {
+            "name": "Guardian of the Light Order",
+            "status": "Gold 2",
+            "advances": ["Fel"],
+            "skills" : ["Language (Any)", "Lore (Any)"],
+            "talents":  ["Combat Aware", "Iron Will", "Menacing", "Resistance (Chaos)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Elaborate Robes", "Library (Magic)", "Study"]
+        }
+    },
     "Lawyer" : {
         "class": "Academic",
 		"source": "Corebook, p.55",
@@ -249,6 +417,90 @@
             "talents":  ["Commanding Presence","Kingpin","Savant (Law)","Wealthy"],
             "npc_suggested_talents": [],
             "trappings": ["Gavel","Ostentatious Wig"]
+        }
+    },
+    "Magister Vigilant" : {
+        "class": "Academic",
+        "source": "Winds of Magic, p.40",
+        "races": "Human",
+        "earning skill": "Perception",
+        "rank 1" : {
+            "name": "Vigilant’s Apprentice",
+            "status": "Brass 4",
+            "advances": ["WS", "Int", "WP"],
+            "skills" : ["Channelling (Any Colour)", "Charm", "Cool", "Dodge", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception"],
+            "talents":  ["Blather", "Petty Magic", "Read/Write", "Savvy"],
+            "npc_suggested_talents": ["Petty Magic", "Read/Write"],
+            "trappings": ["Disguise", "Grimoire"]
+        },
+        "rank 2" : {
+            "name": "Magister Vigilant",
+            "status": "Silver 4",
+            "advances": ["Agi"],
+            "skills" : ["Charm", "Gossip", "Intimidate", "Language (Battle)", "Pick Lock", "Research"],
+            "talents":  ["Arcane Magic (Any Arcane Lore)", "Fast Hands", "Menacing", "Shadow"],
+            "npc_suggested_talents": ["Arcane Magic (Any Arcane Lore)"],
+            "trappings": ["Magical License"]
+        },
+        "rank 3" : {
+            "name": "Magister Inquisitor",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Navigation", "Secret Signs (Any)", "Sleight of Hand", "Stealth (Urban)"],
+            "talents":  ["Break and Enter", "Magical Sense", "Second Sight", "Sixth Sense"],
+            "npc_suggested_talents": ["Second Sight"],
+            "trappings": ["Magical Item"]
+        },
+        "rank 4" : {
+            "name": "Lord Vigilant",
+            "status": "Gold 2",
+            "advances": ["S"],
+            "skills" : ["Lore (Any)", "Set Trap"],
+            "talents":  ["Alley Cat", "Frightening", "Iron Will", "Nose for Trouble"],
+            "npc_suggested_talents": [],
+            "trappings": ["Standard Robes"]
+        }
+    },    
+    "Mundane Alchemist" : {
+        "class": "Academic",
+        "source": "Winds of Magic, p.38",
+		"races": ["Dwarf", "Halfling", "Human"],
+        "earning skill": "Trade (Alchemist)",
+        "rank 1" : {
+            "name": "Tinkerer",
+            "status": "Brass 3",
+            "advances": ["T", "Dex", "Int"],
+            "skills" : ["Charm", "Consume Alcohol", "Gossip", "Haggle", "Language (Classical)", "Lore (Chemistry)", "Lore (Geology)", "Lore (Science)", "Trade (Alchemist)", "Trade (Poisoner)"],
+            "talents":  ["Concoct", "Craftsman (Alchemist)", "Read/Write", "Savvy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Book (Blank)", "Leather Jerkin", "Pestle and Mortar", "Tripod", "Test Tubes and Alembic", "Writing Kit"]
+        },
+        "rank 2" : {
+            "name": "Alchemist",
+            "status": "Silver 2",
+            "advances": ["I"],
+            "skills" : ["Intuition", "Lore (Medicine)", "Language (Guilder)", "Perception", "Research", "Secret Signs (Guilder)"],
+            "talents":  ["Criminal", "Etiquette (Guilder)", "Magical Sense", "Nimble Fingered"],
+            "npc_suggested_talents": [],
+            "trappings": ["Guild License", "Trade Tools"]
+        },
+        "rank 3" : {
+            "name": "Master Alchemist",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Drive", "Language (Any)", "Leadership", "Lore (Any)"],
+            "talents":  ["Bookish", "Detect Artefact", "Master Tradesman (Alchemist)", "Petty Magic"],
+            "npc_suggested_talents": [],
+            "trappings": ["Apprentice", "Book (Alchemy)", "Laboratory"]
+        },
+        "rank 4" : {
+            "name": "Transmutator",
+            "status": "Gold 1",
+            "advances": ["WP"],
+            "skills" : ["Channelling (Chamon)", "Ride (Horse)"],
+            "talents":  ["Arcane Magic (Lore of Metal)", "Master Tradesman (Poisoner)", "Resistance (Poison)", "Savant (Alchemy)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Fine Quality Laboratory", "Letter of Commission"]
         }
     },
     "Nun" : {
@@ -377,6 +629,48 @@
             "trappings": ["Library (Theology)","Subordinate High Priests"]
         }
     },
+    "Pyromancer" : {
+        "class": "Academic",
+        "source": "Winds of Magic, p.128",
+        "races": "Human",
+        "earning skill": "Language (Magick)",
+        "rank 1" : {
+            "name": "Apprentice Pyromancer",
+            "status": "Brass 3",
+            "advances": ["WS", "Int", "WP"],
+            "skills" : ["Channelling (Aqshy)", "Dodge", "Intimidate", "Intuition", "Language (Battle)", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception"],
+            "talents":  ["Aethyric Attunement", "Petty Magic", "Read/Write", "Second Sight"],
+            "npc_suggested_talents": ["Petty Magic", "Read/Write", "Second Sight"],
+            "trappings": ["First Key of Secrets", "Grimoire", "Staff"]
+        },
+        "rank 2" : {
+            "name": "Pyromancer",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Charm", "Cool", "Gossip", "Language (Any)", "Leadership", "Lore (Warfare)"],
+            "talents":  ["Arcane Magic (Lore of Fire)", "Detect Artefact", "Fast Hands", "Sixth Sense"],
+            "npc_suggested_talents": ["Arcane Magic (Lore of Fire)"],
+            "trappings": ["Magical Licence", "Practical Robes", "Second and Third Keys of Secrets", "Sword"]
+        },
+        "rank 3" : {
+            "name": "Master Pyromancer",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Animal Care", "Evaluate", "Research", "Ride (Horse)"],
+            "talents":  ["Dual Wielder", "Instinctive Diction", "Magical Sense", "Menacing"],
+            "npc_suggested_talents": [],
+            "trappings": ["Apprentice", "Fourth and Fifth Keys of Secrets", "Light Warhorse", "Magical Item", "Standard Robes"]
+        },
+        "rank 4" : {
+            "name": "Pyromancer Lord",
+            "status": "Gold 2",
+            "advances": ["Fel"],
+            "skills" : ["Language (Any)", "Lore (Any)"],
+            "talents":  ["Combat Aware", "Frightening", "Iron Will", "War Wizard"],
+            "npc_suggested_talents": [],
+            "trappings": ["Apprentice", "Elaborate Robes", "Library (Magic)", "Sixth and Seventh Keys of Secrets", "Workshop (Magic)"]
+        }
+    },
     "Scholar" : {
         "class": "Academic",
 		"source": "Corebook, p.59",
@@ -417,6 +711,132 @@
             "talents":  ["Magnum Opus","Master Orator","Savant (Any)","Sharp"],
             "npc_suggested_talents": [],
             "trappings": ["Study"]
+        }
+    },
+    "Shadowmancer" : {
+        "class": "Academic",
+        "source": "Winds of Magic, p.104",
+        "races": "Human",
+        "earning skill": "Language (Magick)",
+        "rank 1" : {
+            "name": "Trickster’s Apprentice",
+            "status": "Brass 3",
+            "advances": ["Agi", "Int", "WP"],
+            "skills" : ["Channelling (Ulgu)", "Dodge", "Intuition", "Language (Battle)", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception", "Secret Signs (Grey Order)"],
+            "talents":  ["Aethyric Attunement", "Petty Magic", "Read/Write", "Second Sight"],
+            "npc_suggested_talents": ["Petty Magic", "Read/Write", "Second Sight"],
+            "trappings": ["Grimoire", "Hooded Cloak", "Staff"]
+        },
+        "rank 2" : {
+            "name": "Shadowmancer",
+            "status": "Silver 3",
+            "advances": ["I"],
+            "skills" : ["Charm", "Cool", "Gossip", "Intimidate", "Language (Any)", "Leadership"],
+            "talents":  ["Arcane Magic (Shadows)", "Detect Artefact", "Fast Hands", "Sixth Sense"],
+            "npc_suggested_talents": ["Arcane Magic (Shadows)"],
+            "trappings": ["Magical License"]
+        },
+        "rank 3" : {
+            "name": "Grey Guardian",
+            "status": "Gold 1",
+            "advances": ["WS"],
+            "skills" : ["Evaluate", "Lore (Politics)", "Research", "Ride (Horse)"],
+            "talents":  ["Blather", "Instinctive Diction", "Magical Sense", "Mimic"],
+            "npc_suggested_talents": [],
+            "trappings": ["Apprentice", "Light Warhorse", "Magical Item"]
+        },
+        "rank 4" : {
+            "name": "Grey Lord",
+            "status": "Gold 2",
+            "advances": ["Dex"],
+            "skills" : ["Language (Any)", "Lore (Any)"],
+            "talents":  ["Secret Identity", "Shadow", "Tower of Memories", "War Wizard"],
+            "npc_suggested_talents": [],
+            "trappings": ["Apprentice", "Library (Magic)", "Ring of Informers", "Workshop (Magic)"]
+        }
+    },
+    "Shaman" : {
+        "class": "Academic",
+        "source": "Winds of Magic, p.140",
+        "races": "Human",
+        "earning skill": "Language (Magick)",
+        "rank 1" : {
+            "name": "Shaman’s Apprentice",
+            "status": "Brass 3",
+            "advances": ["WS", "Int", "WP"],
+            "skills" : ["Animal Care", "Channelling (Ghur)", "Cool", "Dodge", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Polearm)", "Outdoor Survival", "Perception"],
+            "talents":  ["Aethyric Attunement", "Petty Magic", "Read/Write", "Second Sight"],
+            "npc_suggested_talents": ["Petty Magic", "Read/Write", "Second Sight"],
+            "trappings": ["Staff"]
+        },
+        "rank 2" : {
+            "name": "Amber Wizard",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Animal Training", "Charm Animal", "Intimidate", "Ranged (Bow)", "Stealth (Rural)", "Track"],
+            "talents":  ["Arcane Magic (Lore of Beasts)", "Coolheaded", "Fast Hands", "Sixth Sense"],
+            "npc_suggested_talents": ["Arcane Magic (Lore of Beasts)"],
+            "trappings": ["Magical Licence"]
+        },
+        "rank 3" : {
+            "name": "Master Shaman",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Evaluate", "Navigation", "Research", "Ride (Horse)"],
+            "talents":  ["Animal Affinity", "Instinctive Diction", "Magical Sense", "Menacing"],
+            "npc_suggested_talents": [],
+            "trappings": ["Apprentice", "Magical Item"]
+        },
+        "rank 4" : {
+            "name": "Shaman Lord",
+            "status": "Gold 2",
+            "advances": ["T"],
+            "skills" : ["Lore (Any)", "Leadership"],
+            "talents":  ["Frightening", "Iron Will", "Lightning Reflexes", "War Wizard"],
+            "npc_suggested_talents": [],
+            "trappings": ["Conclave of Shamans", "Shamanic Lair"]
+        }
+    },
+    "Spiriter" : {
+        "class": "Academic",
+        "source": "Winds of Magic, p.116",
+        "races": "Human",
+        "earning skill": "Language (Magick)",
+        "rank 1" : {
+            "name": "Apprentice",
+            "status": "Brass 2",
+            "advances": ["Dex", "Int", "WP"],
+            "skills" : ["Channelling (Shyish)", "Cool", "Dodge", "Intimidate", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception"],
+            "talents":  ["Aethyric Attunement", "Petty Magic", "Read/Write", "Second Sight"],
+            "npc_suggested_talents": ["Petty Magic", "Read/Write", "Second Sight"],
+            "trappings": ["Grimoire", "Staff of Petrified Wood"]
+        },
+        "rank 2" : {
+            "name": "Amethyst Wizard",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Art (Engraving)", "Endurance", "Evaluate", "Language (Battle)", "Lore (Undead)", "Research"],
+            "talents":  ["Arcane Magic (Death)", "Detect Artefact", "Fast Hands", "Sixth Sense"],
+            "npc_suggested_talents": ["Arcane Magic (Death)"],
+            "trappings": ["Magical Licence", "Scythe"]
+        },
+        "rank 3" : {
+            "name": "Master Spiriter",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Animal Care", "Leadership", "Lore (Warfare)", "Ride (Horse)"],
+            "talents":  ["Instinctive Diction", "Magical Sense", "Menacing", "Resistance (Poison or Disease)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Apprentice", "Light Warhorse", "Magical Item"]
+        },
+        "rank 4" : {
+            "name": "Magister Lord",
+            "status": "Gold 2",
+            "advances": ["T"],
+            "skills" : ["Language (Any)", "Lore (Any)"],
+            "talents":  ["Combat Aware", "Frightening", "Iron Will", "War Wizard"],
+            "npc_suggested_talents": [],
+            "trappings": ["Library (Magic)", "Workshop (Magic)"]
         }
     },
     "Wizard" : {
@@ -1471,6 +1891,48 @@
             "talents":  ["Hardy","Linguistics","Savant (Local)","Tenacious"],
             "npc_suggested_talents": [],
             "trappings": ["Selection of Maps","Trade Tools (Cartographer)"]
+        }
+    },
+    "Scryer" : {
+        "class": "Peasant",
+        "source": "Winds of Magic, p.42",
+        "races": "Human",
+        "earning skill": "Perception,",
+        "rank 1" : {
+            "name": "Haunted",
+            "status": "Brass 1",
+            "advances": ["Int", "WP", "Fel"],
+            "skills" : ["Dodge", "Intuition", "Lore (Local)", "Melee (Basic)", "Outdoor Survival", "Navigation", "Perception", "Psychometry", "Sleight of Hand", "Stealth (Rural)"],
+            "talents":  ["Beneath Notice", "Luck", "Orientation", "Second Sight"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack with Tent", "Dagger", "Practical Outdoor Clothing"]
+        },
+        "rank 2" : {
+            "name": "Scryer",
+            "status": "Brass 3",
+            "advances": ["I"],
+            "skills" : ["Bribery", "Cool", "Endurance", "Gossip", "Haggle", "Intimidate"],
+            "talents":  ["Coolheaded", "Criminal", "Savvy", "Sixth Sense"],
+            "npc_suggested_talents": [],
+            "trappings": ["Permanent Abode"]
+        },
+        "rank 3" : {
+            "name": "Psychometrician",
+            "status": "Silver 2",
+            "advances": ["Agi"],
+            "skills" : ["Charm", "Evaluate", "Lore (History)", "Lore (Politics)"],
+            "talents":  ["Etiquette (Nobles)", "Menacing", "Nose for Trouble", "Well-prepared"],
+            "npc_suggested_talents": [],
+            "trappings": ["Respectable Clothing"]
+        },
+        "rank 4" : {
+            "name": "Reader of the Past",
+            "status": "Gold 1",
+            "advances": ["Dex"],
+            "skills" : ["Entertain (Storytelling)", "Leadership"],
+            "talents":  ["Commanding Presence", "Frightening", "Magical Sense", "Strong-minded"],
+            "npc_suggested_talents": [],
+            "trappings": ["Fine Clothing", "Town House"]
         }
     },
     "Villager" : {
@@ -2863,6 +3325,48 @@
             "trappings": ["Large Tame Badger (Mootland Spotted Pony-Badger)","A Squire (Badger Botherer)","Plate Armour","Sense of Humour"]
         }
     },
+    "Beadle" : {
+        "class": "Warrior",
+        "source": "Winds of Magic, p.36",
+        "races": ["Dwarf", "Halfling", "Human"],
+        "earning skill": "Perception",
+        "rank 1" : {
+            "name": "Laboratory Assistant",
+            "status": "Silver 1",
+            "advances": ["WS", "Int", "WP"],
+            "skills" : ["Consume Alcohol", "Dodge", "Endurance", "Gamble", "Gossip", "Intuition", "Melee (Basic)", "Perception", "Stealth (Urban)", "Trade (Carpenter)"],
+            "talents":  ["Diceman", "Read/Write", "Savvy", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Uniform in the Colours of the Faculty"]
+        },
+        "rank 2" : {
+            "name": "Beadle",
+            "status": "Silver 2",
+            "advances": ["Agi"],
+            "skills" : ["Athletics", "Charm", "Cool", "Intimidate", "Lore (Any)", "Ranged (Blackpowder)"],
+            "talents":  ["Carouser", "Etiquette (Scholars)", "Reversal", "Strike Mighty Blow"],
+            "npc_suggested_talents": [],
+            "trappings": ["Pistol or Blunderbuss with 12 shots", "Sleeved Mail Shirt"]
+        },
+        "rank 3" : {
+            "name": "Groundskeeper",
+            "status": "Silver 4",
+            "advances": ["I"],
+            "skills" : ["Entertain (Storytelling)", "Heal", "Melee (Any)", "Track"],
+            "talents":  ["Argumentative", "Fearless (Intruders)", "Menacing", "Stout-hearted"],
+            "npc_suggested_talents": [],
+            "trappings": ["Helmet", "Master Key to the Faculty"]
+        },
+        "rank 4" : {
+            "name": "Terror of the Faculty",
+            "status": "Silver 5",
+            "advances": ["Fel"],
+            "skills" : ["Leadership", "Lore (Any)"],
+            "talents":  ["Frightening", "Public Speaker", "Suave", "Unshakable"],
+            "npc_suggested_talents": [],
+            "trappings": ["Breastplate", "Crew of beadles"]
+        }
+    },        
     "Cavalryman": {
         "class": "Warrior",
 		"source": "Corebook, p.109",
