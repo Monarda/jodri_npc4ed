@@ -85,7 +85,7 @@
     },
     "Artillerist" : {
         "class": "Academic",
-		"source": "Up in Arms, p.18-19",
+		"source": "Up in Arms, p.18",
 		"races": ["Dwarf", "Halfling", "Human"],
         "earning skill": "Ranged (Blackpowder, Catapult, Crossbow or Engineering)",
         "rank 1" : {
@@ -211,7 +211,7 @@
     },
     "Cartographer" : {
         "class": "Academic",
-		"source": "Up in Arms, p.22-23",
+		"source": "Up in Arms, p.22",
 		"races": ["Dwarf", "Halfling", "High Elf", "Human", "Wood Elf"],
         "earning skill": "Art (Cartography)",
         "rank 1" : {
@@ -2021,7 +2021,7 @@
     },
     "Camp Follower" : {
         "class": "Ranger",
-		"source": "Up in Arms, p.20-21",
+		"source": "Up in Arms, p.20",
 		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Outdoor Survival",
         "rank 1" : {
@@ -3243,7 +3243,7 @@
     },
     "Archer" : {
         "class": "Warrior",
-		"source": "Up in Arms, p.10-11",
+		"source": "Up in Arms, p.10",
 		"races": "Halfling, High Elf, Human, Wood Elf",
         "earning skill": "Ranged (Bow)",
         "rank 1" : {
@@ -3453,7 +3453,7 @@
     },
     "Greatsword" : {
         "class": "Warrior",
-		"source": "Up in Arms, p.12-13",
+		"source": "Up in Arms, p.12",
 		"races": "Human",
         "earning skill": "Melee (Two-handed)",
         "rank 1" : {
@@ -3537,7 +3537,7 @@
     },
     "Halberdier" : {
         "class": "Warrior",
-		"source": "Up in Arms, p.14-15",
+		"source": "Up in Arms, p.14",
 		"races": "Dwarf, Halfling, Human",
         "earning skill": "Melee (Polearm)",
         "rank 1" : {
@@ -3579,7 +3579,7 @@
     },
     "Handgunner" : {
         "class": "Warrior",
-		"source": "Up in Arms, p.16-17",
+		"source": "Up in Arms, p.16",
 		"races": "Dwarf, Halfling, Human",
         "earning skill": "Ranged (Blackpowder)",
         "rank 1" : {
@@ -3705,7 +3705,7 @@
     },
     "Knight Of The Blazing Sun" : {
         "class": "Warrior",
-        "source": "Up in Arms, p.32-33",
+        "source": "Up in Arms, p.32",
         "races": "Human",
         "earning skill": "Melee (Cavalry)",
         "rank 1" : {
@@ -3747,7 +3747,7 @@
     },
     "Knight Of The White Wolf" : {
         "class": "Warrior",
-		"source": "Up in Arms, p.35-36",
+		"source": "Up in Arms, p.35",
 		"races": "Human",
         "earning skill": "Melee (Cavalry)",
         "rank 1" : {
@@ -3789,7 +3789,7 @@
     },
     "Knight Panther" : {
         "class": "Warrior",
-		"source": "Up in Arms, p.36-37",
+		"source": "Up in Arms, p.36",
 		"races": "",
         "earning skill": "Melee (Cavalry)",
         "rank 1" : {
@@ -3831,7 +3831,7 @@
     },
     "Light Cavalry" : {
         "class": "Warrior",
-		"source": "Up in Arms, p.44-45",
+		"source": "Up in Arms, p.44",
 		"races": "Human, High Elf",
         "earning skill": "Ride (Horse)",
         "rank 1" : {
@@ -3915,7 +3915,7 @@
     },
     "Pikeman" : {
         "class": "Warrior",
-		"source": "Up in Arms, p.48-49",
+		"source": "Up in Arms, p.48",
 		"races": "Human",
         "earning skill": "Melee (Polearm)",
         "rank 1" : {
@@ -4083,7 +4083,7 @@
     },
     "Siege Specialist" : {
         "class": "Warrior",
-		"source": "Up in Arms, p.46-47",
+		"source": "Up in Arms, p.46",
 		"races": "Dwarf, Human, High Elf",
         "earning skill": "Ranged (Crossbow)",
         "rank 1" : {
