@@ -92,7 +92,7 @@
             "name": "Apprentice Artillerist",
             "status": "Silver 1",
             "advances": ["BS", "I", "Int"],
-            "skills" : ["Animal Care", "Cool", "Drive", "Endurance", "Evaluate", "Language (Battle)", "Melee (Basic)", "Navigation", "Perception", "Ranged (Blackpowder, Catapult, Crossbow, or Engineering)"],
+            "skills" : ["Animal Care", "Cool", "Drive", "Endurance", "Evaluate", "Language (Battle)", "Melee (Basic)", "Navigation", "Perception", "Ranged (Blackpowder, Catapult, Crossbow or Engineering)"],
             "talents":  ["Marksman", "Rapid Reload", "Strong Back", "Warrior Born"],
             "npc_suggested_talents": [],
             "trappings": ["Dagger", "Leather Apron"]
@@ -1897,7 +1897,7 @@
         "class": "Peasant",
         "source": "Winds of Magic, p.42",
         "races": "Human",
-        "earning skill": "Perception,",
+        "earning skill": "Perception",
         "rank 1" : {
             "name": "Haunted",
             "status": "Brass 1",
@@ -4001,7 +4001,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.78",
 		"races": "Human",
-        "earning skill": "Silver 2",
+        "earning skill": "Lore (Warfare)",
         "rank 1" : {
             "name": "First Eagle",
             "status": "Silver 1",
