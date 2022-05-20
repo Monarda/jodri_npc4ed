@@ -3,6 +3,7 @@
         "class": "Academic",
         "source": "Winds of Magic, p.68",
         "races": "Human",
+        "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Alchemist Apprentice",
@@ -87,6 +88,7 @@
         "class": "Academic",
 		"source": "Up in Arms, p.18",
 		"races": ["Dwarf", "Halfling", "Human"],
+        "alternative_to": "Engineer",
         "earning skill": "Ranged (Blackpowder, Catapult, Crossbow or Engineering)",
         "rank 1" : {
             "name": "Apprentice Artillerist",
@@ -129,6 +131,7 @@
         "class": "Academic",
         "source": "Winds of Magic, p.92",
         "races": "Human",
+        "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Celestial Acolyte",
@@ -213,6 +216,7 @@
         "class": "Academic",
 		"source": "Up in Arms, p.22",
 		"races": ["Dwarf", "Halfling", "High Elf", "Human", "Wood Elf"],
+        "alternative_to": "Scholar",
         "earning skill": "Art (Cartography)",
         "rank 1" : {
             "name": "Surveyor",
@@ -255,6 +259,7 @@
         "class": "Academic",
         "source": "Winds of Magic, p.80",
         "races": "Human",
+        "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Druid’s Apprentice",
@@ -339,6 +344,7 @@
         "class": "Academic",
         "source": "Winds of Magic, p.56",
         "races": "Human",
+        "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Acolyte of the Light Order",
@@ -423,6 +429,7 @@
         "class": "Academic",
         "source": "Winds of Magic, p.40",
         "races": "Human",
+        "alternative_to": "Wizard",
         "earning skill": "Perception",
         "rank 1" : {
             "name": "Vigilant’s Apprentice",
@@ -465,6 +472,7 @@
         "class": "Academic",
         "source": "Winds of Magic, p.38",
 		"races": ["Dwarf", "Halfling", "Human"],
+        "alternative_to": "Apothecary",
         "earning skill": "Trade (Alchemist)",
         "rank 1" : {
             "name": "Tinkerer",
@@ -633,6 +641,7 @@
         "class": "Academic",
         "source": "Winds of Magic, p.128",
         "races": "Human",
+        "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Apprentice Pyromancer",
@@ -717,6 +726,7 @@
         "class": "Academic",
         "source": "Winds of Magic, p.104",
         "races": "Human",
+        "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Trickster’s Apprentice",
@@ -759,6 +769,7 @@
         "class": "Academic",
         "source": "Winds of Magic, p.140",
         "races": "Human",
+        "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Shaman’s Apprentice",
@@ -801,6 +812,7 @@
         "class": "Academic",
         "source": "Winds of Magic, p.116",
         "races": "Human",
+        "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
             "name": "Apprentice",
@@ -1897,6 +1909,7 @@
         "class": "Peasant",
         "source": "Winds of Magic, p.42",
         "races": "Human",
+        "alternative_to": "Mystic",
         "earning skill": "Perception",
         "rank 1" : {
             "name": "Haunted",
@@ -2023,6 +2036,7 @@
         "class": "Ranger",
 		"source": "Up in Arms, p.20",
 		"races": "Dwarf, Halfling, High Elf, Human, Wood Elf",
+        "alternative_to": "Pedlar",
         "earning skill": "Outdoor Survival",
         "rank 1" : {
             "name": "Ribaud",
@@ -2149,6 +2163,7 @@
         "class": "Ranger",
 		"source": "Archives of the Empire Vol 1, p.89",
 		"races": "Halfling",
+        "alternative_to": "Road Warden",
         "earning skill": "Ranged (Sling)",
         "rank 1" : {
             "name": "Novice Warden",
@@ -2233,6 +2248,7 @@
         "class": "Ranger",
 		"source": "Archives of the Empire Vol 1, p.88",
 		"races": "Wood Elf",
+        "alternative_to": "Bounty Hunter",
         "earning skill": "Ranged (Bow)",
         "rank 1" : {
             "name": "Forest Ranger",
@@ -2275,6 +2291,7 @@
         "class": "Ranger",
 		"source": "Archives of the Empire Vol 1, p.90",
 		"races": "Dwarf",
+        "alternative_to": "Messenger",
         "earning skill": "Trade (Cartographer)",
         "rank 1" : {
             "name": "Hold Runner",
@@ -3245,6 +3262,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.10",
 		"races": "Halfling, High Elf, Human, Wood Elf",
+        "alternative_to": "Soldier",
         "earning skill": "Ranged (Bow)",
         "rank 1" : {
             "name": "Bowman",
@@ -3287,6 +3305,7 @@
         "class": "Warrior",
 		"source": "Archives of the Empire Vol 1, p.91",
 		"races": "Halfling",
+        "alternative_to": "Soldier",
         "earning skill": "Ride (Badger)",
         "rank 1" : {
             "name": "Badger Botherer",
@@ -3329,6 +3348,7 @@
         "class": "Warrior",
         "source": "Winds of Magic, p.36",
         "races": ["Dwarf", "Halfling", "Human"],
+        "alternative_to": "Guard",
         "earning skill": "Perception",
         "rank 1" : {
             "name": "Laboratory Assistant",
@@ -3413,6 +3433,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.31",
 		"races": "Human",
+        "alternative_to": "Knight",
         "earning skill": "Melee (Cavalry)",
         "rank 1" : {
             "name": "Squire",
@@ -3455,6 +3476,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.12",
 		"races": "Human",
+        "alternative_to": "Soldier",
         "earning skill": "Melee (Two-handed)",
         "rank 1" : {
             "name": "Greatsword Cadet",
@@ -3539,6 +3561,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.14",
 		"races": "Dwarf, Halfling, Human",
+        "alternative_to": "Soldier",
         "earning skill": "Melee (Polearm)",
         "rank 1" : {
             "name": "Halberdier Recruit",
@@ -3581,6 +3604,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.16",
 		"races": "Dwarf, Halfling, Human",
+        "alternative_to": "Soldier",
         "earning skill": "Ranged (Blackpowder)",
         "rank 1" : {
             "name": "Handgunner Recruit",
@@ -3707,6 +3731,7 @@
         "class": "Warrior",
         "source": "Up in Arms, p.32",
         "races": "Human",
+        "alternative_to": "Knight",
         "earning skill": "Melee (Cavalry)",
         "rank 1" : {
             "name": "Novice",
@@ -3749,6 +3774,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.35",
 		"races": "Human",
+        "alternative_to": "Knight",
         "earning skill": "Melee (Cavalry)",
         "rank 1" : {
             "name": "Novice",
@@ -3790,7 +3816,8 @@
     "Knight Panther" : {
         "class": "Warrior",
 		"source": "Up in Arms, p.36",
-		"races": "",
+		"races": "Human",
+        "alternative_to": "Knight",
         "earning skill": "Melee (Cavalry)",
         "rank 1" : {
             "name": "Squire",
@@ -3832,7 +3859,8 @@
     "Light Cavalry" : {
         "class": "Warrior",
 		"source": "Up in Arms, p.44",
-		"races": "Human, High Elf",
+		"races": ["Human", "High Elf"],
+        "alternative_to": "Cavarlyman",
         "earning skill": "Ride (Horse)",
         "rank 1" : {
             "name": "Reiver",
@@ -3917,6 +3945,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.48",
 		"races": "Human",
+        "alternative_to": "Soldier",
         "earning skill": "Melee (Polearm)",
         "rank 1" : {
             "name": "Recruit",
@@ -4001,6 +4030,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.78",
 		"races": "Human",
+        "alternative_to": "Warrior Priest",
         "earning skill": "Lore (Warfare)",
         "rank 1" : {
             "name": "First Eagle",
@@ -4085,6 +4115,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.46",
 		"races": "Dwarf, Human, High Elf",
+        "alternative_to": "Soldier",
         "earning skill": "Ranged (Crossbow)",
         "rank 1" : {
             "name": "Crossbowman",
