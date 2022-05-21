@@ -50,11 +50,11 @@ class RandomNPC4(BuildNPC4):
 
     @classmethod
     def known_species(cls):
-        return ['Reiklander','Dwarf','Halfling','High Elf','Wood Elf','Gnome','Nordlander','Middenheimer','Middenlander', 'Ogre']
+        return ['Reiklander','Dwarf','Halfling','High Elf','Wood Elf','Gnome','Middenheimer','Middenlander', 'Nordlander', 'Ogre']
 
     @classmethod
     def known_humans(cls):
-        return ['Reiklander','Nordlander','Middenheimer','Middenlander']
+        return ['Reiklander','Middenheimer','Middenlander', 'Nordlander']
 
     @classmethod
     def random_species(cls):
