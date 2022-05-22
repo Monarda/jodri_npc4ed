@@ -3860,7 +3860,7 @@
         "class": "Warrior",
 		"source": "Up in Arms, p.44",
 		"races": ["Human", "High Elf"],
-        "alternative_to": "Cavarlyman",
+        "alternative_to": "Cavalryman",
         "earning skill": "Ride (Horse)",
         "rank 1" : {
             "name": "Reiver",
