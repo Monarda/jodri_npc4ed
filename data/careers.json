@@ -3772,7 +3772,7 @@
     },
     "Knight Of The White Wolf" : {
         "class": "Warrior",
-		"source": "Up in Arms, p.35",
+		"source": "Up in Arms, p.34",
 		"races": "Human",
         "alternative_to": "Knight",
         "earning skill": "Melee (Cavalry)",
