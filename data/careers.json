@@ -436,7 +436,7 @@
             "status": "Brass 4",
             "advances": ["WS", "Int", "WP"],
             "skills" : ["Channelling (Any Colour)", "Charm", "Cool", "Dodge", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception"],
-            "talents":  ["Blather", "Petty Magic", "Read/Write", "Savvy"],
+            "talents":  ["Magical Sense", "Petty Magic", "Read/Write", "Second Sight"],
             "npc_suggested_talents": ["Petty Magic", "Read/Write"],
             "trappings": ["Disguise", "Grimoire"]
         },
@@ -445,7 +445,7 @@
             "status": "Silver 4",
             "advances": ["Agi"],
             "skills" : ["Charm", "Gossip", "Intimidate", "Language (Battle)", "Pick Lock", "Research"],
-            "talents":  ["Arcane Magic (Any Arcane Lore)", "Fast Hands", "Menacing", "Shadow"],
+            "talents":  ["Arcane Magic (Any Arcane Lore)", "Blather", "Fast Hands", "Menacing"],
             "npc_suggested_talents": ["Arcane Magic (Any Arcane Lore)"],
             "trappings": ["Magical License"]
         },
@@ -454,7 +454,7 @@
             "status": "Gold 1",
             "advances": ["I"],
             "skills" : ["Navigation", "Secret Signs (Any)", "Sleight of Hand", "Stealth (Urban)"],
-            "talents":  ["Break and Enter", "Magical Sense", "Second Sight", "Sixth Sense"],
+            "talents":  ["Break and Enter", "Savvy", "Shadow", "Sixth Sense"],
             "npc_suggested_talents": ["Second Sight"],
             "trappings": ["Magical Item"]
         },
@@ -488,7 +488,7 @@
             "status": "Silver 2",
             "advances": ["I"],
             "skills" : ["Intuition", "Lore (Medicine)", "Language (Guilder)", "Perception", "Research", "Secret Signs (Guilder)"],
-            "talents":  ["Criminal", "Etiquette (Guilder)", "Magical Sense", "Nimble Fingered"],
+            "talents":  ["Bookish", "Criminal", "Etiquette (Guilder)", "Nimble Fingered"],
             "npc_suggested_talents": [],
             "trappings": ["Guild License", "Trade Tools"]
         },
@@ -497,7 +497,7 @@
             "status": "Silver 3",
             "advances": ["Agi"],
             "skills" : ["Drive", "Language (Any)", "Leadership", "Lore (Any)"],
-            "talents":  ["Bookish", "Detect Artefact", "Master Tradesman (Alchemist)", "Petty Magic"],
+            "talents":  ["Detect Artefact", "Master Tradesman (Alchemist)", "Petty Magic", "Second Sight"],
             "npc_suggested_talents": [],
             "trappings": ["Apprentice", "Book (Alchemy)", "Laboratory"]
         },
@@ -731,8 +731,8 @@
         "rank 1" : {
             "name": "Trickster’s Apprentice",
             "status": "Brass 3",
-            "advances": ["Agi", "Int", "WP"],
-            "skills" : ["Channelling (Ulgu)", "Dodge", "Intuition", "Language (Battle)", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception", "Secret Signs (Grey Order)"],
+            "advances": ["Int", "WP", "Fel"],
+            "skills" : ["Channelling (Ulgu)", "Dodge", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception", "Secret Signs (Grey Order)", "Stealth (Urban)"],
             "talents":  ["Aethyric Attunement", "Petty Magic", "Read/Write", "Second Sight"],
             "npc_suggested_talents": ["Petty Magic", "Read/Write", "Second Sight"],
             "trappings": ["Grimoire", "Hooded Cloak", "Staff"]
@@ -741,7 +741,7 @@
             "name": "Shadowmancer",
             "status": "Silver 3",
             "advances": ["I"],
-            "skills" : ["Charm", "Cool", "Gossip", "Intimidate", "Language (Any)", "Leadership"],
+            "skills" : ["Charm", "Cool", "Entertain (Acting)", "Gossip", "Intimidate", "Language (Any)"],
             "talents":  ["Arcane Magic (Shadows)", "Detect Artefact", "Fast Hands", "Sixth Sense"],
             "npc_suggested_talents": ["Arcane Magic (Shadows)"],
             "trappings": ["Magical License"]
@@ -758,7 +758,7 @@
         "rank 4" : {
             "name": "Grey Lord",
             "status": "Gold 2",
-            "advances": ["Dex"],
+            "advances": ["Agi"],
             "skills" : ["Language (Any)", "Lore (Any)"],
             "talents":  ["Secret Identity", "Shadow", "Tower of Memories", "War Wizard"],
             "npc_suggested_talents": [],
@@ -784,7 +784,7 @@
             "name": "Amber Wizard",
             "status": "Silver 3",
             "advances": ["Agi"],
-            "skills" : ["Animal Training", "Charm Animal", "Intimidate", "Ranged (Bow)", "Stealth (Rural)", "Track"],
+            "skills" : ["Animal Training", "Charm Animal", "Lore (Beasts)", "Ranged (Bow)", "Stealth (Rural)", "Track"],
             "talents":  ["Arcane Magic (Lore of Beasts)", "Coolheaded", "Fast Hands", "Sixth Sense"],
             "npc_suggested_talents": ["Arcane Magic (Lore of Beasts)"],
             "trappings": ["Magical Licence"]
@@ -793,7 +793,7 @@
             "name": "Master Shaman",
             "status": "Gold 1",
             "advances": ["I"],
-            "skills" : ["Evaluate", "Navigation", "Research", "Ride (Horse)"],
+            "skills" : ["Navigation", "Research", "Ride (Horse)", "Secret Signs (Amber Order)"],
             "talents":  ["Animal Affinity", "Instinctive Diction", "Magical Sense", "Menacing"],
             "npc_suggested_talents": [],
             "trappings": ["Apprentice", "Magical Item"]
