@@ -1,4 +1,4 @@
-import collections
+import collections, copy
 import json
 import importlib.resources
 import random
@@ -75,9 +75,16 @@ class Magic4e:
                     lores['spells'].update(self.spells(lore))
             return lores
 
-    def spells(self, lore : str) -> dict:
-        """ Get all the spells for the specified lore """
-        return dict(self[lore]['spells'])
+    def spells(self, lore : str, max_cn : int = None) -> dict:
+        """ Get all the spells for the specified lore and maximum Casting Number (CN) """
+        spells = self[lore]['spells'] 
+
+        if max_cn:
+            for spell in spells.copy():
+                if spells[spell]['CN']>max_cn:
+                    spells.pop(spell)
+
+        return dict(spells)
 
     @property
     def lores(self) -> List[str]:
@@ -93,16 +100,18 @@ class Magic4e:
         """ Is this lore one of the colour magics? """
         return bool(self[lore]['colour'])
 
-    def get_random_spells(self, lore : str, request_spells : int) -> dict:
+    def get_random_spells(self, lore : str, request_spells : int, max_cn : int = None) -> dict:
         """ Get n random spells from a lore """
-        spells = self.spells(lore)
+        spells = self.spells(lore, max_cn)
 
-        actual_spells = len(spells)
-        if request_spells > actual_spells:
-            request_spells = actual_spells
+        number_available_spells = len(spells)
+        if request_spells > number_available_spells:
+            request_spells = number_available_spells
             canon_lore = self._lore_best_match(lore)
-            self._error = f'{canon_lore.title()} ({lore.title()}) has only {actual_spells} spells, listing all spells'
-            print('error')
+
+            max_cn_msg = ''
+            if max_cn: max_cn_msg = f' with maximum CN of {max_cn}'
+            self._error = f'{canon_lore.title()} ({lore.title()}) has only {number_available_spells} spells{max_cn_msg}, listing all spells'
 
         random_spells = sorted(random.sample(list(spells), k=request_spells))
         return collections.OrderedDict({key: spells[key] for key in random_spells})
@@ -120,3 +129,4 @@ class Magic4e:
     def miscast_grimoire(self) -> str:
         """ Return text describing a randomly rolled grimoire miscast."""
         return miscast.miscast_grimoire()        
+
