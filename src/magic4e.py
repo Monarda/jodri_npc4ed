@@ -116,3 +116,7 @@ class Magic4e:
     def miscast_major(self) -> str:
         """ Return text describing a randomly rolled major miscast."""
         return miscast.miscast_major()
+
+    def miscast_grimoire(self) -> str:
+        """ Return text describing a randomly rolled grimoire miscast."""
+        return miscast.miscast_grimoire()        

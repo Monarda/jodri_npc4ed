@@ -39,6 +39,10 @@ def miscast_minor() -> str:
 
     return miscast_text
 
+def miscast_grimoire() -> str:
+    """ Return text describing a randomly rolled grimoire miscast. """
+    return _miscast_template(miscasts.magic_grimoire_miscasts)[0]
+
 
 def miscast_major() -> str:
     """ Return text describing a randomly rolled major miscast."""
