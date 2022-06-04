@@ -79,5 +79,5 @@ ignoring Armour Points. However, the wizard immediately memorises the spell.''',
 + 4 damage ignoring Armour Points.''',
     'No effect', 90, 'Magical energy burns the spell from the grimoire and it is lost.',
     'Up in Smoke', 95, '',
-    'Book Burning', 100 'The grimoire is destroyed.'
+    'Book Burning', 100, 'The grimoire is destroyed.'
 ]
