@@ -142,6 +142,8 @@ class Magic4e:
         return miscast.miscast_grimoire()        
 
     def random_mark(self, lore) -> str:
+        """ Return text describing a randomly rolled arcane mark from the specified lore."""
+
         # Load the JSON data about arcane marks
         with importlib.resources.open_text(data,'arcane_marks.json') as f:
             _marks_data = json.load(f)
