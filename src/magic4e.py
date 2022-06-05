@@ -62,6 +62,17 @@ class Magic4e:
 
         return self._lore_best_match(lore)
 
+    def get_wind_name(self, lore):
+        """ Return the wind name that best matches the input text, e.g. "Lore of Shadows" becomes 'ulgu' 
+            If there is no wind name it will return the lore name, e.g. "Petty Lore"
+        """
+
+        lore_name = self._lore_best_match(lore)
+        if 'colour' in _magic_data[lore_name] and _magic_data[lore_name]['colour'] == True: 
+            return _magic_data[lore_name]["names"]["wind"]
+        else:
+            return lore_name
+
     def __getitem__(self, lore : str) -> dict:
         lorekey = self._lore_best_match(lore)
         if not lorekey: raise KeyError(f"'{lore}' is not valid key for spells dictionary")
@@ -130,3 +141,16 @@ class Magic4e:
         """ Return text describing a randomly rolled grimoire miscast."""
         return miscast.miscast_grimoire()        
 
+    def random_mark(self, lore) -> str:
+        # Load the JSON data about arcane marks
+        with importlib.resources.open_text(data,'arcane_marks.json') as f:
+            _marks_data = json.load(f)
+
+        # Turn the lore into a wind name so we can do a lookup in the json
+        wind_name = self.get_wind_name(lore)
+        
+        # Choose a mark at random
+        mark = random.choices(_marks_data[wind_name], k=1)[0]
+
+        # Return the result with some formatting
+        return f"**{mark['title']}**: {mark['description']}"

@@ -1,0 +1,418 @@
+{
+    "Hysh" : [
+        {
+            "number" : 1,
+            "title" : "Vulnerability to Darkness",
+            "description": "When in areas of darkness, Channelling (Hysh) and Language (Magick) Tests suffer from -1 SL."
+        },
+        {
+            "number" : 2,
+            "title"  : "Aura of Light",
+            "description": "You give off a radiant energy that makes other light sources glow brighter. All light sources within 20 yards provide stronger light (+2 yards). Further manifestations increase this effect."
+        },
+        {
+            "number" : 3,
+            "title"  : "Autoluminescent:",
+            "description": "You give off a constant glow, making it nearly impossible to conceal your movements. You give off soft light allowing you to see 2 yards in darkness. Further manifestations increase this by 2 yards. This cannot be turned off but becomes much dimmer when sleeping. This does not counteract the Vulnerability to Darkness manifestation."
+        },
+        {
+            "number" : 4,
+            "title"  : "Stoicism:",
+            "description": "Given your wisdom, you have a deeper understanding of the nature of the Realm of Chaos and how emotions can feed its influence. You must resist Psychology Tests when you are able to, even if you feel that to do so is not in your interest. Gain +2 SL to Cool Tests made to resist Psychology."
+        },
+        {
+            "number" : 5,
+            "title"  : "Enlightened Condescension",
+            "description": "You see yourself akin to a beacon of knowledge blazing up above a black sea of ignorance. Even among your equal and lower peers, your deep knowledge (or rather your opinion about your own education) comes off as arrogant and pretentious. You take a -10 penalty to your initial Fellowship score as you can't help but express pity at other people's lack of comprehension."
+        },
+        {
+            "number" : 6,
+            "title"  : "White Eyes",
+            "description": "You are momentarily blinded by the light of Hysh and gain 3 Blinded Conditions. Once you regain your sight your irises have lost all colour, and your eyes become pure white globes. Suffer -1 SL to all Fellowship-based Tests."
+        },
+        {
+            "number" : 7,
+            "title"  : "Bleaching:",
+            "description": "Hysh swirls around your head, making your hair stand out in all directions. When the winds disappear, they have taken the pigment with them — your hair becomes completely white."
+        },
+        {
+            "number" : 8,
+            "title"  : "Instant Recall",
+            "description": "Whenever you use a Fortune Point to reroll a Test to recall information, such as using a Lore Skill, you automatically succeed."
+        },
+        {
+            "number" : 9,
+            "title"  : "Purging",
+            "description": "You feel bathed in purifying light, but this is not a gentle sensation. You must pass a Hard (–20) Endurance Test or suffer the Fever Symptom (WFRP, page 188) for the next 2d10 days. However, afterwards you feel energised. Hysh's powers of preservation and healing have done their work. Gain +1 SL to any Tests to resist contracting disease."
+        },
+        {
+            "number" : 10,
+            "title"  : "Mark of Hysh",
+            "description": "The rune of Hysh appears somewhere on your body. You gain the Suffuse with Hysh (page 186) Talent."
+        }
+    ],
+    "Chamon" : [
+        {
+            "number" : 1,
+            "title" : "Quicksilver Tears",
+            "description": "Your tears and sweat take on the appearance of mercury. They are practically unchanged but quite unsettling."
+        },
+        {
+            "number" : 2,
+            "title"  : "Mechanical:",
+            "description": "With your stiff gait and robotic movements, animals see you as an object rather than a creature, and are very uneasy when you approach them. Charm Animal Tests suffer from –2 SL."
+        },
+        {
+            "number" : 3,
+            "title"  : "Forge's Glow",
+            "description": "You glow with the faint radiance of hot metal. This gives off no heat but you suffer –1 SL to sight-based Stealth Tests."
+        },
+        {
+            "number" : 4,
+            "title"  : "Thieves!",
+            "description": "You suffer from paranoia, convinced everyone is out to steal your money. Gain Prejudice (Strangers)."
+        },
+        {
+            "number" : 5,
+            "title"  : "Leaden Tongue",
+            "description": "Your voice takes on a harsh tone, akin to metal clashing upon metal. Tests involving speech, such as Gossip or Entertain (Singing) suffer from –1 SL."
+        },
+        {
+            "number" : 6,
+            "title"  : "Feeling A Bit Stiff",
+            "description": "Chamon accretes on your joints, making movement difficult. Suffer a penalty of -5 to Ag and -1 to Movement."
+        },
+        {
+            "number" : 7,
+            "title"  : "Shining Orbs",
+            "description": "Your eyes burn with agonising pain. Gain 3 Blinded Conditions. Once you regain your sight, your eyes become golden globes. Suffer –1 SL to all Fellowship-based Tests."
+        },
+        {
+            "number" : 8,
+            "title"  : "Hardness",
+            "description": "If you take Damage from metal weapons, the 1 Wound minimum rule does not apply."
+        },
+        {
+            "number" : 9,
+            "title"  : "Metallic Affinity",
+            "description": "You gain the Numismatics Talent (WFRP, 142), but it can only be applied to anything made of metal."
+        },
+        {
+            "number" : 10,
+            "title"  : "Mark of Chamon",
+            "description": "The rune of Chamon appears somewhere on your body. Gain the Suffuse with Chamon Talent (see page 186)."
+        }
+    ],
+    "Ghyran" : [
+        {
+            "number" : 1,
+            "title" : "Rapid Growth",
+            "description": "Your hair and fingernails grow at an alarming rate. You must spend a portion of each day trimming them back. Further manifestations cause plantlife to also form, such as ivy growing in hair or mould under your fingernails, which grow back within a day if removed."
+        },
+        {
+            "number" : 2,
+            "title"  : "Barefoot",
+            "description": "You can't abide wearing footwear and when you must, all Agility-based Tests suffer from a –2 SL penalty."
+        },
+        {
+            "number" : 3,
+            "title"  : "Winter's Nadir",
+            "description": "During the months of Ulriczeit and Vorhexen you must make a Very Easy (+60) Endurance Test every morning. If you fail, you suffer from a Fatigued Condition."
+        },
+        {
+            "number" : 4,
+            "title"  : "Whiff of Ghyran",
+            "description": "You give off an odour of damp earth, green shoots, and freshly cut grass."
+        },
+        {
+            "number" : 5,
+            "title"  : "Ghyran Face",
+            "description": "Your skin takes on a greenish hue and your eyes turn emerald. You suffer –1 SL to all Fellowship-based Tests."
+        },
+        {
+            "number" : 6,
+            "title"  : "Vulnerability to Fire",
+            "description": "When you suffer Damage from Ablaze Conditions, you take +1 Damage."
+        },
+        {
+            "number" : 7,
+            "title"  : "Catalyst:",
+            "description": "Your influence causes even destructive things to procreate. Diseases incubate twice as fast and last twice as long in Characters within 10 yards of you. In addition, unpreserved food perishes twice as fast while you are near."
+        },
+        {
+            "number" : 8,
+            "title"  : "Aura of Growth",
+            "description": "You emit an aura of growth and vigour. Remaining in one place for any extended period causes a noticeable boost in the life and colour of the surrounding flora, no matter where you reside. Any Outdoor Survival Tests you make to find food benefit from +1 SL."
+        },
+        {
+            "number" : 9,
+            "title"  : "Nemophilist",
+            "description": "You gain the Arboreal Trait (WFRP, page 338)."
+        },
+        {
+            "number" : 10,
+            "title"  : "Mark of Ghyran",
+            "description": "The rune of Ghyran appears somewhere on your body. You gain the Suffuse with Ghyran Talent (see page 186)."
+        }
+    ],
+    "Azyr" : [
+        {
+            "number" : 1,
+            "title" : "Troubling Foresight",
+            "description": "When under stress, you are plagued with unbidden visions of the future. If you fail any Willpower-based Test by 3 SL or more, you fall Prone and see disturbing revelations of disaster."
+        },
+        {
+            "number" : 2,
+            "title"  : "Cerulean Eyes",
+            "description": "Your eyes become pale blue orbs which emit a faint glow. This is unnerving to others. Suffer -1 SL to all Fellowship-based Tests."
+        },
+        {
+            "number" : 3,
+            "title"  : "Whispery Voice",
+            "description": "Your voice becomes thin and airy. You can no longer shout. In noisy surroundings, listeners must pass an Average (+20) Perception (Hearing) Test to hear your voice."
+        },
+        {
+            "number" : 4,
+            "title"  : "Insubstantial:",
+            "description": "You become very slightly transparent, only noticeable in certain lights. You lose 10% of your weight and suffer from –5 Strength."
+        },
+        {
+            "number" : 5,
+            "title"  : "High-minded",
+            "description": "In conversation you seem distracted, tend to look upwards and struggle to articulate specifics. You benefit from +5 Intelligence but suffer from –10 Fellowship."
+        },
+        {
+            "number" : 6,
+            "title"  : "Aura of Tranquility",
+            "description": "You emit a strange, but peaceful aura that others find calming. All Intimidate Tests in your presence suffer from –1 SL."
+        },
+        {
+            "number" : 7,
+            "title"  : "Wandering Consciousness",
+            "description": "You occasionally lose track of where your mind ends and the cosmos begins. You suffer from –5 Initiative."
+        },
+        {
+            "number" : 8,
+            "title"  : "Scentless:",
+            "description": "Your natural smell is replaced by the scent of clean, fresh air. Reeking fluids, noxious potions, and other sources of stench gradually lose their aroma on contact with your person. Attempts to track you using scent can be no easier than Hard (–20)."
+        },
+        {
+            "number" : 9,
+            "title"  : "Stargazer:",
+            "description": "You become agitated when unable to scry the stars. For each night you fail to observe the night sky for at least an hour, the default difficulty of Willpower- and Intelligence-based Tests becomes one step harder, to a maximum of Very Hard (–30). When you can study the heavens once again, default difficulty returns to normal."
+        },
+        {
+            "number" : 10,
+            "title"  : "Mark of Azyr",
+            "description": "The rune of Azyr appears somewhere on your body. You gain the Suffuse with Azyr Talent (see page 186)."
+        }
+    ],
+    "Ulgu" : [
+        {
+            "number" : 1,
+            "title" : "Vague",
+            "description": "When speaking you are often unsure of yourself, given to obfuscation and hesitation. Sugger -1 SL to all Charm and Gossip Tests."
+        },
+        {
+            "number" : 2,
+            "title"  : "Mantle of Mist",
+            "description": "Mist, fog, smoke, and other vapours seem drawn to your side. Stealth Tests in foggy, misty, or hazy areas benefit from +1 SL. Stealth Tests in brightly lit areas suffer from -1 SL."
+        },
+        {
+            "number" : 3,
+            "title"  : "Vulnerability to Sunlight",
+            "description": "When you are exposed to sunshine, Channelling (Ulgu) and Language (Magick) Tests become one step harder."
+        },
+        {
+            "number" : 4,
+            "title"  : "Animal Aversion",
+            "description": "An aura of mystery settles over you. Animals feel it: horses get nervous, cats run away, dogs start barking. Animal Care, Animal Training, Charm Animal, and Ride Tests suffer from –1 SL."
+        },
+        {
+            "number" : 5,
+            "title"  : "Disturbing Eyes",
+            "description": "Your eyes become grey and swirl with unnatural darkness. You advance the Night Vision Talent (WFRP, page 141) or gain it if you do not already have it. Suffer –1 SL to all Fellowship-based Tests."
+        },
+        {
+            "number" : 6,
+            "title"  : "Wilful Shadow",
+            "description": "Your shadow does not behave itself, often moving of its own accord. The shifting wrongness of your shadow puts folk ill at ease. Suffer –1 SL to all Fellowship-based Tests and gain the Menacing Talent (WFRP, page 140)."
+        },
+        {
+            "number" : 7,
+            "title"  : "Cipher",
+            "description": "You become less remarkable. A long nose becomes shorter, a scar less visible. Your face becomes less recognisable and more generic. You gain the Beneath Notice Talent (WFRP, page 133)."
+        },
+        {
+            "number" : 8,
+            "title"  : "Flicker",
+            "description": "Light seems uncomfortable in your presence. Candles flicker, lanterns dim, and fires burn low when you are around. If you succeed on a Difficult (-10) Willpower Test, you can extinguish a small flame within 20 yards, such as an approaching watchman's lantern."
+        },
+        {
+            "number" : 9,
+            "title"  : "Phantasmal",
+            "description": "If you use Language (Magick) or Dodge to oppose an attack, rolling doubles and succeeding causes you to grow insubstantial, granting you the Ward (9) and Unstable Traits for Willpower Bonus rounds."
+        },
+        {
+            "number" : 10,
+            "title"  : "Mark of Ulgu",
+            "description": "The rune of Ulgu appears somewhere on your body. You gain the Suffuse with Ulgu Talent (see page 186)."
+        }
+    ],
+    "Shyish" : [
+        {
+            "number" : 1,
+            "title" : "Skeletal Frame",
+            "description": "Your muscles wither; reduce your Strength by 5."
+        },
+        {
+            "number" : 2,
+            "title"  : "Cataracts",
+            "description": "White film covers your eyes. Though you can still see, your stare is unnerving. You suffer –1 SL to all Fellowship-based Tests."
+        },
+        {
+            "number" : 3,
+            "title"  : "Cold Dead Hand",
+            "description": "Your touch is repellent to those not of the Amethyst Order. You suffer –1 SL to all Fellowship-based Tests where tactile contact is involved."
+        },
+        {
+            "number" : 4,
+            "title"  : "Curse of Age",
+            "description": "Any creature born within Willpower yards of you ages at an accelerated rate, living for no more than three quarters of the span it would otherwise"
+        },
+        {
+            "number" : 5,
+            "title"  : "Voice of the Dead",
+            "description": "Your voice changes to that of an unsettling, hoarse whisper. It becomes a struggle to talk at a clearly audible volume, and impossible to shout. Suffer -1 SL to Casting Tests."
+        },
+        {
+            "number" : 6,
+            "title"  : "Grave Stench",
+            "description": "You stink of the grave and attract scavengers such as carrion birds. If you are nearby, Impressive Failures or Fumbles by the party in the wilderness might attract larger, more aggressive types of scavengers. You suffer –1 SL to all Fellowship-based Tests with those who can smell you."
+        },
+        {
+            "number" : 7,
+            "title"  : "Grim Determination",
+            "description": "Despite your unhealthy appearance, Shyish fuels your determination to see it to the inevitable end. Fatigued Conditions (WFRP, page 169) do not give penalties to Language (Magick) and Channelling Tests."
+        },
+        {
+            "number" : 8,
+            "title"  : "I Hear Dead People",
+            "description": "The voices of the dead follow you everywhere. Most of the time this susurrus is easily ignored but you can choose to focus in on them if you wish by passing a Challenging (+0) Perception Test, which may provide helpful insight from the knowledge of the local collective dead. If you Fumble, suffer from Moderate Exposure to Corruption."
+        },
+        {
+            "number" : 9,
+            "title"  : "Siphon",
+            "description": "When a living being of Size Small or larger, who is suffering from Fatigued Conditions as a result of one of your spells, dies, you gain 1 Wound up to your maximum Wounds."
+        },
+        {
+            "number" : 10,
+            "title"  : "Mark of Shyish",
+            "description": "The rune of Shyish appears somewhere on your body. You gain the Suffuse with Shyish Talent (see page 186)."
+        }
+    ],
+    "Aqshy" : [
+        {
+            "number" : 1,
+            "title" : "Fiery Hair",
+            "description": "Your hair and eyebrows turn a bright, fiery red, and naturally finds itself in the tangled shape of flame. Your hair ignites as you cast spells or if your temper flares. This fire is as hot and bright as any, but you are unaffected."
+        },
+        {
+            "number" : 2,
+            "title"  : "Whiff of Aqshy",
+            "description": "You leave behind the smell of burnt toast, and strands of smoke, in your wake."
+        },
+        {
+            "number" : 3,
+            "title"  : "Red Mist",
+            "description": "Whenever you receive a Surprised Condition, you must pass an Average (+20) Cool Test. If you fail this Test, you enter a state of Frenzy if you are in a combat situation or suffer from Animosity (Everyone) (WFRP, page 190) in a non-combat situation."
+        },
+        {
+            "number" : 4,
+            "title"  : "Vulnerable to Cold",
+            "description": "You are uncomfortable in the cold. All Tests you make while suffering from Cold Exposure (WFRP, page 181) are one step more difficult."
+        },
+        {
+            "number" : 5,
+            "title"  : "Aquaphobic",
+            "description": "You must pass an Average (+20) Cool Test to cross any significant body of water or set foot on a boat."
+        },
+        {
+            "number" : 6,
+            "title"  : "Pyromania",
+            "description": "You become agitated when unable to spend some time gazing at a blaze. For each day you fail to observe a crackling fire for at least an hour, the default difficulty of Willpower- and Intelligence-based Tests becomes one step harder, to a maximum of Very Hard (–30). When you can see a fire once again, default difficulty returns to normal."
+        },
+        {
+            "number" : 7,
+            "title"  : "Bright Skin",
+            "description": "Tattoo-like symbols glowing beneath your skin. The glowing intensifies as you become more emotional. You suffer –1 SL to sight-based Stealth Tests."
+        },
+        {
+            "number" : 8,
+            "title"  : "Feed the Fire",
+            "description": "you are within 4 yards of an Ablaze Condition stack (including your own), it deals +1 Damage."
+        },
+        {
+            "number" : 9,
+            "title"  : "Fire Resistant",
+            "description": "You double your Toughness Bonus when calculating Damage from fire including Ablaze Conditions and breath attacks."
+        },
+        {
+            "number" : 10,
+            "title"  : "Mark of Aqshy",
+            "description": "The rune of Aqshy appears somewhere on your body. You gain the Suffuse with Aqshy Talent (see page 186)."
+        }
+    ],
+    "Ghur" : [
+        {
+            "number" : 1,
+            "title" : "Savage Gaze",
+            "description": "You may use Willpower to oppose melee attacks from wolves, bears, boars, and rats. Additionally, if you roll a Critical when doing so, roll on the Head Critical Wounds Table; the number of Wounds is how many Broken Conditions the animal receives."
+        },
+        {
+            "number" : 2,
+            "title"  : "Claustrophobia",
+            "description": "You must pass an Easy (+40) Cool Test to enter any building or artificial construction. If you fail, receive one Broken Condition."
+        },
+        {
+            "number" : 3,
+            "title"  : "Restless",
+            "description": "You tend not to want to stay in one place for long, always needing to move about. It's worse when you're in closed spaces. You cannot lose Fatigued Conditions within the walls of a large city (except Middenheim)."
+        },
+        {
+            "number" : 4,
+            "title"  : "Dirty",
+            "description": "For some reason, you attract dirt and can never fully get clean."
+        },
+        {
+            "number" : 5,
+            "title"  : "Hairy",
+            "description": "You grow thick hair all over your body. When you shave it off, it regrows quickly. You don't take penalties for Endurance Tests to withstand Cold Exposure (WFRP, page 181) if you lack the proper clothing, but you are rather unsightly."
+        },
+        {
+            "number" : 6,
+            "title"  : "Feral",
+            "description": "Your nails thicken and lengthen, and your teeth grow pointed. You have a wild-eyed appearance that others find unsettling. You suffer –1 SL to all Fellowship-based Tests."
+        },
+        {
+            "number" : 7,
+            "title"  : "Musk",
+            "description": "You exude a strong natural musk. Fellowship Tests made when interacting with Gold Status Characters suffer –1 SL when you are within 5 yards."
+        },
+        {
+            "number" : 8,
+            "title"  : "Hunter's Instincts",
+            "description": "You benefit from a bonus of +1 SL when using Outdoor Survival for hunting and fishing."
+        },
+        {
+            "number" : 9,
+            "title"  : "Small Friends",
+            "description": "You attract small, though harmless, animals like squirrels, mice, small birds, and so on. They seem to show up when least appropriate, leaving droppings in food and drink or otherwise interrupting. This may occur when a member of your party Fumbles any Fellowship-based Test within 20 yards of you."
+        },
+        {
+            "number" : 10,
+            "title"  : "Mark of Ghur",
+            "description": "The rune of Ghur appears somewhere on your body. You gain the Suffuse with Ghur Talent (see page 186)."
+        }
+    ]
+}
