@@ -148,11 +148,15 @@ class Magic4e:
         with importlib.resources.open_text(data,'arcane_marks.json') as f:
             _marks_data = json.load(f)
 
-        # Turn the lore into a wind name so we can do a lookup in the json
-        wind_name = self.get_wind_name(lore)
-        
-        # Choose a mark at random
-        mark = random.choices(_marks_data[wind_name], k=1)[0]
+        try:
+            # Turn the lore into a wind name so we can do a lookup in the json
+            wind_name = self.get_wind_name(lore)
+            
+            # Choose a mark at random
+            mark = random.choices(_marks_data[wind_name], k=1)[0]
+        except KeyError:
+            # Either the wind name couldn't be identified, or there are no marks associated with this lore
+            return None
 
         # Return the result with some formatting
         return f"**{mark['title']}**: {mark['description']}"
