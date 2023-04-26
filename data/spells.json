@@ -78,7 +78,8 @@
                 "CN": 0,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.241"
             },
             "Marsh Lights": {
                 "CN": 0,
