@@ -340,6 +340,19 @@
         ],
         "utility": false
     },
+    "Chanty": {
+        "addskill": null,
+        "addtalent": null,
+        "combat": false,
+        "group": false,
+        "max": "IB",
+        "social": false,
+        "stat_mod": null,
+        "tests": [
+            "Entertain (Singing)"
+        ],
+        "utility": true
+    },
     "Combat Aware": {
         "addskill": null,
         "addtalent": null,
@@ -1164,6 +1177,19 @@
         "stat_mod": "+5 BS",
         "tests": [
             null
+        ],
+        "utility": false
+    },
+    "Master And Commander": {
+        "addskill": null,
+        "addtalent": null,
+        "combat": false,
+        "group": false,
+        "max": null,
+        "social": true,
+        "stat_mod": null,
+        "tests": [
+            "Leadership"
         ],
         "utility": false
     },
