@@ -3387,6 +3387,48 @@
             "spell-lists": ["Arcane Lore", "Chaos Arcane Lore", "Chaos Lore of Tzeentch", "Lore of Daemonology"]
         }
     },
+    "Beachcomber" : {
+        "class": "Seafarer",
+        "source": "Sea of Claws, p.64-65",
+        "races": ["Human", "Halfling"],
+        "earning skill": "Perception",
+        "rank 1" : {
+            "name": "Scavenger",
+            "status": "Brass 1",
+            "advances": ["WS", "I", "Int"],
+            "skills" : ["Climb", "Dodge", "Gossip", "Haggle", "Lore (Coasts and Tides)", "Melee (Basic)", "Outdoor Survival", "Perception", "Row", "Stealth (Rural)"],
+            "talents":  ["Fisherman", "Orientation", "Strider (Coastal)", "Strong Swimmer"],
+            "npc_suggested_talents": [],
+            "trappings": ["Fishing Net", "String Bag"]
+        },
+        "rank 2" : {
+            "name": "Beachcomber",
+            "status": "Brass 3",
+            "advances": ["Agi"],
+            "skills" : ["Consume Alcohol", "Endurance", "Lore (Any)", "Ranged (Sling)", "Set Trap", "Swim"],
+            "talents":  ["Coolheaded", "Flee!", "Rover", "Stone Soup"],
+            "npc_suggested_talents": [],
+            "trappings": ["Found Boots", "Leather Jerkin", "Rain Hat"]
+        },
+        "rank 3" : {
+            "name": "Drifter",
+            "status": "Brass 5",
+            "advances": ["WP"],
+            "skills" : ["Charm", "Evaluate", "Gamble", "Sail"],
+            "talents":  ["Old Salt", "Savant (Coasts and Tides)", "Sea Legs", "Tinker"],
+            "npc_suggested_talents": [],
+            "trappings": ["Boat", "Hut", "Storm Lantern"]
+        },
+        "rank 4" : {
+            "name": "Master of the Beach",
+            "status": "Silver 2",
+            "advances": ["T"],
+            "skills" : ["Leadership", "Trade (Boatbuilder)"],
+            "talents":  ["Dealmaker", "River Guide", "Seasoned Traveller", "Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Wreck Dwelling"]
+        }
+    },
     "Archer" : {
         "class": "Warrior",
 		"source": "Up in Arms, p.10",
