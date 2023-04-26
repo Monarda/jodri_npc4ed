@@ -25,6 +25,7 @@ species_npc_characteristics_4e = {
     "clanrat":       {"M":5, "WS":30, "BS":30, "S":30, "T":30, "I":40, "Agi":35, "Dex":30, "Int":30, "WP":20, "Fel":30},
     "stormvermin":   {"M":5, "WS":45, "BS":35, "S":35, "T":35, "I":55, "Agi":50, "Dex":30, "Int":30, "WP":25, "Fel":20},
     "rat ogre":      {"M":5, "WS":35, "BS":10, "S":55, "T":45, "I":35, "Agi":45, "Dex":25, "Int":10, "WP":25, "Fel":15},
+    "syreen":        {"M":6, "WS":30, "BS": 0, "S":30, "T":30, "I":20, "Agi":30, "Dex":30, "Int":25, "WP":25, "Fel":15},
 }
 
 species_npc_traits_4e = {
@@ -51,6 +52,7 @@ species_npc_traits_4e = {
     "clanrat": {'Armour 2', 'Infected', 'Night Vision', 'Weapon +7'},
     "stormvermin": {'Armour 4', 'Infected', 'Night Vision', 'Weapon +8'},
     "rat ogre": {'Armour 1', 'Infected', 'Night Vision', 'Size (Large)', 'Stupid', 'Weapon +9'},
+    "syreen": {'Amphibious', 'Corrupting (Minor)', 'Dark Vision', 'Ethereal', 'Fury', 'Terror 3', 'Undead', 'Unstable', 'Weapons (Ghostly Blade)'},
 }
 
 species_npc_optional_traits_4e = {
@@ -77,6 +79,7 @@ species_npc_optional_traits_4e = {
     "clanrat": {'Disease (Ratte Fever)', 'Mutation', 'Skittish', 'Stealthy', 'Tracker'},
     "stormvermin": {'Disease (Ratte Fever)', 'Mutation', 'Tracker'},
     "rat ogre": {'Corruption (Minor)', 'Dark Vision', 'Disease (Ratte Fever)', 'Infestation', 'Mutation', 'Tail+8', 'Tracker', 'Trained (Broken, Guard, Mount, War)'},
+    "syreen": {},
 }
 
 # Aliases
