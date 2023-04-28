@@ -639,7 +639,7 @@
     },
     "Priest Of Handrich" : {
         "class": "Academic",
-        "source": "Archives of the Empire Vol. 3, p.46",
+        "source": "Archives of the Empire Vol 3, p.46",
         "races": ["Human"],
         "alternative_to": "Priest",
         "earning skill": "Haggle",
@@ -682,9 +682,9 @@
     },    
     "Priestess Of Rhya" : {
         "class": "Academic",
-        "source": "Archives of the Empire Vol. 3, p.72",
+        "source": "Archives of the Empire Vol 3, p.72",
         "races": ["Human"],
-        "alternative_to": "priest",
+        "alternative_to": "Priest",
         "earning skill": "Pray",
         "rank 1" : {
             "name": "Initiate",
@@ -725,7 +725,7 @@
     },
     "Priest Of Solkan" : {
         "class": "Academic",
-        "source": "Archives of the Empire Vol. 3, p.54",
+        "source": "Archives of the Empire Vol 3, p.54",
         "races": ["Human"],
         "alternative_to": "Priest",
         "earning skill": "Pray",
@@ -3427,6 +3427,343 @@
             "talents":  ["Dealmaker", "River Guide", "Seasoned Traveller", "Tenacious"],
             "npc_suggested_talents": [],
             "trappings": ["Wreck Dwelling"]
+        }
+    },
+    "Chantyman" : {
+        "class": "Seafarer",
+        "source": "Sea of Claws, p.66-67",
+        "races": ["High Elf", "Human"],
+        "earning skill": "Entertain (Singing)",
+        "rank 1" : {
+            "name": "Chanter",
+            "status": "Silver 1",
+            "advances": ["Dex", "Int", "Fel"],
+            "skills" : ["Charm", "Consume Alcohol", "Dodge", "Entertain (Singing)", "Gossip", "Melee (Brawling)", "Play (Fiddle, Squeezebox or Tin Whistle)", "Row", "Sail", "Swim"],
+            "talents":  ["Etiquette (Crew)", "Perfect Pitch", "Sea Legs", "Strider (Coastal)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Musical Instrument", "Rain Hat"]
+        },
+        "rank 2" : {
+            "name": "Chantyman",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Athletics", "Climb", "Endurance", "Gamble", "Melee (Basic)", "Perform (Any)"],
+            "talents":  ["Chanty", "Jump Up", "Seasoned Traveller", "Strong Swimmer"],
+            "npc_suggested_talents": [],
+            "trappings": ["Sealskin Coat"]
+        },
+        "rank 3" : {
+            "name": "Chanty Captain",
+            "status": "Silver 5",
+            "advances": ["WP"],
+            "skills" : ["Cool", "Language (Any)", "Leadership", "Perception"],
+            "talents":  ["Carouser", "Fisherman", "Old Salt", "Public Speaker"],
+            "npc_suggested_talents": [],
+            "trappings": ["Quality Instrument"]
+        },
+        "rank 4" : {
+            "name": "Chanty Master",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Lore (Oceans)", "Navigation"],
+            "talents":  ["Tenacious", "Magnum Opus", "Orientation", "Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Quality Hat"]
+        }
+    },
+    "Huffer (Ocean)" : {
+        "class": "Seafarer",
+        "source": "Sea of Claws, p.68-69",
+        "races": ["Dwarf", "Halfling", "High Elf", "Human"],
+        "earning skill": "Navigation",
+        "rank 1" : {
+            "name": "Portguide",
+            "status": "Brass 4",
+            "advances": ["WS", "T", "I"],
+            "skills" : ["Consume Alcohol", "Gossip", "Intuition", "Lore (Local)", "Lore (Oceans)", "Melee (Basic)", "Navigation", "Perception", "Row", "Swim"],
+            "talents":  ["Fisherman", "Night Vision", "Orientation", "Waterman"],
+            "npc_suggested_talents": [],
+            "trappings": ["Weapon (Boat Hook)", "Storm Lantern and Oil"]
+        },
+        "rank 2" : {
+            "name": "Huffer",
+            "status": "Silver 1",
+            "advances": ["WP"],
+            "skills" : ["Athletics", "Charm", "Climb", "Cool", "Entertain (Storytelling)", "Language (Any)"],
+            "talents":  ["Dealmaker", "Etiquette (Guilder)", "Nose for Trouble", "Old Salt"],
+            "npc_suggested_talents": [],
+            "trappings": ["Leather Jerkin", "Rope", "Row Boat"]
+        },
+        "rank 3" : {
+            "name": "Pilot",
+            "status": "Silver 3",
+            "advances": ["Int"],
+            "skills" : ["Haggle", "Intimidate", "Lore (Local)", "Lore (Wrecks)"],
+            "talents":  ["Acute Sense (Sight)", "Pilot", "Sea Legs", "Very Strong"],
+            "npc_suggested_talents": [],
+            "trappings": ["Pole", "Storm Lantern and Oil"]
+        },
+        "rank 4" : {
+            "name": "Master Pilot",
+            "status": "Silver 5",
+            "advances": ["Fel"],
+            "skills" : ["Leadership", "Sail"],
+            "talents":  ["Sharp", "Sixth Sense", "Strong Swimmer", "Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Boathand", "Small Boat"]
+        }
+    },
+    "Officer" : {
+        "class": "Seafarer",
+        "source": "Sea of Claws, p.70-71",
+        "races": ["Dwarf", "High Elf", "Human"],
+        "earning skill": "Leadership",
+        "rank 1" : {
+            "name": "Midshipman",
+            "status": "Silver 1",
+            "advances": ["WS", "Int", "Fel"],
+            "skills" : ["Athletics", "Climb", "Gossip", "Leadership", "Melee (Basic)", "Outdoor Survival", "Perception", "Row", "Sail", "Swim"],
+            "talents":  ["Etiquette (Crew)", "Orientation", "Read/Write", "Sea Legs"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon", "Uniform"]
+        },
+        "rank 2" : {
+            "name": "Officer",
+            "status": "Silver 5",
+            "advances": ["BS"],
+            "skills" : ["Cool", "Endurance", "Intimidate", "Lore (Oceans)", "Navigation", "Ranged (Blackpowder)"],
+            "talents":  ["Coolheaded", "Old Salt", "Master And Commander", "Pilot"],
+            "npc_suggested_talents": [],
+            "trappings": ["Quality Uniform", "Ship’s Chest"]
+        },
+        "rank 3" : {
+            "name": "Captain",
+            "status": "Gold 2",
+            "advances": ["T"],
+            "skills" : ["Art (Cartography)", "Charm", "Dodge", "Intuition"],
+            "talents":  ["Inspiring", "Seasoned Traveller", "War Leader", "Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["Big Hat", "Boat to Command", "Captain's Log"]
+        },
+        "rank 4" : {
+            "name": "Admiral",
+            "status": "Gold 5",
+            "advances": ["WP"],
+            "skills" : ["Language (Any)", "Lore (Any)"],
+            "talents":  ["Commanding Presence", "Iron Will", "Public Speaker", "Stout-hearted"],
+            "npc_suggested_talents": [],
+            "trappings": ["A Fleet"]
+        }
+    },
+    "Priest Of Stromfels" : {
+        "class": "Seafarer",
+        "source": "Sea of Claws, p.90",
+        "races": "Human",
+        "alternative_to": "Sailor-Priest Of Manann",
+        "earning skill": "Melee (Basic)",
+        "rank 1" : {
+            "name": "Initiate",
+            "status": "Silver 2",
+            "advances": ["WS", "S", "I"],
+            "skills" : ["Climb", "Consume Alcohol", "Endurance", "Intimidate", "Intuition", "Melee (Basic)", "Pray", "Row", "Sail", "Swim"],
+            "talents":  ["Bless (Stromfels)", "Criminal", "Holy Visions", "Strong Swimmer"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crowbar", "Hand Weapon", "Large Sack", "Leather Jerkin", "Leather Gloves"]
+        },
+        "rank 2" : {
+            "name": "Priest Of Stromfels",
+            "status": "Silver 3",
+            "advances": ["Fel"],
+            "skills" : ["Cool", "Entertain (Singing), Lore (Stromfels)", "Navigation", "Perception", "Track"],
+            "talents":  ["Fearless (Any)", "Flee!", "Invoke (Stromfels)", "Menacing"],
+            "npc_suggested_talents": [],
+            "trappings": ["Leather Jack", "Storm Lantern and Oil"]
+        },
+        "rank 3" : {
+            "name": "Pirate Priest",
+            "status": "Silver 4",
+            "advances": ["Agi"],
+            "skills" : ["Gossip", "Leadership", "Lore (Oceans)", "Set Trap"],
+            "talents":  ["Hatred (Manannites or Followers of Chaos)", "Impassioned Zeal", "Master Orator", "Rover"],
+            "npc_suggested_talents": [],
+            "trappings": ["Grappling Hook and Rope", "Religious Relic", "Riverboat"]
+        },
+        "rank 4" : {
+            "name": "Priest Captain",
+            "status": "Silver 5",
+            "advances": ["BS"],
+            "skills" : ["Melee (Any)", "Ranged (Blackpowder)"],
+            "talents":  ["Furious Assault", "In-fighter", "Pilot", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Group of Cultists", "Pistol with 10 Shots"]
+        }
+    },
+    "Sailor" : {
+        "class": "Seafarer",
+        "source": "Sea of Claws, p.72-73",
+        "races": ["Dwarf", "Halfling", "High Elf", "Human"],
+        "earning skill": "Sail",
+        "rank 1" : {
+            "name": "Landsman",
+            "status": "Silver 1",
+            "advances": ["Agi", "Dex", "Fel"],
+            "skills" : ["Climb", "Consume Alcohol", "Gamble", "Gossip", "Lore (Oceans)", "Melee (Brawling)", "Play (Pennywhistle)", "Row", "Sail", "Swim"],
+            "talents":  ["Fisherman", "Strider (Coastal)", "Strong Back", "Strong Swimmer"],
+            "npc_suggested_talents": [],
+            "trappings": ["Brush", "Bucket", "Mop"]
+        },
+        "rank 2" : {
+            "name": "Sailor",
+            "status": "Silver 3",
+            "advances": ["WS"],
+            "skills" : ["Athletics", "Dodge", "Endurance", "Entertain (Singing)", "Language (Any)", "Melee (Basic)"],
+            "talents":  ["Catfall", "Sea Legs", "Seasoned Traveller", "Strong Legs"],
+            "npc_suggested_talents": [],
+            "trappings": ["Boat Hook", "Leather Jerkin"]
+        },
+        "rank 3" : {
+            "name": "Boatswain",
+            "status": "Silver 5",
+            "advances": ["I"],
+            "skills" : ["Cool", "Leadership", "Perception", "Trade (Carpenter)"],
+            "talents":  ["Old Salt", "Strike Mighty Blow", "Tenacious", "Very Strong"],
+            "npc_suggested_talents": [],
+            "trappings": ["Trade Tools (Carpenter)"]
+        },
+        "rank 4" : {
+            "name": "Ship's Master",
+            "status": "Gold 2",
+            "advances": ["Int"],
+            "skills" : ["Charm", "Navigation"],
+            "talents":  ["Orientation", "Pilot", "Public Speaker", "Savvy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Sailing Ship and Crew", "Sextant", "Shipping Charts", "Spyglass"]
+        }
+    },
+    "Sailor-Priest Of Manann" : {
+        "class": "Seafarer",
+        "source": "Sea of Claws, p.74-75",
+        "races": "Human",
+        "earning skill": "Pray",
+        "rank 1" : {
+            "name": "Initiate",
+            "status": "Brass 2",
+            "advances": ["T", "Agi", "WP"],
+            "skills" : ["Athletics", "Consume Alcohol", "Cool", "Endurance", "Language (Classical)", "Lore (Manann)", "Pray", "Row", "Sail", "Swim"],
+            "talents":  ["Bless (Manann)", "Holy Visions", "Sea Legs", "Very Strong"],
+            "npc_suggested_talents": [],
+            "trappings": ["Blue or Green or Turquoise Robes", "Cutlass", "Symbol of Manann"]
+        },
+        "rank 2" : {
+            "name": "Sailor-Priest",
+            "status": "Silver 1",
+            "advances": ["Fel"],
+            "skills" : ["Intuition", "Entertain (Singing)", "Gamble", "Intimidate", "Melee (Polearm)", "Navigation"],
+            "talents":  ["Invoke (Manann)", "Public Speaker", "Read/Write", "Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Holy Book of Manann", "Trident (counts as Spear)"]
+        },
+        "rank 3" : {
+            "name": "Priest-Captain",
+            "status": "Gold 1",
+            "advances": ["I"],
+            "skills" : ["Charm", "Leadership", "Lore (Oceans)", "Ranged (Blackpowder)"],
+            "talents":  ["Hatred (Followers of Stromfels)", "Old Salt", "Pilot", "Strong Swimmer"],
+            "npc_suggested_talents": [],
+            "trappings": ["Ceremonial Boat", "Quality Robes", "Subordinate Priests", "Temple"]
+        },
+        "rank 4" : {
+            "name": "Wave Lord",
+            "status": "Gold 2",
+            "advances": ["Int"],
+            "skills" : ["Language (Any)", "Lore (Politics)"],
+            "talents":  ["Chanty", "Inspiring", "Pure Soul", "Seasoned Traveller"],
+            "npc_suggested_talents": [],
+            "trappings": ["Flotilla of Ships", "Holy Relic", "Subordinate High Priests"]
+        }
+    },
+    "Ship'S Gunner" : {
+        "class": "Seafarer",
+        "source": "Sea of Claws, p.76-77",
+        "races": ["Dwarf", "Halfling", "High Elf", "Human"],
+        "earning skill": "Ranged (Blackpowder)",
+        "rank 1" : {
+            "name": "Powder Monkey",
+            "status": "Brass 3",
+            "advances": ["BS", "Agi", "Int"],
+            "skills" : ["Athletics", "Climb", "Dodge", "Endurance", "Language (Battle)", "Melee (Brawling)", "Perception", "Ranged (Blackpowder)", "Row", "Swim"],
+            "talents":  ["Old Salt", "Rapid Reload", "Sea Legs", "Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bucket", "Hammock"]
+        },
+        "rank 2" : {
+            "name": "Ship's Gunner",
+            "status": "Silver 3",
+            "advances": ["I"],
+            "skills" : ["Consume Alcohol", "Cool", "Gamble", "Gossip", "Melee (Basic)", "Sail"],
+            "talents":  ["Etiquette (Crew)", "Gunner", "Marksman", "Sniper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hat", "Sea Chest", "Tools"]
+        },
+        "rank 3" : {
+            "name": "Gunnery Captain",
+            "status": "Silver 5",
+            "advances": ["T"],
+            "skills" : ["Leadership", "Lore (Artillery)", "Navigation", "Trade (Gunsmith)"],
+            "talents":  ["Combat Aware", "Crew Commander", "Orientation", "Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crew", "Telescope"]
+        },
+        "rank 4" : {
+            "name": "Master Gunner",
+            "status": "Gold 1",
+            "advances": ["WP"],
+            "skills" : ["Charm", "Lore (Oceans)"],
+            "talents":  ["Accurate Shot", "Inspiring", "Seasoned Traveller", "Stout-hearted"],
+            "npc_suggested_talents": [],
+            "trappings": ["Cabin", "Quality Uniform"]
+        }
+    },
+    "Wrecker (Ocean)" : {
+        "class": "Seafarer",
+        "source": "Sea of Claws, p.78-79",
+        "races": ["Dwarf", "Human", "Wood Elf"],
+        "earning skill": "Melee (Basic)",
+        "rank 1" : {
+            "name": "Cargo Scavenger",
+            "status": "Brass 2",
+            "advances": ["WS", "S", "I"],
+            "skills" : ["Climb", "Consume Alcohol", "Dodge", "Endurance", "Melee (Basic)", "Outdoor Survival", "Ranged (Sling)", "Row", "Sail", "Swim"],
+            "talents":  ["Break and Enter", "Criminal", "Fisherman", "Strong Back"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crowbar", "Large Sack", "Leather Gloves"]
+        },
+        "rank 2" : {
+            "name": "Wrecker",
+            "status": "Brass 3",
+            "advances": ["WP"],
+            "skills" : ["Bribery", "Cool", "Intuition", "Navigation", "Perception", "Set Trap"],
+            "talents":  ["Flee!", "Rover", "Strong Swimmer", "Trapper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Boat Hook", "Leather Jack", "Storm Lantern and Oil"]
+        },
+        "rank 3" : {
+            "name": "Pirate",
+            "status": "Brass 5",
+            "advances": ["BS"],
+            "skills" : ["Gossip", "Intimidate", "Ranged (Crossbow)", "Stealth (Rural)"],
+            "talents":  ["Dirty Fighting", "Etiquette (Criminals)", "Menacing", "Waterman"],
+            "npc_suggested_talents": [],
+            "trappings": ["Crossbow with 10 Bolts", "Grappling Hook and Rope", "Riverboat"]
+        },
+        "rank 4" : {
+            "name": "Pirate Captain",
+            "status": "Silver 2",
+            "advances": ["Fel"],
+            "skills" : ["Leadership", "Lore (Oceans)"],
+            "talents":  ["Furious Assault", "In-fighter", "Master And Commander", "Warrior Born"],
+            "npc_suggested_talents": [],
+            "trappings": ["Fleet of Riverboats and Wrecker Crew", "Keg of Ale", "Manacles"]
         }
     },
     "Archer" : {
