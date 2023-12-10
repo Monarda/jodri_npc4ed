@@ -7,63 +7,63 @@
                 "Range": "1 yard",
                 "Target": 1,
                 "Duration": "1 hour",
-                "Source": "Core, p.240"
+                "Source": "Corebook, p.240"
             },
             "Bearings": {
                 "CN": 0,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "Instant",
-                "Source": "Core, p.240"
+                "Source": "Corebook, p.240"
             },
             "Dazzle": {
                 "CN": 0,
                 "Range": "Touch",
                 "Target": 1,
                 "Duration": "WPB rounds",
-                "Source": "Core, p.240"
+                "Source": "Corebook, p.240"
             },
             "Careful Step": {
                 "CN": 0,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WP Minutes",
-                "Source": "Core, p.240"
+                "Source": "Corebook, p.240"
             },
             "Conserve": {
                 "CN": 0,
                 "Range": "1 yard",
                 "Target": 1,
                 "Duration": "WPB days",
-                "Source": "Core, p.240"
+                "Source": "Corebook, p.240"
             },
             "Dart": {
                 "CN": 0,
                 "Range": "WP yards",
                 "Target": 1,
                 "Duration": "Instant",
-                "Source": "Core, p.240"
+                "Source": "Corebook, p.240"
             },
             "Drain": {
                 "CN": 0,
                 "Range": "Touch",
                 "Target": 1,
                 "Duration": "Instant",
-                "Source": "Core, p.240"
+                "Source": "Corebook, p.240"
             },
             "Eavesdrop": {
                 "CN": 0,
                 "Range": "WP yards",
                 "Target": 1,
                 "Duration": "IB rounds",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
             },
             "Gust": {
                 "CN": 0,
                 "Range": "WP yards",
                 "Target": "Special",
                 "Duration": "Instant",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
 
             },
             "Light": {
@@ -71,35 +71,36 @@
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WP minutes",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
 
             },
             "Magic Flame": {
                 "CN": 0,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.241"
             },
             "Marsh Lights": {
                 "CN": 0,
                 "Range": "WP yards",
                 "Target": "Special",
                 "Duration": "WP minutes",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
             },
             "Murmured Whisper": {
                 "CN": 0,
                 "Range": "WP yards",
                 "Target": "",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
             },
             "Open Lock": {
                 "CN": 0,
                 "Range": "Touch",
                 "Target": "Special",
                 "Duration": "Instant",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
 
             },
             "Produce Small Animal": {
@@ -107,42 +108,42 @@
                 "Range": "Touch",
                 "Target": "Special",
                 "Duration": "Instant",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
             },
             "Protection from Rain": {
                 "CN": 0,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "TB rounds",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
             },
             "Purify Water": {
                 "CN": 0,
                 "Range": "1 yard",
                 "Target": "Special",
                 "Duration": "Instant",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
             },
             "Rot": {
                 "CN": 0,
                 "Range": "1 yard",
                 "Target": "Special",
                 "Duration": "Instant",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
             },
             "Sleep": {
                 "CN": 0,
                 "Range": "Touch",
                 "Target": 1,
                 "Duration": "WPB rounds",
-                "Source": "Core, p.241"
+                "Source": "Corebook, p.241"
             },
             "Spring": {
                 "CN": 0,
                 "Range": "Touch",
                 "Target": "Special",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.242"
+                "Source": "Corebook, p.242"
 
             },
             "Shock": {
@@ -150,14 +151,14 @@
                 "Range": "Touch",
                 "Target": 1,
                 "Duration": "Instant",
-                "Source": "Core, p.242"
+                "Source": "Corebook, p.242"
             },
             "Sly Hands": {
                 "CN": 0,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.242"
+                "Source": "Corebook, p.242"
 
             },
             "Sounds": {
@@ -165,21 +166,21 @@
                 "Range": "WP yards",
                 "Target": "Special",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.242"
+                "Source": "Corebook, p.242"
             },
             "Twitch": {
                 "CN": 0,
                 "Range": "WPB yards",
                 "Target": "Special",
                 "Duration": "Instant",
-                "Source": "Core, p.242"
+                "Source": "Corebook, p.242"
             },
             "Warning": {
                 "CN": 0,
                 "Range": "1 yard",
                 "Target": "Special",
                 "Duration": "Instant",
-                "Source": "Core, p.242"
+                "Source": "Corebook, p.242"
             }
         }
     },
@@ -302,140 +303,189 @@
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds+",
-                "Source": "Core, p.242"
+                "Source": "Corebook, p.242"
             },
             "Aethyric Arms": {
                 "CN": 2,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds+",
-                "Source": "Core, p.242"
+                "Source": "Corebook, p.242"
             },
             "Arrow Shield": {
                 "CN": 3,
                 "Range": "You",
                 "Target": "AoE WPB yards",
                 "Duration": "WPB rounds+",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
+            },
+            "Belligerence of the Bloodmarsh": {
+                "CN": 2,
+                "Range": "WPB yards",
+                "Target": "Any 1 Fenbeast",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.26"
             },
             "Blast": {
                 "CN": 4,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
                 "Duration": "Instant",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
             },
             "Bolt": {
                 "CN": 4,
                 "Range": "WP yards",
                 "Target": 1,
                 "Duration": "Instant",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
             },
             "Breath": {
                 "CN": 6,
                 "Range": "1 yard",
                 "Target": "Special",
                 "Duration": "Instant",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
             },
             "Bridge": {
                 "CN": 4,
                 "Range": "WP yards",
                 "Target": "AoE",
                 "Duration": "WPB rounds+",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
             },
             "Chain Attack": {
                 "CN": 6,
                 "Range": "WP yards",
                 "Target": "Special",
                 "Duration": "Instant",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
+            },
+            "Collapse Construct": {
+                "CN": 6,
+                "Range": "WPB yards",
+                "Target": "Any 1 Construct",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.26"
             },
             "Corrosive Blood": {
                 "CN": 4,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
             },
             "Dark Vision": {
                 "CN": 1,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
+            },
+            "Decipher Curse": {
+                "CN": 4,
+                "Range": "WP yards",
+                "Target": "Any item",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.26"
+            },
+            "Disrupt Magic": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "1",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.26"
             },
             "Distracting": {
                 "CN": 4,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
             },
             "Dome": {
                 "CN": 7,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
             },
             "Drop": {
                 "CN": 1,
                 "Range": "WP yards",
                 "Target": 1,
                 "Duration": "Instant",
-                "Source": "Core, p.243"
+                "Source": "Corebook, p.243"
             },
             "Entangle": {
                 "CN": 3,
                 "Range": "WP yards",
                 "Target": 1,
                 "Duration": "Special",
-                "Source": "Core, p.244"
+                "Source": "Corebook, p.244"
             },
             "Fearsome": {
                 "CN": 3,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.244"
+                "Source": "Corebook, p.244"
             },
             "Flight": {
                 "CN": 8,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds+",
-                "Source": "Core, p.244"
+                "Source": "Corebook, p.244"
+            },
+            "Fly-Infested Rotweed": {
+                "CN": 4,
+                "Range": "WPB yards",
+                "Target": "Any 1 Fenbeast",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.26"
+            },
+            "Lifebloom Silt": {
+                "CN": 4,
+                "Range": "WPB yards",
+                "Target": "Any 1 Fenbeast",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.26"
             },
             "Magic Shield": {
                 "CN": 4,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.244"
+                "Source": "Corebook, p.244"
             },
             "Move Object": {
                 "CN": 4,
                 "Range": "WP yards",
                 "Target": 1,
                 "Duration": "1 rounds",
-                "Source": "Core, p.244"
+                "Source": "Corebook, p.244"
             },
             "Mundane Aura": {
                 "CN": 4,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WP minutes",
-                "Source": "Core, p.244"
+                "Source": "Corebook, p.244"
             },
             "Push": {
                 "CN": 6,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "Instant",
-                "Source": "Core, p.244"
+                "Source": "Corebook, p.244"
+            },
+            "Silence": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "AoE (WPB yards)",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.27"
             },
             "Snitch": {
                 "CN": 2,
@@ -444,26 +494,146 @@
                 "Duration": "WPB hours",
                 "Source": "PBtT:C, p.110"
             },
+            "Succour Magical Servant": {
+                "CN": 2,
+                "Range": "WPB yards",
+                "Target": "One of your Familiars or Constructs",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.27"
+            },
             "Teleport": {
                 "CN": 5,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "Instant",
-                "Source": "Core, p.244"
+                "Source": "Corebook, p.244"
             },
             "Terrifying": {
                 "CN": 7,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.244"
+                "Source": "Corebook, p.244"
             },
             "Ward": {
                 "CN": 5,
                 "Range": "You",
                 "Target": "You",
                 "Duration": "WPB rounds",
-                "Source": "Core, p.244"
+                "Source": "Corebook, p.244"
+            }
+        }
+    },
+    "ritual magic": {
+        "colour": false,
+        "spells": {
+            "Bind Monstrous Beast": {
+                "CN": "Equal to the Beast's Wounds",
+                "Type": "Lore of Beasts",
+                "Ingredients": "The skull or hide from the same species as the beast being bound",
+                "Source": "Winds of Magic, p.28"
+            },
+            "Bind Spirit Within Power Stone": {
+                "CN": 32,
+                "Type": "Any Lore of the Eight Winds",
+                "Ingredients": "A Power Stone and a Minor Elemental (or similar spirit)",
+                "Source": "Winds of Magic, p.28"
+            },
+            "Carve Ogham Stone": {
+                "CN": "50",
+                "Type": "Any",
+                "Ingredients": "A large piece of granite shot through with veins of quartz. The stone should be around six feet in height and a foot in breadth, or larger.",
+                "Source": "Winds of Magic, p.28"
+            },
+            "Create Power Stone": {
+                "CN": 64,
+                "Type": "Any Lore of the Eight Winds",
+                "Ingredients": "None",
+                "Source": "Winds of Magic, p.28"
+            },
+            "Conjuration of the Bloody Hidesman": {
+                "CN": 85,
+                "Type": "Lore of Beasts",
+                "Ingredients": "A constructed totem comprised of the bones and freshly flensed pelts from eight or more large animals.",
+                "Source": "Winds of Magic, p.29"
+            },
+            "Conjuration of the Incarnate Elemental of Death": {
+                "CN": 90,
+                "Type": "Lore of Death",
+                "Ingredients": "An hourglass filled with sand made from the powdered bones of a monarch.",
+                "Source": "Winds of Magic, p.29"
+            },
+            "Conjuration of Jack O’ Cinders": {
+                "CN": 85,
+                "Type": "Lore of Fire",
+                "Ingredients": "A colossal pyre must be constructed and kept ablaze whilst the ritual is in progress.",
+                "Source": "Winds of Magic, p.30"
+            },
+            "Corrupt Waystone": {
+                "CN": 60,
+                "Type": "Any Dark Lore",
+                "Ingredients": "An unbroken waystone",
+                "Source": "Winds of Magic, p.30"
+            },
+            "Create Construct": {
+                "CN": 60,
+                "Type": "Any Lore",
+                "Ingredients": "A suitable form for the construct to inhabit",
+                "Source": "Winds of Magic, p.30"
+            },
+            "Create Familiar": {
+                "CN": 45,
+                "Type": "Any Lore",
+                "Ingredients": "A suitable vessel for the familiar",
+                "Source": "Winds of Magic, p.31"
+            },
+            "Create Waystone Property": {
+                "CN": 40,
+                "Type": "Any Lore",
+                "Ingredients": "An unbroken waystone.",
+                "Source": "Winds of Magic, p.32"
+            },
+            "Cursecraft": {
+                "CN": 50,
+                "Type": "Any Lore",
+                "Ingredients": "The item to be cursed.",
+                "Source": "Winds of Magic, p.32"
+            },
+            "Dark Cursecraft": {
+                "CN": 25,
+                "Type": "Lroe of Witchcraft, Daemonology, Necromancy, or any Chaos Lore",
+                "Ingredients": "The item to be cursed.",
+                "Source": "Winds of Magic, p.32"
+            },
+            "Imbue Staff": {
+                "CN": 35,
+                "Type": "Any Lore of the Eight Winds",
+                "Ingredients": "A quarterstaff or metal rod of similar length",
+                "Source": "Winds of Magic, p.32"
+            },
+            "Invocate Daemon": {
+                "CN": "The Daemon’s Willpower",
+                "Type": "Lore of Daemonology",
+                "Ingredients": "At least one of the names the Daemon uses. The invoker must also cause significant mayhem, suffering, or death during the ritual",
+                "Source": "Winds of Magic, p.32"
+            },
+            "Materialise the Living Swamp": {
+                "CN": 40,
+                "Type": "Lore of Death, Lore of Life, Lore of Shadows, Lore of Hedgecraft, Lore of Witchcraft",
+                "Ingredients": "A heartstone and access to a suitable quantity of organic matter.",
+                "Source": "Winds of Magic, p.32"
+            },
+            "Remove Curse": {
+                "CN": 40,
+                "Type": "Any Lore",
+                "Ingredients": "The cursed Item.",
+                "Source": "Winds of Magic, p.33"
+            },
+            "The Crossed Scythes": {
+                "CN": "Willpower of the entity",
+                "Type": "Lore of Death",
+                "Ingredients": "No ingredients, though the caster requires the tools with which to create the carving.",
+                "Source": "Winds of Magic, p.33"
             }
         }
     },
@@ -575,73 +745,190 @@
                 "CN": 6,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.245; Winds of Magic, p.146"
+            },
+            "Amber Trance": {
+                "CN": 4,
+                "Range": "I yards",
+                "Target": "1",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.146"
+            },
+            "Awakening of the Wood": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE (WP yards)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.146"
             },
             "Beast Form": {
                 "CN": 5,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WP minutes"
+                "Duration": "WP minutes",
+                "Source": "Corebook, p.245; Winds of Magic, p.146"
             },
             "Beast Made Well": {
                 "CN": 3,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.4"
             },
             "Beast Master": {
                 "CN": 10,
                 "Range": "WPB yards",
                 "Target": 1,
-                "Duration": "WPB days"
+                "Duration": "WPB days",
+                "Source": "Corebook, p.245; Winds of Magic, p.146"
             },
             "Beast Tongue": {
                 "CN": 3,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WP minutes"
+                "Duration": "WP minutes",
+                "Source": "Corebook, p.245; Winds of Magic, p.147"
+            },
+            "Beast Unbroken": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": "1",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.147"
             },
             "Cruelty's Deserts": {
                 "CN": 2,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB Days"
+                "Duration": "WPB Days",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.4"
+            },
+            "Curse of Anraheir": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.147"
+            },
+            "Eyes of the Pack": {
+                "CN": 3,
+                "Range": "Touch",
+                "Target": "1",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.147"
             },
             "Flock of Doom": {
                 "CN": 8,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.245; Winds of Magic, p.147"
+            },
+            "Follow Scent": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "I minutes",
+                "Source": "Winds of Magic, p.148"
             },
             "Hunter's Hide": {
                 "CN": 6,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.246; Winds of Magic, p.148"
+            },
+            "Hunter's Moons": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "AoE (WP yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.148"
+            },
+            "Merciw's Monstrous Regiment": {
+                "CN": 13,
+                "Range": "WP yards",
+                "Target": "AoE (WPB rounds)",
+                "Duration": "SB rounds",
+                "Source": "Winds of Magic, p.148"
+            },
+            "Musk Spray": {
+                "CN": 2,
+                "Range": "WPB yards",
+                "Target": "1",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.148"
+            },
+            "Quick Passage": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.148"
+            },
+            "Summon Mount": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.148"
             },
             "The Amber Spear": {
                 "CN": 8,
                 "Range": "WP yards",
                 "Target": "Special",
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.246; Winds of Magic, p.148"
+            },
+            "The Ox Stands": {
+                "CN": 5,
+                "Range": "You",
+                "Target": "AoE (WP yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.149"
+            },
+            "Transformation of Kadon": {
+                "CN": 14,
+                "Range": "You or Touch",
+                "Target": "You or 1 (maximum)",
+                "Duration": "WPBrounds",
+                "Source": "Winds of Magic, p.149"
+            },
+            "Vengeful Hood": {
+                "CN": 7,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "2 x WPB rounds",
+                "Source": "Winds of Magic, p.149"
             },
             "Wildercall": {
                 "CN": 2,
                 "Range": "You",
                 "Target": "AoE WPB miles",
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.4"
+            },
+            "Winter Coat": {
+                "CN": 2,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.149"
             },
             "Wyssan's Ally": {
                 "CN": 4,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.4"
             },
             "Wyssan's Wildform": {
                 "CN": 8,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.246; Winds of Magic, p.149"
             }
         }
     },
@@ -659,67 +946,162 @@
                 "CN": 7,
                 "Range": "Touch",
                 "Target": "Special",
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.246; Winds of Magic, p.123"
+            },
+            "Compel Spirits": {
+                "CN": 6,
+                "Range": "WPB yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "Until sunrise",
+                "Source": "Winds of Magic, p.123"
+            },
+            "Crystal Maze": {
+                "CN": 13,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.123"
+            },
+            "Death’s Release": {
+                "CN": 5,
+                "Range": "1/2 I yards",
+                "Target": "1",
+                "Duration": "3 rounds",
+                "Source": "Winds of Magic, p.123"
             },
             "Deathsight": {
                 "CN": 2,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.5"
             },
             "Dying Words": {
                 "CN": 6,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.246; Winds of Magic, p.123"
+            },
+            "Fate of Bjuna": {
+                "CN": 8,
+                "Range": "1/2 WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "FelB rounds",
+                "Source": "Winds of Magic, p.123"
+            },
+            "Iyrtu’s Embrace": {
+                "CN": 3,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "1 round",
+                "Source": "Winds of Magic, p.124"
+            },
+            "Limbwither": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "1",
+                "Duration": "WPB minutes or days",
+                "Source": "Winds of Magic, p.124"
             },
             "Preservation": {
                 "CN": 5,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB Days"
+                "Duration": "WPB Days",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.5"
             },
             "Purple Pall of Shyish": {
                 "CN": 9,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.246; Winds of Magic, p.124"
             },
             "Sanctify": {
                 "CN": 10,
                 "Range": "Touch",
-                "Target": "AoE WPB yards",
-                "Duration": "WP minutes"
+                "Target": "AoE (WPB yards)",
+                "Duration": "WP minutes",
+                "Source": "Corebook, p.246; Winds of Magic, p.124"
             },
             "Scythe of Shyish": {
                 "CN": 6,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.247; Winds of Magic, p.124"
+            },
+            "Shyish Uncovered": {
+                "CN": 4,
+                "Range": "AoE (WPB yards)",
+                "Target": "You",
+                "Duration": "IB minutes",
+                "Source": "Winds of Magic, p.124"
             },
             "Soul Vortex": {
                 "CN": 8,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.247; Winds of Magic, p.124"
+            },
+            "Speed of Lykos": {
+                "CN": 3,
+                "Range": "1/2 I yards",
+                "Target": "1",
+                "Duration": "1 round",
+                "Source": "Winds of Magic, p.124"
             },
             "Stay Death's Hand": {
                 "CN": 3,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.5"
             },
             "Steal Life": {
                 "CN": 7,
                 "Range": "WP yards",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.247; Winds of Magic, p.125"
             },
             "Swift Passing": {
                 "CN": 6,
                 "Range": "Touch",
                 "Target": "Special",
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.247; Winds of Magic, p.124"
+            },
+            "Taste of Death": {
+                "CN": 7,
+                "Range": "1/2 WP yards",
+                "Target": "1 + AoE (Special)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.125"
+            },
+            "Telepathy": {
+                "CN": 1,
+                "Range": "100 yards",
+                "Target": "1",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.125"
+            },
+            "Tide of Years": {
+                "CN": 3,
+                "Range": "WPB yards",
+                "Target": "1",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.125"
+            },
+            "Wild Kin of Zandox": {
+                "CN": 5,
+                "Range": "Special",
+                "Target": "Range",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.125"
             }
         }
     },
@@ -737,67 +1119,190 @@
                 "CN": 5,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.247; Winds of Magic, p.134"
+            },
+            "Body of Fire": {
+                "CN": 5,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "TB minutes",
+                "Source": "Winds of Magic, p.134"
+            },
+            "Boiling Blood": {
+                "CN": 5,
+                "Range": "Touch",
+                "Target": "1",
+                "Duration": "1 round",
+                "Source": "Winds of Magic, p.134"
+            },
+            "Burning Head": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.134"
+            },
+            "Captivating Flame": {
+                "CN": 3,
+                "Range": "1/2 WP yards",
+                "Target": "1 fire",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.134"
             },
             "Cauterise": {
                 "CN": 4,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.247; Winds of Magic, p.135"
             },
             "Ceaseless Flame": {
                 "CN": 2,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB hours"
+                "Duration": "WPB hours",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.6"
+            },
+            "Choleric": {
+                "CN": 2,
+                "Range": "1/2 I yards",
+                "Target": "1",
+                "Duration": "WPB hours, days, or weeks",
+                "Source": "Winds of Magic, p.135"
             },
             "Comfort": {
                 "CN": 3,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": "WPB hours"
+                "Duration": "WPB hours",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.6"
             },
             "Crown of Flame": {
                 "CN": 8,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB rounds"
-            },
-            "Flaming Hearts": {
-                "CN": 8,
-                "Range": "WP yards",
-                "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
-            },
-            "Flashcook": {
-                "CN": 2,
-                "Range": "Touch",
-                "Target": 1,
-                "Duration": "Instant"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.247; Winds of Magic, p.135"
             },
             "Firewall": {
                 "CN": 6,
                 "Range": "WP yards",
                 "Target": "AoE",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.248; Winds of Magic, p.135"
             },
-            "Great Fires of U'Zhul": {
-                "CN": 10,
+            "Flamestorm": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.135"
+            },
+            "Flaming Hearts": {
+                "CN": 8,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.248; Winds of Magic, p.135"
             },
             "Flaming Sword of Rhuin": {
                 "CN": 8,
                 "Range": "WP yards",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.248; Winds of Magic, p.135"
+            },
+            "Flashcook": {
+                "CN": 2,
+                "Range": "Touch",
+                "Target": 1,
+                "Duration": "Instant",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.6"
+            },
+            "Forge of Tarnus": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": "1 Forge",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.136"
+            },
+            "Great Fires of U'Zhul": {
+                "CN": 10,
+                "Range": "WP yards",
+                "Target": "AoE WPB yards",
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.248; Winds of Magic, p.136"
+            },
+            "Ignite": {
+                "CN": 3,
+                "Range": "WP yards",
+                "Target": "1",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.136"
+            },
+            "Inextinguishable Flame": {
+                "CN": 3,
+                "Range": "1/2 I yards",
+                "Target": "1 fire",
+                "Duration": "WPB hours, days, or weeks",
+                "Source": "Winds of Magic, p.136"
+            },
+            "Kindleflame": {
+                "CN": 2,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "1 round",
+                "Source": "Winds of Magic, p.136"
+            },
+            "Kindred of the Hearth": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.136"
+            },
+            "Magma Storm": {
+                "CN": 13,
+                "Range": "Random Vortex",
+                "Target": "AoE (2x WPB yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.136"
             },
             "Purge": {
                 "CN": 10,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.248; Winds of Magic, p.137"
+            },
+            "Sanguine Swords": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "You",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.137"
+            },
+            "Taste of Fire": {
+                "CN": 2,
+                "Range": "WPB yards",
+                "Target": "1 pot, jug, or flask",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.137"
+            },
+            "Withering Heat": {
+                "CN": 6,
+                "Range": "AoE (WP yards)",
+                "Target": "You",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.137"
+            },
+            "Ygethmor’s Flaming Blizzard": {
+                "CN": 12,
+                "Range": "WP yards",
+                "Target": "AoE (WP yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.137"
             }
         }
     },
@@ -811,71 +1316,187 @@
             "adept": "Astromancer"
         },
         "spells": {
+            "Azure Blades": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.98"
+            },
             "Birdspeech": {
                 "CN": 4,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB minutes"
+                "Duration": "WPB minutes",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.7"
             },
             "Cerulean Shield": {
                 "CN": 7,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.249; Winds of Magic, p.98"
             },
             "Comet of Casandora": {
                 "CN": 10,
                 "Range": "I yards",
                 "Target": "AoE IB yards",
-                "Duration": "Special"
+                "Duration": "Special",
+                "Source": "Corebook, p.249; Winds of Magic, p.98"
+            },
+            "Curse of Fate": {
+                "CN": 8,
+                "Range": "1/2 WP yards",
+                "Target": "1",
+                "Duration": "1 day",
+                "Source": "Winds of Magic, p.99"
+            },
+            "Divination": {
+                "CN": 3,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.99"
+            },
+            "Enemy Foreseen": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.99"
+            },
+            "Fantastic Foresight": {
+                "CN": 7,
+                "Range": "AoE (WP yards)",
+                "Target": "You",
+                "Duration": "1",
+                "Source": "Winds of Magic, p.99"
             },
             "Fate's Fickle Fingers": {
                 "CN": 6,
                 "Range": "You",
                 "Target": "AoE IB yards",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.249; Winds of Magic, p.99"
+            },
+            "Fate Illuminated": {
+                "CN": 5,
+                "Range": "1/2 Int yards or Touch",
+                "Target": "1",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.99"
             },
             "Gale": {
                 "CN": 5,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": " Special WPB rounds/Hours"
+                "Duration": " Special WPB rounds/Hours",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.7"
+            },
+            "Lens on the Sky": {
+                "CN": 3,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "IB minutes",
+                "Source": "Winds of Magic, p.100"
+            },
+            "Let the Four Winds Blow!": {
+                "CN": 9,
+                "Range": "WP yards",
+                "Target": "4 x AoE (WPB yards)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.100"
+            },
+            "Mistral From the Stratosphere": {
+                "CN": 7,
+                "Range": "WPB yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.100"
+            },
+            "Mystic Mirror": {
+                "CN": 7,
+                "Range": "WP miles",
+                "Target": "1 (maximum)",
+                "Duration": "FelB rounds",
+                "Source": "Winds of Magic, p.100"
+            },
+            "Polish and Glean": {
+                "CN": 1,
+                "Range": "Touch",
+                "Target": "1 object",
+                "Duration": "IB minutes",
+                "Source": "Winds of Magic, p.100"
+            },
+            "Project Spirit": {
+                "CN": 7,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "TB hours",
+                "Source": "Winds of Magic, p.100"
+            },
+            "Sapphire Arch": {
+                "CN": 6,
+                "Range": "1/2 WP yards",
+                "Target": "Special",
+                "Duration": "1 round",
+                "Source": "Winds of Magic, p.100"
             },
             "Starcrossed": {
                 "CN": 7,
                 "Range": "WP yards",
                 "Target": 1,
-                "Duration": "IB rounds"
+                "Duration": "IB rounds",
+                "Source": "Corebook, p.249; Winds of Magic, p.101"
+            },
+            "Storm of Shemtek": {
+                "CN": 11,
+                "Range": "1/2 WP yards",
+                "Target": "2 x IB or IB",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.101"
             },
             "T'Essla's Arc": {
                 "CN": 7,
                 "Range": "WP yards",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.249; Winds of Magic, p.101"
             },
             "The First Portent of Amul": {
                 "CN": 3,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "IB rounds"
+                "Duration": "IB rounds",
+                "Source": "Corebook, p.249; Winds of Magic, p.101"
             },
             "The Second Portent of Amul": {
                 "CN": 6,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "IB rounds"
+                "Duration": "IB rounds",
+                "Source": "Corebook, p.249; Winds of Magic, p.101"
             },
             "The Third Portent of Amul": {
                 "CN": 12,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "IB rounds"
+                "Duration": "IB rounds",
+                "Source": "Corebook, p.249; Winds of Magic, p.101"
+            },
+            "Thorsen's Thunderstorm": {
+                "CN": 11,
+                "Range": "Random Vortex",
+                "Target": "AoE (2 x WPB yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.101"
             },
             "Weathervane": {
                 "CN": 2,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.7"
             }
         }
     },
@@ -889,71 +1510,194 @@
             "adept": "Alchemist"
         },
         "spells": {
+            "Armour of Tin": {
+                "CN": 4,
+                "Range": "WP yards",
+                "Target": "AoE (WP yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.74"
+            },
+            "Breach the Unknown": {
+                "CN": 4,
+                "Range": "I yards",
+                "Target": "1",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.74"
+            },
             "Crucible of Chamon": {
                 "CN": 7,
                 "Range": "WPB yards",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.249; Winds of Magic, p.74"
+            },
+            "Curse of Rust": {
+                "CN": 4,
+                "Range": "WP yards",
+                "Target": "1 object of 1 Encumbrance",
+                "Duration": "",
+                "Source": "Winds of Magic, p.74"
             },
             "Enchant Weapon": {
                 "CN": 6,
                 "Range": "Touch",
                 "Target": "Special",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.250; Winds of Magic, p.74"
+            },
+            "Fault of Form": {
+                "CN": 2,
+                "Range": "WP yards",
+                "Target": "1 weapon",
+                "Duration": "IB rounds",
+                "Source": "Winds of Magic, p.75"
             },
             "Feather of Lead": {
                 "CN": 5,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.250; Winds of Magic, p.75"
             },
             "Fool's Gold": {
                 "CN": 4,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WP minutes"
+                "Duration": "WP minutes",
+                "Source": "Corebook, p.250; Winds of Magic, p.75"
             },
             "Forge of Chamon": {
                 "CN": 9,
                 "Range": "WPB yards",
                 "Target": "Special",
-                "Duration": "WP minutes"
+                "Duration": "WP minutes",
+                "Source": "Corebook, p.250; Winds of Magic, p.75"
             },
+            "Gehenna's Golden Globe": {
+                "CN": 13,
+                "Range": "Random Vortex",
+                "Target": "AoE (2 x WPB yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.75"
+            },
+            "Gilded Cage": {
+                "CN": 9,
+                "Range": "WPB yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.75"
+            },            
             "Glittering Robe": {
                 "CN": 5,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "TB rounds"
+                "Duration": "TB rounds",
+                "Source": "Corebook, p.250; Winds of Magic, p.75"
+            },
+            "Golden Touch": {
+                "CN": 7,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "WP x 1d10 minutes",
+                "Source": "Winds of Magic, p.75"
+            },
+            "Goldsteel Shielding": {
+                "CN": 10,
+                "Range": "WPB yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "WP minutes",
+                "Source": "Winds of Magic, p.76"
+            },
+            "Inscription": {
+                "CN": 2,
+                "Range": "1 yard",
+                "Target": "Special",
+                "Duration": "Special",
+                "Source": "Winds of Magic, p.76"
+            },
+            "Knot Untied": {
+                "CN": 5,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.76"
+            },
+            "Metal Mended": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": "1 object",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.76"
+            },
+            "Meteoric Ironclad": {
+                "CN": 7,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "1 round",
+                "Source": "Winds of Magic, p.76"
             },
             "Mutable Metal": {
                 "CN": 5,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.250; Winds of Magic, p.77"
+            },
+            "Prismatic Refraction of Habermas": {
+                "CN": 5,
+                "Range": "AoE (WP yards)",
+                "Target": "You",
+                "Duration": "1 round",
+                "Source": "Winds of Magic, p.77"
+            },
+            "Puchta's Silver Compass": {
+                "CN": 2,
+                "Range": "AoE (WP yards)",
+                "Target": "1 compass",
+                "Duration": "WP minutes",
+                "Source": "Winds of Magic, p.77"
+            },
+            "Replication of Levorg": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "Special",
+                "Duration": "1d10 hours",
+                "Source": "Winds of Magic, p.77"
             },
             "Rigor of Steel": {
                 "CN": 3,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB minutes"
+                "Duration": "WPB minutes",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.8"
             },
             "Sense Metal": {
                 "CN": 1,
                 "Range": "WP yards",
                 "Target": "You",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.8"
             },
             "Tale of Metal": {
                 "CN": 3,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.8"
             },
             "Transmutation of Chamon": {
                 "CN": 12,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.250; Winds of Magic, p.77"
+            },
+            "Trial and Error": {
+                "CN": 3,
+                "Range": "Int yards",
+                "Target": "1",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.77"
             }
         }
     },
@@ -967,71 +1711,194 @@
         },
         "colour": true,
         "spells": {
+            "Almanac": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "1 day",
+                "Source": "Winds of Magic, p.86"
+            },
             "Barkskin": {
                 "CN": 3,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.251; Winds of Magic, p.86"
+            },
+            "Dwellers Below": {
+                "CN": 13,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.86"
             },
             "Earthblood": {
                 "CN": 6,
                 "Range": "You",
                 "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.251; Winds of Magic, p.86"
             },
             "Earthpool": {
                 "CN": 8,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.251; Winds of Magic, p.86"
             },
             "Fat of the Land": {
                 "CN": 4,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB days"
+                "Duration": "WPB days",
+                "Source": "Corebook, p.251; Winds of Magic, p.87"
             },
             "Ferment": {
                 "CN": 3,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.9"
+            },
+            "Flesh of Stone": {
+                "CN": 9,
+                "Range": "WPB yards",
+                "Target": "1",
+                "Duration": "WP minutes",
+                "Source": "Winds of Magic, p.87"
             },
             "Forest of Thorns": {
                 "CN": 6,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.251; Winds of Magic, p.87"
+            },
+            "Gardener’s Warcry": {
+                "CN": 9,
+                "Range": "WP yards",
+                "Target": "AoE (WP yards)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.87"
+            },
+            "Geyser": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.87"
+            },
+            "Invigorating Chant": {
+                "CN": 6,
+                "Range": "2 x FelB yards",
+                "Target": "AoE (FelB yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.87"
+            },
+            "Jade Casket": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "1",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.87"
+            },
+            "Leaf Fall": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.88"
+            },
+            "Leyfinding": {
+                "CN": 5,
+                "Range": "IB miles",
+                "Target": "You",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.88"
             },
             "Lie of the Land": {
                 "CN": 5,
                 "Range": "IB miles",
                 "Target": "You",
-                "Duration": "Special"
+                "Duration": "Special",
+                "Source": "Corebook, p.251; Winds of Magic, p.88"
             },
             "Lifebloom": {
                 "CN": 8,
                 "Range": "WPB yards",
                 "Target": "Special",
-                "Duration": "Special"
+                "Duration": "Special",
+                "Source": "Corebook, p.252; Winds of Magic, p.88"
+            },
+            "Nature’s Whisper": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "FelB minutes",
+                "Source": "Winds of Magic, p.88"
+            },
+            "Paranoth’s Pathway": {
+                "CN": 4,
+                "Range": "AoE (WP yards)",
+                "Target": "You",
+                "Duration": "WP minutes",
+                "Source": "Winds of Magic, p.88"
             },
             "Regenerate": {
                 "CN": 6,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.252; Winds of Magic, p.88"
+            },
+            "Spiral Stair": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.89"
             },
             "Timbervault": {
                 "CN": 4,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.9"
             },
             "Track's Tale Told": {
                 "CN": 3,
                 "Range": "You",
                 "Target": 1,
-                "Duration": "Special"
+                "Duration": "Special",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.9"
+            },
+            "Vaunted Transmogrification of Colchis": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "AoE (WP yards)",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.89"
+            },
+            "Verdant Apotheosis": {
+                "CN": 16,
+                "Range": "Line of Sight",
+                "Target": "AoE (WPB yards)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.89"
+            },
+            "Vital Growth": {
+                "CN": 7,
+                "Range": "WPB yards",
+                "Target": "1",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.89"
+            },
+            "Wood Shape": {
+                "CN": 8,
+                "Range": "Touch",
+                "Target": "1",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.89"
             }
         }
     },
@@ -1045,74 +1912,197 @@
             "adept": "Hierophant"
         },
         "spells": {
+            "Abulla's Snare": {
+                "CN": 5,
+                "Range": "I yards",
+                "Target": "1",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.62"
+            },
+            "Assault of Stone": {
+                "CN": 12,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.62"
+            },             
             "Banishment": {
                 "CN": 12,
                 "Range": "You",
-                "Target": "AoE WPB yards",
-                "Duration": "Instant"
+                "Target": "AoE (WPB yards)",
+                "Duration": "Instant",
+                "Source": "Corebook, p.252; Winds of Magic, p.62"
             },
             "Blinding Light": {
                 "CN": 5,
                 "Range": "WP yards",
                 "Target": "You",
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.252; Winds of Magic, p.62"
             },
             "Clarity of Thought": {
                 "CN": 6,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "Int minutes"
+                "Duration": "Int minutes",
+                "Source": "Corebook, p.252; Winds of Magic, p.62"
             },
+            "Crevasse": {
+                "CN": 6,
+                "Range": "Touch",
+                "Target": "1",
+                "Duration": "Int minutes",
+                "Source": "Winds of Magic, p.62"
+            },   
             "Cleansing Glow": {
                 "CN": 3,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.10"
             },
             "Disgust": {
                 "CN": 5,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB Hours"
+                "Duration": "WPB Hours",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.10"
             },
             "Daemonbane": {
                 "CN": 10,
                 "Range": "WPB yards",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.252; Winds of Magic, p.63"
             },
+            "Dazzling Brightness": {
+                "CN":  5,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.63"
+            },   
+            "Driving Intent": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": "1",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.63"
+            },                           
             "Healing Light": {
                 "CN": 9,
                 "Range": "WPB yards",
                 "Target": 1,
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.252; Winds of Magic, p.63"
+            },
+            "Erect the Edifice": {
+                "CN": 9,
+                "Range": "WPB yards",
+                "Target": "Special",
+                "Duration": "Special",
+                "Source": "Winds of Magic, p.63"
+            },               
+            "Eyes of Volans": {
+                "CN": 6,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.63"
+            },               
+            "Hands of Karkora": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.64"
+            },
+            "Illuminate the Edifice": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": "1 (maximum)",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.64"
             },
             "Illuminate": {
                 "CN": 3,
                 "Range": "WP yards",
                 "Target": 1,
-                "Duration": "WPB Rounds"
+                "Duration": "WPB Rounds",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.10"
+            },
+            "Light of Purity": {
+                "CN": 6,
+                "Range": "Special",
+                "Target": "1 (maximum)",
+                "Duration": "Special",
+                "Source": "Winds of Magic, p.64"
+            },
+            "Meissner's Instantaneous Librarian": {
+                "CN": 2,
+                "Range": "AoE (Int yards)",
+                "Target": "You",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.64"
             },
             "Net of Amyntok": {
                 "CN": 8,
                 "Range": "IntB yards",
                 "Target": 1,
-                "Duration": "Target IntB rounds"
+                "Duration": "Target IntB rounds",
+                "Source": "Corebook, p.252; Winds of Magic, p.64"
+            },
+            "Orb of Hysh": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "1",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.65"
+            },
+            "Perfect Comprehension": {
+                "CN": 5,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.65"
             },
             "Phâ's Protection": {
                 "CN": 10,
                 "Range": "You",
-                "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
+                "Target": "AoE (WPB yards)",
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.253; Winds of Magic, p.65"
+            },
+            "Pierce the Veil": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.65"
+            },
+            "Shimmering Cloak": {
+                "CN": 9,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.65"
             },
             "Speed of Thought": {
                 "CN": 8,
                 "Range": "You",
                 "Target": "WPB rounds",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.253; Winds of Magic, p.65"
+            },
+            "Time Amok": {
+                "CN": 11,
+                "Range": "You",
+                "Target": "AoE (WP yards)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.65"
             }
         }
-    },
+},
     "lore of shadows": {
         "colour": true,
         "names": {
@@ -1123,71 +2113,194 @@
             "adept": "Grey Guardian"
         },
         "spells": {
+            "Bewilder": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "1",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.110"
+            },
+            "Black Horrors": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.110"
+            },
+            "Bridge of Shadows": {
+                "CN": 6,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "1 round",
+                "Source": "Winds of Magic, p.110"
+            },
             "Choking Shadows": {
                 "CN": 6,
                 "Range": "WPB yards",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.253; Winds of Magic, p.110"
             },
             "Cloak Activity": {
                 "CN": 6,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "WPB minutes"
+                "Duration": "WPB minutes",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.11"
+            },
+            "Dance of Despair": {
+                "CN": 13,
+                "Range": "AoE (WP yards)",
+                "Target": "You",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.110"
+            },
+            "Deep Pockets": {
+                "CN": 5,
+                "Range": "Touch",
+                "Target": "Special",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.111"
             },
             "Doppelganger": {
                 "CN": 10,
                 "Range": "You",
                 "Target": "You",
-                "Duration": "IntB minutes"
+                "Duration": "IntB minutes",
+                "Source": "Corebook, p.253; Winds of Magic, p.111"
             },
-            "Illusion": {
+            "Grand Illusion": {
+                "CN": 14,
+                "Range": "WP yards",
+                "Target": "AoE (IB yards)",
+                "Duration": "WP minutes",
+                "Source": "Winds of Magic, p.111"
+            },
+            "Grey Wings": {
                 "CN": 6,
                 "Range": "WP yards",
-                "Target": "AoE IntB yards",
-                "Duration": "WPB minutes"
+                "Target": "1 (maximum)",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.111"
+            },
+            "Horn of Andar": {
+                "CN": 5,
+                "Range": "AoE (Fel yards)",
+                "Target": "You",
+                "Duration": "WP minutes",
+                "Source": "Winds of Magic, p.111"
+            },
+            "Hush": {
+                "CN": 3,
+                "Range": "WP yards",
+                "Target": "1 with AoE (WPB yards)",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.111"
+            },
+            "Illusion": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE (IB yards)",
+                "Duration": "WPB minutes",
+                "Source": "Corebook, p.253; Winds of Magic, p.111"
             },
             "Mindslip": {
                 "CN": 6,
                 "Range": "1 yards",
                 "Target": 1,
-                "Duration": "WP minutes"
+                "Duration": "WP minutes",
+                "Source": "Corebook, p.253; Winds of Magic, p.112"
+            },
+            "Mutable Visage": {
+                "CN": 4,
+                "Range": "Touch",
+                "Target": "1",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.112"
             },
             "Mystifying Miasma": {
                 "CN": 6,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.253; Winds of Magic, p.112"
             },
             "Pall of Darkness": {
                 "CN": 5,
                 "Range": "WP yards",
                 "Target": "AoE WPB yards",
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.11"
+            },
+            "Pit of Tarnus": {
+                "CN": 8,
+                "Range": "WP yards",
+                "Target": "AoE (WPB yards)",
+                "Duration": "WPB rounds",
+                "Source": "Winds of Magic, p.112"
+            },
+            "Ribauld’s Retroactive Illusion": {
+                "CN": 11,
+                "Range": "WP yards",
+                "Target": "Special",
+                "Duration": "Instant",
+                "Source": "Winds of Magic, p.112"
+            },
+            "Shadow Grove": {
+                "CN": 5,
+                "Range": "WP yards",
+                "Target": "AoE (I yards)",
+                "Duration": "WPB hours",
+                "Source": "Winds of Magic, p.112"
             },
             "Shadows of Splendour": {
                 "CN": 4,
                 "Range": "Touch",
                 "Target": 1,
-                "Duration": "WPB minutes"
+                "Duration": "WPB minutes",
+                "Source": "Sullsara's Spells of Unrivalled Utility, p.11"
             },
             "Shadowsteed": {
                 "CN": 6,
                 "Range": "WPB yards",
                 "Target": 1,
-                "Duration": "Until the next sunrise"
+                "Duration": "Until the next sunrise",
+                "Source": "Corebook, p.253; Winds of Magic, p.113"
             },
             "Shadowstep": {
                 "CN": 8,
                 "Range": "WP yards",
                 "Target": "You",
-                "Duration": "Instant"
+                "Duration": "Instant",
+                "Source": "Corebook, p.254; Winds of Magic, p.113"
             },
             "Shroud of Invisibility": {
                 "CN": 8,
                 "RanNge": "Touch",
                 "Target": 1,
-                "Duration": "WPB rounds"
+                "Duration": "WPB rounds",
+                "Source": "Corebook, p.254; Winds of Magic, p.113"
+            },
+            "Substance of Shadow": {
+                "CN": 9,
+                "Range": "Touch",
+                "Target": "1",
+                "Duration": "Special",
+                "Source": "Winds of Magic, p.113"
+            },
+            "Traitor of Tarn": {
+                "CN": 12,
+                "Range": "WP yards",
+                "Target": "1",
+                "Duration": "WP minutes",
+                "Source": "Winds of Magic, p.113"
+            },
+            "Wandering Shadow": {
+                "CN": 4,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB minutes",
+                "Source": "Winds of Magic, p.113"
             }
         }
     },

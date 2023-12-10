@@ -1,4 +1,4 @@
-import collections
+import collections, copy
 import json
 import importlib.resources
 import random
@@ -62,6 +62,17 @@ class Magic4e:
 
         return self._lore_best_match(lore)
 
+    def get_wind_name(self, lore):
+        """ Return the wind name that best matches the input text, e.g. "Lore of Shadows" becomes 'ulgu' 
+            If there is no wind name it will return the lore name, e.g. "Petty Lore"
+        """
+
+        lore_name = self._lore_best_match(lore)
+        if 'colour' in _magic_data[lore_name] and _magic_data[lore_name]['colour'] == True: 
+            return _magic_data[lore_name]["names"]["wind"]
+        else:
+            return lore_name
+
     def __getitem__(self, lore : str) -> dict:
         lorekey = self._lore_best_match(lore)
         if not lorekey: raise KeyError(f"'{lore}' is not valid key for spells dictionary")
@@ -75,9 +86,16 @@ class Magic4e:
                     lores['spells'].update(self.spells(lore))
             return lores
 
-    def spells(self, lore : str) -> dict:
-        """ Get all the spells for the specified lore """
-        return dict(self[lore]['spells'])
+    def spells(self, lore : str, max_cn : int = None) -> dict:
+        """ Get all the spells for the specified lore and maximum Casting Number (CN) """
+        spells = self[lore]['spells'] 
+
+        if max_cn:
+            for spell in spells.copy():
+                if spells[spell]['CN']>max_cn:
+                    spells.pop(spell)
+
+        return dict(spells)
 
     @property
     def lores(self) -> List[str]:
@@ -93,16 +111,18 @@ class Magic4e:
         """ Is this lore one of the colour magics? """
         return bool(self[lore]['colour'])
 
-    def get_random_spells(self, lore : str, request_spells : int) -> dict:
+    def get_random_spells(self, lore : str, request_spells : int, max_cn : int = None) -> dict:
         """ Get n random spells from a lore """
-        spells = self.spells(lore)
+        spells = self.spells(lore, max_cn)
 
-        actual_spells = len(spells)
-        if request_spells > actual_spells:
-            request_spells = actual_spells
+        number_available_spells = len(spells)
+        if request_spells > number_available_spells:
+            request_spells = number_available_spells
             canon_lore = self._lore_best_match(lore)
-            self._error = f'{canon_lore.title()} ({lore.title()}) has only {actual_spells} spells, listing all spells'
-            print('error')
+
+            max_cn_msg = ''
+            if max_cn: max_cn_msg = f' with maximum CN of {max_cn}'
+            self._error = f'{canon_lore.title()} ({lore.title()}) has only {number_available_spells} spells{max_cn_msg}, listing all spells'
 
         random_spells = sorted(random.sample(list(spells), k=request_spells))
         return collections.OrderedDict({key: spells[key] for key in random_spells})
@@ -116,3 +136,28 @@ class Magic4e:
     def miscast_major(self) -> str:
         """ Return text describing a randomly rolled major miscast."""
         return miscast.miscast_major()
+
+    def miscast_grimoire(self) -> str:
+        """ Return text describing a randomly rolled grimoire miscast."""
+        return miscast.miscast_grimoire()        
+
+    def random_mark(self, lore) -> str:
+        """ Return text describing a randomly rolled arcane mark from the specified lore.
+            Returns None if the lore has no associated arcane marks."""
+
+        # Load the JSON data about arcane marks
+        with importlib.resources.open_text(data,'arcane_marks.json') as f:
+            _marks_data = json.load(f)
+
+        try:
+            # Turn the lore into a wind name so we can do a lookup in the json
+            wind_name = self.get_wind_name(lore)
+            
+            # Choose a mark at random
+            mark = random.choices(_marks_data[wind_name], k=1)[0]
+        except KeyError:
+            # Either the wind name couldn't be identified, or there are no marks associated with this lore
+            return None
+
+        # Return the result with some formatting
+        return f"**{mark['title']}**: {mark['description']}"

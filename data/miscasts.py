@@ -71,3 +71,13 @@ there are no targets in range, the magic has nowhere to vent, so your head explo
 ]
 for i in range(2,len(magic_miscasts_major),3):
     magic_miscasts_major[i] = magic_miscasts_major[i].replace('\n',' ')
+
+magic_grimoire_miscasts = [
+    'Seared Into the Mind', 2, '''The wizard’s head feels like it will explode with pain as they take 1d10 {rolld10} + 1 damage
+ignoring Armour Points. However, the wizard immediately memorises the spell.''',
+    'All Pain, No Gain', 10, '''The wizard is racked with pain taking 1d10 {rolld10}
++ 4 damage ignoring Armour Points.''',
+    'No effect', 90, 'Magical energy burns the spell from the grimoire and it is lost.',
+    'Up in Smoke', 95, '',
+    'Book Burning', 100, 'The grimoire is destroyed.'
+]

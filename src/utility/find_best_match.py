@@ -120,6 +120,9 @@ def find_best_match(target, options):
     # distance as appropriate
     # At the moment 'vriest' says 'villager' instead of 'priest'
     prefix_match = find_longest_prefix(target,options)
+    if prefix_match:
+        if len(prefix_match)<len(target): return prefix_match
+
     if prefix_match: 
         ## Score the prefix - every letter that doesn't match reduces the score
         count = 0
