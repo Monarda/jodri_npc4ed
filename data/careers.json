@@ -853,7 +853,7 @@
     },    
     "Priest of Solkan" : {
         "class": "Academic",
-        "source": "Archives of the Empire Vol. 3", "p.54",
+        "source": "Archives of the Empire Vol. 3, p.54",
         "races": "Human",
         "earning skill": "Pray",
         "rank 1" : {
