@@ -1,3 +1,790 @@
 {
-    "hand weapon" : {"group":"", "price":"","encumbrance":1, "availability":"","reach":"average","damage":"SB+4","qualities":""}
+    "hand weapon": {
+        "group": "Basic",
+        "price": "1GC",
+        "encumbrance": 1,
+        "availability": "Common",
+        "reach": "average",
+        "damage": "SB+4",
+        "qualities": [],
+        "aliases": [
+            "sword",
+            "axe",
+            "crowbar"
+        ],
+        "range": null,
+        "bad_aliases": []
+    },
+    "improvised weapon": {
+        "group": "Basic",
+        "price": null,
+        "encumbrance": null,
+        "availability": "Always",
+        "reach": "varies",
+        "damage": "SB+1",
+        "qualities": [
+            "Undamaging"
+        ],
+        "aliases": [
+            "hammer and spikes",
+            "gavel",
+            "hammer and nails",
+            "crutch",
+            "spade"
+        ],
+        "range": null,
+        "bad_aliases": [
+            "wooden training sword"
+        ]
+    },
+    "dagger": {
+        "group": "Basic",
+        "price": "16/-",
+        "encumbrance": 0,
+        "availability": "Common",
+        "reach": "very short",
+        "damage": "SB+2",
+        "qualities": [],
+        "aliases": [
+            "garotte"
+        ],
+        "range": null,
+        "bad_aliases": []
+    },
+    "knife": {
+        "group": "Basic",
+        "price": "8/-",
+        "encumbrance": 0,
+        "availability": "Common",
+        "reach": "very short",
+        "damage": "SB+1",
+        "qualities": [
+            "Undamaging"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "buckler": {
+        "group": "Basic",
+        "price": "18/2",
+        "encumbrance": 0,
+        "availability": "Common",
+        "reach": "personal",
+        "damage": "SB+1",
+        "qualities": [
+            "Shield 1",
+            "Defensive",
+            "Undamaging"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "shield": {
+        "group": "Basic",
+        "price": "2GC",
+        "encumbrance": 1,
+        "availability": "Common",
+        "reach": "very short",
+        "damage": "SB+2",
+        "qualities": [
+            "Shield 2",
+            "Defensive",
+            "Undamaging"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "shield (large)": {
+        "group": "Basic",
+        "price": "3GC",
+        "encumbrance": 1,
+        "availability": "Common",
+        "reach": "very short",
+        "damage": "SB+3",
+        "qualities": [
+            "Shield 3",
+            "Defensive",
+            "Undamaging"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "cavalry hammer": {
+        "group": "cavalry",
+        "price": "1GC",
+        "encumbrance": 3,
+        "availability": "Scarce",
+        "reach": "long",
+        "damage": "SB+5",
+        "qualities": [
+            "Pummel"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "lance": {
+        "group": "",
+        "price": "cavalry",
+        "encumbrance": 3,
+        "availability": "Rare",
+        "reach": "very long",
+        "damage": "SB+6",
+        "qualities": [
+            "Impact",
+            "Impale"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "foil": {
+        "group": "Fencing",
+        "price": "5GC",
+        "encumbrance": 1,
+        "availability": "Scarce",
+        "reach": "medium",
+        "damage": "SB+3",
+        "qualities": [
+            "Fast",
+            "Impale",
+            "Precise",
+            "Undamaging"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "rapier": {
+        "group": "Fencing",
+        "price": "5GC",
+        "encumbrance": 1,
+        "availability": "Scarce",
+        "reach": "long",
+        "damage": "SB+4",
+        "qualities": [
+            "Fast",
+            "Impale"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "unarmed": {
+        "group": "Brawling",
+        "price": null,
+        "encumbrance": 0,
+        "availability": "Always",
+        "reach": "personal",
+        "damage": "SB+0",
+        "qualities": [
+            "Undamaging"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "knuckledusters": {
+        "group": "Brawling",
+        "price": "2/6",
+        "encumbrance": 0,
+        "availability": "Common",
+        "reach": "personal",
+        "damage": "SB+2",
+        "qualities": [],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "grain flail": {
+        "group": "Flail",
+        "price": "10/-",
+        "encumbrance": 1,
+        "availability": "Common",
+        "reach": "average",
+        "damage": "SB+3",
+        "qualities": [
+            "Distract",
+            "Imprecise",
+            "Wrap"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "flail": {
+        "group": "Flail",
+        "price": "2GC",
+        "encumbrance": 1,
+        "availability": "Scarce",
+        "reach": "average",
+        "damage": "SB+5",
+        "qualities": [
+            "Distract",
+            "Wrap"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "military flail": {
+        "group": "Flail",
+        "price": "3GC",
+        "encumbrance": 2,
+        "availability": "Rare",
+        "reach": "long",
+        "damage": "SB+6",
+        "qualities": [
+            "Distract",
+            "Impact",
+            "Tiring",
+            "Wrap"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "main gauche": {
+        "group": "Parry",
+        "price": "1GC",
+        "encumbrance": 0,
+        "availability": "Rare",
+        "reach": "very short",
+        "damage": "SB+2",
+        "qualities": [
+            "Defensive"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "swordbreaker": {
+        "group": "Parry",
+        "price": "1GC 2/6",
+        "encumbrance": 1,
+        "availability": "Scarce",
+        "reach": "short",
+        "damage": "SB+3",
+        "qualities": [
+            "Defensive",
+            "Trap-blade"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "halberd": {
+        "group": "Polearm",
+        "price": "2GC",
+        "encumbrance": 3,
+        "availability": "Common",
+        "reach": "long",
+        "damage": "SB+4",
+        "qualities": [
+            "Defensive",
+            "Hack",
+            "Impale"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "spear": {
+        "group": "Polearm",
+        "price": "15/-",
+        "encumbrance": 2,
+        "availability": "Common",
+        "reach": "very long",
+        "damage": "SB+4",
+        "qualities": [
+            "Impale"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "pike": {
+        "group": "Polearm",
+        "price": "18/-",
+        "encumbrance": 4,
+        "availability": "Rare",
+        "reach": "massive",
+        "damage": "SB+4",
+        "qualities": [
+            "Impale"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "quarter staff": {
+        "group": "Polearm",
+        "price": "3/-",
+        "encumbrance": 2,
+        "availability": "Common",
+        "reach": "long",
+        "damage": "SB+4",
+        "qualities": [
+            "Defensive",
+            "Pummel"
+        ],
+        "aliases": [
+            "quarterstaff"
+        ],
+        "range": null,
+        "bad_aliases": []
+    },
+    "bastard sword": {
+        "group": "2-Handed",
+        "price": "8GC",
+        "encumbrance": 3,
+        "availability": "Scarce",
+        "reach": "long",
+        "damage": "SB+5",
+        "qualities": [
+            "Damaging",
+            "Defensive"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "great axe": {
+        "group": "2-Handed",
+        "price": "4GC",
+        "encumbrance": 3,
+        "availability": "Scarce",
+        "reach": "long",
+        "damage": "SB+6",
+        "qualities": [
+            "Hack",
+            "Impact",
+            "Tiring"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "pick": {
+        "group": "2-Handed",
+        "price": "9/-",
+        "encumbrance": 3,
+        "availability": "Common",
+        "reach": "average",
+        "damage": "SB+5",
+        "qualities": [
+            "Damaging",
+            "Impale",
+            "Slow"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": ["lock pick", "lockpick", "lockpicks", "lock picks"]
+    },
+    "warhammer": {
+        "group": "2-Handed",
+        "price": "3GC",
+        "encumbrance": 3,
+        "availability": "Common",
+        "reach": "average",
+        "damage": "SB+6",
+        "qualities": [
+            "Damaging",
+            "Pummel",
+            "Slow"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "zweihander": {
+        "group": "2-Handed",
+        "price": "10GC",
+        "encumbrance": 3,
+        "availability": "Scarce",
+        "reach": "long",
+        "damage": "SB+5",
+        "qualities": [
+            "Damaging",
+            "Hack"
+        ],
+        "aliases": [],
+        "range": null,
+        "bad_aliases": []
+    },
+    "blunderbuss": {
+        "group": "Blackpowder",
+        "price": "2GC",
+        "encumbrance": 1,
+        "availability": "Scarce",
+        "reach": null,
+        "range": 20,
+        "damage": "8",
+        "qualities": [
+            "Blackpowder",
+            "Blast 3",
+            "Damaging",
+            "Dangerous",
+            "Reload 2"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "hochland long rifle": {
+        "group": "Blackpowder",
+        "price": "100GC",
+        "encumbrance": 3,
+        "availability": "Exotic",
+        "reach": null,
+        "range": 100,
+        "damage": "9",
+        "qualities": [
+            "Accurate",
+            "Blackpowder",
+            "Damaging",
+            "Precise",
+            "Reload 4"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "handgun": {
+        "group": "Blackpowder",
+        "price": "4GC",
+        "encumbrance": 2,
+        "availability": "Scarce",
+        "reach": null,
+        "range": 50,
+        "damage": "9",
+        "qualities": [
+            "Blackpowder",
+            "Damaging",
+            "Dangerous",
+            "Reload 3"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "pistol": {
+        "group": "Blackpowder",
+        "price": "8GC",
+        "encumbrance": 0,
+        "availability": "Rare",
+        "reach": null,
+        "range": 20,
+        "damage": "8",
+        "qualities": [
+            "Blackpowder",
+            "Damaging",
+            "Pistol",
+            "Reload 1"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "elf bow": {
+        "group": "Bow",
+        "price": "10GC",
+        "encumbrance": 2,
+        "availability": "Exotic",
+        "reach": null,
+        "range": 150,
+        "damage": "SB+4",
+        "qualities": [
+            "Damaging",
+            "Precise"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "longbow": {
+        "group": "Bow",
+        "price": "5GC",
+        "encumbrance": 3,
+        "availability": "Scarce",
+        "reach": null,
+        "range": 100,
+        "damage": "SB+4",
+        "qualities": [
+            "Damaging"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "bow": {
+        "group": "Bow",
+        "price": "4GC",
+        "encumbrance": 2,
+        "availability": "Common",
+        "reach": null,
+        "range": 50,
+        "damage": "SB+3",
+        "qualities": [],
+        "aliases": [],
+        "bad_aliases": [
+            "bowl"
+        ]
+    },
+    "shortbow": {
+        "group": "Bow",
+        "price": "3GC",
+        "encumbrance": 1,
+        "availability": "Common",
+        "reach": null,
+        "range": 20,
+        "damage": "SB+2",
+        "qualities": [],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "crossbow pistol": {
+        "group": "Crossbow",
+        "price": "6GC",
+        "encumbrance": 0,
+        "availability": "Scarce",
+        "reach": null,
+        "range": 10,
+        "damage": "7",
+        "qualities": [
+            "Pistol"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "heavy crossbow": {
+        "group": "Crossbow",
+        "price": "7GC",
+        "encumbrance": 3,
+        "availability": "Rare",
+        "reach": null,
+        "range": 100,
+        "damage": "9",
+        "qualities": [
+            "Damaging",
+            "Reload 2"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "crossbow": {
+        "group": "Crossbow",
+        "price": "5GC",
+        "encumbrance": 2,
+        "availability": "Common",
+        "reach": null,
+        "range": 60,
+        "damage": "9",
+        "qualities": [
+            "Reload 1"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "repeater handgun": {
+        "group": "Engineering",
+        "price": "10GC",
+        "encumbrance": 3,
+        "availability": "Rare",
+        "reach": null,
+        "range": 30,
+        "damage": "9",
+        "qualities": [
+            "Blackpowder",
+            "Damaging",
+            "Dangerous",
+            "Reload 5",
+            "Repeater 4"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "repeater pistol": {
+        "group": "Engineering",
+        "price": "15GC",
+        "encumbrance": 1,
+        "availability": "Rare",
+        "reach": null,
+        "range": 10,
+        "damage": "8",
+        "qualities": [
+            "Blackpowder",
+            "Damaging",
+            "Dangerous",
+            "Pistol",
+            "Reload 4",
+            "Repeater 4"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "lasso": {
+        "group": "Entangling",
+        "price": "6/-",
+        "encumbrance": 0,
+        "availability": "Common",
+        "reach": null,
+        "range": "SB\u00d72",
+        "damage": null,
+        "qualities": [
+            "Entangle"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "whip": {
+        "group": "Entangling",
+        "price": "",
+        "encumbrance": 0,
+        "availability": "Common",
+        "reach": null,
+        "range": 6,
+        "damage": "SB+2",
+        "qualities": [
+            "Entangle"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "bomb": {
+        "group": "Explosives",
+        "price": "3GC",
+        "encumbrance": 0,
+        "availability": "Rare",
+        "reach": null,
+        "range": "SB",
+        "damage": "12",
+        "qualities": [
+            "Blast 5",
+            "Dangerous",
+            "Impact"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "incendiary": {
+        "group": "Explosives",
+        "price": "1GC",
+        "encumbrance": 0,
+        "availability": "Scarce",
+        "reach": null,
+        "range": "SB",
+        "damage": "Special",
+        "qualities": [
+            "Blast 5",
+            "Dangerous",
+            "Impact"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "sling": {
+        "group": "Sling",
+        "price": "1/-",
+        "encumbrance": 0,
+        "availability": "Common",
+        "reach": null,
+        "range": 60,
+        "damage": "6",
+        "qualities": [],
+        "aliases": [],
+        "bad_aliases": ["sling bag"]
+    },
+    "staff sling": {
+        "group": "Sling",
+        "price": "4/-",
+        "encumbrance": 2,
+        "availability": "Scarce",
+        "reach": null,
+        "range": 100,
+        "damage": "7",
+        "qualities": [],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "bolas": {
+        "group": "Throwing",
+        "price": "10/-",
+        "encumbrance": 0,
+        "availability": "Rare",
+        "reach": null,
+        "range": "SB\u00d73",
+        "damage": "SB",
+        "qualities": [
+            "Entangle"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "dart": {
+        "group": "Throwing",
+        "price": "2/-",
+        "encumbrance": 0,
+        "availability": "Scarce",
+        "reach": null,
+        "range": "SB\u00d72",
+        "damage": "SB+1",
+        "qualities": [
+            "Impale"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "javelin": {
+        "group": "Throwing",
+        "price": "10/6",
+        "encumbrance": 1,
+        "availability": "Scarce",
+        "reach": null,
+        "range": "SB\u00d73",
+        "damage": "SB+3",
+        "qualities": [
+            "Impale"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "rock": {
+        "group": "Throwing",
+        "price": "",
+        "encumbrance": 0,
+        "availability": "Common",
+        "reach": null,
+        "range": "SB\u00d73",
+        "damage": "SB",
+        "qualities": [],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "throwing axe": {
+        "group": "Throwing",
+        "price": "1GC",
+        "encumbrance": 1,
+        "availability": "Common",
+        "reach": null,
+        "range": "SB\u00d73",
+        "damage": "SB+3",
+        "qualities": [
+            "Hack"
+        ],
+        "aliases": [],
+        "bad_aliases": []
+    },
+    "throwing knife": {
+        "group": "Throwing",
+        "price": "18/-",
+        "encumbrance": 0,
+        "availability": "Common",
+        "reach": null,
+        "range": "SB\u00d72",
+        "damage": "SB+2",
+        "qualities": [],
+        "aliases": [
+            "throwing knives"
+        ],
+        "bad_aliases": []
+    }
 }
