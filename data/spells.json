@@ -2274,9 +2274,16 @@
                 "Duration": "Instant",
                 "Source": "Corebook, p.254; Winds of Magic, p.113"
             },
+            "Shroud of Fog": {
+                "CN": 8,
+                "Range": "You",
+                "Target": "AoE (WPB Miles)",
+                "Duration": "WP minutes",
+                "Source": "Lustria, p.81"
+            },
             "Shroud of Invisibility": {
                 "CN": 8,
-                "RanNge": "Touch",
+                "Range": "Touch",
                 "Target": 1,
                 "Duration": "WPB rounds",
                 "Source": "Corebook, p.254; Winds of Magic, p.113"
@@ -2769,6 +2776,35 @@
                 "Target": "AoE (WPB yards)",
                 "Duration": "Instant",
                 "Source": "Empire in Ruins, p.140"
+            }
+        }
+    },
+    "savage orc WAAAGH" {
+        "colour": false,
+        "spells": {
+            "Bash ‘Em Lads!": {
+                "CN": 6,
+                "Range": "WPB yards",
+                "Target": "See text",
+                "Duration": "Instant"
+            },
+            "'Eadbutt!": {
+                "CN": 6,
+                "Range": "WPB yards",
+                "Target": "1",
+                "Duration": "Instant"
+            },
+            "Fists of Gork": {
+                "CN": 2,
+                "Range": "You",
+                "Target": "You",
+                "Duration": "WPB Rounds"
+            },
+            "Mork Save Us!": {
+                "CN": 8,
+                "Range": "WPB yards",
+                "Target": "See text",
+                "Duration": "WPB Rounds"
             }
         }
     },

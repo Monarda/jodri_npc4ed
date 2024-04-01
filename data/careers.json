@@ -262,7 +262,7 @@
         "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
-            "name": "Druid’s Apprentice",
+            "name": "Druid's Apprentice",
             "status": "Brass 3",
             "advances": ["Agi", "Int", "WP"],
             "skills" : ["Channelling (Ghyran)", "Charm Animal", "Dodge", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Outdoor Survival", "Perception"],
@@ -383,6 +383,49 @@
             "trappings": ["Elaborate Robes", "Library (Magic)", "Study"]
         }
     },
+    "Interpreter" : {
+        "class": "Academic",
+        "source": "Lustria, p.194-195",
+        "races": ["Dwarf", "Halfling", "High Elf", "Human", "Wood Elf"],
+        "alternative_to": "Lawyer",
+        "earning skill": "Language (Any)",
+        "rank 1" : {
+            "name": "Translator",
+            "status": "Brass 4",
+            "advances": ["T", "Int", "Fel"],
+            "skills" : ["Bribery", "Charm", "Dodge", "Gossip", "Haggle", "Language (Any)", "Melee (Basic)", "Perception", "Research", "Secret Signs (Any)"],
+            "talents":  ["Linguistics", "Lip Reading", "Read/Write", "Speedreader"],
+            "npc_suggested_talents": [],
+            "trappings": ["Magnifying Glass", "Phrase Book"]
+        },
+        "rank 2" : {
+            "name": "Interpreter",
+            "status": "Silver 1",
+            "advances": ["WP"],
+            "skills" : ["Charm Animal", "Consume Alcohol", "Cool", "Evaluate", "Language (Any)", "Navigation"],
+            "talents":  ["Briber", "Dealmaker", "Etiquette (Any)", "Supportive"],
+            "npc_suggested_talents": [],
+            "trappings": ["Amulet", "Clothing (In a Local Style)", "Deck of Cards"]
+        },
+        "rank 3" : {
+            "name": "Polyglot",
+            "status": "Silver 3",
+            "advances": ["I"],
+            "skills" : ["Art (Any)", "Intimidate", "Language (Any)", "Outdoor Survival"],
+            "talents":  ["Acute Sense (Hearing)", "Blather", "Bookish", "Mimic"],
+            "npc_suggested_talents": [],
+            "trappings": ["Book (Cryptography)"]
+        },
+        "rank 4" : {
+            "name": "Polymath",
+            "status": "Silver 5",
+            "advances": ["Dex"],
+            "skills" : ["Language (Any)", "Lore (Any)"],
+            "talents":  ["Impassioned Zeal", "Numismatics", "Perfect Pitch", "Tower of Memories"],
+            "npc_suggested_talents": [],
+            "trappings": ["Impressive personal library"]
+        }
+    },
     "Lawyer" : {
         "class": "Academic",
 		"source": "Corebook, p.55",
@@ -432,7 +475,7 @@
         "alternative_to": "Wizard",
         "earning skill": "Perception",
         "rank 1" : {
-            "name": "Vigilant’s Apprentice",
+            "name": "Vigilant's Apprentice",
             "status": "Brass 4",
             "advances": ["WS", "Int", "WP"],
             "skills" : ["Channelling (Any Colour)", "Charm", "Cool", "Dodge", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception"],
@@ -858,7 +901,7 @@
         "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
-            "name": "Trickster’s Apprentice",
+            "name": "Trickster's Apprentice",
             "status": "Brass 3",
             "advances": ["Int", "WP", "Fel"],
             "skills" : ["Channelling (Ulgu)", "Dodge", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Basic)", "Melee (Polearm)", "Perception", "Secret Signs (Grey Order)", "Stealth (Urban)"],
@@ -1950,6 +1993,49 @@
             "trappings": ["Trade Tools (Astrology)"]
         }
     },
+    "Oracle" : {
+        "class": "Peasant",
+        "source": "Lustria, p.196-197",
+        "races": ["High Elf", "Human", "Wood Elf"],
+        "alternative_to": "Mystic",
+        "earning skill": "Intuition,",
+        "rank 1" : {
+            "name": "Visionary",
+            "status": "Brass 2",
+            "advances": ["I", "Agi", "Int"],
+            "skills" : ["Charm Animal", "Dodge", "Intuition", "Navigation", "Outdoor Survival", "Perception", "Ranged (Throwing)", "Ride (Any)", "Secret Signs (Lizardman)", "Track"],
+            "talents":  ["Coolheaded", "Detect Artefact", "Second Sight", "Sixth Sense"],
+            "npc_suggested_talents": [],
+            "trappings": ["Quarterstaff"]
+        },
+        "rank 2" : {
+            "name": "Oracle",
+            "status": "Brass 5",
+            "advances": ["Int"],
+            "skills" : ["Animal Care", "Animal Training", "Cool", "Evaluate", "Intimidate", "Melee (Polearm)"],
+            "talents":  ["Magical Sense", "Orientation", "Roughrider", "Sure Shot"],
+            "npc_suggested_talents": [],
+            "trappings": ["Divining Rod", "Javelin", "Mask of the Old Ones"]
+        },
+        "rank 3" : {
+            "name": "Priest of the Old Ones",
+            "status": "Silver 2",
+            "advances": ["Fel"],
+            "skills" : ["Heal", "Language (Magick)", "Leadership", "Lore (Magic)"],
+            "talents":  ["Arcane Magic (Beasts or Heavens)", "Petty Magic", "Luck", "Read/Write"],
+            "npc_suggested_talents": ["Arcane Magic (Beasts or Heavens)"],
+            "trappings": ["Collection of Feathers and Amulets"]
+        },
+        "rank 4" : {
+            "name": "Polymath",
+            "status": "Silver 5",
+            "advances": ["T"],
+            "skills" : ["Channelling (Azyr or Ghur)", "Lore (Old Ones)"],
+            "talents":  ["Aethyric Attunement", "Instinctive Diction", "Pure Soul", "War Wizard"],
+            "npc_suggested_talents": [],
+            "trappings": ["Recovered Magical Item"]
+        }
+    },
     "Rhinox Herder" : {
         "class": "Peasant",
 		"source": "Archives of the Empire Vol 2, p.36",
@@ -2583,6 +2669,92 @@
             "talents":  ["Combat Aware","Commanding Presence","Kingpin","Public Speaker"],
             "npc_suggested_talents": [],
             "trappings": ["Light Warhorse","Pistol with 10 Shots","Quality Hat and Cloak","Unit of Road Wardens"]
+        }
+    },
+    "Survivalist" : {
+        "class": "Ranger",
+        "source": "Lustria, p.198-199",
+        "races": ["Dwarf", "Halfling", "High Elf", "Human", "Wood Elf"],
+        "alternative_to": "Road Warden",
+        "earning skill": "Outdoor Survival",
+        "rank 1" : {
+            "name": "Subsister",
+            "status": "Brass 1",
+            "advances": ["T", "Int", "WP"],
+            "skills" : ["Cool", "Dodge", "Endurance", "Heal", "Intuition", "Melee (Basic)", "Outdoor Survival", "Perception", "Stealth (Rural)", "Swim"],
+            "talents":  ["Hardy", "Sixth Sense", "Stone Soup", "Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon"]
+        },
+        "rank 2" : {
+            "name": "Survivalist",
+            "status": "Brass 4",
+            "advances": ["I"],
+            "skills" : ["Consume Alcohol", "Intimidate", "Lore (Local)", " Navigation", "Ranged (Any)", "Set Trap"],
+            "talents":  ["Field Dressing", "Implacable", "Iron Jaw", "Resistance (Any)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bedroll", "Rope", "Sling with Ammunition", "Sturdy Boots", "Waterskin"]
+        },
+        "rank 3" : {
+            "name": "Wild Whisperer",
+            "status": "Brass 5",
+            "advances": ["S"],
+            "skills" : ["Athletics", "Charm Animal", "Secret Signs (Ranger)", "Track"],
+            "talents":  ["Hunter's Eye", "Menacing", "Orientation", "Trapper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Animal Traps", "Repertoire of Bird Calls"]
+        },
+        "rank 4" : {
+            "name": "Wilderness Instructor",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Animal Care", "Leadership"],
+            "talents":  ["Acute Sense (Hearing)", "Careful Strike", "Iron Will", "Well-prepared"],
+            "npc_suggested_talents": [],
+            "trappings": ["Antitoxin Kit", "Bandage", "Extra Day of Rations", "Map"]
+        }
+    },
+    "Trailblazer" : {
+        "class": "Ranger",
+        "source": "Lustria, p.200-201",
+        "races": ["Dwarf", "Halfling", "High Elf", "Human", "Wood Elf"],
+        "alternative_to": "Coachman",
+        "earning skill": "Navigation,",
+        "rank 1" : {
+            "name": "Pioneer",
+            "status": "Brass 3",
+            "advances": ["I", "Agi", "Int"],
+            "skills" : ["Climb", "Cool", "Endurance", "Melee (Basic)", "Navigation", "Outdoor Survival", "Perception", "Row", "Sail (Any)", "Swim"],
+            "talents":  ["Fleet Footed", "Orientation", "Strider (Any)", "Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Cooking Pot", "Machete", "Sturdy Boots", "Walking Stick", "Waterskin"]
+        },
+        "rank 2" : {
+            "name": "Trailblazer",
+            "status": "Silver 1",
+            "advances": ["T"],
+            "skills" : ["Athletics", "Gossip", "Ranged (Blackpowder)", "Ride (Horse)", "Stealth (Rural)", "Trade (Cartographer)"],
+            "talents":  ["Acute Sense (Sight)", "Jump Up", "Rover", "Scale Sheer Surface"],
+            "npc_suggested_talents": [],
+            "trappings": ["Chalk", "Map", "Pistol with 10 Shots", "Telescope"]
+        },
+        "rank 3" : {
+            "name": "Pacesetter",
+            "status": "Silver 2",
+            "advances": ["WP"],
+            "skills" : ["Bribery", "Dodge", "Drive", "Research"],
+            "talents":  ["Flee!", "Hardy", "Seasoned Traveller", "Sprinter"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bedroll", "Grappling Hook", "Trade Tools (Navigator)"]
+        },
+        "rank 4" : {
+            "name": "Expedition Leader",
+            "status": "Gold 1",
+            "advances": ["Fel"],
+            "skills" : ["Evaluate", "Leadership"],
+            "talents":  ["Dealmaker", "Etiquette (Soldiers)", "Inspiring", "Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Company of Explorers", "Riding Horse with Saddle and Tack", "Tent", "Walking Cane"]
         }
     },
     "Witch Hunter" : {
@@ -3534,7 +3706,7 @@
             "skills" : ["Cool", "Endurance", "Intimidate", "Lore (Oceans)", "Navigation", "Ranged (Blackpowder)"],
             "talents":  ["Coolheaded", "Old Salt", "Master And Commander", "Pilot"],
             "npc_suggested_talents": [],
-            "trappings": ["Quality Uniform", "Ship’s Chest"]
+            "trappings": ["Quality Uniform", "Ship's Chest"]
         },
         "rank 3" : {
             "name": "Captain",
