@@ -9,7 +9,7 @@ with importlib.resources.open_text(data,'careers.json') as f:
 class Careers4:
     # Load data about careers, talents and skills
     def __init__(self):
-        pass
+        self.__complex_stuff()
 
     def __complex_stuff(self):
         self._skills_to_careers = {}
@@ -90,17 +90,17 @@ class Careers4:
         return self._skills_to_careers[skill]
 
 
-
 def main():
     c4 = Careers4()
 
     print(c4.provides_skill('Sail (Any)'))
     print(c4._talents_to_careers['Sprinter'])
-    print(len(c4.list_careers()), sorted(c4.list_careers()))
+    #print(len(c4.list_careers()), sorted(c4.list_careers()))
 
     for skill in sorted(c4._careers_by_earning_skill.keys()):
         print('{:20s}: {}'.format(skill, ', '.join(c4._careers_by_earning_skill[skill])))
 
+    print(c4["hunter"])
 if __name__ == "__main__":
     # execute only if run as a script
     main()
