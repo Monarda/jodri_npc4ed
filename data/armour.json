@@ -1,0 +1,19 @@
+{
+    "leather jack": {"price":"12/–", "encumbrance":1, "availability":"Common", "penalty":"", "locations":["Arms", "Body"], "AP":1, "qualities":[], "aliases": []},
+    "leather jerkin": {"price":"10/–", "encumbrance":1, "availability":"Common", "penalty":"", "locations":["Body"], "AP":1, "qualities":[], "aliases": []},
+    "leather leggings": {"price":"14/–", "encumbrance":1, "availability":"Common", "penalty":"", "locations":["Legs"], "AP":1, "qualities":[], "aliases": []},
+    "leather skullcap": {"price":"8/–", "encumbrance":0, "availability":"Common", "penalty":"", "locations":["Head"], "AP":1, "qualities":["Partial"], "aliases": []},
+
+    "breastplate (boiled leather)": {"price":"18/–", "encumbrance":1, "availability":"Scarce", "penalty":"", "locations":["Body"], "AP":2, "qualities":["Weakpoints"], "aliases": ["boiled leather breastplate", "leather breastplate"]},
+
+    "mail chausses": {"price":"2GC", "encumbrance":2, "availability":"Scarce", "penalty":"", "locations":["Legs"], "AP":2, "qualities":["Flexible"], "aliases": []},
+    "mail coat": {"price":"3GC", "encumbrance":3, "availability":"Common", "penalty":"", "locations":["Arms", "Body"], "AP":2, "qualities":["Flexible"], "aliases": []},
+    "mail coif": {"price":"1GC", "encumbrance":3, "availability":"Scarce", "penalty":"–10 Perception", "locations":["Head"], "AP":2, "qualities":["Flexible", "Partia"], "aliases": ["sleeved mail shirt"]},
+    "mail shirt": {"price":"2GC", "encumbrance":2, "availability":"Scarce", "penalty":"", "locations":["Body"], "AP":2, "qualities":["Flexible"], "aliases": []},
+
+    "breastplate (plate)": {"price":"10GC", "encumbrance":3, "availability":"Scarce", "penalty":"", "locations":["Body"], "AP":2, "qualities":["Impenetrable", "Weakpoints"], "aliases": []},
+    "open helm": {"price":"2GC", "encumbrance":1, "availability":"Common", "penalty":"–10 Perception", "locations":["Head"], "AP":2, "qualities":["Partial"], "aliases": []},
+    "bracers": {"price":"8GC", "encumbrance":3, "availability":"Rare", "penalty":"", "locations":["Arms"], "AP":2, "qualities":["Impenetrable", "Weakpoints"], "aliases": []},
+    "plate Leggings": {"price":"10GC", "encumbrance":3, "availability":"Rare", "penalty":"–10 Stealth", "locations":["Legs"], "AP":2, "qualities":["Impenetrable", "Weakpoints"], "aliases": []},
+    "helm": {"price":"3GC", "encumbrance":2, "availability":"Rare", "penalty":"–20 Perception", "locations":["Head"], "AP":2, "qualities":["Impenetrable", "Weakpoints"], "aliases": ["helmet"]}
+}
