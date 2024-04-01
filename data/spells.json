@@ -2779,7 +2779,7 @@
             }
         }
     },
-    "savage orc WAAAGH" {
+    "savage orc WAAAGH" : {
         "colour": false,
         "spells": {
             "Bash ‘Em Lads!": {
