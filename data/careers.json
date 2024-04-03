@@ -470,7 +470,7 @@
     },
     "Magister Vigilant" : {
         "class": "Academic",
-        "source": "Winds of Magic, p.40",
+        "source": "Winds of Magic, p.40-41",
         "races": "Human",
         "alternative_to": "Wizard",
         "earning skill": "Perception",
@@ -513,7 +513,7 @@
     },    
     "Mundane Alchemist" : {
         "class": "Academic",
-        "source": "Winds of Magic, p.38",
+        "source": "Winds of Magic, p.38-39",
 		"races": ["Dwarf", "Halfling", "Human"],
         "alternative_to": "Apothecary",
         "earning skill": "Trade (Alchemist)",
@@ -2122,7 +2122,7 @@
     },
     "Scryer" : {
         "class": "Peasant",
-        "source": "Winds of Magic, p.42",
+        "source": "Winds of Magic, p.42-43",
         "races": "Human",
         "alternative_to": "Mystic",
         "earning skill": "Perception",
@@ -4026,7 +4026,7 @@
     },
     "Beadle" : {
         "class": "Warrior",
-        "source": "Winds of Magic, p.36",
+        "source": "Winds of Magic, p.36-37",
         "races": ["Dwarf", "Halfling", "Human"],
         "alternative_to": "Guard",
         "earning skill": "Perception",
