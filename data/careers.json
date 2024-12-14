@@ -944,7 +944,7 @@
         "alternative_to": "Wizard",
         "earning skill": "Language (Magick)",
         "rank 1" : {
-            "name": "Shaman’s Apprentice",
+            "name": "Shaman's Apprentice",
             "status": "Brass 3",
             "advances": ["WS", "Int", "WP"],
             "skills" : ["Animal Care", "Channelling (Ghur)", "Cool", "Dodge", "Intuition", "Language (Magick)", "Lore (Magic)", "Melee (Polearm)", "Outdoor Survival", "Perception"],
@@ -2459,6 +2459,48 @@
             "trappings": ["Book (Religion)","Followers (including Penitents, Flagellants, and Zealots)"]
         }
     },
+    "Gamekeeper" : {
+        "class": "Ranger",
+        "source": "Deft Steps, Light Fingers, p.138",
+        "races": ["Dwarf", "Halfling", "Human", "Wood Elf"],
+        "earning skill": "Animal Care",
+        "rank 1" : {
+            "name": "Underkeeper",
+            "status": "Brass 4",
+            "advances": ["BS", "I", "Int"],
+            "skills" : ["Animal Care", "Climb", "Gossip", "Lore (Beasts)", "Melee (Basic)", "Outdoor Survival", "Perception", "Ranged (Bow)", "Set Trap", "Stealth (Rural)"],
+            "talents":  ["Marksman", "Rover", "Strider (Any)", "Trapper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hat", "Bow and Arrows (12)", "Hand Weapon"]
+        },
+        "rank 2" : {
+            "name": "Gamekeeper",
+            "status": "Silver 1",
+            "advances": ["WS"],
+            "skills" : ["Athletics", "Cool", "Endurance", "Intuition", "Lore (Local)", "Track"],
+            "talents":  ["Hunter's Eye", "Menacing", "Sharpshooter", "Strike to Stun"],
+            "npc_suggested_talents": [],
+            "trappings": ["Quality Hat", "Hunting Suit"]
+        },
+        "rank 3" : {
+            "name": "Head Gamekeeper",
+            "status": "Silver 2",
+            "advances": ["Agi"],
+            "skills" : ["Animal Training (Any)", "Navigation", "Ranged (Blackpowder)", "Ride (Horse)"],
+            "talents":  [" Accurate Shot", "Acute Sense (Any)", "Orientation", "Fast Shot"],
+            "npc_suggested_talents": [],
+            "trappings": ["Blackpowder Weapon", "Riding Horse with Saddle and Tack"]
+        },
+        "rank 4" : {
+            "name": "Master Gamekeeper",
+            "status": "Silver 4",
+            "advances": ["WP"],
+            "skills" : ["Leadership", "Lore (Law)"],
+            "talents":  ["Dealmaker", "Commanding Presence", "Etiquette (Servants)", "Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Estate Cottage", "Quality Clothing"]
+        }
+    },
     "Ghost Strider" : {
         "class": "Ranger",
 		"source": "Archives of the Empire Vol 1, p.88",
@@ -2587,6 +2629,48 @@
             "trappings": ["Couriers","Mail Shirt","Writing Kit"]
         }
     },
+    "Muleskinner" : {
+        "class": "Ranger",
+        "source": "Deft Steps, Light Fingers, p.128",
+        "races": ["Dwarf", "Halfling", "Human"],
+        "earning skill": "Drive",
+        "rank 1" : {
+            "name": "Driver",
+            "status": "Brass 4",
+            "advances": ["BS", "Agi", "WP"],
+            "skills" : ["Animal Care", "Charm Animal", "Drive", "Endurance", "Gossip", "Lore (Local)", "Melee (Basic)", "Perception", "Ranged (Entangling)", "Ride (Horse)"],
+            "talents":  ["Animal Affinity", "Crack the Whip", "Orientation", "Tenacious"],
+            "npc_suggested_talents": [],
+            "trappings": ["Gloves, Leather Hat, Travel Clothes, Whip"]
+        },
+        "rank 2" : {
+            "name": "Muleskinner",
+            "status": "Silver 2",
+            "advances": ["Int"],
+            "skills" : ["Animal Training (Any)", "Dodge", "Language (Any)", "Navigation", "Outdoor Survival", "Ranged (Bow)"],
+            "talents":  ["Coolheaded", "Seasoned Traveller", "Fearless (Any)", "Strider (Any)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Tent, Quality Hat"]
+        },
+        "rank 3" : {
+            "name": "Caravan Guide ",
+            "status": "Silver 4",
+            "advances": ["I"],
+            "skills" : ["Cool", "Intuition", "Trade (Carpenter)", "Stealth (Rural)"],
+            "talents":  ["Etiquette (Guilder)", "Nose for Trouble", "Stout-hearted", "Trick Riding"],
+            "npc_suggested_talents": [],
+            "trappings": ["Map", "Pack Animal", "Quality Travel Clothes", "Riding Horse and Tack"]
+        },
+        "rank 4" : {
+            "name": "Caravan Master",
+            "status": "Gold 1",
+            "advances": ["T"],
+            "skills" : ["Haggle", "Leadership"],
+            "talents":  ["Dealmaker", "Inspiring", "Numismatics", "Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Caravan", "Stable of Pack Animals"]
+        }
+    },
     "Pedlar" : {
         "class": "Ranger",
 		"source": "Corebook, p.90",
@@ -2627,6 +2711,90 @@
             "talents":  ["Cat-tongued","Strong-minded","Suave","Tenacious"],
             "npc_suggested_talents": [],
             "trappings": ["Draught Horse and Wagon","Goods worth at least 5d10 Gold","50 Silver in Coin"]
+        }
+    },
+    "Poacher" : {
+        "class": "Ranger",
+        "source": "Deft Steps, Light Fingers, p.140",
+        "races": ["Dwarf", "Halfling", "Human", "Wood Elf"],
+        "earning skill": "Set Trap",
+        "rank 1" : {
+            "name": "Scrumper",
+            "status": "Brass 2",
+            "advances": ["BS", "Agi", "Dex"],
+            "skills" : ["Bribery", "Climb", "Dodge", "Haggle", "Lore (Beasts)", "Outdoor Survival", "Perception", "Ranged (Sling)", "Set Trap", "Stealth (Rural)"],
+            "talents":  ["Fisherman", "Flee!", "Strider (Any)", "Trapper"],
+            "npc_suggested_talents": [],
+            "trappings": ["Cloak", "Rod and Line", "Selection of Animal Traps", "Sling with 10 Stone Bullets"]
+        },
+        "rank 2" : {
+            "name": "Poacher",
+            "status": "Brass 4",
+            "advances": ["Int"],
+            "skills" : ["Athletics", "Cool", "Endurance", "Melee (Basic)", "Ranged (Bow)", "Track"],
+            "talents":  ["Hunter's Eye", "Marksman", "Rover", "Sharpshooter"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bed Roll", "Bow and Arrow", "Tent"]
+        },
+        "rank 3" : {
+            "name": "Master Poacher",
+            "status": "Silver 1",
+            "advances": ["WS"],
+            "skills" : ["Animal Care", "Animal Training (Any)", "Navigation", "Ride (Horse)"],
+            "talents":  ["Accurate Shot", "Acute Sense (Any)", "Criminal", "Fast Shot"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hunting Hound or Hawk", "Quality Weapon"]
+        },
+        "rank 4" : {
+            "name": "Champion Poacher",
+            "status": "Silver 4",
+            "advances": ["I"],
+            "skills" : ["Intimidate", "Lore (Law)"],
+            "talents":  ["Briber", "Dealmaker", "Kingpin", "Menacing"],
+            "npc_suggested_talents": [],
+            "trappings": ["Riding Horse with Saddle and Tack"]
+        }
+    },
+    "Ranger-Priest Of Taal" : {
+        "class": "Ranger",
+        "source": "Deft Steps, Light Fingers, p.86",
+        "races": "Human",
+        "earning skill": "Pray",
+        "rank 1" : {
+            "name": "Initiate",
+            "status": "Brass 2",
+            "advances": ["T", "Agi", "WP"],
+            "skills" : ["Athletics", "Charm Animal", "Cool", "Endurance", "Intuition", "Lore (Theology)", "Outdoor Survival", "Perception", "Pray", "Ranged (Bow)"],
+            "talents":  ["Bless (Taal)", "Holy Visions", "Orientation", "Rover"],
+            "npc_suggested_talents": [],
+            "trappings": ["Bow and 10 arrows", "Cloak", "Religious Symbol (Taal)", "Sturdy Boots"]
+        },
+        "rank 2" : {
+            "name": "Ranger-Priest",
+            "status": "Brass 5",
+            "advances": ["Fel"],
+            "skills" : ["Heal", "Intimidate", "Melee (Basic)", "Navigation", "Stealth (Rural)", "Track"],
+            "talents":  ["Etiquette (Taal)", "Invoke (Taal)", "Strider (Any)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Backpack", "Bedroll", "Book (Taal)", "Hand Weapon"]
+        },
+        "rank 3" : {
+            "name": "High Priest",
+            "status": "Silver 4",
+            "advances": ["I"],
+            "skills" : ["Animal Training (Any)", "Language (Any)"],
+            "talents":  ["Hardy", "Pure Soul", "Resistance (Any)", "Sure Shot"],
+            "npc_suggested_talents": [],
+            "trappings": ["Initiate Follower", "Religious Relic"]
+        },
+        "rank 4" : {
+            "name": "Vice-Heirarch",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Language (Any)", "Stealth (Urban)"],
+            "talents":  ["Disarm", "Gregarious", "Master Orator", "Pure Soul"],
+            "npc_suggested_talents": [],
+            "trappings": ["Animal Companion", "Subordinate Priests"]
         }
     },
     "Road Warden" : {
@@ -3303,6 +3471,90 @@
             "trappings": ["Hired Muscle","Network of Informants","Warehouse"]
         }
     },
+    "Forger" : {
+        "class": "Rogue",
+        "source": "Deft Steps, Light Fingers, p.44",
+        "races": ["Dwarf", "Halfling", "High Elf", "Human", "Wood Elf"],
+        "earning skill": "Trade (Artist or Smith)",
+        "rank 1" : {
+            "name": "Trade (Artist or Smith)",
+            "status": "Brass 2",
+            "advances": ["T", "I", "Dex"],
+            "skills" : ["Art (Any)", "Cool", "Consume Alcohol", "Gossip", "Haggle", "Intuition", "Perception", "Sleight of Hand", "Stealth (Urban)", "Trade (Artist or Smith)"],
+            "talents":  ["Artistic", "Craftsman (Trade)", "Criminal", "Numismatics"],
+            "npc_suggested_talents": [],
+            "trappings": ["Coin Mould (any currency)", "Trade Tools"]
+        },
+        "rank 2" : {
+            "name": "Forger",
+            "status": "Silver 1",
+            "advances": ["Int"],
+            "skills" : ["Art (Any)", "Bribery", "Charm", "Evaluate", "Gamble", "Secret Signs (Thief)"],
+            "talents":  ["Briber", "Nimble Fingered", "Read/Write", "Tinker"],
+            "npc_suggested_talents": [],
+            "trappings": ["Calligrapher's Tools"]
+        },
+        "rank 3" : {
+            "name": "Counterfeiter",
+            "status": "Silver 4",
+            "advances": ["WP"],
+            "skills" : ["Lore (Art)", "Lore (Heraldry)", "Research", "Trade (Any)"],
+            "talents":  ["Acute Sense (Any)", "Dealmaker", "Savvy", "Super Numerate"],
+            "npc_suggested_talents": [],
+            "trappings": ["Artist's Tools", "Workshop", "Charlatan Contact"]
+        },
+        "rank 4" : {
+            "name": "Master Counterfeiter",
+            "status": "Gold 2",
+            "advances": ["Fel"],
+            "skills" : ["Leadership", "Lore (History)"],
+            "talents":  ["Kingpin", "Magnum Opus", "Master Tradesman (Any)", "Schemer"],
+            "npc_suggested_talents": [],
+            "trappings": ["2 Charlatan Subordinates", "Forged Guild Licence", "Quality Clothing"]
+        }
+    },
+    "Gambler-Priest" : {
+        "class": "Rogue",
+        "source": "Deft Steps, Light Fingers, p.16",
+        "races": "Human",
+        "earning skill": "Gamble",
+        "rank 1" : {
+            "name": "Initiate",
+            "status": "Brass 1",
+            "advances": ["I", "Dex", "Fel"],
+            "skills" : ["Charm", "Consume Alcohol", "Cool", "Gamble", "Gossip", "Intuition", "Lore (Ranald)", "Perception", "Pray", "Sleight of Hand"],
+            "talents":  ["Bless (Ranald)", "Luck", "Holy Visions", "Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["Discrete Symbol of Ranald", "Deck of Cards", "Dice"]
+        },
+        "rank 2" : {
+            "name": "Gambler-Priest",
+            "status": "Silver 1",
+            "advances": ["WP"],
+            "skills" : ["Dodge", "Entertain (Storytelling)", "Evaluate", "Haggle", "Intimidate", "Melee (Basic)"],
+            "talents":  ["Cardsharp", "Diceman", "Etiquette (Ranaldans)", "Invoke (The Gamester)"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon", "Quality Clothing", "Lucky Charm"]
+        },
+        "rank 3" : {
+            "name": "High Priest",
+            "status": "Silver 3",
+            "advances": ["Int"],
+            "skills" : ["Bribery", "Evaluate", "Language (Any)", "Sleight of Hand"],
+            "talents":  ["Acute Sense (Any)", "Read/Write", "Fast Hands", "Super Numerate"],
+            "npc_suggested_talents": [],
+            "trappings": ["Initiate Apprentice", "Shrine of Ranald (Portable or Fixed)"]
+        },
+        "rank 4" : {
+            "name": "Master of Chance",
+            "status": "Silver 5",
+            "advances": ["Agi"],
+            "skills" : ["Leadership", "Intimidate"],
+            "talents":  ["Nose for Trouble", "Pure Soul", "Savvy", "Schemer", "Secret Identity"],
+            "npc_suggested_talents": [],
+            "trappings": ["Subordinate Priests", "Best Quality Clothes"]
+        }
+    },
     "Grave Robber" : {
         "class": "Rogue",
 		"source": "Corebook, p.104",
@@ -3343,6 +3595,48 @@
             "talents":  ["Fearless (Undead)","Sixth Sense","Strong-minded","Trapper"],
             "npc_suggested_talents": [],
             "trappings": ["Bedroll","Maps","Tent","Trade Tools (Engineer)","Writing Kit"]
+        }
+    },
+    "Liberator-Priest" : {
+        "class": "Rogue",
+        "source": "Deft Steps, Light Fingers, p.22",
+        "races": "Human",
+        "earning skill": "Pray",
+        "rank 1" : {
+            "name": "Initiate",
+            "status": "Brass 1",
+            "advances": ["Agi", "WP", "Fel"],
+            "skills" : ["Bribery", "Charm", "Cool", "Entertain (Storytelling)", "Gossip", "Haggle", "Intuition", "Lore (Politics)", "Perception", "Pray"],
+            "talents":  ["Argumentative", "Bless (Ranald)", "Holy Visions", "Luck"],
+            "npc_suggested_talents": [],
+            "trappings": ["Discrete Symbol of Ranald", "Leather Jack"]
+        },
+        "rank 2" : {
+            "name": "Liberator-Priest",
+            "status": "Brass 4",
+            "advances": ["Int"],
+            "skills" : ["Athletics", "Bribery", "Dodge", "Intimidate", "Melee (Basic)"],
+            "talents":  ["Cat-tongued", "Etiquette (Ranald)", "Invoke (The Protector)", "Read/Write"],
+            "npc_suggested_talents": [],
+            "trappings": ["Hand Weapon", "Holy Book (Ranald)"]
+        },
+        "rank 3" : {
+            "name": "High Priest",
+            "status": "Silver 1",
+            "advances": ["I"],
+            "skills" : ["Evaluate", "Language (Thieve's Tongue)", "Leadership", "Lore (Local)"],
+            "talents":  ["Impassioned Zeal", "Public Speaker", "Schemer", "Secret Identity"],
+            "npc_suggested_talents": [],
+            "trappings": ["Initiate Apprentice", "Shrine of Ranald", "Street Urchin Band"]
+        },
+        "rank 4" : {
+            "name": "People's Champion",
+            "status": "Silver 3",
+            "advances": ["WS"],
+            "skills" : ["Language (Any)", "Stealth (Urban)"],
+            "talents":  ["Disarm", "Gregarious", "Master Orator", "Pure Soul"],
+            "npc_suggested_talents": [],
+            "trappings": ["Grateful Local Common Folk", "Subordinate Priests"]
         }
     },
     "Outlaw" : {
@@ -3469,6 +3763,90 @@
             "talents":  ["Catfall","Scale Sheer Surface","Strong Legs","Wealthy"],
             "npc_suggested_talents": [],
             "trappings": ["Dark Clothing","Grappling Hook","Mask or Scarves"]
+        }
+    },
+    "Thief-Priest" : {
+        "class": "Rogue",
+        "source": "Deft Steps, Light Fingers, p.14",
+        "races": "Human",
+        "earning skill": "Sleight of Hand",
+        "rank 1" : {
+            "name": "Initiate",
+            "status": "Brass 1",
+            "advances": ["I", "Agi", "WP"],
+            "skills" : ["Athletics", "Climb", "Dodge", "Intuition", "Lore (Ranald)", "Perception", "Pick Lock", "Pray", "Sleight of Hand", "Stealth (Urban)"],
+            "talents":  ["Bless (Ranald)", "Flee!", "Holy Visions", "Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["Discrete Symbol of Ranald", "Leather Jerkin", "Sack"]
+        },
+        "rank 2" : {
+            "name": "Thief-Priest",
+            "status": "Brass 4",
+            "advances": ["Fel"],
+            "skills" : ["Charm", "Intuition", "Endurance", "Entertain (Storytelling)", "Language (Thieve's Tongue)", "Secret Signs (Thief)"],
+            "talents":  ["Secret Identity", "Etiquette (Ranaldans)", "Invoke (The Night Prowler)", "Luck"],
+            "npc_suggested_talents": [],
+            "trappings": ["Trade Tools (Thief)", "Rope", "Book (Ranald)"]
+        },
+        "rank 3" : {
+            "name": "High Priest",
+            "status": "Silver 1",
+            "advances": ["Dex"],
+            "skills" : ["Bribery", "Cool", "Evaluate", "Gossip"],
+            "talents":  ["Alley Cat", "Etiquette (Criminals)", "Nimble Fingered", "Nose for Trouble"],
+            "npc_suggested_talents": [],
+            "trappings": ["Initiate Apprentice/Lookout", "Shrine of the Night Prowler", "Quality Dark Clothing"]
+        },
+        "rank 4" : {
+            "name": "Shadow Prowler",
+            "status": "Silver 3",
+            "advances": ["Int"],
+            "skills" : ["Leadership", "Intimidate"],
+            "talents":  ["Criminal", "Night Vision", "Pure Soul", "Shadow"],
+            "npc_suggested_talents": [],
+            "trappings": ["Mask", "Subordinate Thief-Priests"]
+        }
+    },
+    "Trickster-Priests" : {
+        "class": "Rogue",
+        "source": "Deft Steps, Light Fingers, p.20",
+        "races": "Human",
+        "earning skill": "Pray",
+        "rank 1" : {
+            "name": "Initiate",
+            "status": "Brass 1",
+            "advances": ["I", "WP", "Fel"],
+            "skills" : ["Bribery", "Charm", "Cool", "Intuition", "Entertain (Storytelling)", "Gossip", "Lore (Ranald)", "Perception", "Pray", "Sleight of Hand"],
+            "talents":  ["Bless (Ranald)", "Cat-tongued", "Luck", "Suave"],
+            "npc_suggested_talents": [],
+            "trappings": ["Discrete Symbol of Ranald", "2 Sets of Clothing"]
+        },
+        "rank 2" : {
+            "name": "Trickster-Priest",
+            "status": "Silver 1",
+            "advances": ["Dex"],
+            "skills" : ["Athletics", "Entertain (Acting)", "Intimidate", "Language (Any)", "Melee (Basic)", "Stealth (Urban)"],
+            "talents":  ["Etiquette (Ranald)", "Holy Visions", "Invoke (The Deceiver)", "Secret Identity"],
+            "npc_suggested_talents": [],
+            "trappings": ["Disguise Kit", "Hand Weapon", "Book (Ranald)"]
+        },
+        "rank 3" : {
+            "name": "High Priest",
+            "status": "Silver 3",
+            "advances": ["Agi"],
+            "skills" : ["Art (Any)", "Dodge", "Perform (Acting)", "Secret Signs (Thieves)"],
+            "talents":  ["Blather", "Fast Hands", "Master of Disguise", "Mimic"],
+            "npc_suggested_talents": [],
+            "trappings": ["Initiate Apprentice", "Cloak or Coat with Hidden Pockets"]
+        },
+        "rank 4" : {
+            "name": "Lord of Misrule",
+            "status": "Gold 1",
+            "advances": ["Int"],
+            "skills" : ["Leadership", "Consume Alcohol"],
+            "talents":  ["Nose for Trouble", "Public Speaker", "Pure Soul", "Savvy"],
+            "npc_suggested_talents": [],
+            "trappings": ["Subordinate Priests", "Trade Tools (Any)"]
         }
     },
     "Witch" : {
